@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function Nav({setIsMenuOpen}) {
+export default function Nav({setIsMenuOpen}: { setIsMenuOpen: (open: boolean) => void }) {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [insuranceOpen, setInsuranceOpen] = useState(false);
@@ -121,7 +121,7 @@ export default function Nav({setIsMenuOpen}) {
           </div>
 
           <div className="hover:border-b-2 hover:border-black px-4 py-2">
-            <Link href="/Case_study">Case Study</Link>
+            <Link href="/Case-study">Case Study</Link>
           </div>
           <div className="hover:border-b-2 hover:border-black px-4 py-2">
             <Link href="/contact">Calculator</Link>

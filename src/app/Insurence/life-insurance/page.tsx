@@ -1,7 +1,7 @@
 // components/Sidebar.js
 
-import Header from "@/app/Components/Header/page";
-import Slideri from "@/app/Components/Slideri/page";
+import Header from "@/app/Components/Header/Header";
+import Slideri from "@/app/Components/Slideri/Slideri";
 import {
   ShieldCheck,
   HeartPulse,
@@ -77,7 +77,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header tittle="Life Insurance" />
+      <Header title="Life Insurance" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative  max-w-[1500px] mx-auto leading-7 tracking-wider ">
  {/* Content Div */}
         <div className="contentdiv  lg:w-[85%] py-5">

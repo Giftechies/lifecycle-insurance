@@ -1,6 +1,6 @@
 "use client"
 import { useRef } from "react";
-import Header from "../Components/Header/page";
+import Header from "../Components/Header/Header";
 import gsap from "gsap";
 
 
@@ -11,7 +11,6 @@ export default function Mortgage() {
       {img:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdXNlfGVufDB8fDB8fHww",
         date:20,
         month:'jun',
-        navlink:"",
         heading:"Home Loan",
         li:'http://localhost:3000/Mortgage/home-loans',
         content:"Make your dream of home ownership a reality with our flexible home loan solutions. Enjoy competitive rates and personalized service to guide you every step of the way."
@@ -53,7 +52,9 @@ export default function Mortgage() {
       },
 
     ]
-    const carda = useRef<HTMLDivElement>([])
+    
+    const carda = useRef<(HTMLDivElement | null)[]>([])
+
     carda.current=[]
 
     const animate = (index: number)=>{
@@ -75,7 +76,7 @@ export default function Mortgage() {
     }
   return (
      <main className=" max-w-[1700px] m-auto  " >
-          <Header tittle="Mortgage" />
+          <Header title="Mortgage" />
           
         
     
@@ -103,8 +104,8 @@ export default function Mortgage() {
     
               {/* card  */}
                 {card.map((el,index)=>(
-                 
-                  <div  onClick={()=>router.push(el.navlink)} key={index} onMouseEnter={()=>animate(index)} onMouseLeave={()=>animatend(index)} ref={el => carda.current[index] = el} className="  w-full lg:w-[30%] mt-4 bg-white rounded-2xl shadow-xl overflow-hidden relative ">
+                //  onClick={()=>router.push(el.navlink)}
+                  <div   key={index} onMouseEnter={()=>animate(index)} onMouseLeave={()=>animatend(index)} ref={el => {carda.current[index] = el}} className= "w-full lg:w-[30%] mt-4 bg-white rounded-2xl shadow-xl overflow-hidden relative ">
                 {/* Image section */}
                 <div className="rounded-b-xl shadow-2xs overflow-hidden ">
                   <img

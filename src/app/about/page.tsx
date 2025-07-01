@@ -1,10 +1,10 @@
-import Breadcrumb from "../Components/Breadcumb/page";
-import Header from "../Components/Header/page";
+import Breadcrumb from "../Components/Breadcumb/Breadcumb";
+import Header from "../Components/Header/Header";
 
 export default function about() {
   return (
     <>
-      <Header tittle="About us" />
+      <Header title="About us" />
       <main className=" ">
         {/* section 1 */}
         <section className="section_1  w-full overflow-hidden max-w-[1500px] mx-auto   ">

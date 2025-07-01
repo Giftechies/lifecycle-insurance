@@ -1,7 +1,7 @@
 // components/Sidebar.js
 
-import Header from "@/app/Components/Header/page";
-import Slider from "@/app/Components/Slider/page";
+import Header from "@/app/Components/Header/Header";
+import Slider from "@/app/Components/Slider/Slider";
 
 const Sidebar = () => {
   const cover = [
@@ -129,7 +129,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header tittle="Refinance" />
+      <Header title="Refinance" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative   max-w-[1500px] mx-auto leading-7 tracking-wider ">
         {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">

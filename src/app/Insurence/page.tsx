@@ -1,7 +1,7 @@
 
 "use client"
 import { useRouter } from "next/navigation";
-import Header from "../Components/Header/page";
+import Header from "../Components/Header/Header";
 
 export default function Insurance() {
     const router = useRouter()
@@ -62,7 +62,7 @@ export default function Insurance() {
 
   return (
     <main className=" max-w-[1700px] m-auto  " >
-      <Header tittle="Insurance" />
+      <Header title="Insurance" />
       
     
 

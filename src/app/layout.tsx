@@ -3,10 +3,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "./Components/Nav/page";
-import Footer from "./Components/Footer/page";
+import Nav from "./Components/Nav/Nav";
+import Footer from "./Components/Footer/Footer";
 import { useState } from "react";
-import MobileMenuOverlay from "./Components/MobileMenuOverlay/page";
+import MobileMenuOverlay from "./Components/MobileMenuOverlay/MobileMenuOverlay";
 import Head from "next/head";
 
 const geistSans = Geist({

@@ -1,7 +1,7 @@
 // components/Sidebar.js
 
-import Header from "@/app/Components/Header/page";
-import Slideri from "@/app/Components/Slideri/page";
+import Header from "@/app/Components/Header/Header";
+import Slideri from "@/app/Components/Slideri/Slideri";
 import {
   ShieldCheck,
   HeartPulse,
@@ -138,7 +138,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header tittle="Trauma recovery cover" />
+      <Header title="Trauma recovery cover" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative  max-w-[1500px] mx-auto leading-7 tracking-wider ">
  {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">
@@ -235,7 +235,6 @@ const Sidebar = () => {
             </h1>
             {How.map((el)=>(
               <>
-              <p className=" text-[14px] ">{el.p}</p>
               <div className=" flex items-start mt-2.5 " >
                 <i className="ri-arrow-right-s-line mt-1 mr-1"></i><p className=" text-[14px] " ><span className=" font-semibold " >{el.title}</span>{el.content}</p>
 

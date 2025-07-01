@@ -1,7 +1,7 @@
 // components/Sidebar.js
 
-import Header from "@/app/Components/Header/page";
-import Slideri from "@/app/Components/Slideri/page";
+import Header from "@/app/Components/Header/Header";
+import Slideri from "@/app/Components/Slideri/Slideri";
 import {
   ShieldCheck,
   HeartPulse,
@@ -41,7 +41,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header tittle="Group Insurance" />
+      <Header title="Group Insurance" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative  max-w-[1500px] mx-auto  leading-7 tracking-wider">
  {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">
@@ -52,7 +52,7 @@ const Sidebar = () => {
               <h1 className=" text-[var(--primg)]  ">
                 <i className="ri-record-circle-line mr-1.5 "></i>Group Insurance
               </h1>
-              <h2 className="  text-[26px] leading-11 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
+              <h2 className=" leading-11 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
                Trusted Name for Group Insurances in New Zealand
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify text-[14px] ">
@@ -107,9 +107,9 @@ Our group insurances are designed to support every business in New Zealand in at
             </h1>
              {benefit.map((el)=>(
               <>
-              <p className=" text-[14px] ">{el.p}</p>
+            
               <div className=" flex items-start mt-2.5 " >
-                <i className="ri-arrow-right-s-line mt-1 mr-1"></i><p className=" text-[14px] " ><span className=" font-semibold " >{el.title}</span>{el.content}</p>
+                <i className="ri-arrow-right-s-line mt-1 mr-1"></i><p className=" text-[14px] " >{el.content}</p>
 
               </div>
               

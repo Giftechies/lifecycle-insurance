@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Nav from "./Components/Nav/page";
+import Nav from "./Components/Nav/Nav";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,103 +14,103 @@ export default function Home() {
   const sec3 = useRef(null);
   const sec4 = useRef(null);
 
-  // useGSAP(() => {
-  //   gsap.from(".icon_box", {
-  //     opacity: 0,
-  //     x: -100,
-  //     delay: 0.5,
-  //     scrollTrigger: ".icon_box",
-  //   });
-  // }, []);
+  useGSAP(() => {
+    gsap.from(".icon_box", {
+      opacity: 0,
+      x: -100,
+      delay: 0.5,
+      scrollTrigger: ".icon_box",
+    });
+  }, []);
 
-  // useGSAP(
-  //   () => {
-  //     gsap.from(".sec2part3", {
-  //       opacity: 0,
-  //       x: -400,
-  //       z: 999,
-  //       duration: 2,
-  //       delay: 0.5,
-  //       scrollTrigger: {
-  //         trigger: ".sec2part3",
-  //         start: "top 100%",
-  //       },
-  //     });
-  //   },
-  //   { scope: sec2 }
-  // );
+  useGSAP(
+    () => {
+      gsap.from(".sec2part3", {
+        opacity: 0,
+        x: -400,
+        z: 999,
+        duration: 2,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: ".sec2part3",
+          start: "top 100%",
+        },
+      });
+    },
+    { scope: sec2 }
+  );
 
-  // useGSAP(
-  //   () => {
-  //     gsap.from(".sec3animate", {
-  //       y: -250,
-  //       opacity: 0,
-  //       duration: 1.5,
-  //       scrollTrigger: {
-  //         trigger: ".section_3",
-  //         start: "top 80%",
-  //       },
-  //     });
-  //   },
-  //   { scope: sec3 }
-  // );
+  useGSAP(
+    () => {
+      gsap.from(".sec3animate", {
+        y: -250,
+        opacity: 0,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".section_3",
+          start: "top 80%",
+        },
+      });
+    },
+    { scope: sec3 }
+  );
 
-  // useGSAP(
-  //   () => {
-  //     gsap.from(".sec3animate2", {
-  //       y: 250,
-  //       opacity: 0,
-  //       duration: 1.5,
-  //       scrollTrigger: {
-  //         trigger: ".section_3",
-  //         start: "top 80%",
-  //       },
-  //     });
-  //   },
-  //   { scope: sec3 }
-  // );
+  useGSAP(
+    () => {
+      gsap.from(".sec3animate2", {
+        y: 250,
+        opacity: 0,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".section_3",
+          start: "top 80%",
+        },
+      });
+    },
+    { scope: sec3 }
+  );
 
-  // useGSAP(
-  //   () => {
-  //     gsap.to(".sec3animate3", {
-  //       y: 300,
-  //       duration: 1.5,
-  //       scrollTrigger: {
-  //         trigger: ".section_3",
-  //         start: "top 80%",
-  //         scrub:2
-  //       },
-  //     });
-  //   },
-  //   { scope: sec3 }
-  // );
+  useGSAP(
+    () => {
+      gsap.to(".sec3animate3", {
+        y: 300,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".section_3",
+          start: "top 80%",
+          scrub:2
+        },
+      });
+    },
+    { scope: sec3 }
+  );
 
-  // useGSAP(
-  //   () => {
-  //     gsap.from(".sec4anime", {
-  //       x: -450,
-  //       opacity: 0,
-  //       duration: 2.5,
-  //       delay: 0.5,
-  //       stagger: -0.7,
-  //       ease: "power2.out",
-  //       scrollTrigger: {
-  //         trigger: sec4.current,
-  //         start: "top 50%",
-  //       },
-  //     });
-  //   },
-  //   { scope: sec4 }
-  // );
+  useGSAP(
+    () => {
+      gsap.from(".sec4anime", {
+        x: -450,
+        opacity: 0,
+        duration: 2.5,
+        delay: 0.5,
+        stagger: -0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sec4.current,
+          start: "top 50%",
+        },
+      });
+    },
+    { scope: sec4 }
+  );
 
-  // useGSAP(() => {
-  //   gsap.from(".marquee", {
-  //     xPercent: -100,
-  //     duration: 20,
-  //     ease: "none",
-  //     repeat: -1,
-  //   });
-  // });
+  useGSAP(() => {
+    gsap.from(".marquee", {
+      xPercent: -100,
+      duration: 20,
+      ease: "none",
+      repeat: -1,
+    });
+  });
 
   
 

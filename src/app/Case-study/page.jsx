@@ -1,4 +1,4 @@
-import Header from "../Components/Header/page";
+import Header from "../Components/Header/Header";
 
 export default function Case_study(){
     const card = [
@@ -45,7 +45,7 @@ export default function Case_study(){
     return (
        <>
     
-    <Header tittle='Case Study' />
+    <Header title='Case Study' />
     <main className=" w-full h-full max-w-[1500px] mx-auto ">
         <section className="Section_1  w-full h-full px-4 md:px-[9%] ">
             {/* Heading text */}

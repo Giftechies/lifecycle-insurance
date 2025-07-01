@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 
 
-export default function MobileMenuOverlay({ setIsMenuOpen }) {
+export default function MobileMenuOverlay({ setIsMenuOpen }: { setIsMenuOpen: (open: boolean) => void }) {
     const [isInsuranceOpen, setIsInsuranceOpen] = useState(false);
     const [isMortgageOpen, setIsMortgageOpen] = useState(false);
     const drawerRef = useRef<HTMLDivElement>(null)
