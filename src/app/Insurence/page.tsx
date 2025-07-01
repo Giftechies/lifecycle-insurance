@@ -92,7 +92,8 @@ export default function Insurance() {
 
           {/* card  */}
             {card.map((el)=>(
-              <div onClick={()=>router.push(el.li)} className=" w-full lg:w-[30%] mt-4 bg-white rounded-2xl shadow-xl overflow-hidden relative">
+              // onClick={()=>router.push(el.li)}
+              <div  className=" w-full lg:w-[30%] mt-4 bg-white rounded-2xl shadow-xl overflow-hidden relative">
             {/* Image section */}
             <div className=" rounded-b-4lg overflow-hidden ">
               <img
@@ -126,7 +127,7 @@ export default function Insurance() {
 
               {/* Read More */}
               <a
-                href="#"
+                href={el.li}
                 className="text-[var(--primg)] font-semibold text-sm hover:underline absolute bottom-9 left-9  flex items-center gap-1 "
               >
                 Read More
