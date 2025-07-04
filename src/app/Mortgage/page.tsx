@@ -147,7 +147,7 @@ export default function Mortgage() {
                 {/* Read More */}
                 <Link
                   href='#'
-                  className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 lg:mt8"
+                  className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 lg:mt-8"
                 >
                   Read More
                   <span className="inline-block transform transition-transform group-hover:translate-x-1">

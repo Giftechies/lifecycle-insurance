@@ -51,7 +51,7 @@ export default function Enquire({
 
   return (
     <main className=" fixed inset-0 z-99999 flex items-center justify-center ">
-      <div className=" w-full h-full bg-[var(--primg)]/50  inset-0 absolute  "
+      <div className=" w-full h-full bg-[var(--primg)]/50  backdrop-blur-[3px] inset-0 absolute  "
       onClick={handleclose}
       
       />

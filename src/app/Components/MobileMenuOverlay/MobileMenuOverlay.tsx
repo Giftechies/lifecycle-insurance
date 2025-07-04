@@ -50,12 +50,12 @@ export default function MobileMenuOverlay({
   return (
     <div className="fixed inset-0 z-[9999]">
       {/* Overlay background */}
-      <div className="absolute inset-0 bg-black/50 " onClick={handleclose} />
+      <div className="absolute inset-0  bg-[var(--primg)]/50  backdrop-blur-[2px] " onClick={handleclose} />
 
       {/* Side Drawer */}
       <div
         ref={drawerRef}
-        className="absolute top-0 right-0  h-full text-white w-[70%] sm:w-[50%] bg-black shadow-lg p-6 overflow-y-auto"
+        className="absolute top-0 right-0  h-full text-white w-[70%] sm:w-[50%]  bg-black shadow-lg p-6 overflow-y-auto"
       >
         <div className="border-b w-full h-8 text-[18px] font-medium flex justify-between items-end ">
           Menu{" "}
