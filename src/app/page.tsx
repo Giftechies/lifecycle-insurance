@@ -225,8 +225,8 @@ export default function Home() {
                 alt=""
               />
             </div>
-            <div className="contentRight lg:w-[55%] lg:flex flex-col   ">
-              <div className="uppercontent  lg:w-[90%] lg:ml-8 xl:ml-16 ">
+            <div className="contentRight lg:w-[55%] lg:flex flex-col items-end  ">
+              <div className="uppercontent  lg:w-[90%]  ">
                 <h1 className="text-[var(--primg)] font-semibold text-[18px] ">
                   {" "}
                   <i className="  ri-record-circle-line font-medium mr-1  "></i>
@@ -246,7 +246,8 @@ export default function Home() {
               </div>
 
               <div className="middel md:flex gap-10 ">
-                <div className="text bg-[var(--primg)] text-white mt-6 max-lg:rounded-4xl  p-6 md:w-[55%] md:p-12 md:flex md:flex-col lg:py-3 lg:px-6 xl:px-16 lg:w-[60%] max-lg:justify-center lg:rounded-r-4xl    ">
+               <div className=" md:w-[55%]  lg:w-[65%] xl:w-[50%] ">
+                 <div className="text bg-[var(--primg)] text-white mt-6 max-lg:rounded-4xl  p-6 md:w-[100%] md:p-12 md:flex md:flex-col lg:py-10 lg:px-6 xl:px-16 lg:w-[100%] max-lg:justify-center lg:rounded-r-4xl    ">
                   <p className=" lg:mt-5  text-[18px] font-semibold">
                     {" "}
                     <img
@@ -262,6 +263,21 @@ export default function Home() {
                     Zealand
                   </h1>
                 </div>
+                  <div className="call text-[var(--primg)] font-medium md:ml-15 lg:ml-6 xl:ml-16 flex    bottom-6 left-130 xl:left-190 xl:bottom-9 gap-2 max-md:hidden ">
+                    <div className="  p-4 bg-[var(--secgr)] rounded-b-full ">
+                      <img
+                        src="./phone.svg"
+                        className=" w-[2rem]   object-cover object-center "
+                        alt=""
+                      />
+                    </div>
+
+                    <div className="call">
+                      <p className=" font-semibold">Call Now</p>
+                      <p>0800 50 7770</p>
+                    </div>
+                  </div>
+               </div>
 
                 <div className="lowerpic w-full flex flex-col items-center mt-6 md:w-[40%] lg:w-[30%]  ">
                   <div className="img">
@@ -289,20 +305,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-             <div className="call text-[var(--primg)] font-medium mt-2 flex  absolute  bottom-6 left-130 xl:left-190 xl:bottom-9 gap-2 max-lg:hidden ">
-                    <div className="  p-4 bg-[var(--secgr)] rounded-b-full ">
-                      <img
-                        src="./phone.svg"
-                        className=" w-[2rem]   object-cover object-center "
-                        alt=""
-                      />
-                    </div>
-
-                    <div className="call">
-                      <p className=" font-semibold">Call Now</p>
-                      <p>0800 50 7770</p>
-                    </div>
-                  </div>
+           
           </main>
         </section>
 
