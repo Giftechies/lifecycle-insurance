@@ -8,6 +8,8 @@ import Footer from "./Components/Footer/Footer";
 import { useState } from "react";
 import MobileMenuOverlay from "./Components/MobileMenuOverlay/MobileMenuOverlay";
 import Head from "next/head";
+import { EnquiryProvider } from "./Context/EnquiryContext";
+import Enquire from "./Components/Enquire";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +30,7 @@ export default function RootLayout({
 }>) {
 
    const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isEnquireOpen, setIsEnquireOpen] = useState(false);
   return (
     <html lang="en">
       <link
@@ -37,12 +40,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Nav setIsMenuOpen={setIsMenuOpen} />
+        <EnquiryProvider>
+          <Nav setIsMenuOpen={setIsMenuOpen} setIsEnquireOpen={setIsEnquireOpen} />
         {children}
         <Footer/>
          {isMenuOpen && (
-          <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen} />
+          <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen} setIsEnquireOpen={setIsEnquireOpen} />
         )}
+        {isEnquireOpen &&(<Enquire setIsEnquireOpen={setIsEnquireOpen}  />)}
+        </EnquiryProvider>
       </body>
     </html>
   );

@@ -3,15 +3,18 @@ import { useRef } from "react";
 import Header from "../Components/Header/Header";
 import gsap from "gsap";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 export default function Mortgage() {
+  const router = useRouter();
   const card = [
     {
       img: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdXNlfGVufDB8fDB8fHww",
       date: 20,
       month: "jun",
       heading: "Home Loan",
-      li: "/Mortgage/home-loans",
+      li: ()=> router.push( '/Mortgage/home-loans'),
       content:
         "Make your dream of home ownership a reality with our flexible home loan solutions. Enjoy competitive rates and personalized service to guide you every step of the way.",
     },
@@ -20,7 +23,7 @@ export default function Mortgage() {
       date: 20,
       month: "jun",
       heading: "Refinance",
-      li: "/Mortgage/refinance",
+      li:    ()=> router.push( '/Mortgage/refinance') ,
       content:
         "Save more with our easy refinancing options. Lower your interest rate, reduce monthly payments, and simplify your finances without the hassle.",
     },
@@ -29,7 +32,7 @@ export default function Mortgage() {
       date: 20,
       month: "jun",
       heading: "Investment Loan",
-      li: "/Mortgage/investment-loan",
+      li: ()=> router.push( "/Mortgage/investment-loan"),
       content:
         "Build your wealth with our tailored investment loans. We help you maximize returns and grow your property portfolio with expert advice.",
     },
@@ -38,7 +41,7 @@ export default function Mortgage() {
       date: 20,
       month: "jun",
       heading: "Business Loan",
-      li: "/Mortgage/business-loan",
+      li: ()=> router.push(  "/Mortgage/business-loan"),
       content:
         "Fuel your business ambitions with fast, flexible financing. Whether expanding or managing cash flow, our business loans adapt to your goals.",
     },
@@ -47,7 +50,7 @@ export default function Mortgage() {
       date: 20,
       month: "jun",
       heading: "Construction Loan",
-      li: "/Mortgage/construction-loan",
+      li: ()=> router.push( "/Mortgage/construction-loan" ),
       content:
         "Bring your building plans to life with structured funding at every stage. Our construction loans ensure your project stays on track and on budget.",
     },
@@ -55,8 +58,8 @@ export default function Mortgage() {
       img: "https://images.unsplash.com/photo-1599580546666-c26f15e00933?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbW1lcmNpYWwlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D",
       date: 20,
       month: "jun",
-      heading: "Commercial Loan",
-      li: "/Mortgage/commercial-loan",
+      heading: "Commercial Loan" ,
+      li:  ()=> router.push( "/Mortgage/commercial-loan"),
       content:
         "Finance commercial properties with confidence. We offer competitive rates and expert support for your business growth and investment needs.",
     },
@@ -83,39 +86,40 @@ export default function Mortgage() {
   };
 
   return (
-    <main className="max-w-[1700px] m-auto">
+    <main className="max-w-[1600px] m-auto">
       <Header title="Mortgage" />
 
       {/* section 1 */}
-      <section className="w-full px-4 bg-[#F7F4FB] overflow-hidden lg:flex flex-col items-center justify-center lg:px-[9%] lg:py-10 max-w-[1500px] mx-auto tracking-wider">
+      <section className="w-full p-4 bg-[#F7F4FB] overflow-hidden lg:flex flex-col items-center justify-center lg:px-[9%] lg:py-10 max-w-[1600px] mx-auto tracking-wider">
         {/* text */}
-        <div className="h-[20%] w-full mt-8 lg:flex gap-10">
+        <div className="h-[20%] w-full  lg:flex gap-10">
           {/* left */}
           <div className="w-full text-[var(--primg)] text-[16px] lg:w-[55%] font-medium">
             <i className="ri-record-circle-line"></i> Mortgage
-            <p className="text-[36px] leading-9 text-black lg:text-[36px] font-semibold mt-3 lg:leading-11">
+            <p className="text-[26px] leading-9 text-black lg:text-[36px] font-semibold mt-3 lg:leading-11">
               Mortgage Solutions Crafted for Your Life.
             </p>
           </div>
 
           {/* right */}
-          <div className="w-full lg:w-[40%] mt-10 text-justify">
+          <div className="w-full lg:w-[40%] mt-2 lg:mt-10 text-justify">
             Get expert guidance and flexible options to make home ownership
             easy. We’re here to help you finance your dreams with confidence.
           </div>
         </div>
 
         {/* cards */}
-        <div className="w-full lg:w-[97%] mt-10 lg:flex flex-wrap gap-14 mb-4">
+        <div  className="w-full lg:w-[100%]  mt-10 flex flex-wrap justify-evenly gap-8 ">
           {card.map((el, index) => (
             <div
               key={index}
               onMouseEnter={() => animate(index)}
               onMouseLeave={() => animatend(index)}
+              onClick={el.li }
               ref={(elRef) => {
                 carda.current[index] = elRef;
               }}
-              className="w-full lg:w-[30%] mt-4 bg-white rounded-2xl shadow-xl overflow-hidden relative"
+              className="w-full md:w-[45%] lg:w-[30%] mt-4 bg-white rounded-2xl shadow-xl overflow-hidden relative"
             >
               {/* Image section */}
               <div className="rounded-b-xl shadow-2xs overflow-hidden">
@@ -132,18 +136,18 @@ export default function Mortgage() {
               </div>
 
               {/* Content */}
-              <div className="px-[35px] py-4 h-70">
+              <div className="px-[35px] py-4 ">
                 <h3 className="text-[25px] font-medium leading-7 text-gray-900 mb-2">
                   {el.heading}
                 </h3>
-                <p className="text-gray-700 text-[14px] mb-[20px] text-justify">
+                <p className="text-gray-700 text-[14px] mt-5 text-justify">
                   {el.content}
                 </p>
 
                 {/* Read More */}
                 <Link
-                  href={el.li}
-                  className="text-[var(--primg)] font-semibold text-sm hover:underline flex items-center gap-1 absolute bottom-9 left-9"
+                  href='#'
+                  className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 lg:mt8"
                 >
                   Read More
                   <span className="inline-block transform transition-transform group-hover:translate-x-1">

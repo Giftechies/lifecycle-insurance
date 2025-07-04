@@ -17,7 +17,7 @@ export default function Header({title}:{title:string}){
 
           {/* text */}
           <div className=" h-[25%]    w-[100%] flex flex-col items-center justify-center text-center border-white z-20 absolute top-[50%] left-[50%]  transform -translate-x-1/2 -translate-y-1/2  text-white">
-            <p className="animate-fadeInUp text-[1.8rem] mt-6 lg:mt-8 md:text-[40px] lg:text-[56px] leading-tight md:text-base font-semibold mb-2">
+            <p className="animate-fadeInUp text-[26px] mt-6 lg:mt-8 md:text-[40px] lg:text-[56px] leading-tight md:text-base font-medium mb-2">
               
               {title}
             <p className=" flex  justify-center "><Breadcrumb /></p>

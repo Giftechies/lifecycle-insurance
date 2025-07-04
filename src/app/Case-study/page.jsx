@@ -1,6 +1,13 @@
 import Header from "../Components/Header/Header";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap/gsap-core";
+
 
 export default function Case_study(){
+  
+    
+
+
     const card = [
         {
            img:"8.jpg",
@@ -46,10 +53,10 @@ export default function Case_study(){
        <>
     
     <Header title='Case Study' />
-    <main className=" w-full h-full max-w-[1500px] mx-auto ">
-        <section className="Section_1  w-full h-full px-4 md:px-[9%] ">
+    <main className=" w-full h-full max-w-[1600px] mx-auto ">
+        <section className="Section_1 p-6 w-full h-full px-4 md:px-[9%] ">
             {/* Heading text */}
-               <div className=" h-[20%] w-full   mt-8 lg:flex gap-10">
+               <div className=" h-[20%] w-full lg:flex gap-10">
           {/* left */}
           <div className=" w-full text-[var(--primg)]  text-[16px] lg:w-[55%] font-medium ">
             <i className="ri-record-circle-line"></i> Case Study
@@ -59,7 +66,7 @@ export default function Case_study(){
           </div>
 
           {/* right */}
-          <div className=" w-full mt-2 lg:mt-0 lg:w-[40%]   text-justify">
+          <div className=" w-full mt-2 lg:mt-10 lg:w-[43%]   text-justify">
             {" "}
             Lifecycle Financial offers trusted mortgage and insurance advice,
             working with leading banks and providers to help you make the best
@@ -68,11 +75,13 @@ export default function Case_study(){
         </div>
 
         {/* cards */}
-        <div className="Cards w-full h-full py-6  md:p-6 rounded-[20px]   md:flex flex-wrap gap-10 ">
+        <div className="Cards w-full h-full  rounded-[20px]  mt-4  max-md:flex-col flex  justify-items-stretch gap-8 flex-wrap  ">
 
         {/* card */}
         {card.map((el)=>(
-               <div className="card1 w-full md:w-[45%]  mt-6 lg:w-[30%] h-100 shadow-lg rounded-[20px] bg-white relative overflow-hidden  ">
+               <div
+              
+               className="card anime w-full md:w-[45%]   lg:w-[30%] h-100 shadow-lg rounded-[20px] bg-white relative overflow-hidden  ">
             <div className="img w-[100%] h-[50%]  overflow-hidden absolute  z-0 "><img src={el.img} className=" h-full w-full object-cover  "  alt="" />
             </div><div className=" h-[50%] w-full absolute z-20 bg-gradient-to-t from-black/50 via-black/10 to-transparent "></div>
             {/* text */}

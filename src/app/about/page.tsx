@@ -1,24 +1,34 @@
-import Breadcrumb from "../Components/Breadcumb/Breadcumb";
+
 import Header from "../Components/Header/Header";
 
 export default function about() {
+  
   return (
     <>
       <Header title="About us" />
       <main className=" ">
-        {/* section 1 */}
-        <section className="section_1  w-full overflow-hidden max-w-[1500px] mx-auto   ">
-          <main className="main_1  py-4  w-full px-4  lg:relative lg:h-[47em]  lg:px-[9%] ">
-            {/* Part-2 */}
-            <div className="part_2   rounded-[15px] lg:mb-4 w-full  lg:absolute lg:h-[10em] lg:top-7 lg:w-[36%] lg:right-60  ">
-              <p className="text-[var(--primg)]  text-[14px] ">
-                {" "}
-                <i className=" mr-2   ri-record-circle-line "></i>About us
+        <section className="section-1 max-w-[1600px] mx-auto w-[100%]  lg:px-[3rem] lg:py-[3rem]  xl:px-[9rem] ">
+          <main className="  w-full lg:flex " >
+            
+           <div className="Left lg:w-[50%]  xl:w-[30vw] max-lg:hidden  ">
+           <div className="img  lg:aspect-[.7] xl:aspect-[3/4] w-[100%]  rounded-2xl overflow-hidden ">
+           <img src="./about1.jpg" className=" w-full  h-full  object-cover object-center " alt="" />
+
+           </div>
+           </div>
+           <div className="Right w-full   lg:w-[55%] xl:w-[50vw] max-lg:flex flex-col gap-2.5  max-lg:p-6   ">
+             <div className="uppercontent    lg:pl-5 xl:px-8  ">
+              <div className="left w-[80%] ">
+                 <p className="text-[var(--primg)]  text-[16px] ">
+                <i className="   ri-record-circle-line mr-1 "></i>About us
               </p>
-              <p className="text-black text-[26px]  mt-2 leading-7 lg:mt-4  lg:text-[30px] lg:leading-9 font-semibold">
+              <p className="text-black text-[20px] lg:text-[26px]  mt-2 leading-7  xl:leading-9 font-semibold">
                 Operating since 2006 in this Industry.
               </p>
-              <p className="   mt-1 font-extralight tracking-wider leading-6 text-justify  text-[14px]  ">
+
+              </div>
+              <div className="right  ">
+                 <p className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                 Lifecycle Financial is proudly affiliated with KAN (Kiwi Advisor
                 Network), one of New Zealand’s largest and most trusted
                 financial groups specializing in mortgage and insurance
@@ -29,23 +39,19 @@ export default function about() {
                 accountability, and customer-focused support in everything we
                 do.
               </p>
+
+
+              </div>
             </div>
 
             {/* image */}
-            <div className="part_1  mt-2 h-[22em] w-full rounded-[20px] mb-4  overflow-hidden lg:absolute lg:w-[35%] lg:h-[40em] lg:z-10">
-              <img
-                src="./about1.jpg"
-                className=" h-full w-full object-cover "
-                alt=""
-              />
+            <div className="img w-full sm:h-[40vw]  rounded-2xl overflow-hidden lg:hidden ">
+              <img src="./about1.jpg" className=" w-full h-full object-cover  " alt="" />
             </div>
 
-            <div className="   w-full p-5 md:h-[40%] rounded-tl-[25px] rounded-br-[25px] lg:w-[46%] lg:rounded-r-[40px] bg-[var(--primg)] lg:absolute lg:right-45 lg:bottom-25 md:flex items-center flex-col gap-4 py-8 lg:pl-20 lg:px-16 ">
-              <p className=" text-white text-[26px] leading-7  lg:text-[30px] lg:leading-9 font-semibold">
-                Comprehensive Financial Solutions, Tailored to Your Needs
-              </p>
-              <p className="   mt-1 font-extralight tracking-wider text-justify text-[14px]  text-white ">
-                Lifecycle Financial is proudly affiliated with KAN (Kiwi Advisor
+            <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl lg:mt-3 xl:w-[80%]   xl:mt-8  xl:px-8 xl:py-6 lg:rounded-r-4xl ">
+              <h1 className="  lg:leading-6 font-semibold  text-[20px]  xl:leading-8 w-[90%] ">Comprehensive Financial Solutions, Tailored to Your Needs</h1>
+              <p className=" text-[14px]  mt-3 text-justify  ">  Lifecycle Financial is proudly affiliated with KAN (Kiwi Advisor
                 Network), one of New Zealand’s largest and most trusted
                 financial groups specializing in mortgage and insurance
                 distribution. As a committed member of the Auckland Chamber of
@@ -53,29 +59,34 @@ export default function about() {
                 We are also an active contributor to the Insurance & Financial
                 Services Ombudsman Scheme, ensuring transparency,
                 accountability, and customer-focused support in everything we
-                do.
-              </p>
+                do.</p>
+
             </div>
+           </div>
+
           </main>
+
         </section>
 
+
+
         {/* section 2 */}
-        <section className="section_2  lg:pb-55 w-full overflow-hidden  ">
+        <section className="section_2  xl:pb-55 w-full overflow-hidden  ">
           <div className=" bg-[var(--tri)]  max-w-[1600px] mx-auto  ">
-            <div className="  p-4  lg:h-[33em] lg:px-[9%] lg:py-[50px] relative  ">
+            <div className="  p-4  xl:h-[33em] xl:px-[9%] xl:py-[50px] relative  ">
               {/* text */}
-              <div className="  lg:text-left lg:flex gap-10 text-white">
+              <div className="  xl:text-left xl:flex gap-10 text-white">
                 {/* left */}
-                <div className=" w-full text-[14px] lg:w-[55%]  ">
+                <div className=" w-full text-[14px] xl:w-[55%]  ">
                   <i className="ri-record-circle-line"></i> Get to Know Us
                   Better
-                  <p className=" text-[26px] leading-8 lg:leading-11 lg:text-[40px]  font-semibold mt-3 lg:mt-8">
+                  <p className=" text-[26px] leading-8 xl:leading-11 xl:text-[40px]  font-semibold mt-3 xl:mt-8">
                     Empowering Kiwis With Financial Confidence Since 2006
                   </p>
                 </div>
 
                 {/* right */}
-                <div className=" lg:w-[40%] lg:pl-4 lg:pt-10  text-justify lg:mt-5 ">
+                <div className=" xl:w-[40%] xl:pl-4 xl:pt-10  text-justify xl:mt-5 ">
                   {" "}
                   Lifecycle Financial offers trusted mortgage and insurance
                   advice, working with leading banks and providers to help you
@@ -84,22 +95,21 @@ export default function about() {
               </div>
               {/* pic */}
               <div
-                className=" sm:flex md:relative   w-full md:mt-82
-               lg:absolute lg:w-[85%] lg:flex justify-between  lg:-top-10 tracking-normal text-white "
+                className=" md:flex md:gap-5 md:relative   w-full md:mt-82 xl:absolute xl:w-[85%]  justify-between  xl:-top-10 tracking-normal text-white "
               >
                 {/* img */}
-                <div className=" w-full   mt-3 rounded-[10px] sm:w-full sm:h-70 md:-top-75 lg:h-[25em] lg:w-[32%] lg:rounded-[20px] overflow-hidden sm:absolute lg:left-[34%] lg:-top-10 ">
+                <div className=" w-full   mt-3 rounded-[10px]  sm:h-70 md:-top-75 xl:h-[25em] md:absolute md:w-[100%] xl:w-[32%] xl:rounded-[20px] overflow-hidden  xl:left-[34%] xl:-top-10 ">
                   <img
                     src="./ab2.jpg"
                     className=" h-full w-full  object-cover"
                     alt=""
                   />
                 </div>
-                <div className="  mt-3 sm:w-[46%] lg:h-[26em] lg:w-[32%] rounded-[20px] overflow-hidden bg-[var(--primg)] py-6 px-6 ">
-                  <p className=" text-[25px] text-white font-bold ">
+                <div className="  mt-3 w-[100%] xl:h-[26em] xl:w-[32%] rounded-[20px] overflow-hidden bg-[var(--primg)] py-6 px-6 ">
+                  <p className=" text-[25px] md:text-[24px]  text-white font-bold ">
                     Why Lifecycle Financial?
                   </p>
-                  <p className=" mt-3.5 text-justify text-[14px]">
+                  <p className=" mt-3.5 text-justify text-[.9rem]">
                     <i className="ri-checkbox-blank-circle-line text-white "></i>{" "}
                     <span className="font-bold mr-1">
                       Independent and Unbiased Advice:
@@ -112,9 +122,9 @@ export default function about() {
                     secure your future with confidence and clarity.
                   </p>
 
-                  <p className=" mt-3.5 text-justify text-[14px]">
-                    <i className="ri-checkbox-blank-circle-line text-white "></i>{" "}
-                    <span className="font-bold mr-1">
+                  <p className=" mt-3.5 text-justify text-[.9rem]">
+                    <i className="ri-checkbox-blank-circle-line text-white  "></i>{" "}
+                    <span className="font-bold mr-1 text-left ">
                       Expert & Proven Team:
                     </span>
                     Our experienced brokers bring a proven track record in
@@ -125,13 +135,13 @@ export default function about() {
                   </p>
                 </div>
 
-                <div className="  mt-3  sm:w-[46%] lg:h-[26em] lg:w-[32%] rounded-[20px] overflow-hidden bg-[var(--primg)] py-6 px-6 ">
+                <div className="  mt-3  w-[100%] xl:h-[26em] xl:w-[32%] rounded-[20px] overflow-hidden bg-[var(--primg)] py-6 px-6 ">
                   <p className=" text-[25px] text-white font-bold ">
                     What we do?
                   </p>
                   <p className=" mt-3.5 text-justify text-[14px]">
                     <i className="ri-checkbox-blank-circle-line text-white "></i>{" "}
-                    <span className="font-bold mr-1">
+                    <span className="font-bold mr-1 ">
                       Your Needs, Our Insurance Expertise:
                     </span>
                     We review your existing insurance coverage to ensure it
@@ -142,15 +152,17 @@ export default function about() {
                     tailored specifically to your requirements.
                   </p>
 
-                  <p className=" mt-3.5 text-justify text-[14px]">
+                  <p className=" mt-3.5 text-[14px] text-justify md:mt-10">
                     <i className="ri-checkbox-blank-circle-line text-white "></i>{" "}
-                    <span className="font-bold mr-1">
+                    <span className="font-bold mr-1  ">
                       Expert Advice, Claims & Portfolio Audits:
                     </span>
-                    We provide expert advice, handle claims efficiently, and
+                    <span className=" text-justify ">
+                      We provide expert advice, handle claims efficiently, and
                     regularly review your insurance portfolio to ensure it stays
                     aligned with your changing needs. Your peace of mind is our
                     priority.
+                    </span>
                   </p>
                 </div>
               </div>
@@ -161,53 +173,35 @@ export default function about() {
         {/*  */}
 
         {/* section 3 team */}
-        <section className=" w-full px-4 py-10 lg:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
+        <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
           <main className=" w-full ">
-            <p className=" text-[var(--primg)] ">
-            <i className="ri-record-circle-line mr-2 text-lg font-extralight "></i>
+            <p className=" text-[var(--primg)]  font-semibold">
+            <i className="ri-record-circle-line mr-2 text-xl "></i>
             OUR TEAM
           </p>
           {/* cards */}
-          <div className=" md:flex  w-full h-[35em] mb-25 sm:mb-0  text-black/40  items-center justify-center gap-14 mt-1.5 ">
+          <div className=" w-full  text-black/40   mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
           {/* card 1 */}
-            <div className=" w-full h-[60%] md:h-90 bg-white md:w-80  shadow-lg rounded-[30px] overflow-hidden  relative ">
-              <div className="h-40 z-20 w-full bg-[var(--primg)]  "></div>
-              <div className=" h-full  z-10 b w-full  absolute inset-0 flex flex-col items-center justify-center ">
-                {/* img */}
-                <div className=" h-56 w-56 overflow-hidden rounded-full border-8 border-[var(--primg)] ">
-                  <img
-                    src="/harpreet.jpg"
-                    className="  h-full w-full object-top "
-                  />
-                </div>
-                <h1 className="text-2lg text-black font-bold mt-5 ">
-                  Harpreet Singh
-                </h1>
-                <p className=" tracking-tighter text-[14px] ">
-                  Financial Adviser
-                </p>
-              </div>
-            </div>
-            {/* card2 */}
-            <div className=" w-full h-[60%] mt-3.5 md:h-90 bg-white md:w-80  shadow-lg rounded-[30px] overflow-hidden  relative hover:scale-101 duration-300 ">
-              <div className="h-40 w-full bg-[var(--primg)] "></div>
-              <div className=" h-full w-full absolute inset-0 flex flex-col items-center justify-center ">
-                {/* img */}
-                <div className=" h-56 w-56 overflow-hidden rounded-full border-8 border-[var(--primg)] ">
-                  <img
-                    src="/raji.jpg"
-                    className="  h-full w-full object-top "
-                  />
-                </div>
-                <h1 className="text-2lg text-black font-bold mt-5 ">
-                  Rajwinder Rattan
-                </h1>
-                <p className=" tracking-tighter text-[14px]">
-                  Practice Manager
-                </p>
-              </div>
+
+          {[
+            {Name:"Harpeet Singh",
+            title:" Financial Adviser",
+            img:'/harpreet.jpg'
+          },
+            {Name:"Rajwinder Rattan",
+            title:"Practice Manager",
+            img:'/raji.jpg'
+          },
+          ].map((el)=>(
+            <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%]    bg-white shadow rounded-xl flex items-center justify-center text-center p-3">
+            <div className="img w-[95%]  aspect-square">
+              <img src={el.img} className="w-full rounded-xl h-full object-cover object-top " alt="" />
+              <h1 className=" mt-4  md:text-[20px] text-black/80 font-medium ">{el.Name}</h1>
+              <h3 className=" text-[14px] mt-2 ">{el.title}</h3>
             </div>
 
+          </div>
+          ))}
           </div>
           </main>
         </section>
