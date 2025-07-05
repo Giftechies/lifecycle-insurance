@@ -177,15 +177,15 @@ export default function MobileMenuOverlay({
           </li>
           <li>
             <Link
-              href="#"
+              href="/Calculator"
               onClick={() => {
-                  setIsEnquireOpen(true)
+                  
                 setIsMenuOpen(false);
 
                 
               }}
             >
-              Contact
+              Calculator
             </Link>
           </li>
         </ul>
