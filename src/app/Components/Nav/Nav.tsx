@@ -11,7 +11,7 @@ type NavProps = {
 export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [insuranceOpen, setInsuranceOpen] = useState(false);
+  const [InsurenceOpen, setInsurenceOpen] = useState(false);
   const [mortgageOpen, setMortgageOpen] = useState(false);
   const router = useRouter();
 
@@ -52,17 +52,17 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
               <Link href="/about">About Us</Link>
             </div>
 
-            {/* Insurance dropdown */}
+            {/* Insurence dropdown */}
             <div
               className="relative   duration-150   px-4 py-2"
-              onMouseEnter={() => setInsuranceOpen(true)}
-              onMouseLeave={() => setInsuranceOpen(false)}
+              onMouseEnter={() => setInsurenceOpen(true)}
+              onMouseLeave={() => setInsurenceOpen(false)}
             >
               <Link href="/Insurence">Insurance</Link>
-              {insuranceOpen && (
+              {InsurenceOpen && (
                 <div className="absolute top-full left-0 w-64 bg-white  shadow-xl rounded-md z-50 p-3">
                   {[
-                    "Life Insurance",
+                    "Life insurance",
                     "Trauma Recovery Cover",
                     "Total Permanent Disability Benefit Cover",
                     "Mortgage & Rent Protection Cover",

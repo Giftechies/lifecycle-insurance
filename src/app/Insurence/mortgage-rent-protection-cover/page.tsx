@@ -14,18 +14,7 @@ import {
 } from "lucide-react";
 
 const Sidebar = () => {
-  const items = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} /> },
-    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} /> },
-    {
-      label: "Total Permanent Disability Benefit Cover",
-      icon: <Activity size={20} />,
-    },
-    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} /> },
-    { label: "Income Protection Cover", icon: <Wallet size={20} /> },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} /> },
-    { label: "Group Insurance", icon: <Users size={20} /> },
-  ];
+ 
 
   const cover = [
     {
@@ -80,7 +69,7 @@ const Sidebar = () => {
 
   const How = [
     {title:"You can choose to cover upto 110% of your mortgage repayment on your residential property.  ",
-      content:" The extra 10% is important because there are additional expenses with property, such as rates, and home and contents insurance and the interest rate on most home loans will rise at some stage, when fixed rates roll off or variable rates increase."
+      content:" The extra 10% is important because there are additional expenses with property, such as rates, and home and contents Insurance and the interest rate on most home loans will rise at some stage, when fixed rates roll off or variable rates increase."
     },
     {title:" Alternatively, you can take our Mortgage cover for your investment property ",
       content:"For investment properties or for small business lending against your residential property, you can take out Mortgage cover up to the value of 40% of your gross annual income. "
@@ -105,7 +94,7 @@ const Sidebar = () => {
       content:" Your TPD cover is separate to your term life Insurance cover. A TPD claim won’t reduce the amount of life cove you have. "
     },
      {title:"Accelerated :",
-      content:" Your TPD insurance is linked to your life cover. So if TPD claim is paid your life cover is reduced by that amount. However you can choose to reinstate your life cover if this happens."
+      content:" Your TPD Insurance is linked to your life cover. So if TPD claim is paid your life cover is reduced by that amount. However you can choose to reinstate your life cover if this happens."
     },
     
   ]
@@ -136,7 +125,7 @@ const Sidebar = () => {
               Mortgage Repayment Cover
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify lg:text-[14px] ">
-                Recovery cover pay you a lump sum of money to help you recover physically and financially from a serious illness, injury or medical procedure. The most common illnesses linked to trauma insurance in New Zealand are Cancer, Hearth Attack and Stroke and the cost of recovery can have a huge impact on you, your family and your business.
+                Recovery cover pay you a lump sum of money to help you recover physically and financially from a serious illness, injury or medical procedure. The most common illnesses linked to trauma Insurance in New Zealand are Cancer, Hearth Attack and Stroke and the cost of recovery can have a huge impact on you, your family and your business.
 
 
               </p>
@@ -184,7 +173,7 @@ const Sidebar = () => {
              <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
             How does Mortgage Cover work ?
             </h1>
-            <p className=" text-[14px] ">There are three types of TPD Insurances….</p>
+            <p className=" text-[14px] ">There are three types of TPD Insurences….</p>
             {How.map((el)=>(
               <>
               <div className=" flex items-start mt-2.5 " >

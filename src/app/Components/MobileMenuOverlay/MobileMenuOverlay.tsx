@@ -12,7 +12,7 @@ type MobileProps = {
 export default function MobileMenuOverlay({
   setIsMenuOpen,setIsEnquireOpen
 }: MobileProps) {
-  const [isInsuranceOpen, setIsInsuranceOpen] = useState(false);
+  const [isInsurenceOpen, setIsInsurenceOpen] = useState(false);
   const [isMortgageOpen, setIsMortgageOpen] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
   const handleclose = () => {
@@ -76,27 +76,27 @@ export default function MobileMenuOverlay({
             </Link>
           </li>
 
-          {/* Insurance dropdown */}
+          {/* Insurence dropdown */}
           <li>
             <div className="flex justify-between items-center w-full">
               <Link href={"/Insurence"} onClick={() => setIsMenuOpen(false)}>
                 <span>Insurance</span>
               </Link>
               <span>
-                {isInsuranceOpen ? (
+                {isInsurenceOpen ? (
                   <i
-                    onClick={() => setIsInsuranceOpen(!isInsuranceOpen)}
+                    onClick={() => setIsInsurenceOpen(!isInsurenceOpen)}
                     className="ri-arrow-down-s-line"
                   ></i>
                 ) : (
                   <i
-                    onClick={() => setIsInsuranceOpen(!isInsuranceOpen)}
+                    onClick={() => setIsInsurenceOpen(!isInsurenceOpen)}
                     className="ri-arrow-right-s-line"
                   ></i>
                 )}
               </span>
             </div>
-            {isInsuranceOpen && (
+            {isInsurenceOpen && (
               <ul className="pl-4 mt-2 space-y-6 text-sm">
                 {[
                   "Life Insurance",

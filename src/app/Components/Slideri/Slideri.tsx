@@ -17,16 +17,16 @@ import { useRouter } from "next/navigation";
     const router = useRouter()
 
     const items = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} />, li: ()=>router.push('http://localhost:3000/Insurence/life-insurance') },
-    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} />, li: ()=>router.push('http://localhost:3000/Insurence/trauma-recovery-cover') },
+    { label: "Life Insurance", icon: <ShieldCheck size={20} />, li: ()=>router.push('/Insurence/life-insurance') },
+    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} />, li: ()=>router.push('/Insurence/trauma-recovery-cover') },
     {
       label: "Total Permanent Disability Benefit Cover",
-      icon: <Activity size={20} />,li: ()=>router.push('http://localhost:3000/Insurence/total-permanent-disability-benefit-cover')
+      icon: <Activity size={20} />,li: ()=>router.push('/Insurence/total-permanent-disability-benefit-cover')
     },
-    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} />, li: ()=>router.push('http://localhost:3000/Insurence/mortgage-rent-protection-cover') },
-    { label: "Income Protection Cover", icon: <Wallet size={20} />, li: ()=>router.push('http://localhost:3000/Insurence/income-protection-cover') },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} />, li: ()=>router.push('http://localhost:3000/Insurence/medical-insurance') },
-    { label: "Group Insurance", icon: <Users size={20} />, li: ()=>router.push('http://localhost:3000/Insurence/group-insurance') },
+    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} />, li: ()=>router.push('/Insurence/mortgage-rent-protection-cover') },
+    { label: "Income Protection Cover", icon: <Wallet size={20} />, li: ()=>router.push('/Insurence/income-protection-cover') },
+    { label: "Medical Insurance", icon: <Stethoscope size={20} />, li: ()=>router.push('/Insurence/medical-insurance') },
+    { label: "Group Insurance", icon: <Users size={20} />, li: ()=>router.push('/Insurence/group-insurance') },
   ];
     return(
          <div className=" hidden  md:w-[50%] lg:w-[25%] md:flex flex-col  px-6">

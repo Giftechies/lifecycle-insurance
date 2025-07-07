@@ -14,18 +14,7 @@ import {
 } from "lucide-react";
 
 const Sidebar = () => {
-  const items = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} /> },
-    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} /> },
-    {
-      label: "Total Permanent Disability Benefit Cover",
-      icon: <Activity size={20} />,
-    },
-    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} /> },
-    { label: "Income Protection Cover", icon: <Wallet size={20} /> },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} /> },
-    { label: "Group Insurance", icon: <Users size={20} /> },
-  ];
+ 
 
 
   const benefit =[
@@ -53,14 +42,14 @@ const Sidebar = () => {
                 <i className="ri-record-circle-line mr-1.5 "></i>Group Insurance
               </h1>
               <h2 className=" leading-11 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
-               Trusted Name for Group Insurances in New Zealand
+               Trusted Name for Group Insurences in New Zealand
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify text-[14px] ">
-At LifeCycle Financial, we understand that your workers are the greatest asset for your business. Their protection and safety at the workplace is your prime goal. But what about uncertain accidents? This is where group insurances come into the picture.
+At LifeCycle Financial, we understand that your workers are the greatest asset for your business. Their protection and safety at the workplace is your prime goal. But what about uncertain accidents? This is where group Insurences come into the picture.
 
               </p>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify ">
-Our group insurances are designed to support every business in New Zealand in attracting and retaining top talent while taking care of their financial security.
+Our group Insurences are designed to support every business in New Zealand in attracting and retaining top talent while taking care of their financial security.
 
               </p>
             </div>
@@ -76,8 +65,8 @@ Our group insurances are designed to support every business in New Zealand in at
                     <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
                 What Is Group Insurance?
                     </h1>
-                     <p className=" mt-1 lg:mt-4 ">    Group insurance, as the name suggests, is a type of insurance that is ideal for businesses. This provides cover for a group of individuals, under a single policy. It is suitable for businesses to offer meaningful benefits to their team members such as life insurance, income protection, etc.          </p>
-                     <p className=" mt-1 lg:mt-2 ">    Since group insurance is a combination of multiple policies in one, it offers outstanding benefits with reduced premiums.         </p>
+                     <p className=" mt-1 lg:mt-4 ">    Group Insurance, as the name suggests, is a type of Insurance that is ideal for businesses. This provides cover for a group of individuals, under a single policy. It is suitable for businesses to offer meaningful benefits to their team members such as life Insurance, income protection, etc.          </p>
+                     <p className=" mt-1 lg:mt-2 ">    Since group Insurance is a combination of multiple policies in one, it offers outstanding benefits with reduced premiums.         </p>
                   
 
                   </div>
@@ -120,7 +109,7 @@ Our group insurances are designed to support every business in New Zealand in at
              Give your team the peace of mind!
             </p>
             <p className=" text-[14px] mt-2 ">
-             Let your team focus on what they do the best while being stress-free about their financial freedom with comprehensive group insurance solutions from LifeCycle Financial. 
+             Let your team focus on what they do the best while being stress-free about their financial freedom with comprehensive group Insurance solutions from LifeCycle Financial. 
             </p>
             <p className=" text-[14px] mt-2">
              We’re here to help.

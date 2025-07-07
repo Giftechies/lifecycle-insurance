@@ -17,25 +17,28 @@ export default function Home() {
   const sec4 = useRef(null);
 
   useGSAP(() => {
-    gsap.from(".icon_box", {
+    gsap.from(".icon-box", {
       opacity: 0,
       x: -100,
+      duration:1,
       delay: 0.5,
-      scrollTrigger: ".icon_box",
+      scrollTrigger: ".icon-box",
     });
   }, []);
 
   useGSAP(
     () => {
-      gsap.from(".sec2part3", {
+      gsap.from(".sec-2-anim", {
         opacity: 0,
         x: -400,
         z: 999,
-        duration: 2,
+        duration: 1,
         delay: 0.5,
+      
         scrollTrigger: {
-          trigger: ".sec2part3",
-          start: "top 100%",
+          trigger: ".sec-2-anim",
+          start: "top 95%",
+          
         },
       });
     },
@@ -44,13 +47,13 @@ export default function Home() {
 
   useGSAP(
     () => {
-      gsap.from(".sec3animate", {
-        y: -250,
+      gsap.from(".box-anime", {
+        x: -250,
         opacity: 0,
         duration: 1.5,
         scrollTrigger: {
-          trigger: ".section_3",
-          start: "top 80%",
+          trigger: ".box-anime",
+          start: "top 60%",
         },
       });
     },
@@ -59,13 +62,14 @@ export default function Home() {
 
   useGSAP(
     () => {
-      gsap.from(".sec3animate2", {
-        y: 250,
+      gsap.from(".box-anime-2", {
+        x: 250,
         opacity: 0,
         duration: 1.5,
         scrollTrigger: {
-          trigger: ".section_3",
-          start: "top 80%",
+          trigger: ".box-anime",
+          start: "top 60%",
+          markers:true,
         },
       });
     },
@@ -142,7 +146,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
 
           {/* Text + Icon Content */}
-          <div className="relative  w-full h-full max-w-[1600px] mx-auto">
+          <div className=" relative  w-full h-full max-w-[1600px] mx-auto">
             <div className="relative pt-25 px-4 md:px-[2.5rem]  lg:px-[3.5rem] xl:px-[9%] lg:pt-50 pb-10 z-20 text-white ">
               <p className="animate-fadeInUp text-gray-300 text-sm md:text-base font-semibold mb-2">
                 <i className="ri-record-circle-line mr-2 text-lg font-extralight text-white"></i>
@@ -174,7 +178,7 @@ export default function Home() {
               </button>
 
               {/* Icon Box */}
-              <div className="mt-12 w-full overflow-hidden bg-white/10 border border-dotted border-white/40 md:w-[70%] rounded-3xl flex flex-col  md:flex-row items-center lg:w-[50%] justify-between p-4 gap-6">
+              <div className="icon-box mt-12 w-full overflow-hidden bg-white/10 border border-dotted border-white/40 md:w-[70%] rounded-3xl flex flex-col  md:flex-row items-center lg:w-[50%] justify-between p-4 gap-6">
                 {/* Card 1 */}
                 <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dotted border-white/40 p-4">
                   <img
@@ -216,7 +220,7 @@ export default function Home() {
         </section>
 
         {/* section 2 */}
-        <section className="section-2 max-w-[1600px] mx-auto  ">
+        <section ref={sec2} className="section-2 max-w-[1600px] mx-auto  ">
           <main className="  w-full p-4  lg:px-[3rem] lg:flex  relative ">
             <div className="imgLeft w-full  rounded-4xl overflow-hidden border max-md:aspect-[1.5] md:aspect-[1.8]  lg:w-[44%] lg:h-[37rem]  ">
               <img
@@ -235,9 +239,9 @@ export default function Home() {
                 <p className=" text-[14px] text-justify text-[var(--secgr)] mt-2">
                   We provide wide range of financial services to the clients
                   including Mortgages both Residential & Commercial, & Personal
-                  insurance products such as life, Health, Income Protection,
-                  Mortgage Protection, Redundancy cover and Trauma insurance.
-                  For home, contents, car and business insurance we have
+                  Insurence products such as life, Health, Income Protection,
+                  Mortgage Protection, Redundancy cover and Trauma Insurence.
+                  For home, contents, car and business Insurence we have
                   additional specialists that we call upon.
                 </p>
                 <button className=" bg-[var(--primg)]  text-white/80 px-7 py-3 rounded-full  mt-4   text-[12px] ">
@@ -246,7 +250,7 @@ export default function Home() {
               </div>
 
               <div className="middel md:flex gap-10 ">
-               <div className=" md:w-[55%]  lg:w-[65%] xl:w-[50%] ">
+               <div className="sec-2-OneBox sec-2-anim md:w-[55%]  lg:w-[65%] xl:w-[50%] ">
                  <div className="text bg-[var(--primg)] text-white mt-6 max-lg:rounded-4xl  p-6 md:w-[100%] md:p-12 md:flex md:flex-col lg:py-10 lg:px-6 xl:px-16 lg:w-[100%] max-lg:justify-center lg:rounded-r-4xl    ">
                   <p className=" lg:mt-5  text-[18px] font-semibold">
                     {" "}
@@ -279,7 +283,7 @@ export default function Home() {
                   </div>
                </div>
 
-                <div className="lowerpic w-full flex flex-col items-center mt-6 md:w-[40%] lg:w-[30%]  ">
+                <div className="lowerpic sec-2-anim w-full flex flex-col items-center mt-6 md:w-[40%] lg:w-[30%]  ">
                   <div className="img">
                     <img
                       src="./sec2pic2.png"
@@ -324,7 +328,7 @@ export default function Home() {
                 <h1 className=" text-[36px] lg:text-[32px]  font-bold tracking-norma  leading-9 text-white/80 ">
                   Numbers That Speak for Themselves
                 </h1>
-                <div className="card  max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
+                <div className="card box-anime  max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
                   <div className=" w-[80%] lg:w-[75%] xl:w-[65%] tracking-normal ">
                     <img src="./family.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
@@ -336,7 +340,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="card  max-md:p-8   md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
+                <div className="card box-anime  max-md:p-8   md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
                   <div className="w-[80%]lg:w-[75%]  lg:w-[65%] tracking-normal ">
                     <img src="./timer.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
@@ -348,7 +352,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="card  max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
+                <div className="card box-anime-2   max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
                   <div className=" w-[80%] lg:w-[75%]  xl:w-[65%] tracking-normal ">
                     <img src="./family.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
@@ -360,7 +364,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="card  max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
+                <div className="card  box-anime-2 max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
                   <div className=" w-[80%] lg:w-[75%]  xl:w-[65%] tracking-normal ">
                     <img src="./bank.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
@@ -368,14 +372,14 @@ export default function Home() {
                     </p>
                     <p className=" font-medium  text-black/60 ">
                       {" "}
-                      Trusted bank and insurance partners
+                      Trusted bank and Insurence partners
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="left md:hidden lg:block lg:w-[40%]    relative ">
-              <div className="  img sec3animate3  absolute bg-red-500   lg:w-[90%] xl:w-[70%] aspect-[.5] bottom-55 right-0   rounded-4xl overflow-hidden    ">
+              <div className="  img sec3animate3  absolute   lg:w-[90%] xl:w-[70%] aspect-[.5] bottom-55 right-0   rounded-4xl overflow-hidden    ">
                 <img
                   src="12.jpg"
                   className=" h-full w-full object-cover"
@@ -427,12 +431,12 @@ export default function Home() {
                 {/* part 2 */}
                 <div className="part2 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full lg:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden ">
                   <p className="text-white font-semibold text-[20px] lg:mb-3">
-                    INSURANCE
+                    Insurence
                   </p>
 
                   <p className=" text-[14px] text-white/80 text-justify mt-2">
                     {" "}
-                    As specialist Insurance Brokers with many years of
+                    As specialist Insurence Brokers with many years of
                     experience, we are able to advise you and provide you with
                     the solutions that best suit your needs,
                   </p>
@@ -761,7 +765,7 @@ export default function Home() {
                   <option value="" disabled>
                     Service you're interested in?
                   </option>
-                  <option value="Insurance">Insurance</option>
+                  <option value="Insurence">Insurence</option>
                   <option value="Mortgage">Mortgage</option>
                 </select>
 

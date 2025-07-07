@@ -15,7 +15,7 @@ import {
 
 const Sidebar = () => {
   const items = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} /> },
+    { label: "Life Insurence", icon: <ShieldCheck size={20} /> },
     { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} /> },
     {
       label: "Total Permanent Disability Benefit Cover",
@@ -23,8 +23,8 @@ const Sidebar = () => {
     },
     { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} /> },
     { label: "Income Protection Cover", icon: <Wallet size={20} /> },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} /> },
-    { label: "Group Insurance", icon: <Users size={20} /> },
+    { label: "Medical Insurence", icon: <Stethoscope size={20} /> },
+    { label: "Group Insurence", icon: <Users size={20} /> },
   ];
 
   const cover = [
@@ -41,7 +41,7 @@ const Sidebar = () => {
     {
       title: " Paying for Alternative treatments ",
       content:
-        "that aren’t covered by health insurance. For example, many people undergoing chemotherapy choose to do alternative treatments at the same time to help them recover from the effects of the chemotherapy. Trauma Recovery cover can also help cover medical treatments that health insurance only partly pays for.",
+        "that aren’t covered by health Insurence. For example, many people undergoing chemotherapy choose to do alternative treatments at the same time to help them recover from the effects of the chemotherapy. Trauma Recovery cover can also help cover medical treatments that health Insurence only partly pays for.",
     },
     {
       title: "Reducing debt :",
@@ -81,7 +81,7 @@ const Sidebar = () => {
       content:"Your Trauma Cover is separate from you life cover. A Trauma claim won’t reduce the amount of life cover you have."
     },
     {title:"Accelerated –",
-      content:"Your Trauma Cover is linked to your life cover. Insurance company will pay your Trauma claim out of your life Cover. However you can add a benefit to re-establish your original life cover if this happens."
+      content:"Your Trauma Cover is linked to your life cover. Insurence company will pay your Trauma claim out of your life Cover. However you can add a benefit to re-establish your original life cover if this happens."
     },
   ]
 
@@ -99,13 +99,13 @@ const Sidebar = () => {
       content:": You can choose to increase your existing trauma cover, without any medical underwriting, whenever a special event occurs in your life- such as taking out o a mortgage or getting a pay rise."
     },
      {title:"Inflation adjustment benefit : ",
-      content:"Each year Insurance company will offer to increase your sum insured by the rate of inflation, according to the consumer price index (CPI)"
+      content:"Each year Insurence company will offer to increase your sum insured by the rate of inflation, according to the consumer price index (CPI)"
     },
      {title:"Bringing you home  :",
       content:" If you have been working overseas for more than three months when you suffer a trauma and you wish to return home, your Trauma cover includes a return to home benefit which will reimburse you for the costs of bringing yourself and a companion home to New Zealand (up to certain limits)"
     },
      {title:"Free Kids Cover : ",
-      content:"You can have free Trauma insurance up to $50,000 for each of your children or grandchildren as part of your policy."
+      content:"You can have free Trauma Insurence up to $50,000 for each of your children or grandchildren as part of your policy."
     },
      {title:"Early Trauma Benefit :",
       content:"We will receive a partial payment up to 25% of your total cover for an additional conditions such as Parkinson’s or Multiple Sclerosis. This is paid in addition to the main conditions that you are covered for with Trauma cover."
@@ -114,7 +114,7 @@ const Sidebar = () => {
       content:"You can restore your Trauma cover after 12 months of you have claimed on it, so that you can claim it again in the future."
     },
      {title:"Life Cover Buy Back benefit : ",
-      content:"You can increase your life cover back to its original amount when your trauma claim comes out of your life insurance – when you have the accelerated version of Trauma insurance."
+      content:"You can increase your life cover back to its original amount when your trauma claim comes out of your life Insurence – when you have the accelerated version of Trauma Insurence."
     },
      {title:"We pay your Premiums’ benefit :",
       content:"This will pay your Trauma Cover premiums for you if you are ill or injured and can’t work in your usual job for more than 10 hours a week."
@@ -153,7 +153,7 @@ const Sidebar = () => {
                 When others depend on you
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-               Trauma Recovery cover pays you a lump sum of money to help you recover physically and financially from a serious illness, injury or medical procedure. The most common illnesses linked to trauma insurance in New Zealand are Cancer, Hearth Attack and Stroke and the cost of recovery can have a huge impact on you, your family and your business.
+               Trauma Recovery cover pays you a lump sum of money to help you recover physically and financially from a serious illness, injury or medical procedure. The most common illnesses linked to trauma Insurence in New Zealand are Cancer, Hearth Attack and Stroke and the cost of recovery can have a huge impact on you, your family and your business.
               </p>
             </div>
 

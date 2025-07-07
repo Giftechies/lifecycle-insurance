@@ -9,12 +9,12 @@ import { useRouter } from "next/navigation";
     const router = useRouter()
 
  const items = [
-    { label: "Home Loan", icon: <Home size={20} />, li: ()=>router.push('http://localhost:3000/Mortgage/home-loans')  },
-    { label: "Refinance", icon: <Repeat size={20} />, li: ()=>router.push('http://localhost:3000/Mortgage/refinance') },
-    { label: "Investment Loan", icon: <LineChart size={20} />, li: ()=>router.push('http://localhost:3000/Mortgage/investment-loan')   },
-    { label: "Business Loan", icon: <Briefcase size={20} /> , li: ()=>router.push('http://localhost:3000/Mortgage/business-loan')},
-    { label: "Construction Loan", icon: <Hammer size={20} />, li: ()=>router.push('http://localhost:3000/Mortgage/construction-loan') },
-    { label: "Commercial Loan", icon: <Building size={20} /> , li: ()=>router.push('http://localhost:3000/Mortgage/commercial-loan')},
+    { label: "Home Loan", icon: <Home size={20} />, li: ()=>router.push('/Mortgage/home-loans')  },
+    { label: "Refinance", icon: <Repeat size={20} />, li: ()=>router.push('/Mortgage/refinance') },
+    { label: "Investment Loan", icon: <LineChart size={20} />, li: ()=>router.push('/Mortgage/investment-loan')   },
+    { label: "Business Loan", icon: <Briefcase size={20} /> , li: ()=>router.push('/Mortgage/business-loan')},
+    { label: "Construction Loan", icon: <Hammer size={20} />, li: ()=>router.push('/Mortgage/construction-loan') },
+    { label: "Commercial Loan", icon: <Building size={20} /> , li: ()=>router.push('/Mortgage/commercial-loan')},
   ];
 
     return(

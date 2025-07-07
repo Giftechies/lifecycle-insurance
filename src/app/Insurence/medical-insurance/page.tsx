@@ -40,7 +40,7 @@ const Sidebar = () => {
     {
       title: "",
       content:
-        "  During this time, 60% of all insurance claims were for individuals aged 30–59. ",
+        "  During this time, 60% of all Insurance claims were for individuals aged 30–59. ",
     },
     {
       title: "",
@@ -94,7 +94,7 @@ const Sidebar = () => {
   const easy = [
     {
       content:
-        " Making the right choice on which health insurance policy is not always easy. The aim is to find a good balance between cover and cost. Some key factors to look for in a policy are :",
+        " Making the right choice on which health Insurance policy is not always easy. The aim is to find a good balance between cover and cost. Some key factors to look for in a policy are :",
     },
     {
       content:
@@ -109,7 +109,7 @@ const Sidebar = () => {
     { content: " Clarity of what is covered and what is not" },
     {
       content:
-        " A trusted insurer with a proven history as health insurance provider",
+        " A trusted insurer with a proven history as health Insurance provider",
     },
   ];
 
@@ -130,10 +130,10 @@ const Sidebar = () => {
 
               <p className=" mt-1 lg:mt-4 text-[14px] tracking-wider text-justify ">
                 Nothing is more important than the health of you and your
-                family. And that’s what makes health insurance such an important
+                family. And that’s what makes health Insurance such an important
                 part of your life. Unexpected health problems can impact your
                 family’s life, lifestyle and finances. By Choosing health
-                insurance you and your family can get on with enjoying life to
+                Insurance you and your family can get on with enjoying life to
                 the full, with the security of knowing that you have protection
                 and options should you need them.
               </p>
@@ -170,7 +170,7 @@ const Sidebar = () => {
                 {/* content 2 */}
                 <div className=" text-black/60 mt-4 ">
                   <h1 className="  text-[18px] lg:text-[26px] lg:leading-8 text-black font-semibold ">
-                    Five important reasons to have health insurance
+                    Five important reasons to have health Insurance
                   </h1>
                   {reason.map((el) => (
                     <div className=" flex items-start mt-1 text-black/80 ">
@@ -197,7 +197,7 @@ const Sidebar = () => {
             {/* public */}
             <div>
               <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">
-                Public health system vs private health insurance
+                Public health system vs private health Insurance
               </h1>
               <p className=" text-[14px]  mt-2 ">
                 While New Zealand has an established public health system, ther
@@ -210,7 +210,7 @@ const Sidebar = () => {
                 being inconvenient to devastating.
               </p>
               <p className=" text-[14px] mt-3 ">
-                Private health insurance provides for those who don’t qualify
+                Private health Insurance provides for those who don’t qualify
                 for immediate treatment in the public system. It means you can
                 choose to have treatment and access to provate healthcare when
                 you need it. You don’t need to compromise your quality of life
@@ -221,7 +221,7 @@ const Sidebar = () => {
 
             <div>
               <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">
-                Can you afford not to have health insurance ?
+                Can you afford not to have health Insurance ?
               </h1>
               <p className=" text-[14px]  mt-2 ">
                 While New Zealand has an health system, ther are limitations to
@@ -294,7 +294,7 @@ const Sidebar = () => {
                 their major costs such as mortgages, credit card debt, car
                 loans, children’s education, childcare and day-to-day expenses (
                 food, electricity, rates etc). What costs would you need to
-                cover ? Ill health and lack of health insurance is one of the
+                cover ? Ill health and lack of health Insurance is one of the
                 five main causes of the people going broke.{" "}
               </p>
             </div>
@@ -303,7 +303,7 @@ const Sidebar = () => {
                 Couldn’t I just self insure ?
               </h1>
               <p className=" text-[14px]  mt-2 ">
-                Rather than paying premiums for private health insurance, some
+                Rather than paying premiums for private health Insurance, some
                 people believe they could afford private treatment if need be.
                 With many hospital treatments now costing over $20,000, self
                 insuring for this amount could be financially challenging.{" "}
@@ -330,7 +330,7 @@ const Sidebar = () => {
             <div>
               <h1 className="text-[18px] mt-6 lg:text-[26px] text-black lg:leading-8 font-semibold">
                 How would I afford to pay for one of those expensive treatments
-                without insurance ?
+                without Insurance ?
               </h1>
               <p className=" text-[14px]  mt-2 ">
                 Many people do not realise the actual cost of private hospital
@@ -358,7 +358,7 @@ const Sidebar = () => {
                 How do I easily compare between different health policies ?
               </h1>
               <p className=" text-[14px]  mt-2 ">
-                Making the right choice on which health insurance policy is not
+                Making the right choice on which health Insurance policy is not
                 always easy. The aim is to find a good balance between cover and
                 cost. Some key factors to look for in a policy are :
               </p>
@@ -375,7 +375,7 @@ const Sidebar = () => {
                   Pre-Existing Conditions………. We can possibly get you some cover
                 </span>{" "}
                 which will cover Pre-Existing Conditions. For more information
-                or a free no obligation review of your insurance needs then
+                or a free no obligation review of your Insurance needs then
                 please contact us on 0800 50 7770 or
                 harpreet@lifecyclefinancial.co.nz{" "}
               </p>

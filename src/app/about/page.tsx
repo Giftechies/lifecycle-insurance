@@ -31,10 +31,10 @@ export default function about() {
                  <p className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                 Lifecycle Financial is proudly affiliated with KAN (Kiwi Advisor
                 Network), one of New Zealand’s largest and most trusted
-                financial groups specializing in mortgage and insurance
+                financial groups specializing in mortgage and Insurence
                 distribution. As a committed member of the Auckland Chamber of
                 Commerce, we uphold the highest standards of service and ethics.
-                We are also an active contributor to the Insurance & Financial
+                We are also an active contributor to the Insurence & Financial
                 Services Ombudsman Scheme, ensuring transparency,
                 accountability, and customer-focused support in everything we
                 do.
@@ -53,10 +53,10 @@ export default function about() {
               <h1 className="  lg:leading-6 font-semibold  text-[20px]  xl:leading-8 w-[90%] ">Comprehensive Financial Solutions, Tailored to Your Needs</h1>
               <p className=" text-[14px]  mt-3 text-justify  ">  Lifecycle Financial is proudly affiliated with KAN (Kiwi Advisor
                 Network), one of New Zealand’s largest and most trusted
-                financial groups specializing in mortgage and insurance
+                financial groups specializing in mortgage and Insurence
                 distribution. As a committed member of the Auckland Chamber of
                 Commerce, we uphold the highest standards of service and ethics.
-                We are also an active contributor to the Insurance & Financial
+                We are also an active contributor to the Insurence & Financial
                 Services Ombudsman Scheme, ensuring transparency,
                 accountability, and customer-focused support in everything we
                 do.</p>
@@ -88,7 +88,7 @@ export default function about() {
                 {/* right */}
                 <div className=" xl:w-[40%] xl:pl-4 xl:pt-10  text-justify xl:mt-5 ">
                   {" "}
-                  Lifecycle Financial offers trusted mortgage and insurance
+                  Lifecycle Financial offers trusted mortgage and Insurence
                   advice, working with leading banks and providers to help you
                   make the best financial decisions for your future.
                 </div>
@@ -116,7 +116,7 @@ export default function about() {
                     </span>
                     At Lifecycle Financial, we provide independent, need-based
                     advice, working with top banks and insurers to deliver
-                    tailored mortgage and insurance solutions. Our expert
+                    tailored mortgage and Insurence solutions. Our expert
                     brokers focus on your goals, ensuring the protection you
                     need—right when you need it. We’re committed to helping you
                     secure your future with confidence and clarity.
@@ -128,7 +128,7 @@ export default function about() {
                       Expert & Proven Team:
                     </span>
                     Our experienced brokers bring a proven track record in
-                    delivering personalized financial and insurance solutions.
+                    delivering personalized financial and Insurence solutions.
                     With a strong focus on your needs, we ensure you receive the
                     right coverage to protect your lifestyle—when it matters
                     most.
@@ -142,12 +142,12 @@ export default function about() {
                   <p className=" mt-3.5 text-justify text-[14px]">
                     <i className="ri-checkbox-blank-circle-line text-white "></i>{" "}
                     <span className="font-bold mr-1 ">
-                      Your Needs, Our Insurance Expertise:
+                      Your Needs, Our Insurence Expertise:
                     </span>
-                    We review your existing insurance coverage to ensure it
+                    We review your existing Insurence coverage to ensure it
                     aligns with your current needs and circumstances. After
                     conducting a detailed needs analysis based on the
-                    information you provide, we reach out to multiple insurance
+                    information you provide, we reach out to multiple Insurence
                     providers to secure the most suitable products and deals
                     tailored specifically to your requirements.
                   </p>
@@ -159,7 +159,7 @@ export default function about() {
                     </span>
                     <span className=" text-justify ">
                       We provide expert advice, handle claims efficiently, and
-                    regularly review your insurance portfolio to ensure it stays
+                    regularly review your Insurence portfolio to ensure it stays
                     aligned with your changing needs. Your peace of mind is our
                     priority.
                     </span>

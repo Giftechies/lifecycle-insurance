@@ -14,18 +14,6 @@ import {
 } from "lucide-react";
 
 const Sidebar = () => {
-  const items = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} /> },
-    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} /> },
-    {
-      label: "Total Permanent Disability Benefit Cover",
-      icon: <Activity size={20} />,
-    },
-    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} /> },
-    { label: "Income Protection Cover", icon: <Wallet size={20} /> },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} /> },
-    { label: "Group Insurance", icon: <Users size={20} /> },
-  ];
 
   const premium = [
     {
@@ -64,7 +52,7 @@ const Sidebar = () => {
     {content:'Paying off the mortgage Many people need to reduce their debt as quickly as they can if they go from two incomes to one.'},
     {content:'Providing extra income for their family after they have gone or contributed to their spouse’s retirement fund. Many people would need financial support if an income earner passed away.'},
     {content:'Paying for childcare support if the person who passed away was the primary caregiver. Many people find that, as the remaining parent, they need extra support. If they continue working, they may also need more childcare support'},
-    {content:'Providing future financial support for their children: You can use part of your advance life insurance payment, after becoming terminally ill, to pay for your children’s Tertiary education.'},
+    {content:'Providing future financial support for their children: You can use part of your advance life Insurance payment, after becoming terminally ill, to pay for your children’s Tertiary education.'},
   ]
 
   const benfite = [
@@ -86,7 +74,7 @@ const Sidebar = () => {
             {/*upper Content */}
             <div className="upperContent w-full ">
               <h1 className=" text-[var(--primg)]  ">
-                <i className="ri-record-circle-line mr-1.5 "></i>Life insurance
+                <i className="ri-record-circle-line mr-1.5 "></i>Life Insurance
               </h1>
               <h2 className="  text-[26px] leading-6 lg:text-[2.5vw]  lg:mt-8 font-semibold mt-3 ">
                 When others depend on you

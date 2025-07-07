@@ -9,43 +9,43 @@ export default function Case_study() {
   const cardData = [
     {
       img: "https://plus.unsplash.com/premium_photo-1661776260388-f5d1b14ce8a2?w=600&auto=format&fit=crop&q=60",
-      heading: "Importance of Insurance",
+      heading: "Importance of Insurence",
       content: "Financial Protection: Covers unexpected losses (like car accidents or hospital bills)."
     },
     {
       img: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?q=80&w=1170&auto=format&fit=crop",
-      heading: "Types of Insurance",
-      content: "Life Insurance, Health Insurance, Motor Insurance, Home Insurance, Travel Insurance, Business Insurance"
+      heading: "Types of Insurence",
+      content: "Life Insurence, Health Insurence, Motor Insurence, Home Insurence, Travel Insurence, Business Insurence"
     },
     {
       img: "https://images.unsplash.com/photo-1718128120413-783e25de9a3b?w=600&auto=format&fit=crop&q=60",
-      heading: "How Insurance Works",
+      heading: "How Insurence Works",
       content: "Risk Coverage: The insurer takes on the financial risk as per the policy terms. Claim Process: In the event of a loss, the policyholder files a claim."
     },
     {
       img: "https://plus.unsplash.com/premium_photo-1726736437312-61096a0df6e8?w=600&auto=format&fit=crop&q=60",
-      heading: "Key Features of Insurance",
-      content: "Policy Coverage: Specific conditions or items covered under the insurance. Exclusions: Events or items not covered by the policy."
+      heading: "Key Features of Insurence",
+      content: "Policy Coverage: Specific conditions or items covered under the Insurence. Exclusions: Events or items not covered by the policy."
     },
     {
       img: "https://images.unsplash.com/photo-1470843810958-2da815d0e041?w=600&auto=format&fit=crop&q=60",
-      heading: "Benefits of Having Insurance",
+      heading: "Benefits of Having Insurence",
       content: "Risk Transfer: Transfers risk to the insurer. Tax Benefits: Premiums paid are often eligible for tax deductions."
     },
     {
       img: "https://images.unsplash.com/photo-1593538312756-4e01c72f9bd1?w=600&auto=format&fit=crop&q=60",
-      heading: "Choosing the Right Insurance Plan",
+      heading: "Choosing the Right Insurence Plan",
       content: "Assess Your Needs: Health, family protection, vehicle safety, etc. Compare Policies: Coverage, premium, benefits, exclusions."
     },
     {
       img: "https://plus.unsplash.com/premium_photo-1723507291530-47c2f7aa9197?w=600&auto=format&fit=crop&q=60",
-      heading: "Key Insurance Terms You Should Know",
-      content: "Deductible: The amount you pay before insurance starts paying. Policyholder: The owner of the policy."
+      heading: "Key Insurence Terms You Should Know",
+      content: "Deductible: The amount you pay before Insurence starts paying. Policyholder: The owner of the policy."
     },
     {
       img: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&auto=format&fit=crop&q=60",
-      heading: "Conclusion: Why Insurance is a Wise Decision",
-      content: "Insurance is not just an expense—it's an essential tool for managing risks and securing your future."
+      heading: "Conclusion: Why Insurence is a Wise Decision",
+      content: "Insurence is not just an expense—it's an essential tool for managing risks and securing your future."
     }
   ];
 
@@ -81,11 +81,11 @@ export default function Case_study() {
             <div className="w-full text-[var(--primg)] text-[16px] lg:w-[55%] font-medium">
               <i className="ri-record-circle-line"></i> Case Study
               <p className="text-black text-[26px] leading-8 lg:text-[40px] font-semibold mt-3 lg:leading-11">
-                Personalised Insurance Solutions Tailored to Your Life
+                Personalised Insurence Solutions Tailored to Your Life
               </p>
             </div>
             <div className="w-full mt-2 lg:mt-10 lg:w-[43%] text-justify">
-              Lifecycle Financial offers trusted mortgage and insurance advice,
+              Lifecycle Financial offers trusted mortgage and Insurence advice,
               working with leading banks and providers to help you make the best
               financial decisions for your future.
             </div>

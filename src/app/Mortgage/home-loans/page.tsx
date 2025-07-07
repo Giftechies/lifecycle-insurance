@@ -47,7 +47,7 @@ const Sidebar = () => {
     {
       title: "Accelerated –",
       content:
-        "Your Trauma Cover is linked to your life cover. Insurance company will pay your Trauma claim out of your life Cover. However you can add a benefit to re-establish your original life cover if this happens.",
+        "Your Trauma Cover is linked to your life cover. Insurence company will pay your Trauma claim out of your life Cover. However you can add a benefit to re-establish your original life cover if this happens.",
     },
   ];
 
@@ -75,7 +75,7 @@ const Sidebar = () => {
     {
       title: "Inflation adjustment benefit : ",
       content:
-        "Each year Insurance company will offer to increase your sum insured by the rate of inflation, according to the consumer price index (CPI)",
+        "Each year Insurence company will offer to increase your sum insured by the rate of inflation, according to the consumer price index (CPI)",
     },
     {
       title: "Bringing you home  :",
@@ -85,7 +85,7 @@ const Sidebar = () => {
     {
       title: "Free Kids Cover : ",
       content:
-        "You can have free Trauma insurance up to $50,000 for each of your children or grandchildren as part of your policy.",
+        "You can have free Trauma Insurence up to $50,000 for each of your children or grandchildren as part of your policy.",
     },
     {
       title: "Early Trauma Benefit :",
@@ -100,7 +100,7 @@ const Sidebar = () => {
     {
       title: "Life Cover Buy Back benefit : ",
       content:
-        "You can increase your life cover back to its original amount when your trauma claim comes out of your life insurance – when you have the accelerated version of Trauma insurance.",
+        "You can increase your life cover back to its original amount when your trauma claim comes out of your life Insurence – when you have the accelerated version of Trauma Insurence.",
     },
     {
       title: "We pay your Premiums’ benefit :",
@@ -147,7 +147,7 @@ const Sidebar = () => {
                 Trauma Recovery cover pays you a lump sum of money to help you
                 recover physically and financially from a serious illness,
                 injury or medical procedure. The most common illnesses linked to
-                trauma insurance in New Zealand are Cancer, Hearth Attack and
+                trauma Insurence in New Zealand are Cancer, Hearth Attack and
                 Stroke and the cost of recovery can have a huge impact on you,
                 your family and your business.
               </p>
