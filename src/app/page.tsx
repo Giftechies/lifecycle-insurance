@@ -69,7 +69,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: ".box-anime",
           start: "top 60%",
-          markers:true,
+          
         },
       });
     },
