@@ -234,7 +234,7 @@ export default function RepaymentCalculator() {
             )}
 
             {/* Loan Period */}
-            {/* <div className="tenure flex flex-col w-full lg:h-20  relative ">
+            <div className="tenure flex flex-col w-full lg:h-20  relative ">
               <label className=" text-[14px]   absolute  bg-white p-1 left-3 lg:text-[17px] " htmlFor="">
                 Loan Period (Yrs)
               </label>
@@ -244,9 +244,9 @@ export default function RepaymentCalculator() {
                 placeholder="e.g. 30"
                 type="number"
               />
-            </div> */}
+            </div>
 
-            <div className="w-full flex flex-col mt-4">
+            {/* <div className="w-full flex flex-col mt-4">
               <label className="mb-2 font-medium text-gray-700">
                 Number of months
               </label>
@@ -264,7 +264,7 @@ export default function RepaymentCalculator() {
                   {months} <span className="text-gray-500 text-sm">MONTHS</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </form>
           <div className="Result  lg:w-[40%]">
             {totalInterest !== null && totalPayable !== null && (

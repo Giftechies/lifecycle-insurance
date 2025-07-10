@@ -48,7 +48,7 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
           </div>
           <div className=" flex items-center lg:gap-3 lg:text-[14px] xl:gap-12 xl:text-[16px]">
             <div className="hidden mb:flex mb:gap-1  lg:flex gap-3  ">
-              <div className="border-b-2 border-white hover:border-b-2 hover:border-black px-4 py-2">
+              <div className="border-b-2  hover:border-b-2 hover:border-black px-4 py-2">
                 <Link href="/about">About Us</Link>
               </div>
 

@@ -73,11 +73,11 @@ export default function about() {
 
         {/* section 2 */}
         <section className="section_2   w-full overflow-hidden  ">
-          <main className="   max-w-[1600px] max-lg:space-y-4  max-lg:p-4 lg:h-[47rem] xl:h-[40rem]  mx-auto  relative  ">
+          <main className="   max-w-[1600px] max-lg:space-y-4  max-lg:p-4 lg:h-[47rem] xl:h-[42rem]  mx-auto  relative  ">
             
 
             {/* part 1 */}
-            <div className=" border p-[1rem] max-lg:rounded-2xl bg-[var(--tri)] max-lg:flex-col flex gap-2 lg:gap-3 text-white lg:px-[2.8rem] xl:px-[7rem] lg:absolute lg:h-[50%] xl-px-[8rem] z-10 ">
+            <div className=" border p-[1rem] max-lg:rounded-2xl bg-[var(--tri)] max-lg:flex-col flex gap-2 lg:gap-3 text-white lg:px-[2.8rem] xl:px-[7rem] xl:py-10 lg:absolute lg:h-[50%]  z-10 ">
               {/* left */}
               <div className=" w-full text-[14px] lg:w-[50%]  ">
                 <i className="ri-record-circle-line"></i> Get to Know Us Better
@@ -186,33 +186,34 @@ export default function about() {
               <i className="ri-record-circle-line mr-2 text-xl "></i>
               OUR TEAM
             </p>
+              <p className=" text-[36px] text-center mt-5 font-semibold ">Our Mortgage Experts</p>
             {/* cards */}
-            <div className=" w-full  text-black/40   mt-6 flex max-md:flex-col items-start justify-around gap-5 lg:justify-start lg:gap-15 ">
+            <div className=" w-full  text-black/40   mt-6 flex max-md:flex-col items-start justify-around gap-5 lg:justify-center lg:gap-15 ">
               {/* card 1 */}
 
               {[
                 {
                   Name: "Harpeet Singh",
                   title: " Financial Adviser",
-                  img: "/harpreet.jpg",
+                  img: "/our2.jpg",
                 },
                 {
                   Name: "Rajwinder Rattan",
                   title: "Practice Manager",
-                  img: "/raji.jpg",
+                  img: "/our1.jpg",
                 },
               ].map((el) => (
-                <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%]    bg-white shadow rounded-xl flex items-center justify-center text-center p-3">
-                  <div className="img w-[95%]  aspect-square">
+                <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%]  mt-4  bg-white shadow rounded-xl flex items-center justify-center text-center p-4">
+                  <div className="img w-[100%]  aspect-square">
                     <img
                       src={el.img}
                       className="w-full rounded-xl h-full object-cover object-top "
                       alt=""
                     />
-                    <h1 className=" mt-4  md:text-[20px] text-black/80 font-medium ">
+                    <h1 className=" mt-2  md:text-[20px] text-black/80 font-medium ">
                       {el.Name}
                     </h1>
-                    <h3 className=" text-[14px] mt-2 ">{el.title}</h3>
+                    <h3 className=" text-[14px]  ">{el.title}</h3>
                   </div>
                 </div>
               ))}
