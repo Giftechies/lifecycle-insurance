@@ -6,11 +6,11 @@ export default function Footer() {
     <>
       {/* footer */}
       <footer className="footer bg-[var(--tri)] overflow-hidden">
-        <main className="w-full h-full max-w-[1600px] mx-auto text-[14px] px-4 pb-10 lg:pb-5 lg:px-[3rem] xl:py-5 tracking-wide  font-light">
+        <main className="w-full h-full max-w-[1600px] mx-auto text-[14px] p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-18 font-light">
           <div
             className="content border-b border-dotted border-white/50 text-white/90
               flex flex-col 
-              lg:flex-row max-xl:flex-wrap lg:justify-between gap-6 mt-7 lg:items-start xl:pb-5"
+              lg:flex-row max-xl:flex-wrap lg:justify-between gap-6  lg:items-start "
           >
             {/* Insurence */}
             <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <h1 className="text-white font-medium tracking-widest text-center mt-3 mb-12 md:mb-0">
+          <h1 className="text-white font-medium tracking-widest text-center mt-6">
             Copyright © 2025 Lifecycle Financial. All Rights Reserved.
           </h1>
         </main>

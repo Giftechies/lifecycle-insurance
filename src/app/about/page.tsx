@@ -73,11 +73,11 @@ export default function about() {
 
         {/* section 2 */}
         <section className="section_2   w-full overflow-hidden  ">
-          <main className="   max-w-[1600px] max-lg:space-y-4  max-lg:p-4 lg:h-[47rem] xl:h-[42rem]  mx-auto  relative  ">
+          <main className="   max-w-[1600px] max-lg:space-y-4  max-lg:p-6   mx-auto  relative  ">
             
 
             {/* part 1 */}
-            <div className=" border p-[1rem] max-lg:rounded-2xl bg-[var(--tri)] max-lg:flex-col flex gap-2 lg:gap-3 text-white lg:px-[2.8rem] xl:px-[7rem] xl:py-10 lg:absolute lg:h-[50%]  z-10 ">
+            <div className=" border p-[1rem] max-lg:rounded-2xl bg-[var(--tri)] max-lg:flex-col flex gap-2 lg:gap-3 text-white lg:px-[2.8rem] xl:p-[7rem]   lg:h-[50%]  z-10 ">
               {/* left */}
               <div className=" w-full text-[14px] lg:w-[50%]  ">
                 <i className="ri-record-circle-line"></i> Get to Know Us Better
@@ -97,8 +97,8 @@ export default function about() {
 
             {/* part 2 */}
 
-            <div className=" w-full flex max-lg:flex-col gap-6 lg:gap-3  lg:px-[2.8rem] xl:px-[7rem] justify-around mt-3 lg:mt-14 lg:absolute  top-35  z-20 ">
-              <div className=" w-full rounded-2xl text-left lg:w-[30%] bg-white p-3 shadow-2xl   ">
+            <div className=" w-full flex max-lg:flex-col  gap-6 lg:gap-3  lg:p-[2.8rem]  xl:p-[5rem] justify-around ">
+              <div className=" w-full rounded-2xl  lg:w-[45%] bg-white p-3 shadow-2xl  lg:p-10 tracking-wider  ">
                 <p className=" text-[25px]   font-medium ">
                   Why Lifecycle Financial?
                 </p>
@@ -107,7 +107,7 @@ export default function about() {
                   <span className="font-semibold ">
                     Independent and Unbiased Advice:
                   </span>
-                  <p className=" ml-4 inline  text-justify text-black/70 ">
+                  <p className=" ml-5   text-justify text-black/70  ">
                     At Lifecycle Financial, we provide independent, need-based
                     advice, working with top banks and insurers to deliver
                     tailored mortgage and Insurence solutions. Our expert
@@ -122,7 +122,7 @@ export default function about() {
                   <span className="font-bold mr-1 text-left ">
                     Expert & Proven Team:
                   </span>
-                  <p className=" ml-3 inline text-justify text-black/70 ">
+                  <p className="  text-justify text-black/70   ml-5  ">
                     Our experienced brokers bring a proven track record in
                     delivering personalized financial and Insurence solutions.
                     With a strong focus on your needs, we ensure you receive the
@@ -132,17 +132,9 @@ export default function about() {
                 </p>
               </div>
 
-              {/* img */}
-              <div className=" w-full rounded-2xl overflow-hidden lg:w-[30%]   ">
-                <img
-                  src="./ab2.jpg"
-                  className=" h-full w-full  object-cover"
-                  alt=""
-                />
-              </div>
               {/* text */}
-              <div className=" w-full rounded-2xl text-left lg:w-[30%] bg-white p-3  shadow-2xl">
-                <p className=" text-[20px] text-white font-bold ">
+              <div className=" w-full rounded-2xl text-left lg:w-[45%] bg-white p-4 lg:p-10  shadow-2xl">
+                <p className=" text-[25px]   font-medium ">
                   What we do?
                 </p>
                 <p className=" mt-3.5 text-justify text-[14px]">
@@ -150,14 +142,14 @@ export default function about() {
                   <span className="font-bold mr-1 ">
                     Your Needs, Our Insurence Expertise:
                   </span>
-                  <span className="text-black/70 ">
+                  <p className="text-black/70   ml-5 ">
                     We review your existing Insurence coverage to ensure it
                     aligns with your current needs and circumstances. After
                     conducting a detailed needs analysis based on the
                     information you provide, we reach out to multiple Insurence
                     providers to secure the most suitable products and deals
                     tailored specifically to your requirements.
-                  </span>
+                  </p>
                 </p>
 
                 <p className=" mt-3.5 text-[14px] text-justify md:mt-10 ">
@@ -165,12 +157,12 @@ export default function about() {
                   <span className="font-bold mr-1  ">
                     Expert Advice, Claims & Portfolio Audits:
                   </span>
-                  <span className=" text-black/70  ">
+                  <p className=" text-black/70   ml-5  ">
                     We provide expert advice, handle claims efficiently, and
                     regularly review your Insurence portfolio to ensure it stays
                     aligned with your changing needs. Your peace of mind is our
                     priority.
-                  </span>
+                  </p>
                 </p>
               </div>
             </div>
@@ -182,13 +174,10 @@ export default function about() {
         {/* section 3 team */}
         <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
           <main className=" w-full ">
-            <p className=" text-[var(--primg)]  font-semibold">
-              <i className="ri-record-circle-line mr-2 text-xl "></i>
-              OUR TEAM
-            </p>
-              <p className=" text-[36px] text-center mt-5 font-semibold ">Our Mortgage Experts</p>
+            
+              <p className=" text-[36px] text-center text-[var(--secgr)]  font-semibold ">Our Mortgage Experts</p>
             {/* cards */}
-            <div className=" w-full  text-black/40   mt-6 flex max-md:flex-col items-start justify-around gap-5 lg:justify-center lg:gap-15 ">
+            <div className=" w-full  text-black/40  mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
               {/* card 1 */}
 
               {[
