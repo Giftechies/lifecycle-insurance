@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useEnquiryContext, EnquiryData } from "./Context/EnquiryContext";
 import { nanoid } from "nanoid";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -15,12 +16,13 @@ export default function Home() {
   const sec2 = useRef(null);
   const sec3 = useRef(null);
   const sec4 = useRef(null);
+  const router = useRouter();
 
   useGSAP(() => {
     gsap.from(".icon-box", {
       opacity: 0,
       x: -100,
-      duration:1,
+      duration: 1,
       delay: 0.5,
       scrollTrigger: ".icon-box",
     });
@@ -34,11 +36,10 @@ export default function Home() {
         z: 999,
         duration: 1,
         delay: 0.5,
-      
+
         scrollTrigger: {
           trigger: ".sec-2-anim",
           start: "top 95%",
-          
         },
       });
     },
@@ -69,7 +70,6 @@ export default function Home() {
         scrollTrigger: {
           trigger: ".box-anime",
           start: "top 60%",
-          
         },
       });
     },
@@ -80,11 +80,11 @@ export default function Home() {
     () => {
       gsap.to(".sec3animate3", {
         y: 300,
-        duration: 1.5,
+        duration: 1,
         scrollTrigger: {
           trigger: ".section_3",
-          start: "top 80%",
-          scrub: 2,
+          start: "top 70%",
+          scrub: 1,
         },
       });
     },
@@ -110,7 +110,7 @@ export default function Home() {
   );
 
   useGSAP(() => {
-    gsap.from(".marquee", {
+    gsap.to(".marquee", {
       xPercent: -100,
       duration: 20,
       ease: "none",
@@ -143,44 +143,42 @@ export default function Home() {
           />
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black   to-[var(--secgr)]/40 z-10" />
 
           {/* Text + Icon Content */}
-          <div className=" relative  w-full h-full max-w-[1600px] mx-auto">
-            <div className="relative pt-25 px-4 md:px-[2.5rem]  lg:px-[3.5rem] xl:px-[9%] lg:pt-50 pb-10 z-20 text-white ">
+          <div className=" relative  w-full h-full max-w-[1600px] mx-auto z-30">
+            <div className="relative pt-25 px-4 md:px-[1.5rem]  lg:px-[3.5rem] xl:px-[7rem] lg:pt-50 pb-10 z-20 text-white ">
               <p className="animate-fadeInUp text-gray-300 text-sm md:text-base font-semibold mb-2">
                 <i className="ri-record-circle-line mr-2 text-lg font-extralight text-white"></i>
                 LIFE CYCLE FINANCIAL
               </p>
 
-              <div>
-                <h1 className="text-[26px] md:text-[46px] lg:text-5lg font-semibold leading-tight mt-6  ">
+              <div className=" text-[26px] md:text-[46px] lg:text-[58px] font-semibold tracking-normal leading-tight">
+                <h1 className=" mt-6  ">
                   From Smart{" "}
-                  <span className="text-[var(--primg)]">Financing</span> to
+                  <span className="text-[var(--primg)]">Financing</span> To
                 </h1>
-                <h1 className="text-[26px] md:text-[46px] lg:text-5lg font-semibold leading-tight">
+                <h1 className="">
                   Dream <span className="text-[var(--primg)]">Mortgages</span>.
                 </h1>
-                <h1 className="text-[26px] md:text-[46px] lg:text-5lg font-semibold leading-tight">
-                  We Cover It All
-                </h1>
+                <h1 className="">We Cover It All</h1>
               </div>
 
-              <p className="mt-4 text-sm md:text-base lg:w-[70%] text-white/70 tracking-widest max-w-3lg">
-                Lifecycle Financial is a leading independent financial advisory
-                company providing a wide range of services including residential
-                & commercial mortgages.
-              </p>
+              <h4 className="mt-4 text-[14px] lg:w-[65%] text-white tracking-wider ">
+                Lifecycle Financial is a Leading independent Financial Advisory
+                Company providing a wide range of financial services to the
+                clients including Mortgages both Residential & Commercial,
+              </h4>
 
-              <button className="mt-6 tracking-widest py-3 px-8 text-sm mb-10 border border-white rounded-full hover:text-[var(--primg)] hover:border-[var(--primg)] transition-all duration-300">
+              <button className="mt-6 tracking-widest py-3 px-8 text-sm mb-10 border border-white rounded-full hover:text-[var(--primg)] hover:border-[var(--primg)] hover:scale-[.9] transition-all duration-300 ">
                 Request An Appraisal{" "}
                 <i className="ml-2 ri-arrow-right-wide-fill"></i>
               </button>
 
               {/* Icon Box */}
-              <div className="icon-box mt-12 w-full overflow-hidden bg-white/10 border border-dotted border-white/40 md:w-[70%] rounded-3xl flex flex-col  md:flex-row items-center lg:w-[50%] justify-between p-4 gap-6">
+              <div className="icon-box  max-md:mt-12 w-full overflow-hidden border border-dashed border-white/40 md:w-[80%] rounded-3xl flex flex-col  md:flex-row items-center lg:w-[60%] justify-between p-4 gap-6">
                 {/* Card 1 */}
-                <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dotted border-white/40 p-4">
+                <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dashed border-white/40 p-4">
                   <img
                     src="./thumbsup.svg"
                     alt="Rating"
@@ -192,7 +190,7 @@ export default function Home() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dotted border-white/40 p-4">
+                <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dashed border-white/40 p-4">
                   <img
                     src="./conversation.svg"
                     alt="Clients"
@@ -220,23 +218,26 @@ export default function Home() {
         </section>
 
         {/* section 2 */}
-        <section ref={sec2} className="section-2 max-w-[1600px] mx-auto  ">
-          <main className="  w-full p-4  lg:px-[3rem] lg:flex  relative ">
-            <div className="imgLeft w-full  rounded-4xl overflow-hidden border max-md:aspect-[1.5] md:aspect-[1.8]  lg:w-[44%] lg:h-[37rem]  ">
+        <section
+          ref={sec2}
+          className="section-2 w-full  p-4 lg:px-[3rem] xl:px-[7rem] lg:py-[80px] max-w-[1600px] mx-auto  "
+        >
+          <main className="  w-[100%]    lg:flex  relative ">
+            <div className="imgLeft w-full  rounded-4xl overflow-hidden border max-md:aspect-[1.5] md:aspect-[1.8]  lg:w-[52%] lg:h-[42rem]  ">
               <img
                 src="./about-pic1.jpg"
                 className=" w-full lg:h-full object-cover object-center"
                 alt=""
               />
             </div>
-            <div className="contentRight lg:w-[55%] lg:flex flex-col items-end  ">
-              <div className="uppercontent  lg:w-[90%]  ">
-                <h1 className="text-[var(--primg)] font-semibold text-[18px] ">
+            <div className="contentRight max-lg:mt-3 lg:w-[55%] lg:flex gap- flex-col tracking-normal  ">
+              <div className="uppercontent w-full xl:w-[80%] leading-6 lg:ml-12  ">
+                <h1 className="text-[var(--primg)] font-semibold text-[22px] ">
                   {" "}
-                  <i className="  ri-record-circle-line font-medium mr-1  "></i>
+                  <i className="  ri-record-circle-line font-medium mr-2  "></i>
                   Get to Know Life Cycle Financial
                 </h1>
-                <p className=" text-[14px] text-justify text-[var(--secgr)] mt-2">
+                <p className=" text-[16px]  text-[var(--secgr)] font-normal  mt-2">
                   We provide wide range of financial services to the clients
                   including Mortgages both Residential & Commercial, & Personal
                   Insurence products such as life, Health, Income Protection,
@@ -244,30 +245,35 @@ export default function Home() {
                   For home, contents, car and business Insurence we have
                   additional specialists that we call upon.
                 </p>
-                <button className=" bg-[var(--primg)]  text-white/80 px-7 py-3 rounded-full  mt-4   text-[12px] ">
-                  Know more
+                <button
+                  onClick={() => router.push("/about")}
+                  className=" flex items-center bg-[var(--primg)] cursor-pointer text-white px-7 py-3 rounded-full  mt-4   text-[16px] hover:text-black hover:scale-[.9] duration-300 "
+                >
+                  Know more <i className="ri-arrow-right-s-line    "></i>
                 </button>
               </div>
 
-              <div className="middel md:flex gap-10 ">
-               <div className="sec-2-OneBox sec-2-anim md:w-[55%]  lg:w-[65%] xl:w-[50%] ">
-                 <div className="text bg-[var(--primg)] text-white mt-6 max-lg:rounded-4xl  p-6 md:w-[100%] md:p-12 md:flex md:flex-col lg:py-10 lg:px-6 xl:px-16 lg:w-[100%] max-lg:justify-center lg:rounded-r-4xl    ">
-                  <p className=" lg:mt-5  text-[18px] font-semibold">
-                    {" "}
-                    <img
-                      src="checksquare.svg"
-                      className="h-9 w-9 mb-2   "
-                      alt=""
-                    />
-                    One Call Does It All
-                  </p>
-                  <h1 className="mt-3  text-white/100 text-[14px] tracking-widest md:text-justify l  ">
-                    From application to approval, we handle everything under one
-                    roof. With access to top banks and lenders across New
-                    Zealand
-                  </h1>
-                </div>
-                  <div className="call text-[var(--primg)] font-medium md:ml-15 lg:ml-6 xl:ml-16 flex    bottom-6 left-130 xl:left-190 xl:bottom-9 gap-2 max-md:hidden ">
+              <div className="middel md:flex max-md:gap-10  lg:gap-2 w-full  ">
+                <div className="sec-2-OneBox sec-2-anim md:w-[55%]  lg:w-[80%]  ">
+                  <div className="text bg-[var(--primg)] text-white mt-6 max-lg:rounded-4xl  p-6 md:w-[100%] md:p-12 md:flex md:flex-col lg:py-10 lg:px-6 xl:px-10 xl:py-16    lg:w-[100%] justify-center items-center  lg:rounded-r-4xl    ">
+                    <div>
+                      <p className=" font-semibold">
+                        {" "}
+                        <img
+                          src="checksquare.svg"
+                          className="h-9 w-9 mb-2"
+                          alt=""
+                        />
+                        One Call Does It All
+                      </p>
+                      <h1 className="  text-white/100 text-[14px] tracking-widest   ">
+                        From application to approval, we handle everything under
+                        one roof. With access to top banks and lenders across
+                        New Zealand
+                      </h1>
+                    </div>
+                  </div>
+                  <div className="call text-[var(--primg)] font-medium md:ml-15 lg:ml-6 xl:ml-16 flex  gap-2 max-md:hidden ">
                     <div className="  p-4 bg-[var(--secgr)] rounded-b-full ">
                       <img
                         src="./phone.svg"
@@ -281,9 +287,9 @@ export default function Home() {
                       <p>0800 50 7770</p>
                     </div>
                   </div>
-               </div>
+                </div>
 
-                <div className="lowerpic sec-2-anim w-full flex flex-col items-center mt-6 md:w-[40%] lg:w-[30%]  ">
+                <div className="lowerpic sec-2-anim w-full flex flex-col items-center max-md:mt-6 md:w-[40%] lg:w-[40%]  lg:mt-8 xl:mt-3   ">
                   <div className="img">
                     <img
                       src="./sec2pic2.png"
@@ -309,7 +315,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-           
           </main>
         </section>
 
@@ -322,31 +327,31 @@ export default function Home() {
             <div className="right  w-[100%]  flex max-md:flex-col max-md:justify-center border-black gap-4  lg:w-[65%] xl:w-[60%]">
               <div className="line w-full md:w-[10%]   gap-4 flex md:flex-col items-center text-white justify-center">
                 <div className=" h-3 w-3 lg:h-5 lg:w-5 rounded-full aspect-auto bg-white  "></div>
-                <div className=" w-full border-t md:w-0.5 md:border-r border-dotted h-[85%] mt-8"></div>
+                <div className=" w-full border-t md:w-0.5 md:border-r border-dashed h-[85%] mt-8"></div>
               </div>
-              <div className="cards    w-full  max-md:flex-col  gap-8   md:flex-wrap lg:gap-6  xl:w-[80%] flex ">
+              <div className="cards  font-normal   w-full  max-md:flex-col  gap-8   md:flex-wrap lg:gap-6  xl:w-[80%] flex ">
                 <h1 className=" text-[36px] lg:text-[32px]  font-bold tracking-norma  leading-9 text-white/80 ">
                   Numbers That Speak for Themselves
                 </h1>
                 <div className="card box-anime  max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
                   <div className=" w-[80%] lg:w-[75%] xl:w-[65%] tracking-normal ">
-                    <img src="./family.svg" className=" h-8 w-8 mb-3" alt="" />
+                    <img src="./target.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
                       2,500+
                     </p>
-                    <p className=" font-medium  text-black/60 ">
+                    <p className="   text-black  ">
                       {" "}
-                      Pre-approval Success rate{" "}
+                      Pre-approval Success <br /> rate{" "}
                     </p>
                   </div>
                 </div>
                 <div className="card box-anime  max-md:p-8   md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
-                  <div className="w-[80%]lg:w-[75%]  lg:w-[65%] tracking-normal ">
+                  <div className="w-[80%] lg:w-[75%]  xl:w-[65%] tracking-normal ">
                     <img src="./timer.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
                       45 Hours
                     </p>
-                    <p className=" font-medium  text-black/60 ">
+                    <p className="   text-black ">
                       {" "}
                       Average time for loan approvals
                     </p>
@@ -358,7 +363,7 @@ export default function Home() {
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
                       2,500+
                     </p>
-                    <p className=" font-medium  text-black/60 ">
+                    <p className="   text-black ">
                       {" "}
                       Families helped in buying their first home
                     </p>
@@ -370,7 +375,7 @@ export default function Home() {
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
                       20+
                     </p>
-                    <p className=" font-medium  text-black/60 ">
+                    <p className="  text-black ">
                       {" "}
                       Trusted bank and Insurence partners
                     </p>
@@ -378,7 +383,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="left md:hidden lg:block lg:w-[40%]    relative ">
+            <div className="left md:hidden lg:block lg:w-[45%]    relative ">
               <div className="  img sec3animate3  absolute   lg:w-[90%] xl:w-[70%] aspect-[.5] bottom-55 right-0   rounded-4xl overflow-hidden    ">
                 <img
                   src="12.jpg"
@@ -393,22 +398,22 @@ export default function Home() {
         {/* section 4 */}
         <section
           ref={sec4}
-          className="Section_4  lg:py-5 max-w-[1600px] mx-auto overflow-hidden "
+          className="Section_4  lg:py-5 max-w-[1600px] mx-auto overflow-hidden  "
         >
-          <main className=" pt-10 py-3 px-4 lg:px-[3.3rem] xl:px-[9%]  ">
+          <main className=" pt-10 py-3 px-4 lg:px-[3rem] xl:px-[7rem]   ">
             {/* part 1 */}
-            <div className="h-[12em]   w-[100%]  lg:flex  ">
+            <div className="   w-[100%]  lg:flex  ">
               <div className="  lg:w-[60%]  ">
                 <p className="text-[var(--primg)]  lg:text-[16px]">
                   {" "}
                   <i className="ri-record-circle-line mr-1 text-2lg"></i>Our
                   Service
                 </p>
-                <h1 className="text-[30px] font-semibold leading-8 sm:text-[30px]  mb-4 mt-3 tracking-normal md:text-[40px] md:leading-10 text-zinc-600/90  md:font-semibold xl:mt-6 lg:leading-13 ">
+                <h1 className="text-[26px] font-semibold leading-8 sm:text-[38px]   mt-3 tracking-normal  md:leading-10 text-zinc-600/90  md:font-semibold xl:mt-6  sm:w-[70%] ">
                   Comprehensive Financial & Mortgage Solutions
                 </h1>
               </div>
-              <div className="  lg:w-[40%] lg:mt-11 ">
+              <div className="  lg:w-[40%] lg:mt-11 mt-3 ">
                 <p className=" text-[14px]  ">
                   {" "}
                   We have a team of experienced advisors who have already proved
@@ -417,11 +422,11 @@ export default function Home() {
               </div>
             </div>
             {/* part 2 */}
-            <div className="superpart-2  w-full h-[75em] mt-10 flex flex-col gap-6 sm:mt-0 md:h-[40em] md:mt-0 lg:gap-3 lg:flex-row lg:mt-4 lg:h-[18em]  xl:h-[16em] ">
+            <div className="superpart-2  w-full h-[75em] mt-8 flex flex-col max-md:gap-6 sm:mt-0 md:h-[40em] md:mt-5 lg:gap-3 lg:flex-row lg:mt-8 lg:h-[18em]  xl:h-[16em] ">
               {/* container 1 */}
               <div className="container1 w-full h-[49%] flex flex-col gap-6  md:flex-row md:h-[50%]  md:w-[100%] lg:gap-3 lg:h-full lg:w-[50%]  ">
                 {/* part 1 */}
-                <div className="part1 w-full h-[50%] md:h-[90%]   lg:h-full lg:w-[50%] rounded-2xl overflow-hidden ">
+                <div className="part1 w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden ">
                   <img
                     src="./pic3.jpg"
                     className=" h-full w-full  object-cover"
@@ -429,7 +434,7 @@ export default function Home() {
                   />
                 </div>
                 {/* part 2 */}
-                <div className="part2 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full lg:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden ">
+                <div className="part2 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden ">
                   <p className="text-white font-semibold text-[20px] lg:mb-3">
                     Insurence
                   </p>
@@ -448,7 +453,7 @@ export default function Home() {
               {/* container 2 */}
               <div className="container2  w-full h-[49%]      flex flex-col   gap-6 md:flex-row-reverse md:w-[100%] md:h-[50%] lg:gap-3 lg:flex-row lg:h-full lg:w-[50%]  ">
                 {/* part 3 */}
-                <div className="part3 w-full h-[50%] md:h-[90%]   lg:h-full lg:w-[50%] rounded-2xl overflow-hidden  ">
+                <div className="part3 w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden  ">
                   <img
                     src="./pic4.jpg"
                     className=" h-full w-full  object-cover"
@@ -456,7 +461,7 @@ export default function Home() {
                   />
                 </div>
                 {/* part 4 */}
-                <div className="part4 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--primg)] text-white relative md:h-[90%] lg:h-full lg:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  ">
+                <div className="part4 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--primg)] text-white relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  ">
                   <p className="text-[20px] font-bold ">Mortgages</p>
 
                   <p className=" text-[14px] text-white/80  text-justify mt-2">
@@ -475,255 +480,429 @@ export default function Home() {
         </section>
 
         {/* section 5 */}
-        <section className="section_5  h-[87em] md:h-[62em]  lg:h-[66em] overflow-hidden">
-          <main className=" w-full px-4  p lg:relative  lg:py-10 max-w-[1600px] mx-auto ">
-            {/* part 1 */}
-            <div className="h-[17em] w-[100%] rounded-[20px] mt-2  overflow-hidden lg:absolute lg:z-10  lg:h-[40em]   lg:w-[22em] lg:top-0 lg:left-13  xl:h-[43em] xl:w-[33%] xl:top-0 xl:left-32 ">
-              <img
-                src="./sec5.jpg  "
-                className=" h-full w-full object-cover "
-                alt=""
-              />
-            </div>
+        <section className="section_5 w-full px-4 lg:px-[3rem] xl:px-[7rem] overflow-hidden max-w-[1600px] mx-auto">
+          <main className=" w-full   ">
+            <div className="w-full flex max-lg:flex-col mt-3 max-lg:gap-4 ">
+              {/* left part 1 */}
+              <div className=" w-full h-[20rem] lg:w-[40%] lg:h-[37rem] rounded-xl  overflow-hidden">
+                <img
+                  src="./sec5.jpg  "
+                  className=" h-full w-full object-cover "
+                  alt=""
+                />
+              </div>
+              {/* Right */}
+              <div className="Right lg:w-[60%] ">
+                {/* part 2 */}
+                <div className=" lg:ml-[3rem]">
+                  <p className="text-[var(--primg)] font-bold   ">
+                    {" "}
+                    <i className="ri-record-circle-line mr-2  tracking-normal font-medium  "></i>
+                    Mortgage Services Backed by Experience
+                  </p>
 
-            {/* part 2 */}
-            <div className="h-[14em] md:h-[10em]   w-[100%]  mt-2 mb-2 rounded-[20px] pt-3 px-4  text-black lg:absolute lg:w-[50%] lg:right-22 lg:top-10 xl:w-[45%] xl:right-35 font-sans xl:top-12 ">
-              <p className="text-[var(--primg)] font-bold  text-[20px]">
-                {" "}
-                <i className="ri-record-circle-line mr-2  tracking-normal font-medium  text-[20px] "></i>
-                Mortgage Services Backed by Experience
-              </p>
-
-              <p className="text-[14px]  mt-4">
-                {" "}
-                From application to approval, we handle everything under one
-                roof. With access to top banks and lenders across New Zealand,
-                we provide custom loan options, expert advice, and stress-free
-                support
-              </p>
-            </div>
-            {/* part 3 */}
-            <div className=" w-full  xl:h-260  relative ">
-              {/* icon box */}
-              <div className="lg:mt-8  p-4 mt-2 sm:mt-2 md:mt-2 max-lg:rounded-t-4xl   bg-[var(--primg)]  text-white lg:absolute lg:h-[23em] lg:w-[55%] lg:right-15 lg:rounded-r-4xl  lg:top-[10em]  lg:z-0 xl:right-23   lg:py-12 tracking-wide ">
-                {/* part1 */}
-                <div className="md:flex lg:mb-15  ">
-                  <div className="h-[6em]  w-full md:h-[9em] md:p-8 p-2 md:flex-col  flex items-center md:gap-2 gap-6 lg:border-r lg:h-[7em] lg:flex-col  lg:p-0  ">
-                    <div className=" h-[63%] w-[18%] md:w-[25%]   text-center p-3 lg:p-2 lg:px-3 lg:h-10 lg:w-[28%]  xl:px-3 xl:h-13 xl:w-15   bg-white/20 rounded-[10px] ">
-                      {" "}
-                      <img
-                        src="./checksquare.svg"
-                        className=" h-full w-full object-cover"
-                        alt=""
-                      />
-                    </div>
-                    <h1 className=" text-[20px] font-medium md:text-[14px] ">
-                      Home Loan
-                    </h1>
-                  </div>
-                  <div className="h-[6em] w-full md:h-[9em] md:p-8 p-2  md:flex-col flex items-center md:gap-2  gap-6 lg:border-r lg:h-[7em] lg:flex-col  lg:p-0  ">
-                    <div className=" h-[63%] w-[18%] md:w-[25%]   text-center p-3 lg:p-2 lg:px-3 lg:h-10 lg:w-[25%]  xl:px-3 xl:h-13 xl:w-15    bg-white/20 rounded-[10px] ">
-                      {" "}
-                      <img
-                        src="./checksquare.svg"
-                        className=" h-full w-full object-cover"
-                        alt=""
-                      />
-                    </div>
-                    <h1 className=" text-[20px] font-medium md:text-[14px] ">
-                      Investment Loan
-                    </h1>
-                  </div>
-                  <div className="h-[6em] w-full p-2  md:h-[9em] md:p-8 md:flex-col flex items-center md:gap-2 gap-6   lg:h-[7em] lg:flex-col  lg:p-0  ">
-                    <div className=" h-[63%] w-[18%]  md:w-[25%]  text-center p-3 lg:p-2 lg:px-3 lg:h-10 lg:w-[25%]  xl:px-3 xl:h-13 xl:w-15    bg-white/20 rounded-[10px] ">
-                      {" "}
-                      <img
-                        src="./checksquare.svg"
-                        className=" h-full w-full object-cover"
-                        alt=""
-                      />
-                    </div>
-                    <h1 className=" text-[20px] font-medium  md:text-[14px] ">
-                      Refinance
-                    </h1>
-                  </div>
+                  <p className="text-[14px] mt-4  lg:mt-1">
+                    {" "}
+                    From application to approval, we handle everything under one
+                    roof. With access to top banks and lenders across New
+                    Zealand, we provide custom loan options, expert advice, and
+                    stress-free support
+                  </p>
                 </div>
-                <div className="md:flex md:mt-3 ">
-                  {" "}
-                  <div className="h-[6em] w-full p-2 md:h-[9em] md:p-8 lg:border-r  md:flex-col  flex items-center md:gap-2 gap-6  lg:h-[7em] lg:flex-col  lg:p-0  ">
-                    <div className="h-[63%] w-[18%]  md:w-[25%]  text-center p-3 lg:p-2 lg:px-3 lg:h-10 lg:w-[25%]  xl:px-3 xl:h-13 xl:w-15    bg-white/20 rounded-[10px] ">
-                      {" "}
-                      <img
-                        src="./checksquare.svg"
-                        className=" h-full w-full object-cover"
-                        alt=""
-                      />
+                {/* part 3 */}
+                <div className=" w-full mt-5  ">
+                  {/* icon box */}
+                  <div className="  w-full  bg-[var(--primg)] flex max-md:flex-col flex-wrap  justify-center max-md:gap-8  text-white text-[20px] font-semibold text-center max-lg:rounded-t-4xl tracking-wide p-10   md:space-y-7  md:pb-0    lg:rounded-r-4xl lg:mt-8  xl:pt-20  xl:py-20  ">
+                    <div
+                      onClick={() => {
+                        router.push("/Mortgage/home-loan");
+                      }}
+                      className=" w-full md:w-[33%] md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-center md:justify-cente  lg:gap-y-4   "
+                    >
+                      <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
+                        {" "}
+                        <img
+                          src="./checksquare.svg"
+                          className=" h-full w-full object-cover cursor-pointer"
+                          alt=""
+                        />
+                      </div>
+                      <h1 className=" cursor-pointer  ">Home Loan</h1>
                     </div>
-                    <h1 className=" text-[20px] font-medium  md:text-[14px] ">
-                      Business Loan
-                    </h1>
-                  </div>
-                  <div className="h-[6em] w-full p-2 md:h-[9em] md:p-8 md:flex-col flex items-center md:gap-2 gap-6 lg:border-r lg:h-[7em] lg:flex-col  lg:p-0  ">
-                    <div className="h-[63%] w-[18%] md:w-[25%]   text-center p-3 lg:p-2 lg:px-3 lg:h-10 lg:w-[25%]  xl:px-3 xl:h-13 xl:w-15    bg-white/20 rounded-[10px] ">
-                      {" "}
-                      <img
-                        src="./checksquare.svg"
-                        className=" h-full w-full object-cover"
-                        alt=""
-                      />
+                    <div
+                      onClick={() => {
+                        router.push("/Mortgage/investment-loan");
+                      }}
+                      className=" w-full md:w-[33%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-center justify-cente  lg:gap-y-4   "
+                    >
+                      <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
+                        {" "}
+                        <img
+                          src="./checksquare.svg"
+                          className=" h-full w-full object-cover cursor-pointer"
+                          alt=""
+                        />
+                      </div>
+                      <h1 className="  cursor-pointer  ">Investment Loan</h1>
                     </div>
-                    <h1 className=" text-[20px] font-medium  md:text-[14px]">
-                      Construction Loan
-                    </h1>
-                  </div>
-                  <div className="h-[6em] w-full p-2 md:h-[9em] md:p-8 md:flex-col flex items-center gap-6 md:gap-2  lg:h-[7em] lg:flex-col  lg:p-0  ">
-                    <div className="h-[63%] w-[18%] md:w-[25%]   text-center p-3 lg:p-2 lg:px-3 lg:h-10 lg:w-[25%]  xl:px-3 xl:h-13 xl:w-15    bg-white/20 rounded-[10px]">
-                      {" "}
-                      <img
-                        src="./checksquare.svg"
-                        className=" h-full w-full object-cover"
-                        alt=""
-                      />
+                    <div
+                      onClick={() => {
+                        router.push("/Mortgage/refinance");
+                      }}
+                      className=" w-full md:w-[33%]      flex md:flex-col  gap-4  items-center md:justify-cente  lg:gap-y-4  "
+                    >
+                      <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
+                        {" "}
+                        <img
+                          src="./checksquare.svg"
+                          className=" h-full w-full object-cover cursor-pointer"
+                          alt=""
+                        />
+                      </div>
+                      <h1 className="   cursor-pointer  ">Refinance</h1>
                     </div>
-                    <h1 className=" text-[20px] font-medium  md:text-[14px]">
-                      Commercial Loan
-                    </h1>
+                    <div
+                      onClick={() => {
+                        router.push("/Mortgage/commercial-loan");
+                      }}
+                      className="  w-full md:w-[33%]     md:border-r  border-white/50 border-dashed flex md:flex-col  gap-4  items-center   lg:gap-y-4  "
+                    >
+                      <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
+                        {" "}
+                        <img
+                          src="./checksquare.svg"
+                          className=" h-full w-full object-cover cursor-pointer"
+                          alt=""
+                        />
+                      </div>
+                      <h1 className="  cursor-pointer   ">Business Loan</h1>
+                    </div>
+                    <div
+                      onClick={() => {
+                        router.push("/Mortgage/construction-loan");
+                      }}
+                      className=" w-full md:w-[33%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-center   lg:gap-y-4  "
+                    >
+                      <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
+                        {" "}
+                        <img
+                          src="./checksquare.svg"
+                          className=" h-full w-full object-cover cursor-pointer"
+                          alt=""
+                        />
+                      </div>
+                      <h1 className="  text-[19px]  cursor-pointer   ">
+                        Construction Loan
+                      </h1>
+                    </div>
+
+                    <div
+                      onClick={() => {
+                        router.push("/Mortgage/commercial-loan");
+                      }}
+                      className=" w-full md:w-[33%]      flex md:flex-col  gap-4  items-center  lg:gap-y-4  "
+                    >
+                      <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
+                        {" "}
+                        <img
+                          src="./checksquare.svg"
+                          className=" cursor-pointer  h-full w-full object-cover"
+                          alt=""
+                        />
+                      </div>
+                      <h1 className=" cursor-pointer   ">Commercial Loan</h1>
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* marquee box */}
-              <div className="marque   flex items-center bg-[var(--primg)] rounded-b-[30px] lg flex-col p-2 lg:bg-[var(--primg)] lg:top-165 xl:top-175 lg:w-[95%] xl:w-[86%] lg:h-[20em] xl:left-28 lg:left-5 lg:rounded-[30px] lg:absolute lg:p-12   ">
-                <h1 className="text-center text-white md:text-[18px] md:w-[40%] md:leading-5 md:tracking-tight md:font-bold  my-3 lg:text-[32px] lg:w-[60%] xl:w-[50%] lg:font-semibold lg:leading-11">
-                  Over 20 Handpicked partners to serve You Better
-                </h1>
-                {/* marquee */}
-                <div className="  h-[6em] w-[100%] rounded-[20px] pt-5 bg-white flex flex-wrap gap-7 flex-col   items-center justify-center    lg:h-[8.5em] overflow-hidden ">
-                  <div className="marquee h-[100%] w-[100%] rounded-[20px]  border-black bg-white flex flex-wrap gap-7 flex-col   items-center justify-center  lg:h-[100%]  ">
-                    <div className=" h-[6em] w-[90%] rounded-[20px] b p-4 bg-white flex flex-wrap flex-col lg:gap-10 items-center lg:justify-center justify-between lg:h-[8.5em] ">
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
-                        <img
-                          src="7.png"
-                          alt=""
-                          className=" h-full w-full object-cover"
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="4.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="3.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
-                        <img
-                          src="6.png"
-                          className=" h-[100%] w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
-                        <img
-                          src="1.png"
-                          alt=""
-                          className=" h-full w-full object-cover"
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="2.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="5.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
-                        <img
-                          src="9.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
+            </div>
+            {/* lg marquee box */}
+            <div className="marque  w-full flex items-center bg-[var(--primg)] rounded-b-[30px] lg flex-col p-6 pt-0   lg:mt-4 xl:mt-8  lg:rounded-[30px]  lg:p-10  lg:pt-0 ">
+              <h1 className="text-center text-[14px] font-bold  my-3 text-white md:  md:w-[50%]  md:leading-6 lg:tracking-normal lg:leading-9  lg:text-[30px] lg:w-[65%] xl:w-[50%] lg:font-semibold lg:pt-8 ">
+                Over 20 Handpicked <br /> partners to serve You Better
+              </h1>
+              {/* marquee */}
+              <div className="  h-[6em] w-[100%] rounded-[20px]  bg-white flex flex-wrap gap-7 flex-col   items-center justify-center    lg:h-[8.5em] overflow-hidden ">
+                <div className="marquee h-[100%] w-[100%] rounded-[20px]  border-black bg-white flex flex-wrap gap-7 flex-col   items-center justify-center  lg:h-[100%] lg:gap-50  ">
+                  <div className=" h-[6em] w-[90%] rounded-[20px] b p-4 bg-white flex flex-wrap flex-col lg:gap-10 items-center lg:justify-center justify-between lg:h-[8.5em] ">
+                    <div className="  h-[60%] w-[40%]  lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="m1.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
                     </div>
-                    <div className=" h-[6em] w-[90%] rounded-[20px] b p-4 bg-white flex flex-wrap flex-col lg:gap-10 items-center lg:justify-center justify-between lg:h-[8.5em] ">
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
-                        <img
-                          src="7.png"
-                          alt=""
-                          className=" h-full w-full object-cover"
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="4.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="3.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
-                        <img
-                          src="6.png"
-                          className=" h-[100%] w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
-                        <img
-                          src="1.png"
-                          alt=""
-                          className=" h-full w-full object-cover"
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="2.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
-                        <img
-                          src="5.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
-                      <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
-                        <img
-                          src="9.png"
-                          className=" h-full w-full object-cover"
-                          alt=""
-                        />
-                      </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m2.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
                     </div>
-                    {/* marquee end */}
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m4.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="m4.png"
+                        className=" h-[100%] w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="m5.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m6.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m7.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m8.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m9.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m10.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m11.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                     <div className="  h-[60%] w-[40%]  lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="7.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="4.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="3.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="6.png"
+                        className=" h-[100%] w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="1.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="2.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="5.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="9.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
                   </div>
+                  <div className=" h-[6em] w-[90%] rounded-[20px] b p-4 bg-white flex flex-wrap flex-col lg:gap-10 items-center lg:justify-center justify-between lg:h-[8.5em] ">
+                    <div className="  h-[60%] w-[40%]  lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="m1.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m2.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m4.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="m4.png"
+                        className=" h-[100%] w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="m5.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m6.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="m7.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m8.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m9.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m10.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="m11.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                     <div className="  h-[60%] w-[40%]  lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="7.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="4.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="3.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="6.png"
+                        className=" h-[100%] w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[15%] ">
+                      <img
+                        src="1.png"
+                        alt=""
+                        className=" h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="2.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" h-[60%] w-[40%] lg:h-[40%] lg:w-[20%] ">
+                      <img
+                        src="5.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                    <div className=" hidden h-[60%] w-[40%] lg:block lg:h-[90%] lg:w-[20%] ">
+                      <img
+                        src="9.png"
+                        className=" h-full w-full object-cover"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                 
+                  {/* marquee end */}
                 </div>
               </div>
             </div>
           </main>
         </section>
         {/* section 6 */}
-        <section className="secton_6 w-full h-[63em] mt-4 lg:h-[41em] max-w-[1600px] mx-auto overflow-hidden ">
+        <section className="secton_6 w-full h-[66.5rem] md:h-[62rem]  mt-4 lg:h-[41em] max-w-[1600px] mx-auto overflow-hidden ">
           <main className="px-4 w-full lg:flex flex-row-reverse lg:px-[3rem] xl:px-[9%] items-center justify-center gap-10 ">
             {/* Form Section */}
             <div className="form lg:w-1/2">
@@ -799,7 +978,7 @@ export default function Home() {
                 <div className="h-[50%] p-3 w-[85%] bg-white/95 shadow-2xl rounded-[20px] absolute bottom-0 left-8 lg:w-[80%] lg:left-15 ">
                   <div className="w-full h-[55%] flex flex-col gap-2 items-center justify-around">
                     <i className="ri-group-fill bg-[var(--primg)] text-white text-4xl rounded-[10px] py-3 px-4"></i>
-                    <h1 className="text-[var(--primg)] text-[18px] tracking-normal font-semibold ">
+                    <h1 className="text-[var(--primg)]   tracking-normal font-semibold ">
                       Honored to Be a Member Of
                     </h1>
                   </div>

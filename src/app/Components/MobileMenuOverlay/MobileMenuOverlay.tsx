@@ -79,7 +79,7 @@ export default function MobileMenuOverlay({
           {/* Insurence dropdown */}
           <li>
             <div className="flex justify-between items-center w-full">
-              <Link href={"/Insurence"} onClick={() => setIsMenuOpen(false)}>
+              <Link href={"/Insurance"} onClick={() => setIsMenuOpen(false)}>
                 <span>Insurance</span>
               </Link>
               <span>
@@ -109,7 +109,7 @@ export default function MobileMenuOverlay({
                 ].map((item, index) => (
                   <li key={index}>
                     <Link
-                      href={`/Insurence/${item
+                      href={`/Insurance/${item
                         .toLowerCase()
                         .replace(/ & /g, "-")
                         .replace(/\s+/g, "-")}`}

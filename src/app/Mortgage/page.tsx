@@ -129,10 +129,7 @@ export default function Mortgage() {
                   className="w-full h-[15em] object-cover"
                 />
 
-                {/* Category Badge */}
-                <span className="absolute top-4 left-4 bg-purple-500 text-white text-xs font-medium px-3 py-1 rounded-full">
-                  EVENTS
-                </span>
+               
               </div>
 
               {/* Content */}
@@ -140,14 +137,14 @@ export default function Mortgage() {
                 <h3 className="text-[25px] font-medium leading-7 text-gray-900 mb-2">
                   {el.heading}
                 </h3>
-                <p className="text-gray-700 text-[14px] mt-5 text-justify">
+                <p className="text-gray-700 text-[14px]  mt-2 text-justify">
                   {el.content}
                 </p>
 
                 {/* Read More */}
                 <Link
                   href='#'
-                  className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 lg:mt-8"
+                  className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 "
                 >
                   Read More
                   <span className="inline-block transform transition-transform group-hover:translate-x-1">

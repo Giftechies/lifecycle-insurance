@@ -14,15 +14,15 @@ export default function Footer() {
           >
             {/* Insurence */}
             <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
-              <Link  href='/Insurence' className="text-[20px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
+              <Link  href='/Insurance' className="text-[20px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
               <div className="flex flex-col space-y-4 lg:mt-4">
-                <Link href="/Insurence/life-insurance" className="text-white/90 hover:text-white transition-colors">Life Insurance</Link>
-                <Link href="/Insurence/trauma-recovery-cover" className="text-white/90 hover:text-white transition-colors">Trauma Recovery Cover</Link>
-                <Link href="/Insurence/total-permanent-disability-benefit-cover" className="text-white/90 hover:text-white transition-colors">Total Permanent Disability Benefit Cover</Link>
-                <Link href="/Insurence/mortgage-rent-protection-cover" className="text-white/90 hover:text-white transition-colors">Mortgage & Rent Protection Cover</Link>
-                <Link href="/Insurence/income-protection-cover" className="text-white/90 hover:text-white transition-colors">Income Protection Cover</Link>
-                <Link href="/Insurence/medical-insurance" className="text-white/90 hover:text-white transition-colors">Medical Insurance</Link>
-                <Link href="/Insurence/group-insurance" className="text-white/90 hover:text-white transition-colors">Group Insurance</Link>
+                <Link href="/Insurance/life-insurance" className="text-white/90 hover:text-white transition-colors">Life Insurance</Link>
+                <Link href="/Insurance/trauma-recovery-cover" className="text-white/90 hover:text-white transition-colors">Trauma Recovery Cover</Link>
+                <Link href="/Insurance/total-permanent-disability-benefit-cover" className="text-white/90 hover:text-white transition-colors">Total Permanent Disability Benefit Cover</Link>
+                <Link href="/Insurance/mortgage-rent-protection-cover" className="text-white/90 hover:text-white transition-colors">Mortgage & Rent Protection Cover</Link>
+                <Link href="/Insurance/income-protection-cover" className="text-white/90 hover:text-white transition-colors">Income Protection Cover</Link>
+                <Link href="/Insurance/medical-insurance" className="text-white/90 hover:text-white transition-colors">Medical Insurance</Link>
+                <Link href="/Insurance/group-insurance" className="text-white/90 hover:text-white transition-colors">Group Insurance</Link>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
               <div className="flex flex-col space-y-4">
                 <Link href="/" className="text-white/90 hover:text-white transition-colors">Home</Link>
                 <Link href="/about" className="text-white/90 hover:text-white transition-colors">About Us</Link>
-                <Link href="/Insurence" className="text-white/90 hover:text-white transition-colors">Insurance</Link>
+                <Link href="/Insurance" className="text-white/90 hover:text-white transition-colors">Insurance</Link>
                 <Link href="/Mortgage" className="text-white/90 hover:text-white transition-colors">Mortgage</Link>
                 <Link href="/Case-study" className="text-white/90 hover:text-white transition-colors">Case Study</Link>
                 <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
@@ -57,7 +57,7 @@ export default function Footer() {
               <h3 className="text-[20px] font-medium mb-3 text-white">Important Links</h3>
               <div className="flex flex-col space-y-4">
                 <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
-                <Link href="#" className="text-white/90 hover:text-white transition-colors">Interest Rates</Link>
+                <Link href="/Interest-rate" className="text-white/90 hover:text-white transition-colors">Interest Rates</Link>
                 <Link href="#" className="text-white/90 hover:text-white transition-colors lg:w-[70%]">Public Available Disclosure</Link>
                 <Link href="#" className="text-white/90 hover:text-white transition-colors">Make a Complaint</Link>
                 <Link href="#" className="text-white/90 hover:text-white transition-colors">Privacy Policy</Link>

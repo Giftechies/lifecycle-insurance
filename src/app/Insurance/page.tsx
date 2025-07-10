@@ -15,7 +15,7 @@ export default function Insurence() {
       date: 20,
       month: 'jun',
       heading: "Life Insurence",
-      li: () => router.push("/Insurence/life-Insurence"),
+      li: () => router.push("/Insurance/life-Insurence"),
       content: "Protect your loved ones with tailored life Insurence. Ensure their financial security with affordable, flexible cover. Peace of mind for all stages of life."
     },
     {
@@ -23,7 +23,7 @@ export default function Insurence() {
       date: 20,
       month: 'jun',
       heading: "Trauma Recovery Cover",
-      li: () => router.push('/Insurence/trauma-recovery-cover'),
+      li: () => router.push('/Insurance/trauma-recovery-cover'),
       content: "Get support when it matters most. Trauma cover offers financial security after serious illness or injury so you can focus fully on recovery."
     },
     {
@@ -31,7 +31,7 @@ export default function Insurence() {
       date: 20,
       month: 'jun',
       heading: " Total Permanent Disability Benefit Cover ",
-      li: () => router.push('/Insurence/total-permanent-disability-benefit-cover'),
+      li: () => router.push('/Insurance/total-permanent-disability-benefit-cover'),
       content: "Financial peace of mind if you're unable to work due to permanent disability."
     },
     {
@@ -39,7 +39,7 @@ export default function Insurence() {
       date: 20,
       month: 'jun',
       heading: " Mortgage & Rent Protection Cover ",
-      li: () => router.push("/Insurence/mortgage-rent-protection-cover"),
+      li: () => router.push("/Insurance/mortgage-rent-protection-cover"),
       content: "Keep your home secure if illness or injury stops you working. Mortgage & Rent Protection covers your payments when life gets tough."
     },
     {
@@ -47,7 +47,7 @@ export default function Insurence() {
       date: 20,
       month: 'jun',
       heading: " Income Protection Cover ",
-      li: () => router.push("/Insurence/income-protection-cover"),
+      li: () => router.push("/Insurance/income-protection-cover"),
       content: "Replace lost income during illness or injury. Maintain your lifestyle and meet your commitments with our flexible income protection plans."
     },
     {
@@ -55,7 +55,7 @@ export default function Insurence() {
       date: 20,
       month: 'jun',
       heading: " Medical Insurence ",
-      li: () => router.push("/Insurence/medical-Insurence"),
+      li: () => router.push("/Insurance/medical-Insurence"),
       content: "Access quality healthcare when you need it most. Our medical Insurence plans offer peace of mind and protection for your health and budget."
     },
     {
@@ -63,7 +63,7 @@ export default function Insurence() {
       date: 20,
       month: 'jun',
       heading: " Group Insurence ",
-      li: () => router.push("/Insurence/group-Insurence"),
+      li: () => router.push("/Insurance/group-Insurence"),
       content: "Protect your team with affordable group cover. Flexible plans for businesses that value their employees’ wellbeing and security. Boost morale."
     },
   ];
@@ -133,10 +133,10 @@ export default function Insurence() {
 
               {/* Content */}
               <div className="px-[35px] py-4 relative">
-                <h3 className="text-[25px] font-medium leading-7 text-gray-900 mb-2">
+                <h3 className="text-[20px] font-medium leading-6 text-gray-900 mb-2">
                   {el.heading}
                 </h3>
-                <p className="text-gray-700 text-[14px] text-justify mt-5">
+                <p className="text-gray-700 text-[14px] leading-6 ">
                   {el.content}
                 </p>
 

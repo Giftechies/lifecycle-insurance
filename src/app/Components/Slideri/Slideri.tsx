@@ -17,20 +17,20 @@ import { useRouter } from "next/navigation";
     const router = useRouter()
 
     const items = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} />, li: ()=>router.push('/Insurence/life-insurance') },
-    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} />, li: ()=>router.push('/Insurence/trauma-recovery-cover') },
+    { label: "Life Insurance", icon: <ShieldCheck size={20} />, li: ()=>router.push('/Insurance/life-insurance') },
+    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} />, li: ()=>router.push('/Insurance/trauma-recovery-cover') },
     {
       label: "Total Permanent Disability Benefit Cover",
-      icon: <Activity size={20} />,li: ()=>router.push('/Insurence/total-permanent-disability-benefit-cover')
+      icon: <Activity size={20} />,li: ()=>router.push('/Insurance/total-permanent-disability-benefit-cover')
     },
-    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} />, li: ()=>router.push('/Insurence/mortgage-rent-protection-cover') },
-    { label: "Income Protection Cover", icon: <Wallet size={20} />, li: ()=>router.push('/Insurence/income-protection-cover') },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} />, li: ()=>router.push('/Insurence/medical-insurance') },
-    { label: "Group Insurance", icon: <Users size={20} />, li: ()=>router.push('/Insurence/group-insurance') },
+    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} />, li: ()=>router.push('/Insurance/mortgage-rent-protection-cover') },
+    { label: "Income Protection Cover", icon: <Wallet size={20} />, li: ()=>router.push('/Insurance/income-protection-cover') },
+    { label: "Medical Insurance", icon: <Stethoscope size={20} />, li: ()=>router.push('/Insurance/medical-insurance') },
+    { label: "Group Insurance", icon: <Users size={20} />, li: ()=>router.push('/Insurance/group-insurance') },
   ];
     return(
-         <div className=" hidden  md:w-[50%] lg:w-[25%] md:flex flex-col  px-6">
-          <div className="sticky top-0  ">
+         <div className=" hidden   md:w-[50%] lg:w-[25%] md:flex flex-col  px-4">
+          <div className="sticky top-0  w-full ">
             <aside className="w-full bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
               <h2 className="text-lg font-semibold mb-6 border-b pb-2">
                 Insurance

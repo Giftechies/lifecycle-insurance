@@ -2,11 +2,14 @@
 
 @import "tailwindcss";
 :root {
-  --primg:#74B4C4;
+  --primg:#63b8ce;
   --secgr:#676666;
   --tri:#566776;
 }
-/* [var(--primg)] */
+/* [var(--primg)]
+[var(--secgr)]
+
+*/
 
 body {
   font-family: 'Poppins',sans-serif;

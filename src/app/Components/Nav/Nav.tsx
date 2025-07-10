@@ -34,11 +34,11 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
     // ${show ? "translate-y-0" : "-translate-y-full"}
     <>
       <nav className="  w-full max-w-[1600px] min-w--[320px] mx-auto ">
-        <div className=" w-full h-15  lg:h-20  px-[2.5rem] py-1 flex items-center justify-between   lg:justify-around   max-w-[1600px] mx-auto ">
+        <div className=" w-full h-15  lg:h-20 px-4   lg:px-[3rem] xl:px-[7rem] py-1  flex items-center justify-between      max-w-[1600px] mx-auto ">
           {/*logo  */}
           <div
             onClick={() => router.push("/")}
-            className=" cursor-pointer w-[70px] md:w-[70px]   lg:w-[85px]  bg-white p-1 mt-4 z-40 "
+            className=" cursor-pointer w-[70px] md:w-[70px] p-1  lg:w-[90px] xl:w-[120px]  bg-white lg:p-3 mt-6 z-40 "
           >
             <img
               src="/logo.png"
@@ -46,96 +46,100 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
               className="object-contain z-40 w-full h-full"
             />
           </div>
+          <div className=" flex items-center lg:gap-3 lg:text-[14px] xl:gap-12 xl:text-[16px]">
+            <div className="hidden mb:flex mb:gap-1  lg:flex gap-3  ">
+              <div className="border-b-2 border-white hover:border-b-2 hover:border-black px-4 py-2">
+                <Link href="/about">About Us</Link>
+              </div>
 
-          <div className="hidden mb:flex mb:gap-1  lg:flex gap-3  ">
-            <div className="border-b-2 border-white hover:border-b-2 hover:border-black px-4 py-2">
-              <Link href="/about">About Us</Link>
-            </div>
+              {/* Insurence dropdown */}
+              <div
+                className="relative   duration-150    px-4 py-2"
+                onMouseEnter={() => setInsurenceOpen(true)}
+                onMouseLeave={() => setInsurenceOpen(false)}
+              >
+                <Link href="/Insurance">Insurance</Link>
+                {InsurenceOpen && (
+                  <div className="absolute top-full left-0 w-64 bg-white  shadow-xl rounded-md z-50 p-3">
+                    {[
+                      "Life insurance",
+                      "Trauma Recovery Cover",
+                      "Total Permanent Disability Benefit Cover",
+                      "Mortgage & Rent Protection Cover",
+                      "Income Protection Cover",
+                      "Medical Insurance",
+                      "Group Insurance",
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        href={`/Insurance/${item
+                          .toLowerCase()
+                          .replace(/ & /g, "-")
+                          .replace(/\s+/g, "-")}`}
+                        className="block px-3 py-2 hover:bg-gray-100 text-black"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            {/* Insurence dropdown */}
-            <div
-              className="relative   duration-150   px-4 py-2"
-              onMouseEnter={() => setInsurenceOpen(true)}
-              onMouseLeave={() => setInsurenceOpen(false)}
-            >
-              <Link href="/Insurence">Insurance</Link>
-              {InsurenceOpen && (
-                <div className="absolute top-full left-0 w-64 bg-white  shadow-xl rounded-md z-50 p-3">
-                  {[
-                    "Life insurance",
-                    "Trauma Recovery Cover",
-                    "Total Permanent Disability Benefit Cover",
-                    "Mortgage & Rent Protection Cover",
-                    "Income Protection Cover",
-                    "Medical Insurance",
-                    "Group Insurance",
-                  ].map((item, index) => (
-                    <Link
-                      key={index}
-                      href={`/Insurence/${item
-                        .toLowerCase()
-                        .replace(/ & /g, "-")
-                        .replace(/\s+/g, "-")}`}
-                      className="block px-3 py-2 hover:bg-gray-100 text-black"
-                    >
-                      {item}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+              {/* Mortgage dropdown */}
+              <div
+                className="relative   px-4 py-2"
+                onMouseEnter={() => setMortgageOpen(true)}
+                onMouseLeave={() => setMortgageOpen(false)}
+              >
+                <Link href="/Mortgage">Mortgage</Link>
+                {mortgageOpen && (
+                  <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
+                    {[
+                      "Home Loans",
+                      "Refinance",
+                      "Investment Loan",
+                      "Business Loan",
+                      "Construction Loan",
+                      "Commercial Loan",
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        href={`/Mortgage/${item
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
+                        className="block px-3 py-2 hover:bg-gray-100 text-black"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
-            {/* Mortgage dropdown */}
-            <div
-              className="relative   px-4 py-2"
-              onMouseEnter={() => setMortgageOpen(true)}
-              onMouseLeave={() => setMortgageOpen(false)}
-            >
-              <Link href="/Mortgage">Mortgage</Link>
-              {mortgageOpen && (
-                <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
-                  {[
-                    "Home Loans",
-                    "Refinance",
-                    "Investment Loan",
-                    "Business Loan",
-                    "Construction Loan",
-                    "Commercial Loan",
-                  ].map((item, index) => (
-                    <Link
-                      key={index}
-                      href={`/Mortgage/${item
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
-                      className="block px-3 py-2 hover:bg-gray-100 text-black"
-                    >
-                      {item}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              <div className="hover:border-b-2 hover:border-black px-4 py-2">
+                <Link href="/Case-study">Case Study</Link>
+              </div>
+              <div className="hover:border-b-2 hover:border-black px-4 py-2">
+                <Link href="/Calculator">Calculator</Link>
+              </div>
+              <div className="hover:border-b-2 hover:border-black px-4 py-2">
+                <Link href="/Interest-rate">Interest Rate</Link>
+              </div>
             </div>
-
-            <div className="hover:border-b-2 hover:border-black px-4 py-2">
-              <Link href="/Case-study">Case Study</Link>
-            </div>
-            <div className="hover:border-b-2 hover:border-black px-4 py-2">
-              <Link href="/Calculator">Calculator</Link>
-            </div>
-          </div>
-          <div>
-            <i
-              onClick={() => setIsMenuOpen(true)}
-              className="text-[1.5rem] py-2 px-2 lg:hidden bg-black text-white rounded-[5px] tracking-tighter ri-menu-line"
-            ></i>
-            <Link
-            href="#"
-              onClick={()=>setIsEnquireOpen(true)}
-              className="hidden lg:block py-3 text-center hover:scale-[.9] w-[10em] rounded-full bg-[var(--primg)] text-white  hover:shadow-2
+            <div>
+              <i
+                onClick={() => setIsMenuOpen(true)}
+                className="text-[1.5rem] py-2 px-2 lg:hidden bg-black text-white rounded-[5px] tracking-tighter ri-menu-line"
+              ></i>
+              <Link
+                href="#"
+                onClick={() => setIsEnquireOpen(true)}
+                className="hidden lg:block py-3 px-5  text-[14px] text-center   rounded-full bg-[var(--primg)] text-white  hover:text-black hover:mb-2
            xl transition-all duration-400 ease-in-out"
-            >
-              Enquire Now
-            </Link>
+              >
+                Enquire Now
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -150,7 +154,7 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
             className="flex flex-col items-center text-[12px]"
           >
             <div className=" logo  mb-1">
-              <img src="/navc.svg" className=" w-[18px]"  alt="" />
+              <img src="/navc.svg" className=" w-[18px]" alt="" />
             </div>
             Call
           </a>
@@ -161,7 +165,7 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
             className="flex flex-col items-center  t"
           >
             <div className=" logo   mb-1 ">
-              <img src="/navm.svg"className=" w-[18px]"  alt="" />
+              <img src="/navm.svg" className=" w-[18px]" alt="" />
             </div>
             Email
           </a>
@@ -189,12 +193,11 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }: NavProps) {
           {/* Right Item */}
           <Link
             href="#"
-              onClick={()=>setIsEnquireOpen(true)}
-            
+            onClick={() => setIsEnquireOpen(true)}
             className="flex flex-col items-center text-[12px] "
           >
             <div className=" logo    mb-1 ">
-              <img src="/navco.svg" className=" w-[18px]"  alt="" />
+              <img src="/navco.svg" className=" w-[18px]" alt="" />
             </div>
             contact
           </Link>

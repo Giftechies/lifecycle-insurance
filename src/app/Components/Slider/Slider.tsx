@@ -18,8 +18,8 @@ import { useRouter } from "next/navigation";
   ];
 
     return(
-         <div className=" hidden  md:w-[50%] lg:w-[25%] md:flex flex-col  py-5 px-6">
-          <div className="sticky top-0  ">
+         <div className="hidden  md:w-[50%] lg:w-[25%] md:flex flex-col  py-5 px-4 ">
+          <div className="sticky top-0 w-full ">
             <aside className="w-full bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
               <h2 className="text-lg font-semibold mb-6 border-b pb-2">
                 Insurance

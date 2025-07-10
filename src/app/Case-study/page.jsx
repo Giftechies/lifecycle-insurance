@@ -15,12 +15,12 @@ export default function Case_study() {
     {
       img: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?q=80&w=1170&auto=format&fit=crop",
       heading: "Types of Insurence",
-      content: "Life Insurence, Health Insurence, Motor Insurence, Home Insurence, Travel Insurence, Business Insurence"
+      content: "Life Insurence, Health Insurence, Motor Insurence, Home Insurence, Travel Insurence, Business InsurenceMotor Insurence and Home Insurence"
     },
     {
       img: "https://images.unsplash.com/photo-1718128120413-783e25de9a3b?w=600&auto=format&fit=crop&q=60",
       heading: "How Insurence Works",
-      content: "Risk Coverage: The insurer takes on the financial risk as per the policy terms. Claim Process: In the event of a loss, the policyholder files a claim."
+      content: "Risk Coverage:The insurer takes on the financial risk as per the policy terms.In the event of a loss,the policyholder files a claim."
     },
     {
       img: "https://plus.unsplash.com/premium_photo-1726736437312-61096a0df6e8?w=600&auto=format&fit=crop&q=60",
@@ -30,7 +30,7 @@ export default function Case_study() {
     {
       img: "https://images.unsplash.com/photo-1470843810958-2da815d0e041?w=600&auto=format&fit=crop&q=60",
       heading: "Benefits of Having Insurence",
-      content: "Risk Transfer: Transfers risk to the insurer. Tax Benefits: Premiums paid are often eligible for tax deductions."
+      content: "Risk Transfer: Transfers risk to the insurer, protecting against major losses. Tax Benefits: Premiums paid are often eligible for valuable tax deductions and savings."
     },
     {
       img: "https://images.unsplash.com/photo-1593538312756-4e01c72f9bd1?w=600&auto=format&fit=crop&q=60",
@@ -40,7 +40,7 @@ export default function Case_study() {
     {
       img: "https://plus.unsplash.com/premium_photo-1723507291530-47c2f7aa9197?w=600&auto=format&fit=crop&q=60",
       heading: "Key Insurence Terms You Should Know",
-      content: "Deductible: The amount you pay before Insurence starts paying. Policyholder: The owner of the policy."
+      content: "Deductible: The amount you pay before insurance starts paying for covered claims. Policyholder: The legal owner of the policy and its benefits."
     },
     {
       img: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&auto=format&fit=crop&q=60",
@@ -109,20 +109,18 @@ export default function Case_study() {
                     alt={el.heading}
                     className="w-full h-[15em] object-cover"
                   />
-                  <span className="absolute top-4 left-4 bg-purple-500 text-white text-xs font-medium px-3 py-1 rounded-full">
-                    EVENTS
-                  </span>
+                 
                 </div>
                 <div className="px-[35px] py-4">
                   <h3 className="text-[25px] font-medium leading-7 text-gray-900 mb-2">
                     {el.heading}
                   </h3>
-                  <p className="text-gray-700 text-[14px] mt-5 text-justify">
+                  <p className="text-gray-700 text-[14px] mt-2 ">
                     {el.content}
                   </p>
                   <Link
                     href="#"
-                    className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 lg:mt-8"
+                    className="text-[var(--primg)] font-semibold mt-1 text-sm hover:underline flex items-center gap-1 lg:mt-8"
                   >
                     Read More
                     <span className="inline-block transform transition-transform group-hover:translate-x-1">
