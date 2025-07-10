@@ -48,7 +48,7 @@ export default function Insurence() {
       month: 'jun',
       heading: " Income Protection Cover ",
       li: () => router.push("/Insurance/income-protection-cover"),
-      content: "Replace lost income during illness or injury. Maintain your lifestyle and meet your commitments with our flexible income protection plans."
+      content: "Replace lost income during illness or injury. Maintain your lifestyle and meet your commitments with our flexible income protection plans, providing reliable financial support"
     },
     {
       img: "8.jpg",
@@ -56,7 +56,7 @@ export default function Insurence() {
       month: 'jun',
       heading: " Medical Insurence ",
       li: () => router.push("/Insurance/medical-Insurence"),
-      content: "Access quality healthcare when you need it most. Our medical Insurence plans offer peace of mind and protection for your health and budget."
+      content: "Access quality healthcare when you need it most. Our medical insurance plans offer peace of mind and protection for your health and budget, with flexible options, expert support."
     },
     {
       img: "8.jpg",
@@ -64,7 +64,7 @@ export default function Insurence() {
       month: 'jun',
       heading: " Group Insurence ",
       li: () => router.push("/Insurance/group-Insurence"),
-      content: "Protect your team with affordable group cover. Flexible plans for businesses that value their employees’ wellbeing and security. Boost morale."
+      content: "Protect your team with affordable group cover. Flexible plans for businesses that value their employees’ wellbeing and security. Boost morale and loyalty with comprehensive, customizable coverage options tailored to your needs."
     },
   ];
 
@@ -147,7 +147,7 @@ export default function Insurence() {
                     e.preventDefault();
                     el.li();
                   }}
-                  className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 lg:mt-8"
+                  className="text-[var(--primg)] font-semibold mt-4 text-sm hover:underline flex items-center gap-1 "
                 >
                   Read More
                   <span className="inline-block transform transition-transform group-hover:translate-x-1">
