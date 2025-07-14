@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
               <Link  href='/Mortgage'  className="text-[20px] font-medium mb-3 text-white">Mortgage</Link>
               <div className="flex flex-col space-y-4 mt-3">
-                <Link href="/Mortgage/home-Loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>
+                <Link href="/Mortgage/home-loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>
                 <Link href="/Mortgage/refinance" className="text-white/90 hover:text-white transition-colors">Refinance</Link>
                 <Link href="/Mortgage/investment-loan" className="text-white/90 hover:text-white transition-colors">Investment Loan</Link>
                 <Link href="/Mortgage/business-loan" className="text-white/90 hover:text-white transition-colors">Business Loan</Link>

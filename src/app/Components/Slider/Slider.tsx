@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
     const router = useRouter()
 
  const items = [
-    { label: "Home Loan", icon: <Home size={20} />, li: ()=>router.push('/Mortgage/home-Loan')  },
+    { label: "Home Loan", icon: <Home size={20} />, li: ()=>router.push('/Mortgage/home-loan')  },
     { label: "Refinance", icon: <Repeat size={20} />, li: ()=>router.push('/Mortgage/refinance') },
     { label: "Investment Loan", icon: <LineChart size={20} />, li: ()=>router.push('/Mortgage/investment-loan')   },
     { label: "Business Loan", icon: <Briefcase size={20} /> , li: ()=>router.push('/Mortgage/business-loan')},

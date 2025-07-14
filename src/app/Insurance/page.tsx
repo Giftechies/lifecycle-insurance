@@ -132,7 +132,7 @@ export default function Insurance() {
               </div>
 
               {/* Content */}
-              <div className="px-[35px] py-4 relative">
+              <div className="p-[30px]  relative">
                 <h3 className="text-[20px] cursor-pointer font-medium leading-6 text-gray-900 mb-2">
                   {el.heading}
                 </h3>

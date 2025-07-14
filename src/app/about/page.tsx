@@ -81,9 +81,9 @@ export default function about() {
               {/* left */}
               <div className=" w-full text-[14px] lg:w-[50%]  ">
                 <i className="ri-record-circle-line"></i> Get to Know Us Better
-                <p className=" text-[20px] leading-8 xl:leading-9 xl:text-[30px]  font-semibold mt-3 xl:mt-4">
+                <h1 className=" text-[20px]    leading-8 xl:leading-9 xl:text-[30px]  font-semibold mt-3 xl:mt-4">
                   Empowering Kiwis With Financial Confidence Since 2006
-                </p>
+                </h1>
               </div>
 
               {/* right */}
@@ -177,7 +177,7 @@ export default function about() {
         <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
           <main className=" w-full flex  flex-col items-center ">
             
-              <p className=" text-[20px] w-[20%]  text-[var(--secgr)]  font-semibold underline "> Our Mortgage Experts</p>
+              <p className=" text-[20px] w-[20%]  text-[var(--secgr)]  font-semibold "> Our Mortgage Experts</p>
             {/* cards */}
             <div className=" w-full  text-black/40  mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
               {/* card 1 */}
