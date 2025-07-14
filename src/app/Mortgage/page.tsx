@@ -14,7 +14,7 @@ export default function Mortgage() {
       date: 20,
       month: "jun",
       heading: "Home Loan",
-      li: ()=> router.push( '/Mortgage/home-Loan'),
+      li: ()=> router.push( '/Mortgage/home-loan'),
       content:
         "Make your dream of home ownership a reality with our flexible home loan solutions. Enjoy competitive rates and personalized service to guide you every step of the way.",
     },
