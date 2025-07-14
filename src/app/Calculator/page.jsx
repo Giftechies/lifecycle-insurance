@@ -140,11 +140,11 @@ export default function RepaymentCalculator() {
         <div className="FormContainer lg:flex justify-between shadow-2xl ">
           <form
             // onSubmit={handleSubmit(calculateRepayment)}
-            className="cal mt-6  lg:w-[55%] flex flex-wrap space-y-0  justify-between shadow-2x p-6  "
+            className="cal mt-6  lg:w-[55%] flex flex-wrap max-lg:space-y-5  justify-between shadow-2x p-6  "
           >
             {/* Loan Amount */}
 
-            <div className="amount w-[45%] lg:h-20 flex flex-col relative ">
+            <div className="amount w-[45%]   lg:h-[80px] flex flex-col relative ">
               <label
                 className=" text-[14px] bg-white absolute  left-3 p-1 lg:text-[17px] "
                 htmlFor=""
@@ -153,7 +153,7 @@ export default function RepaymentCalculator() {
               </label>
               <input
                 {...register("amount")}
-                className="border rounded-[5px] text-[var(--secgr)] mt-4 w-full p-4"
+                className="border rounded-[5px] min-h-[60px] text-[var(--secgr)] mt-4 w-full p-4"
                 placeholder="$200,000"
                 type="number"
               />
@@ -173,7 +173,7 @@ export default function RepaymentCalculator() {
                 render={({ field }) => (
                   <select
                     {...field}
-                    className="border rounded-[5px] text-[var(--secgr)]  w-full p-4 mt-4"
+                    className="border rounded-[5px] text-[var(--secgr)] min-h-[60px] w-full p-4 mt-4"
                   >
                     <option value="weekly">Weekly</option>
                     <option value="fortnightly">Fortnightly</option>
@@ -192,7 +192,7 @@ export default function RepaymentCalculator() {
                 Interest Rate %
               </label>
               <input
-                className="border rounded-[5px] text-[var(--secgr)] w-full p-4 mt-4"
+                className="border rounded-[5px] text-[var(--secgr)] w-full min-h-[60px] p-4 mt-4"
                 placeholder="e.g. 6.5"
                 type="number"
                 value={interestRate}
@@ -210,7 +210,7 @@ export default function RepaymentCalculator() {
                   Select Bank Rate
                 </label>
                 <select
-                  className="border rounded-[5px] text-[var(--secgr)] w-full p-4 mt-4"
+                  className="border rounded-[5px] text-[var(--secgr)] w-full min-h-[60px] p-4 mt-4"
                   onChange={(e) => {
                     const newRate = parseFloat(e.target.value);
                     setInterestRate(newRate);
@@ -240,7 +240,7 @@ export default function RepaymentCalculator() {
               </label>
               <input
                 {...register("term")}
-                className="border rounded-[5px] text-[var(--secgr)] w-[45%] p-4 mt-4"
+                className="border rounded-[5px] text-[var(--secgr)] w-[45%] min-h-[60px] p-4 mt-4"
                 placeholder="e.g. 30"
                 type="number"
               />
@@ -268,8 +268,8 @@ export default function RepaymentCalculator() {
           </form>
           <div className="Result  lg:w-[40%]">
             {totalInterest !== null && totalPayable !== null && (
-              <div className="mt-6 p-6 bg-white rounded-lg shadow-2x ">
-                <h3 className="text-xl font-medium mb-4">Repayment Summary</h3>
+              <div className="  lg:mt-6  p-6 bg-white rounded-lg shadow-2x ">
+                <h3 className="text-xl font-medium mb-4 text-center ">Repayment Summary</h3>
 
                 {/* ✅ Graph Section */}
                 <div className="max-w-xs h-56 xl:h-52 flex  justify-center mx-auto mb-6">
@@ -279,7 +279,7 @@ export default function RepaymentCalculator() {
                       datasets: [
                         {
                           data: [parseFloat(watch("amount")), totalInterest],
-                          backgroundColor: ["#4ade80", "#93c5fd"],
+                          backgroundColor: ["#676666", "#76B6C3"],
                           borderWidth: 1,
                         },
                       ],
@@ -304,7 +304,7 @@ export default function RepaymentCalculator() {
                 </div>
 
                 {/* ✅ EMI, Interest, Payable */}
-                <div className="flex flex-col space-y-3  max-lg:mt-32">
+                <div className="flex flex-col space-y-3">
                   <div className="flex justify-between">
                     <span className="font-medium">EMI payable</span>
                     <span className="font-semibold max-sm:text-right ">

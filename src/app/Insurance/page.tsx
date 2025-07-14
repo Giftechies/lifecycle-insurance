@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Header from "../Components/Header/Header";
 import Link from "next/link";
 
-export default function Insurence() {
+export default function Insurance() {
   const router = useRouter();
 
   // Same card data, just li as functions
@@ -14,9 +14,9 @@ export default function Insurence() {
       img: "8.jpg",
       date: 20,
       month: 'jun',
-      heading: "Life Insurence",
-      li: () => router.push("/Insurance/life-Insurence"),
-      content: "Protect your loved ones with tailored life Insurence. Ensure their financial security with affordable, flexible cover. Peace of mind for all stages of life."
+      heading: "Life Insurance",
+      li: () => router.push("/Insurance/life-insurance"),
+      content: "Protect your loved ones with tailored life Insurance. Ensure their financial security with affordable, flexible cover. Peace of mind for all stages of life."
     },
     {
       img: "8.jpg",
@@ -54,16 +54,16 @@ export default function Insurence() {
       img: "8.jpg",
       date: 20,
       month: 'jun',
-      heading: " Medical Insurence ",
-      li: () => router.push("/Insurance/medical-Insurence"),
+      heading: " Medical Insurance ",
+      li: () => router.push("/Insurance/medical-insurance"),
       content: "Access quality healthcare when you need it most. Our medical insurance plans offer peace of mind and protection for your health and budget, with flexible options, expert support."
     },
     {
       img: "8.jpg",
       date: 20,
       month: 'jun',
-      heading: " Group Insurence ",
-      li: () => router.push("/Insurance/group-Insurence"),
+      heading: " Group Insurance ",
+      li: () => router.push("/Insurance/group-insurance"),
       content: "Protect your team with affordable group cover. Flexible plans for businesses that value their employees’ wellbeing and security. Boost morale and loyalty with comprehensive, customizable coverage options tailored to your needs."
     },
   ];
@@ -98,12 +98,12 @@ export default function Insurence() {
           <div className="w-full text-[var(--primg)] text-[16px] lg:w-[55%] font-medium">
             <i className="ri-record-circle-line"></i> Insurance
             <p className="leading-9 text-black text-[26px] lg:text-[36px] font-semibold mt-3 lg:leading-11">
-              Personalised Insurence Solutions Tailored to Your Life
+              Personalised Insurance Solutions Tailored to Your Life
             </p>
           </div>
 
           <div className="w-full mt-2 lg:w-[40%] lg:mt-10 lg:text-[14px] text-justify">
-            Lifecycle Financial offers trusted mortgage and Insurence advice,
+            Lifecycle Financial offers trusted mortgage and Insurance advice,
             working with leading banks and providers to help you make the best
             financial decisions for your future.
           </div>
@@ -133,7 +133,7 @@ export default function Insurence() {
 
               {/* Content */}
               <div className="px-[35px] py-4 relative">
-                <h3 className="text-[20px] font-medium leading-6 text-gray-900 mb-2">
+                <h3 className="text-[20px] cursor-pointer font-medium leading-6 text-gray-900 mb-2">
                   {el.heading}
                 </h3>
                 <p className="text-gray-700 text-[14px] leading-6 ">

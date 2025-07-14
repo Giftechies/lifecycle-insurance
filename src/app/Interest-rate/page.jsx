@@ -45,8 +45,6 @@ export default function InterestRatesTable() {
     <section className=" ">
       <Header title="Interest Rate" />
       <div className="p-4 max-w-[1600px] mx-auto lg:px-[3.3rem] xl:px-[7rem] font-sans ">
-        <h2 className="text-[16px]  text-[var(--primg)]">  <i className="ri-record-circle-line mr-2 text-lg font-extralight"></i>Interest Rate</h2>
-
         {loading && (
           <div className="text-center text-gray-500 p-4">Loading rates...</div>
         )}
@@ -59,7 +57,7 @@ export default function InterestRatesTable() {
         {!loading && !error && (
           <div className="hidden lg:block overflow-x-auto">
             <h1 className=" text-center text-[36px] font-semibold ">The Latest Interest rates</h1>
-            <table className="min-w-full border-collapse border border-gray-300  ">
+            <table className="min-w-full border-collapse border border-gray-300 lg:mt-4 ">
               <thead className="bg-[var(--primg)]  text-white">
                 <tr>
                   <th className="border p-2">Institution</th>

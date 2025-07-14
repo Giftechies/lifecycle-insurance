@@ -45,7 +45,7 @@ const Sidebar = () => {
                 <i className="ri-record-circle-line mr-1.5 "></i>Commercial Loan
               </h1>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-              At Lifecycle Financial, we take pride in providing flexible and strategic commercial loans that help New Zealand businesses flourish. Whether you want to extend your operation, buy new machines or invest in company premises, our knowledgeable experts are available who will guide you to secure the proper finances, quickly, without any hassles.
+              At Lifecycle Financial, we take pride in providing flexible and strategic commercial Loan that help New Zealand businesses flourish. Whether you want to extend your operation, buy new machines or invest in company premises, our knowledgeable experts are available who will guide you to secure the proper finances, quickly, without any hassles.
               </p>
             </div>
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
                     What Is a Commercial Loan?
                     </h1>
                     <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify lg:w-[80%] ">
-                     A commercial loan is a business financing that can be utilised in terms of capital expenditure or operations. Commercial loans, unlike personal loans, are customised and their use can be varied-it can be equipment manufacture or upgrade, property purchase and construction, working capital and lot more.
+                     A commercial loan is a business financing that can be utilised in terms of capital expenditure or operations. Commercial Loan, unlike personal Loan, are customised and their use can be varied-it can be equipment manufacture or upgrade, property purchase and construction, working capital and lot more.
                     </p>
 
                   

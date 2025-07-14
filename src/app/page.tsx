@@ -9,9 +9,10 @@ import { useEnquiryContext, EnquiryData } from "./Context/EnquiryContext";
 import { nanoid } from "nanoid";
 import { useRouter } from "next/navigation";
 
+
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-export default function Home() {
+export default function Home({  }) {
   const iconBox = useRef(null);
   const sec2 = useRef(null);
   const sec3 = useRef(null);
@@ -147,7 +148,7 @@ export default function Home() {
 
           {/* Text + Icon Content */}
           <div className=" relative  w-full h-full max-w-[1600px] mx-auto z-30">
-            <div className="relative pt-25 px-4 md:px-[1.5rem]  lg:px-[3.5rem] xl:px-[7rem] lg:pt-50 pb-10 z-20 text-white ">
+            <div className="relative pt-25 px-4 md:px-[1.5rem]  lg:px-[3.5rem] xl:px-[3rem] lg:pt-50 pb-10 z-20 text-white ">
               <p className="animate-fadeInUp text-gray-300 text-sm md:text-base font-semibold mb-2">
                 <i className="ri-record-circle-line mr-2 text-lg font-extralight text-white"></i>
                 LIFE CYCLE FINANCIAL
@@ -170,23 +171,24 @@ export default function Home() {
                 clients including Mortgages both Residential & Commercial,
               </h4>
 
-              <button className="mt-6 tracking-widest py-3 px-8 text-sm mb-10 border border-white rounded-full hover:text-[var(--primg)] hover:border-[var(--primg)] hover:scale-[.9] transition-all duration-300 ">
+              <button  onClick={()=>{router.push("/Enquire")}}  className="mt-6 tracking-widest py-3 px-6 cursor-pointer text-sm mb-10 border border-white rounded-full hover:text-[var(--primg)] hover:bg-white/10 hover:scale-[.98] transition-all duration-300 ">
                 Request An Appraisal{" "}
-                <i className="ml-2 ri-arrow-right-wide-fill"></i>
+                <i className="ml-1 ri-arrow-right-wide-fill"></i>
               </button>
 
               {/* Icon Box */}
-              <div className="icon-box  max-md:mt-12 w-full overflow-hidden border border-dashed border-white/40 md:w-[80%] rounded-3xl flex flex-col  md:flex-row items-center lg:w-[60%] justify-between p-4 gap-6">
+              <div className="home-icon-box  max-md:mt-12 w-full  border border-dashed border-white/40 md:w-[80%] rounded-3xl flex flex-col  md:flex-row items-center lg:w-[60%] justify-between p-4 gap-6">
                 {/* Card 1 */}
-                <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dashed border-white/40 p-4">
+                <div className="flex flex-col items-center text-center flex-1   md:border-b-0 md:border-r border-dashed border-white/40 p-4">
                   <img
                     src="./thumbsup.svg"
                     alt="Rating"
-                    className="w-12 h-12"
+                    className="w-12  h-12"
                   />
-                  <h1 className="text-white font-semibold mt-3 text-sm">
-                    4.9 Star Ratings
+                  <h1 className="  text-white  font-semibold mt-3 text-sm">
+                  20+ years combined industry experience
                   </h1>
+                  <p className="border b"></p>
                 </div>
 
                 {/* Card 2 */}
@@ -197,7 +199,7 @@ export default function Home() {
                     className="w-12 h-12"
                   />
                   <h1 className="text-white font-semibold mt-3 text-sm">
-                    300+ Happy Clients
+                    700+ Happy Clients served
                   </h1>
                 </div>
 
@@ -209,7 +211,7 @@ export default function Home() {
                     className="w-12 h-12"
                   />
                   <h1 className="text-white font-semibold mt-3 text-sm">
-                    Satisfaction 100%
+                    98% client satisfaction rate
                   </h1>
                 </div>
               </div>
@@ -220,7 +222,7 @@ export default function Home() {
         {/* section 2 */}
         <section
           ref={sec2}
-          className="section-2 w-full  p-4 lg:px-[3rem] xl:px-[7rem] lg:py-[80px] max-w-[1600px] mx-auto  "
+          className="section-2 w-full  p-4 lg:px-[3rem] xl:px-[3rem] lg:py-[80px] max-w-[1600px] mx-auto  "
         >
           <main className="  w-[100%]    lg:flex  relative ">
             <div className="imgLeft w-full  rounded-4xl overflow-hidden border max-md:aspect-[1.5] md:aspect-[1.8]  lg:w-[52%] lg:h-[42rem]  ">
@@ -230,7 +232,7 @@ export default function Home() {
                 alt=""
               />
             </div>
-            <div className="contentRight max-lg:mt-3 lg:w-[55%] lg:flex gap- flex-col tracking-normal  ">
+            <div className="contentRight max-lg:mt-3 lg:w-[55%] lg:flex gap- flex-col tracking-wider text-justify  ">
               <div className="uppercontent w-full xl:w-[80%] leading-6 lg:ml-12  ">
                 <h1 className="text-[var(--primg)] font-semibold text-[22px] ">
                   {" "}
@@ -240,14 +242,14 @@ export default function Home() {
                 <p className=" text-[16px]  text-[var(--secgr)] font-normal  mt-2">
                   We provide wide range of financial services to the clients
                   including Mortgages both Residential & Commercial, & Personal
-                  Insurence products such as life, Health, Income Protection,
-                  Mortgage Protection, Redundancy cover and Trauma Insurence.
-                  For home, contents, car and business Insurence we have
+                  Insurance products such as life, Health, Income Protection,
+                  Mortgage Protection, Redundancy cover and Trauma Insurance.
+                  For home, contents, car and business Insurance we have
                   additional specialists that we call upon.
                 </p>
                 <button
                   onClick={() => router.push("/about")}
-                  className=" flex items-center bg-[var(--primg)] cursor-pointer text-white px-7 py-3 rounded-full  mt-4   text-[16px] hover:text-black hover:scale-[.9] duration-300 "
+                  className=" flex items-center bg-[var(--primg)] cursor-pointer text-white px-7 py-3 rounded-full  mt-4   text-[16px] hover:text-black hover:scale-[.98] duration-300 "
                 >
                   Know more <i className="ri-arrow-right-s-line    "></i>
                 </button>
@@ -266,7 +268,7 @@ export default function Home() {
                         />
                         One Call Does It All
                       </p>
-                      <h1 className="  text-white/100 text-[14px] tracking-widest   ">
+                      <h1 className="  text-white/100 text-[14px] tracking-widest mt-2   ">
                         From application to approval, we handle everything under
                         one roof. With access to top banks and lenders across
                         New Zealand
@@ -277,14 +279,14 @@ export default function Home() {
                     <div className="  p-4 bg-[var(--secgr)] rounded-b-full ">
                       <img
                         src="./phone.svg"
-                        className=" w-[2rem]   object-cover object-center "
+                        className=" w-[2rem]  cursor-pointer object-cover object-center "
                         alt=""
                       />
                     </div>
 
                     <div className="call">
-                      <p className=" font-semibold">Call Now</p>
-                      <p>0800 50 7770</p>
+                      <a href="tel:0800507770" className=" block font-semibold">Call Now</a>
+                      <a href="tel:0800507770" className=" cursor-pointer text-[var(--secgr)] font-semibold text-[18px]">0800 50 7770</a>
                     </div>
                   </div>
                 </div>
@@ -308,8 +310,8 @@ export default function Home() {
                     </div>
 
                     <div className="call">
-                      <p className=" font-semibold">Call Now</p>
-                      <p>0800 50 7770</p>
+                      <a href="tel:0800507770" className=" block font-semibold">Call Now</a>
+                      <a href="tel:0800507770" className="  text-[var(--secgr)]">0800 50 7770</a>
                     </div>
                   </div>
                 </div>
@@ -323,25 +325,25 @@ export default function Home() {
           ref={sec3}
           className="section-3  bg-[var(--primg)] w-full overflow-hidden   font-sans "
         >
-          <main className="  w-full max-w-[1600px] mx-auto p-6 flex lg:p-15 lg:py-22   xl:p-25   ">
+          <main className="  w-full max-w-[1600px] mx-auto p-6 flex lg:p-15 lg:py-22   xl:p-[3rem]   ">
             <div className="right  w-[100%]  flex max-md:flex-col max-md:justify-center border-black gap-4  lg:w-[65%] xl:w-[60%]">
               <div className="line w-full md:w-[10%]   gap-4 flex md:flex-col items-center text-white justify-center">
                 <div className=" h-3 w-3 lg:h-5 lg:w-5 rounded-full aspect-auto bg-white  "></div>
                 <div className=" w-full border-t md:w-0.5 md:border-r border-dashed h-[85%] mt-8"></div>
               </div>
               <div className="cards  font-normal   w-full  max-md:flex-col  gap-8   md:flex-wrap lg:gap-6  xl:w-[80%] flex ">
-                <h1 className=" text-[36px] lg:text-[32px]  font-bold tracking-norma  leading-9 text-white/80 ">
+                <h1 className=" text-[36px] lg:text-[32px]  font-bold tracking-normal  leading-9 text-white/80 ">
                   Numbers That Speak for Themselves
                 </h1>
                 <div className="card box-anime  max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
                   <div className=" w-[80%] lg:w-[75%] xl:w-[65%] tracking-normal ">
                     <img src="./target.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
-                      2,500+
+                      99% 
                     </p>
                     <p className="   text-black  ">
                       {" "}
-                      Pre-approval Success <br /> rate{" "}
+                      application approval <br /> rate{" "}
                     </p>
                   </div>
                 </div>
@@ -349,23 +351,23 @@ export default function Home() {
                   <div className="w-[80%] lg:w-[75%]  xl:w-[65%] tracking-normal ">
                     <img src="./timer.svg" className=" h-8 w-8 mb-3" alt="" />
                     <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
-                      45 Hours
+                      $200 
                     </p>
                     <p className="   text-black ">
                       {" "}
-                      Average time for loan approvals
+                      million+ in mortgage <br /> arranged
                     </p>
                   </div>
                 </div>
                 <div className="card box-anime-2   max-md:p-8  md:w-[45%]  md:aspect-[1.5] lg:w-[47%] lg:aspect-[1.2] xl:aspect-[1.4] flex flex-col justify-center items-center   ">
                   <div className=" w-[80%] lg:w-[75%]  xl:w-[65%] tracking-normal ">
                     <img src="./family.svg" className=" h-8 w-8 mb-3" alt="" />
-                    <p className=" text-[20px]  text-[var(--secgr)] font-bold ">
-                      2,500+
+                    <p className="  text-left text-[20px]  text-[var(--secgr)] font-bold ">
+                      6+
                     </p>
                     <p className="   text-black ">
                       {" "}
-                      Families helped in buying their first home
+                       insurance providers <br /> partnered with
                     </p>
                   </div>
                 </div>
@@ -377,7 +379,7 @@ export default function Home() {
                     </p>
                     <p className="  text-black ">
                       {" "}
-                      Trusted bank and Insurence partners
+                     mortgage providers to <br /> choose from
                     </p>
                   </div>
                 </div>
@@ -400,7 +402,7 @@ export default function Home() {
           ref={sec4}
           className="Section_4  lg:py-5 max-w-[1600px] mx-auto overflow-hidden  "
         >
-          <main className=" pt-10 py-3 px-4 lg:px-[3rem] xl:px-[7rem]   ">
+          <main className=" pt-10 py-3 px-4 lg:px-[3rem] xl:px-[3rem]   ">
             {/* part 1 */}
             <div className="   w-[100%]  lg:flex  ">
               <div className="  lg:w-[60%]  ">
@@ -434,19 +436,19 @@ export default function Home() {
                   />
                 </div>
                 {/* part 2 */}
-                <div className="part2 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden ">
-                  <p className="text-white font-semibold text-[20px] lg:mb-3">
-                    Insurence
+                <div onClick={()=>router.push("/Insurance")} className="part2  w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden ">
+                  <p className="text-white cursor-pointer font-semibold text-[20px] ">
+                    Insurance
                   </p>
 
                   <p className=" text-[14px] text-white/80 text-justify mt-2">
                     {" "}
-                    As specialist Insurence Brokers with many years of
+                    As specialist Insurance Brokers with many years of
                     experience, we are able to advise you and provide you with
                     the solutions that best suit your needs,
                   </p>
-                  <div className="absolute h-[4em] w-[4em] bg-white top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f]">
-                    <i className="text-4lg ri-arrow-right-up-line text-black"></i>
+                  <div className="absolute h-[4em] w-[4em] bg-white top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f ] hover:bg-zinc-100">
+                    <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px] "></i>
                   </div>
                 </div>
               </div>
@@ -461,17 +463,17 @@ export default function Home() {
                   />
                 </div>
                 {/* part 4 */}
-                <div className="part4 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--primg)] text-white relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  ">
-                  <p className="text-[20px] font-bold ">Mortgages</p>
+                <div onClick={()=>router.push("/Mortgage")} className="part4 w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--primg)] text-white relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  ">
+                  <p className="text-[20px] font-bold cursor-pointer ">Mortgages</p>
 
                   <p className=" text-[14px] text-white/80  text-justify mt-2">
                     {" "}
                     A lot of lenders now require a deposit of around 20%, but we
-                    are still able to get some home loans done with as little as
+                    are still able to get some home Loan done with as little as
                     a 5% deposit.
                   </p>
-                  <div className="absolute h-[4em] w-[4em] bg-white top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f]">
-                    <i className="text-4lg ri-arrow-right-up-line text-black"></i>
+                  <div className="absolute h-[4em] w-[4em] bg-white hover:bg-zinc-100 top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f]">
+                    <i   className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px]"></i>
                   </div>
                 </div>
               </div>
@@ -480,9 +482,9 @@ export default function Home() {
         </section>
 
         {/* section 5 */}
-        <section className="section_5 w-full px-4 lg:px-[3rem] xl:px-[7rem] overflow-hidden max-w-[1600px] mx-auto">
+        <section className="section_5 w-full px-4 lg:px-[3rem] xl:px-[3rem] overflow-hidden max-w-[1600px] mx-auto">
           <main className=" w-full   ">
-            <div className="w-full flex max-lg:flex-col mt-3 max-lg:gap-4 ">
+            <div className="w-full flex max-lg:flex-col  max-lg:gap-8  ">
               {/* left part 1 */}
               <div className=" w-full h-[20rem] lg:w-[40%] lg:h-[37rem] rounded-xl  overflow-hidden">
                 <img
@@ -492,7 +494,7 @@ export default function Home() {
                 />
               </div>
               {/* Right */}
-              <div className="Right lg:w-[60%] ">
+              <div className="Right lg:w-[60%] flex flex-col  gap-10 lg:gap-15 ">
                 {/* part 2 */}
                 <div className=" lg:ml-[3rem]">
                   <p className="text-[var(--primg)] font-bold   ">
@@ -501,7 +503,8 @@ export default function Home() {
                     Mortgage Services Backed by Experience
                   </p>
 
-                  <p className="text-[14px] mt-4  lg:mt-1">
+                  <p className="text-[14px] mt-1
+                    ">
                     {" "}
                     From application to approval, we handle everything under one
                     roof. With access to top banks and lenders across New
@@ -510,14 +513,14 @@ export default function Home() {
                   </p>
                 </div>
                 {/* part 3 */}
-                <div className=" w-full mt-5  ">
+                <div className=" w-full    ">
                   {/* icon box */}
-                  <div className="  w-full  bg-[var(--primg)] flex max-md:flex-col flex-wrap  justify-center max-md:gap-8  text-white text-[20px] font-semibold text-center max-lg:rounded-t-4xl tracking-wide p-10   md:space-y-7  md:pb-0    lg:rounded-r-4xl lg:mt-8  xl:pt-20  xl:py-20  ">
+                  <div className="icon-box   w-full  bg-[var(--primg)] flex max-md:flex-col flex-wrap items-start max-md:gap-10  md:justify-between md:gap-y-11 text-white text-[18px]  font-normal  max-lg:rounded-t-4xl tracking-wide p-12   lg:rounded-r-4xl    ">
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/home-loan");
+                        router.push("/Mortgage/home-Loan");
                       }}
-                      className=" w-full md:w-[33%] md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-center md:justify-cente  lg:gap-y-4   "
+                      className="icon  w-full     md:w-[30%] md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-start   "
                     >
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
@@ -527,13 +530,13 @@ export default function Home() {
                           alt=""
                         />
                       </div>
-                      <h1 className=" cursor-pointer  ">Home Loan</h1>
+                      <h1 className="  cursor-pointer  ">Home Loan</h1>
                     </div>
                     <div
                       onClick={() => {
                         router.push("/Mortgage/investment-loan");
                       }}
-                      className=" w-full md:w-[33%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-center justify-cente  lg:gap-y-4   "
+                      className=" icon w-full     md:w-[30%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4       "
                     >
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
@@ -543,19 +546,19 @@ export default function Home() {
                           alt=""
                         />
                       </div>
-                      <h1 className="  cursor-pointer  ">Investment Loan</h1>
+                      <h1 className="  cursor-pointe">Investment Loan</h1>
                     </div>
                     <div
                       onClick={() => {
                         router.push("/Mortgage/refinance");
                       }}
-                      className=" w-full md:w-[33%]      flex md:flex-col  gap-4  items-center md:justify-cente  lg:gap-y-4  "
+                      className="icon w-full     md:w-[30%]      flex md:flex-col  gap-4      "
                     >
-                      <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
+                      <div className=" w-[50px]   bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
                         <img
                           src="./checksquare.svg"
-                          className=" h-full w-full object-cover cursor-pointer"
+                          className=" h-full w-full object-cover  cursor-pointer"
                           alt=""
                         />
                       </div>
@@ -563,9 +566,9 @@ export default function Home() {
                     </div>
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/commercial-loan");
+                        router.push("/Mortgage/business-loan");
                       }}
-                      className="  w-full md:w-[33%]     md:border-r  border-white/50 border-dashed flex md:flex-col  gap-4  items-center   lg:gap-y-4  "
+                      className="icon  w-full     md:w-[30%]     md:border-r  border-white/50 border-dashed flex md:flex-col  gap-4      "
                     >
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
@@ -581,7 +584,7 @@ export default function Home() {
                       onClick={() => {
                         router.push("/Mortgage/construction-loan");
                       }}
-                      className=" w-full md:w-[33%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-center   lg:gap-y-4  "
+                      className="icon w-full     md:w-[30%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4       "
                     >
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
@@ -600,7 +603,7 @@ export default function Home() {
                       onClick={() => {
                         router.push("/Mortgage/commercial-loan");
                       }}
-                      className=" w-full md:w-[33%]      flex md:flex-col  gap-4  items-center  lg:gap-y-4  "
+                      className="icon w-full     md:w-[30%]      flex md:flex-col  gap-4      "
                     >
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
@@ -903,7 +906,7 @@ export default function Home() {
         </section>
         {/* section 6 */}
         <section className="secton_6 w-full h-[66.5rem] md:h-[62rem]  mt-4 lg:h-[41em] max-w-[1600px] mx-auto overflow-hidden ">
-          <main className="px-4 w-full lg:flex flex-row-reverse lg:px-[3rem] xl:px-[9%] items-center justify-center gap-10 ">
+          <main className="px-4 w-full lg:flex flex-row-reverse lg:px-[3rem] xl:px-[3rem] items-center justify-center gap-10 ">
             {/* Form Section */}
             <div className="form lg:w-1/2">
               <p className="text-[var(--primg)]">
@@ -944,7 +947,7 @@ export default function Home() {
                   <option value="" disabled>
                     Service you're interested in?
                   </option>
-                  <option value="Insurence">Insurence</option>
+                  <option value="Insurance">Insurance</option>
                   <option value="Mortgage">Mortgage</option>
                 </select>
 

@@ -69,7 +69,7 @@ const Sidebar = () => {
 
   const How = [
     {title:"You can choose to cover upto 110% of your mortgage repayment on your residential property.  ",
-      content:" The extra 10% is important because there are additional expenses with property, such as rates, and home and contents Insurance and the interest rate on most home loans will rise at some stage, when fixed rates roll off or variable rates increase."
+      content:" The extra 10% is important because there are additional expenses with property, such as rates, and home and contents Insurance and the interest rate on most home Loan will rise at some stage, when fixed rates roll off or variable rates increase."
     },
     {title:" Alternatively, you can take our Mortgage cover for your investment property ",
       content:"For investment properties or for small business lending against your residential property, you can take out Mortgage cover up to the value of 40% of your gross annual income. "
@@ -173,7 +173,7 @@ const Sidebar = () => {
              <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
             How does Mortgage Cover work ?
             </h1>
-            <p className=" text-[14px] ">There are three types of TPD Insurences….</p>
+            <p className=" text-[14px] ">There are three types of TPD Insurances….</p>
             {How.map((el)=>(
               <>
               <div className=" flex items-start mt-2.5 " >

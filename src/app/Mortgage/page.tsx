@@ -14,7 +14,7 @@ export default function Mortgage() {
       date: 20,
       month: "jun",
       heading: "Home Loan",
-      li: ()=> router.push( '/Mortgage/home-loans'),
+      li: ()=> router.push( '/Mortgage/home-Loan'),
       content:
         "Make your dream of home ownership a reality with our flexible home loan solutions. Enjoy competitive rates and personalized service to guide you every step of the way.",
     },
@@ -34,7 +34,7 @@ export default function Mortgage() {
       heading: "Investment Loan",
       li: ()=> router.push( "/Mortgage/investment-loan"),
       content:
-        "Build your wealth with our tailored investment loans. We help you maximize returns and grow your property portfolio with expert advice.",
+        "Build your wealth with our tailored investment Loan. We help you maximize returns and grow your property portfolio with expert advice.",
     },
     {
       img: "https://plus.unsplash.com/premium_photo-1661499804385-da9ba8357b14?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJ1c2luZXNzJTIwb2ZmaWNlfGVufDB8fDB8fHww",
@@ -43,7 +43,7 @@ export default function Mortgage() {
       heading: "Business Loan",
       li: ()=> router.push(  "/Mortgage/business-loan"),
       content:
-        "Fuel your business ambitions with fast, flexible financing. Whether expanding or managing cash flow, our business loans adapt to your goals.",
+        "Fuel your business ambitions with fast, flexible financing. Whether expanding or managing cash flow, our business Loan adapt to your goals.",
     },
     {
       img: "https://media.istockphoto.com/id/2173981229/photo/blurred-image-engineer-is-giving-advice-and-consulting-with-the-designer-to-find-out.webp?a=1&b=1&s=612x612&w=0&k=20&c=Has6w_cyklwmYGPZh5cUBXxb3C7uJ__9JkAwozKYNbY=",
@@ -52,7 +52,7 @@ export default function Mortgage() {
       heading: "Construction Loan",
       li: ()=> router.push( "/Mortgage/construction-loan" ),
       content:
-        "Bring your building plans to life with structured funding at every stage. Our construction loans ensure your project stays on track and on budget.",
+        "Bring your building plans to life with structured funding at every stage. Our construction Loan ensure your project stays on track and on budget.",
     },
     {
       img: "https://images.unsplash.com/photo-1599580546666-c26f15e00933?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbW1lcmNpYWwlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D",
@@ -134,7 +134,7 @@ export default function Mortgage() {
 
               {/* Content */}
               <div className="px-[35px] py-4 ">
-                <h3 className="text-[25px] font-medium leading-7 text-gray-900 mb-2">
+                <h3 className="text-[25px] cursor-pointer font-medium leading-7 text-gray-900 mb-2">
                   {el.heading}
                 </h3>
                 <p className="text-gray-700 text-[14px]  mt-2 text-justify">

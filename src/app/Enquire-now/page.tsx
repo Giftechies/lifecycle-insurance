@@ -59,7 +59,7 @@ export default function EnquiryNow() {
           <option value="" disabled>
             Service you're interested in?
           </option>
-          <option value="Insurence">Insurence</option>
+          <option value="Insurance">Insurance</option>
           <option value="Mortgage">Mortgage</option>
         </select>
 

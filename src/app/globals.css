@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 :root {
-  --primg:#63b8ce;
+  --primg:#76B6C3;
   --secgr:#676666;
   --tri:#566776;
 }
@@ -10,7 +10,12 @@
 [var(--secgr)]
 
 */
+/* *{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
+} */
 body {
   font-family: 'Poppins',sans-serif;
   height: 100%;
@@ -23,6 +28,34 @@ body {
   
   
 }
+
+.icon-box h1{
+  width: 20%;
+  
+}
+p{
+  text-align: justify;
+}
+
+.Enquire-box:hover{
+  color: white;
+  background-color: var(--primg);
+  animation-duration: 2s;
+}
+
+.Enquire-box:hover .ibox{
+  background:white;
+}
+.Enquire-box:hover i{
+  color: var(--primg);
+}
+
+.Enquire-box:hover a{
+  color: white;
+}
+
+
+
 input[type="range"].custom-slider {
   -webkit-appearance: none;
   width: 100%;

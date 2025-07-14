@@ -32,10 +32,10 @@ const Sidebar = () => {
   ];
 
   const type = [
-    {content:"Secured Business Loans "},
-    {content:"Unsecured Business Loans"},
-    {content:"Start-up Business Loans"},
-    {content:"Short-Term Business Loans"},
+    {content:"Secured Business Loan "},
+    {content:"Unsecured Business Loan"},
+    {content:"Start-up Business Loan"},
+    {content:"Short-Term Business Loan"},
     {content:"Line of Credit"},
   ]
   return (
@@ -73,10 +73,10 @@ const Sidebar = () => {
                     What Is a Construction Loan?
                     </h1>
                     <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                    As the name suggests, a construction loan is a short-term, progress-based loan that is designed to fund the building or renovation of a residential or commercial property. Many people may get confused between home loans and construction loans, but they’re different. 
+                    As the name suggests, a construction loan is a short-term, progress-based loan that is designed to fund the building or renovation of a residential or commercial property. Many people may get confused between home Loan and construction Loan, but they’re different. 
                     </p>
                     <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                   At LifeCycle Financial, we are here to help you navigate the best construction loans at competitive prices so that you can focus on building with confidence. 
+                   At LifeCycle Financial, we are here to help you navigate the best construction Loan at competitive prices so that you can focus on building with confidence. 
                     </p>
                   </div>
                 </div>

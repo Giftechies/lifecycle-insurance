@@ -195,7 +195,7 @@ const Sidebar = () => {
              <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
              How does TPD Cover work ?
             </h1>
-            <p className=" text-[14px] ">There are three types of TPD Insurences….</p>
+            <p className=" text-[14px] ">There are three types of TPD Insurances….</p>
             {How.map((el)=>(
               <>
               <div className=" flex items-start mt-2.5 " >

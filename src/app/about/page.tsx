@@ -5,7 +5,7 @@ export default function about() {
     <>
       <Header title="About us" />
       <main className=" ">
-        <section className="section-1 max-w-[1600px] mx-auto w-[100%]  lg:px-[3rem] lg:py-[3rem]  xl:px-[9rem] ">
+        <section className="section-1 max-w-[1600px] mx-auto w-[100%]  lg:px-[3rem] lg:py-[3rem]  xl:px-[3rem] ">
           <main className="  w-full lg:flex ">
             <div className="Left lg:w-[50%]  max-lg:hidden  ">
               <div className="img lg:h-[105%] xl:h-[105%]  w-[100%]  rounded-2xl overflow-hidden ">
@@ -26,15 +26,15 @@ export default function about() {
                     Operating since 2006 in this Industry.
                   </p>
                 </div>
-                <div className="right  ">
+                <div className="right lg:leading-6 lg:tracking-wider  ">
                   <p className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                     Lifecycle Financial is proudly affiliated with KAN (Kiwi
                     Advisor Network), one of New Zealand’s largest and most
                     trusted financial groups specializing in mortgage and
-                    Insurence distribution. As a committed member of the
+                    Insurance distribution. As a committed member of the
                     Auckland Chamber of Commerce, we uphold the highest
                     standards of service and ethics. We are also an active
-                    contributor to the Insurence & Financial Services Ombudsman
+                    contributor to the Insurance & Financial Services Ombudsman
                     Scheme, ensuring transparency, accountability, and
                     customer-focused support in everything we do.
                   </p>
@@ -50,7 +50,7 @@ export default function about() {
                 />
               </div>
 
-              <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl lg:mt-8 xl:w-[100%]   xl:mt-8  xl:px-8 xl:py-6 lg:rounded-r-4xl ">
+              <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl lg:mt-8  lg:w-[90%] lg:p-10 lg:leading-6 lg:tracking-wider  xl:mt-8   lg:rounded-r-4xl ">
                 <h1 className="  lg:leading-6 font-semibold  text-[20px]  xl:leading-8 w-[90%] ">
                   Comprehensive Financial Solutions, Tailored to Your Needs
                 </h1>
@@ -59,10 +59,10 @@ export default function about() {
                   Lifecycle Financial is proudly affiliated with KAN (Kiwi
                   Advisor Network), one of New Zealand’s largest and most
                   trusted financial groups specializing in mortgage and
-                  Insurence distribution. As a committed member of the Auckland
+                  Insurance distribution. As a committed member of the Auckland
                   Chamber of Commerce, we uphold the highest standards of
                   service and ethics. We are also an active contributor to the
-                  Insurence & Financial Services Ombudsman Scheme, ensuring
+                  Insurance & Financial Services Ombudsman Scheme, ensuring
                   transparency, accountability, and customer-focused support in
                   everything we do.
                 </p>
@@ -77,7 +77,7 @@ export default function about() {
             
 
             {/* part 1 */}
-            <div className=" border p-[1rem] max-lg:rounded-2xl bg-[var(--tri)] max-lg:flex-col flex gap-2 lg:gap-3 text-white lg:px-[2.8rem] xl:p-[7rem]   lg:h-[50%]  z-10 ">
+            <div className=" border p-[1rem] max-lg:rounded-2xl bg-[var(--tri)] max-lg:flex-col flex gap-2 lg:gap-3 text-white lg:px-[2.8rem] xl:p-[3rem]   lg:h-[50%]  z-10 ">
               {/* left */}
               <div className=" w-full text-[14px] lg:w-[50%]  ">
                 <i className="ri-record-circle-line"></i> Get to Know Us Better
@@ -89,7 +89,7 @@ export default function about() {
               {/* right */}
               <div className=" text-[14px] lg:w-[45%] lg:mt-8  xl:pl-4   text-justify xl:mt-12 ">
                 {" "}
-                Lifecycle Financial offers trusted mortgage and Insurence
+                Lifecycle Financial offers trusted mortgage and Insurance
                 advice, working with leading banks and providers to help you
                 make the best financial decisions for your future.
               </div>
@@ -97,8 +97,8 @@ export default function about() {
 
             {/* part 2 */}
 
-            <div className=" w-full flex max-lg:flex-col  gap-6 lg:gap-3  lg:p-[2.8rem]  xl:p-[5rem] justify-around ">
-              <div className=" w-full rounded-2xl  lg:w-[45%] bg-white p-3 shadow-2xl  lg:p-10 tracking-wider  ">
+            <div className=" w-full flex max-lg:flex-col  gap-6 lg:gap-3  lg:p-[2.8rem]  xl:p-[5rem] justify-around  tracking-wider ">
+              <div className=" w-full rounded-2xl  lg:w-[45%] bg-white p-3 shadow-2xl  lg:p-10  ">
                 <p className=" text-[25px]   font-medium ">
                   Why Lifecycle Financial?
                 </p>
@@ -110,7 +110,7 @@ export default function about() {
                   <p className=" ml-5   text-justify text-black/70  ">
                     At Lifecycle Financial, we provide independent, need-based
                     advice, working with top banks and insurers to deliver
-                    tailored mortgage and Insurence solutions. Our expert
+                    tailored mortgage and Insurance solutions. Our expert
                     brokers focus on your goals, ensuring the protection you
                     need—right when you need it. We’re committed to helping you
                     secure your future with confidence and clarity.
@@ -124,7 +124,7 @@ export default function about() {
                   </span>
                   <p className="  text-justify text-black/70   ml-5  ">
                     Our experienced brokers bring a proven track record in
-                    delivering personalized financial and Insurence solutions.
+                    delivering personalized financial and Insurance solutions.
                     With a strong focus on your needs, we ensure you receive the
                     right coverage to protect your lifestyle—when it matters
                     most.
@@ -140,30 +140,32 @@ export default function about() {
                 <p className=" mt-3.5 text-justify text-[14px]">
                   <i className="ri-checkbox-blank-circle-line "></i>{" "}
                   <span className="font-bold mr-1 ">
-                    Your Needs, Our Insurence Expertise:
+                    Your Needs, Our Insurance Expertise:
                   </span>
-                  <p className="text-black/70   ml-5 ">
-                    We review your existing Insurence coverage to ensure it
+                  <p className=" text-justify text-black/70  ml-5 ">
+                    We review your existing Insurance coverage to ensure it
                     aligns with your current needs and circumstances. After
                     conducting a detailed needs analysis based on the
-                    information you provide, we reach out to multiple Insurence
+                    information you provide, we reach out to multiple Insurance
                     providers to secure the most suitable products and deals
                     tailored specifically to your requirements.
                   </p>
                 </p>
 
-                <p className=" mt-3.5 text-[14px] text-justify md:mt-10 ">
-                  <i className="ri-checkbox-blank-circle-line  "></i>{" "}
-                  <span className="font-bold mr-1  ">
-                    Expert Advice, Claims & Portfolio Audits:
+                <p className=" mt-3.5 text-[.9rem]">
+                  <i className="ri-checkbox-blank-circle-line   "></i>{" "}
+                  <span className="font-bold mr-1 text-left ">
+                     Expert Advice, Claims & Portfolio Audits:
                   </span>
-                  <p className=" text-black/70   ml-5  ">
+                  <p className="  text-justify text-black/70   ml-5  ">
                     We provide expert advice, handle claims efficiently, and
-                    regularly review your Insurence portfolio to ensure it stays
+                    regularly review your Insurance portfolio to ensure it stays
                     aligned with your changing needs. Your peace of mind is our
                     priority.
                   </p>
                 </p>
+
+               
               </div>
             </div>
           </main>
@@ -173,9 +175,9 @@ export default function about() {
 
         {/* section 3 team */}
         <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
-          <main className=" w-full ">
+          <main className=" w-full flex  flex-col items-center ">
             
-              <p className=" text-[36px] text-center text-[var(--secgr)]  font-semibold ">Our Mortgage Experts</p>
+              <p className=" text-[20px] w-[20%]  text-[var(--secgr)]  font-semibold underline "> Our Mortgage Experts</p>
             {/* cards */}
             <div className=" w-full  text-black/40  mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
               {/* card 1 */}

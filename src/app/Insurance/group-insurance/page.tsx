@@ -42,14 +42,14 @@ const Sidebar = () => {
                 <i className="ri-record-circle-line mr-1.5 "></i>Group Insurance
               </h1>
               <h2 className=" leading-11 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
-               Trusted Name for Group Insurences in New Zealand
+               Trusted Name for Group Insurances in New Zealand
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify text-[14px] ">
-At LifeCycle Financial, we understand that your workers are the greatest asset for your business. Their protection and safety at the workplace is your prime goal. But what about uncertain accidents? This is where group Insurences come into the picture.
+At LifeCycle Financial, we understand that your workers are the greatest asset for your business. Their protection and safety at the workplace is your prime goal. But what about uncertain accidents? This is where group Insurances come into the picture.
 
               </p>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify ">
-Our group Insurences are designed to support every business in New Zealand in attracting and retaining top talent while taking care of their financial security.
+Our group Insurances are designed to support every business in New Zealand in attracting and retaining top talent while taking care of their financial security.
 
               </p>
             </div>

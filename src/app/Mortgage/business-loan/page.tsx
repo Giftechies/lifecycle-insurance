@@ -32,10 +32,10 @@ const Sidebar = () => {
   ];
 
   const type = [
-    {content:"Secured Business Loans "},
-    {content:"Unsecured Business Loans"},
-    {content:"Start-up Business Loans"},
-    {content:"Short-Term Business Loans"},
+    {content:"Secured Business Loan "},
+    {content:"Unsecured Business Loan"},
+    {content:"Start-up Business Loan"},
+    {content:"Short-Term Business Loan"},
     {content:"Line of Credit"},
   ]
 
@@ -49,7 +49,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header title="Business loans" />
+      <Header title="Business Loan" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative   max-w-[1600px] mx-auto leading-7 tracking-wider ">
         {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">
@@ -58,12 +58,12 @@ const Sidebar = () => {
             {/*upper Content */}
             <div className="upperContent w-full ">
               <h1 className=" text-[var(--primg)]  ">
-                <i className="ri-record-circle-line mr-1.5 "></i>Business loans
+                <i className="ri-record-circle-line mr-1.5 "></i>Business Loan
               </h1>
               {/* <h2 className="   leading-6 text-[18px] lg:text-[26px]  lg:mt-6 font-semibold mt-3 ">
               </h2> */}
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                Business loans are the backbone of business growth. Whether you are considering purchasing new equipment or launching a new product, business loans can help you manage your cash flow. Our team at LifeCycle Financial is here to be your guide throughout the process, helping you source and negotiate the best possible funding for businesses across New Zealand.
+                Business Loan are the backbone of business growth. Whether you are considering purchasing new equipment or launching a new product, business Loan can help you manage your cash flow. Our team at LifeCycle Financial is here to be your guide throughout the process, helping you source and negotiate the best possible funding for businesses across New Zealand.
               </p>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
                Our goal is to help your business access the capital you need—quickly and transparently.
@@ -84,7 +84,7 @@ const Sidebar = () => {
                      Why Choose a Business Loan?
                     </h1>
                     <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                     A business loan, as the name suggests, is a type of loan that offers your business the freedom to invest in your company’s growth without compromising day-to-day operations. Common uses of business loans include:
+                     A business loan, as the name suggests, is a type of loan that offers your business the freedom to invest in your company’s growth without compromising day-to-day operations. Common uses of business Loan include:
                     </p>
 
                   
@@ -124,11 +124,11 @@ const Sidebar = () => {
             {/* content 2 */}
             <div className=" text-black mt-4 ">
               <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
-                Types of business loans
+                Types of business Loan
               </h1>
 
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-               We are specialists in working with clients looking for a wide range of business loans, including:
+               We are specialists in working with clients looking for a wide range of business Loan, including:
               </p>
               {type.map((el) => (
                       <>

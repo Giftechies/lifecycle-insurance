@@ -6,16 +6,16 @@ export default function Footer() {
     <>
       {/* footer */}
       <footer className="footer bg-[var(--tri)] overflow-hidden">
-        <main className="w-full h-full max-w-[1600px] mx-auto text-[14px] p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-18 font-light">
+        <main className="w-full h-full max-w-[1600px] mx-auto text-[14px] p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-26 font-light">
           <div
-            className="content border-b border-dotted border-white/50 text-white/90
+            className="content border-b pb-4 lg:pb-[3rem] border-dotted border-white/50 text-white/90
               flex flex-col 
               lg:flex-row max-xl:flex-wrap lg:justify-between gap-6  lg:items-start "
           >
-            {/* Insurence */}
+            {/* Insurance */}
             <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
               <Link  href='/Insurance' className="text-[20px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
-              <div className="flex flex-col space-y-4 lg:mt-4">
+              <div className="flex flex-col space-y-4 mt-3">
                 <Link href="/Insurance/life-insurance" className="text-white/90 hover:text-white transition-colors">Life Insurance</Link>
                 <Link href="/Insurance/trauma-recovery-cover" className="text-white/90 hover:text-white transition-colors">Trauma Recovery Cover</Link>
                 <Link href="/Insurance/total-permanent-disability-benefit-cover" className="text-white/90 hover:text-white transition-colors">Total Permanent Disability Benefit Cover</Link>
@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
               <Link  href='/Mortgage'  className="text-[20px] font-medium mb-3 text-white">Mortgage</Link>
               <div className="flex flex-col space-y-4 mt-3">
-                <Link href="/Mortgage/home-loans" className="text-white/90 hover:text-white transition-colors">Home Loans</Link>
+                <Link href="/Mortgage/home-Loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>
                 <Link href="/Mortgage/refinance" className="text-white/90 hover:text-white transition-colors">Refinance</Link>
                 <Link href="/Mortgage/investment-loan" className="text-white/90 hover:text-white transition-colors">Investment Loan</Link>
                 <Link href="/Mortgage/business-loan" className="text-white/90 hover:text-white transition-colors">Business Loan</Link>
@@ -82,7 +82,7 @@ export default function Footer() {
                     402 Ormiston Road, Flat Bush, Auckland, 2016, North Island, New Zealand
                   </span>
                 </div>
-                <div className="w-full border-t pb-8 lg:pb-0 border-dotted border-white/30 text-lg pt-4 flex gap-2">
+                <div className="w-full border-t  pt-4 border-dotted border-white/30 text-lg  flex gap-2 justify-center ">
                   <Link href="#" className="h-10 w-10 rounded-full bg-white/30 flex items-center justify-center">
                     <i className="ri-facebook-circle-line"></i>
                   </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <h1 className="text-white font-medium tracking-widest text-center mt-6">
+          <h1 className="text-white font-medium tracking-widest text-center mt-4 lg:mt-[3rem]">
             Copyright © 2025 Lifecycle Financial. All Rights Reserved.
           </h1>
         </main>

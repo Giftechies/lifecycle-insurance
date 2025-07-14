@@ -52,7 +52,7 @@ const Sidebar = () => {
                 Smart Refinance Solutions to Save You Money
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                We aim to assist Kiwis to get their finances on track through personalised refinance solutions. Refinancing your mortgage loan or personal loan can help to save huge amounts of money and allow you to be in a better financial state whether it is to reach a better interest rate, merge creditors or enjoy the benefits of better features on the loans.
+                We aim to assist Kiwis to get their finances on track through personalised refinance solutions. Refinancing your mortgage loan or personal loan can help to save huge amounts of money and allow you to be in a better financial state whether it is to reach a better interest rate, merge creditors or enjoy the benefits of better features on the Loan.
               </p>
              
             </div>
@@ -72,7 +72,7 @@ const Sidebar = () => {
               </h1>
 
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-               Refinancing is when you change your existing loan with a new one- normally with a reduced interest rate, new loan tenure, or favourable features. It may be used in terms of home loans, personal loans, car loans or business finance. The goal? Flexibility, reduced repayments, and cleverer money planning.
+               Refinancing is when you change your existing loan with a new one- normally with a reduced interest rate, new loan tenure, or favourable features. It may be used in terms of home Loan, personal Loan, car Loan or business finance. The goal? Flexibility, reduced repayments, and cleverer money planning.
               </p>
                     
                    

@@ -292,7 +292,7 @@ const Sidebar = () => {
               <p className=" text-[14px]  mt-2 ">
                 If the unexpected happened, most people would want to cover
                 their major costs such as mortgages, credit card debt, car
-                loans, children’s education, childcare and day-to-day expenses (
+                Loan, children’s education, childcare and day-to-day expenses (
                 food, electricity, rates etc). What costs would you need to
                 cover ? Ill health and lack of health Insurance is one of the
                 five main causes of the people going broke.{" "}

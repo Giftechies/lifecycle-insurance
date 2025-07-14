@@ -33,7 +33,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header title="Investment Loans" />
+      <Header title="Investment Loan" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative   max-w-[1600px] mx-auto leading-7 tracking-wider ">
         {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">
@@ -42,13 +42,13 @@ const Sidebar = () => {
             {/*upper Content */}
             <div className="upperContent w-full ">
               <h1 className=" text-[var(--primg)]  ">
-                <i className="ri-record-circle-line mr-1.5 "></i>Investment Loans
+                <i className="ri-record-circle-line mr-1.5 "></i>Investment Loan
               </h1>
               <h2 className="   leading-6 text-[18px] lg:text-[26px]  lg:mt-6 font-semibold mt-3 ">
-                Investment Loans For Those Who Love To Invest And Build Long-Term Wealth
+                Investment Loan For Those Who Love To Invest And Build Long-Term Wealth
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                Investment is the best way to make your money earn for you, but not everyone has enough money to invest. This is where investment loans come into the picture. At LifeCycle Financial, we are your one-stop choice when it comes to hunting the unmatched deals on investment loans.
+                Investment is the best way to make your money earn for you, but not everyone has enough money to invest. This is where investment Loan come into the picture. At LifeCycle Financial, we are your one-stop choice when it comes to hunting the unmatched deals on investment Loan.
               </p>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
                Whether you’re planning to buy your first rental property or expanding your portfolio, our team is here to help you with a seamless process of securing the right investment loan for your goals.
@@ -69,7 +69,7 @@ const Sidebar = () => {
                      Why Choose an Investment Loan?
                     </h1>
                     <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                      Investment loans are specialized kinds of loans that are aimed to help smart people to buy income-generating assets, such as residential or commercial properties. Investment loans are not like home loans and come with unique features such as:
+                      Investment Loan are specialized kinds of Loan that are aimed to help smart people to buy income-generating assets, such as residential or commercial properties. Investment Loan are not like home Loan and come with unique features such as:
                     </p>
 
                     {cover.map((el) => (
@@ -111,7 +111,7 @@ const Sidebar = () => {
               </h1>
 
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
-                Ready to make some smart investments and need smart investment loans? We’re ready to be your guide!
+                Ready to make some smart investments and need smart investment Loan? We’re ready to be your guide!
               </p>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
                  Get in touch today with our team for more. 
