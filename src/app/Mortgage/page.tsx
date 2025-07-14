@@ -133,7 +133,7 @@ export default function Mortgage() {
               </div>
 
               {/* Content */}
-              <div className="px-[35px] py-4 ">
+              <div className="p-[35px] ">
                 <h3 className="text-[25px] cursor-pointer font-medium leading-7 text-gray-900 mb-2">
                   {el.heading}
                 </h3>
