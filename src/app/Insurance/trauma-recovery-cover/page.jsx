@@ -149,7 +149,7 @@ import {
               <h1 className=" text-[var(--primg)]  ">
                 <i className="ri-record-circle-line mr-1.5 "></i>Trauma recovery cover
               </h1>
-              <h2 className="   leading-6 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
+              <h2 className="   leading-6 text-[18px] lg:text-[26px]   font-semibold mt-4 ">
                 When others depend on you
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">

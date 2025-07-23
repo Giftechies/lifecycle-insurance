@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+
+  "analyze": "cross-env ANALYZE=true next build"
+
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

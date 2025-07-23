@@ -50,10 +50,10 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex gap-8">
+            <div className="LowerContent w-full   mt-4   gap-8">
               {/* left content */}
               <div
-                className="leftcontent w-[100%] lg:w-[55%] 
+                className="leftcontent  w-[100%]  flex
                "
               >
                 {/* content 1 */}
@@ -62,22 +62,19 @@ const Sidebar = () => {
                     <h1 className=" lg:text-[26px] text-black font-semibold ">
                     What Is a Commercial Loan?
                     </h1>
-                    <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify lg:w-[80%] ">
+                    <p className="m-4 ">
                      A commercial loan is a business financing that can be utilised in terms of capital expenditure or operations. Commercial Loan, unlike personal Loan, are customised and their use can be varied-it can be equipment manufacture or upgrade, property purchase and construction, working capital and lot more.
                     </p>
-
-                  
-                   
                   </div>
                 </div>
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[40%] h-full  mt-8 ">
-                <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[30vh] overflow-hidden rounded-lg ">
+              <div className="">
+                <div className="RightContent  overflow-hidden rounded-lg ">
                   <img
                     src="/8.jpg"
-                    className=" h-full w-full object-cover"
+                    className=" h-[20rem] w-full object-center object-cover"
                     alt=""
                   />
                 </div>
@@ -95,7 +92,7 @@ const Sidebar = () => {
                 {cover.map((el) => (
                       <>
                         <div className=" flex  items-start mt-2.5 text-black">
-                          <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0 "></i>
+                          <i className="ri-arrow-right-s-line  shrink-0 "></i>
                           <p className=" text-[14px] text-justify">
                             {el.content}
                           </p>

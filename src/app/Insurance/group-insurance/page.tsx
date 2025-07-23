@@ -26,7 +26,7 @@ const Sidebar = () => {
               <h1 className=" text-[var(--primg)]  ">
                 <i className="ri-record-circle-line mr-1.5 "></i>Group Insurance
               </h1>
-              <h2 className=" leading-11 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
+              <h2 className=" leading-11 text-[18px] lg:text-[26px]  font-semibold mt- ">
                 Trusted Name for Group Insurances in New Zealand
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify text-[14px] ">

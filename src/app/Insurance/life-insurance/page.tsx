@@ -76,7 +76,7 @@ const Sidebar = () => {
               <h1 className=" text-[var(--primg)]  ">
                 <i className="ri-record-circle-line mr-1.5 "></i>Life Insurance
               </h1>
-              <h2 className="  text-[26px] leading-6 lg:text-[2.5vw]  lg:mt-8 font-semibold mt-3 ">
+              <h2 className="  text-[26px] leading-6 lg:text-[2.5vw]   font-semibold mt-4 ">
                 When others depend on you
               </h2>
               <p className=" mt-1 text-[14px]  lg:mt-4 tracking-wider text-justify ">
@@ -88,39 +88,12 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex gap-8">
+            <div className="LowerContent w-full   mt-4 items-stretch  lg:flex gap-8">
               {/* left content */}
               <div className="leftcontent w-[100%] lg:w-[55%]  ">
-                {/* content 1 */}
-                <div className="flex mt-2">
-                  <div className=" text-black/60 ">
-                    <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
-                      Premium Options
-                    </h1>
-                    <p className="mb-2">
-                      You have two premium options to choose from for your life
-                      cover :
-                    </p>
-
-                    {premium.map((el) => (
-                      <>
-                        <div className=" flex  items-start mt-1 text-black/80">
-                          <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0 "></i>
-                          <p className=" text-[14px] text-justify">
-                            <span className="font-medium text-[16px] lg:text-[20px] text-black ">
-                              {el.title}
-                            </span >
-                            {el.content}
-                          </p>
-                        </div>
-                      </>
-                    ))}
-                  </div>
-                </div>
-
                 {/* content 2 */}
                 <div className=" text-black/60 mt-4 ">
-                  <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
+                  <h1 className="  text-[18px] lg:text-[26px] mb-4 text-black font-semibold ">
                     Food for Thought…
                   </h1>
                   {food.map((el) => (
@@ -130,25 +103,30 @@ const Sidebar = () => {
                     </div>
                   ))}
                 </div>
+
+              
               </div>
 
               {/* Right content image */}
-              <div className="RightContent  md:w-[100%]  md:h-[20em] lg:w-[45%] lg:h-[30em] mt-4 overflow-hidden rounded-lg ">
+              <div className="RightContent  w-full lg:w-[40%]  flex overflow-hidden rounded-lg ">
                 <img
                   src="/8.jpg"
                   className=" h-full w-full object-cover"
                   alt=""
                 />
+                
               </div>
             </div>
           </section>
           
           {/* section 2 */}
           <section className="section_2  w-full  text-justify ">
-            <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
+            
+           <div>
+             <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
               How it works
             </h1>
-            <p className=" text-[14px] ">
+            <p className=" text-[14px] mt-4 ">
               Life Cover can pay a lump sum or a monthly income, depending on
               your needs, if you die prematurely. It’s essential for those with
               family, business or other financial commitments. So why leave life
@@ -157,10 +135,11 @@ const Sidebar = () => {
             <h2 className=" text-[18px] text-black font-semibold mt-3 ">
               What do most people use Life Cover for?
             </h2>
+           </div>
 
           {use.map((el)=>(
-            <div className=" flex items-start ">
-               <i className="ri-arrow-right-s-line mt-1 mr-1"></i><p className=" text-[14px] " >{el.content}</p>
+            <div className=" flex items-start mt-4 ">
+               <i className="ri-arrow-right-s-line"></i><p className=" text-[14px] " >{el.content}</p>
 
             </div>
           ))}
@@ -171,7 +150,7 @@ const Sidebar = () => {
             <h2 className=" text-[18px] text-black font-semibold mt-3 ">
               What benefits does Life Cover include ?
             </h2>
-            <div className=" flex items-start gap-2  ">
+            <div className=" flex items-start gap-2 mt-4  ">
               <i className="mt-2 shrink-0 ri-arrow-right-s-line"></i>
               <p className=" mt-2">
                 {" "}
@@ -225,6 +204,33 @@ const Sidebar = () => {
                 immediate care and help to plan a secure future for your family.
               </p>
             </div>
+
+              {/* content 1 */}
+                <div className="flex mt-2">
+                  <div className=" text-black/60 ">
+                    <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
+                      Premium Options
+                    </h1>
+                    <p className="mb-2">
+                      You have two premium options to choose from for your life
+                      cover :
+                    </p>
+
+                    {premium.map((el) => (
+                      <>
+                        <div className=" flex  items-start mt-1 text-black/80">
+                          <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0 "></i>
+                          <p className=" text-[14px] text-justify">
+                            <span className="font-medium text-[16px] lg:text-[20px] text-black ">
+                              {el.title}
+                            </span >
+                            {el.content}
+                          </p>
+                        </div>
+                      </>
+                    ))}
+                  </div>
+                </div>
           </section>
         </div>
 

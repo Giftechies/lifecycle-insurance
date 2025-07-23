@@ -161,14 +161,14 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex gap-8">
+            <div className="LowerContent w-full   mt-4 items-stretch lg:flex gap-8">
               {/* left content */}
               <div
-                className="leftcontent w-[100%] lg:w-[55%] 
+                className="leftcontent w-[100%] lg:w-[55%]  
                "
               >
                 {/* content 1 */}
-                <div className="flex mt-2">
+                <div className="flex mt-2 ">
                   <div className=" text-black ">
                     <h1 className=" lg:text-[26px] text-black font-semibold ">
                       Why Choose LifeCycle Financial?
@@ -189,16 +189,17 @@ const Sidebar = () => {
                       remains committed to making the whole process smooth,
                       transparent, and successful.
                     </p>
+                   
                   </div>
                 </div>
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[40%] h-full  mt-8 ">
-                <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[40vh] mt-4 overflow-hidden rounded-lg ">
+              <div className="md:w-full lg:w-[40%]  flex  ">
+                <div className="RightContent     overflow-hidden rounded-lg ">
                   <img
                     src="/8.jpg"
-                    className=" h-full w-full object-cover"
+                    className=" h-[100%] w-full object-cover"
                     alt=""
                   />
                 </div>
@@ -209,12 +210,12 @@ const Sidebar = () => {
           {/* section 2 */}
           <section className="section_2  w-full  text-justify ">
             {/* content 2 */}
-            <div className=" text-black/60 mt-4 ">
+            <div className=" text-black/80 mt-4 ">
               <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
                 Ready to secure the best home loan?
               </h1>
 
-              <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
+              <p className=" mt-1 lg:mt-2 tracking-wider  ">
                 Connect with our team today to explore the right home loan
                 options for you in New Zealand. We are here to be your guide
                 throughout the process.

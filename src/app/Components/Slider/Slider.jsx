@@ -40,14 +40,14 @@ export default function Slider() {
   ];
 
   // Determine menu based on path
-  const isMortgage = pathname?.toLowerCase().includes("/mortgage");
-  const isInsurance = pathname?.toLowerCase().includes("/insurance");
+  const isMortgage = pathname?.toLowerCase().startsWith("/mortgage");
+  const isInsurance = pathname?.toLowerCase().startsWith("/insurance");
 
   const menuTitle = isMortgage ? "Mortgage" : isInsurance ? "Insurance" : "";
   const menuItems = isMortgage ? item : isInsurance ? Insurance : [];
 
   return (
-    <div className="hidden md:flex md:w-[40%] lg:w-[30%] xl:w-[25%] flex-col">
+    <div className="hidden lg:flex  lg:w-[30%] xl:w-[25%] flex-col">
       <div className="sticky top-0 w-full space-y-8">
         {/* Dynamic Menu */}
         {menuItems.length > 0 && (

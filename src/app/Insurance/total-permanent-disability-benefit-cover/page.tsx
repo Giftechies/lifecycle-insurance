@@ -113,7 +113,7 @@ const Sidebar = () => {
               <h1 className=" text-[var(--primg)]  ">
                 <i className="ri-record-circle-line mr-1.5 "></i>Total Permanent Disability Benefit Cover
               </h1>
-              <h2 className="  text-[26px] leading-6   lg:mt-8 font-semibold mt-3 text-[18px] lg:text-[26px] ">
+              <h2 className="  font-semibold mt-4 ">
                What is TPD Cover ?
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify lg:text-[14px] ">
@@ -123,7 +123,7 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex gap-8">
+            <div className="LowerContent w-full   mt-4  items-stretch  lg:flex gap-8">
               {/* left content */}
               <div className="leftcontent w-[100%] lg:w-[55%] 
                ">
@@ -166,9 +166,9 @@ const Sidebar = () => {
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[40%] h-full  mt-8 " >
+              <div className="md:w-full lg:w-[40%]  " >
                 
-              <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[90vh] mt-4 overflow-hidden rounded-lg ">
+              <div className="RightContent  w-[100%] h-full  overflow-hidden rounded-lg ">
                 <img
                   src="/8.jpg"
                   className=" h-full w-full object-cover"
@@ -186,7 +186,7 @@ const Sidebar = () => {
               <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
               Could you afford the cost of recovery?
             </h1>
-            <p className=" text-[14px] ">
+            <p className="  mt-4 ">
               Ongoing advances in medical treatment mean New Zealanders have a greater chance of surviving than ever before, and a greater need for financial support. If you suffered a serious illness, would you be able to pay the mortgage or car loan, or simply maintain your lifestyle? How hard would it be on your family?
             </p>
             </div>
@@ -195,7 +195,7 @@ const Sidebar = () => {
              <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
              How does TPD Cover work ?
             </h1>
-            <p className=" text-[14px] ">There are three types of TPD Insurances….</p>
+            <p className=" text-[14px] mt-4 ">There are three types of TPD Insurances….</p>
             {How.map((el)=>(
               <>
               <div className=" flex items-start mt-2.5 " >

@@ -56,7 +56,7 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex gap-8">
+            <div className="LowerContent w-full   mt-4  items-stretch  lg:flex gap-8">
               {/* left content */}
               <div
                 className="leftcontent w-[100%] lg:w-[55%] 
@@ -75,14 +75,14 @@ const Sidebar = () => {
                     {cover.map((el) => (
                       <>
                         <div className=" flex  items-start mt-2.5 text-black">
-                          <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0 "></i>
+                          <i className="ri-arrow-right-s-line  -mt-1 shrink-0 "></i>
                           <p className=" text-[14px] text-justify">
                             {el.content}
                           </p>
                         </div>
                       </>
                     ))}
-                    <p className=" mt-1 lg:mt-4 tracking-wider text-[14px] text-justify ">
+                    <p className=" mt-4 ">
                      When selected after thorough research, an investment loan can be your helping hand in increasing increase returns while managing risks as you build an impressive financial portfolio.
                     </p>
                   </div>
@@ -90,8 +90,8 @@ const Sidebar = () => {
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[40%] h-full  mt-8 ">
-                <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[55vh] overflow-hidden rounded-lg ">
+              <div className="md:w-full lg:w-[40%] flex  mt-8 ">
+                <div className="RightContent   overflow-hidden rounded-lg ">
                   <img
                     src="/8.jpg"
                     className=" h-full w-full object-cover"
