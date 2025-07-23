@@ -4,28 +4,28 @@ const cardData = [
   {
     title: "Home Buyer Case Study",
     paragraph_1:
-      "See how Lifecycle Financial helped a first-time buyer navigate lending hurdles and secure their dream home with tailored mortgage advice.",
+      "See how Lifecycle Financial helped a first-time buyer navigate lending hurdles and secure their dream home with tailored mortgage...",
     featured_image: "8.jpg",
     link: "#",
   },
   {
     title: "Trauma Cover Success Story",
     paragraph_1:
-      "Discover how timely trauma recovery cover ensured one family could focus on healing without financial pressure after a health crisis.",
+      "Discover how timely trauma recovery cover ensured one family could focus...",
     featured_image: "8.jpg",
     link: "#",
   },
   {
     title: "Self-Employed Client Journey",
     paragraph_1:
-      "Explore how our flexible income protection helped a self-employed designer stay financially secure during a temporary illness.",
+      "Explore how our flexible income protection helped a self-employed designer stay financially...",
     featured_image: "8.jpg",
     link: "#",
   },
   {
     title: "Group Cover for a Startup",
     paragraph_1:
-      "Learn how a growing tech startup implemented group insurance to protect its team and boost employee satisfaction.",
+      "Learn how a growing tech startup implemented group insurance to protect its team and boost employee...",
     featured_image: "8.jpg",
     link: "#",
   },
