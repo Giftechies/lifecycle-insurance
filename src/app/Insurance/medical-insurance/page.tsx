@@ -115,7 +115,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header title="Medical Insurance" />
+      <Banner title="Medical Insurance" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10  relative  max-w-[1600px] mx-auto leading-7 tracking-wider ">
         {/* Content Div */}
         <div className="contentdiv  lg:w-[85%] py-5">
@@ -383,7 +383,7 @@ const Sidebar = () => {
           </section>
         </div>
 
-        {/* Centered Sidebar constrained inside main, below header and above footer */}
+        {/* Centered Sidebar constrained inside main, below Banner and above footer */}
         <Slider/>
       </main>
     </>

@@ -24,7 +24,7 @@ export default function Breadcrumb() {
             <li key={i} className="flex items-center">
               <span className="mx-2 text-white    ">{'/'}</span>
               {i === segments.length - 1 ? (
-                <span className="text-zinc-400    ">{label}</span>
+                <span className="text-white/70    ">{label}</span>
               ) : (
                 <Link href={href} className=" text-white    hover:underline">
                   {label}

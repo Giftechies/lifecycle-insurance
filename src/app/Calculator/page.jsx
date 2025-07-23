@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Header from "../Components/Banner/Banner";
+import Banner from "../Components/Banner/Banner";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { Doughnut } from "react-chartjs-2";
@@ -118,29 +118,15 @@ export default function RepaymentCalculator() {
 
   return (
     <>
-      <Header title="Calculator" />
+      <Banner title="Calculator" />
       <section className=" p-6   lg:p-[3rem]  ">
-        {/* text */}
-        <div className=" text h-[20%] w-full lg:flex gap-10  ">
-          {/* left */}
-          <div className="w-full text-[var(--primg)]  text-[14px]   lg:text-[16px]  lg:w-[55%] font-medium">
-            <i className="ri-record-circle-line"></i> Calculator
-            <p className="text-[26px] leading-9 text-black lg:text-[36px] font-semibold mt-3 lg:leading-11">
-              How long will it take to pay off my loan?
-            </p>
-          </div>
-
-          {/* right */}
-          <div className="w-full lg:w-[40%] mt-2 lg:mt-10 text-justify">
-            Use this loan payoff calculator to find out how many payments it
-            will take to pay off a loan.
-          </div>
-        </div>
+       
+       
 
         <div className="FormContainer lg:flex justify-between shadow-2xl ">
           <form
             // onSubmit={handleSubmit(calculateRepayment)}
-            className="cal mt-6  lg:w-[55%] flex flex-wrap max-lg:space-y-5  justify-between shadow-2x p-6  "
+            className="cal   lg:w-[55%] flex flex-wrap max-lg:space-y-5  justify-between shadow-2x p-6  "
           >
             {/* Loan Amount */}
 

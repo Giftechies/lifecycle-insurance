@@ -1,6 +1,6 @@
 // components/ChildDetailPage.js
 "use client"
-import Header from "@/app/Components/Banner/Banner";
+import Banner from "@/app/Components/Banner/Banner";
 import Slider from "@/app/Components/Slider/Slider";
 import { getCategoryPages } from "../../lib/api";
 import { useEffect, useState } from "react";
@@ -69,7 +69,7 @@ useEffect(( )=>{
 
   return (
     <>
-      <Header title={data.title} />
+      <Banner title={data.title} />
       <main className="w-full flex p-4 lg:p-[3rem]  gap-10 relative  max-w-[1600px] mx-auto leading-7 tracking-wider ">
  {/* Content Div */}
         <div className="contentdiv  md:w-[60%]  lg:w-[70%] xl:w-[75%] ">

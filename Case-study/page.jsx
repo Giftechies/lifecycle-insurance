@@ -30,7 +30,7 @@ export default function caseStudy(){
   if(loading){
     return(
       <>
-      <Header title='Insurence'/>
+      <Banner title='Insurence'/>
       <main  className="max-w-[1600px] m-auto text-center py-20">
         <p>loading...</p>
       </main>
@@ -41,7 +41,7 @@ export default function caseStudy(){
    if (!data) {
     return (
       <main className="max-w-[1600px] m-auto text-center py-20">
-        <Header title="Insurance" />
+        <Banner title="Insurance" />
         <p>Failed to load data.</p>
       </main>
     );
@@ -49,7 +49,7 @@ export default function caseStudy(){
 
     return (
     <main className="max-w-[1600px] m-auto">
-      <Header title={data.title} />
+      <Banner title={data.title} />
       
       {/* Inject the HTML content from the API */}
       <section

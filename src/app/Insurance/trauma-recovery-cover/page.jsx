@@ -271,7 +271,7 @@ import {
          
         </div>
 
-{/* Centered Sidebar constrained inside main, below header and above footer */}
+{/* Centered Sidebar constrained inside main, below Banner and above footer */}
       <Slider/>
       </main>
     </>

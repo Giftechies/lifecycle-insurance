@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
-export default function Header({ title }: { title: string }) {
+export default function Banner({ title }: { title: string }) {
   const scope = useRef(null);
 
   useGSAP(() => {

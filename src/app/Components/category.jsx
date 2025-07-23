@@ -25,7 +25,7 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
           </div>
         </div>
 
-        <div className="w-full lg:w-[100%] grid md:grid-cols-2 lg:grid-cols-4 mt-12 gap-10">
+        <div className="w-full  lg:w-[100%] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] mt-12 gap-15">
           {cards?.map((el, index) => (
             <div
               key={index}
@@ -37,7 +37,7 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
                   <img
                     src={el.featured_image}
                     alt={el.title}
-                    className="w-full cursor-pointer h-full object-cover"
+                    className="w-full cursor-pointer h-full object-cover "
                   />
                 </div>
               </Link>
@@ -50,7 +50,7 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
                   </h4>
                 </Link>
 
-                <p className="text-gray-700 mt-2">{el.paragraph_1}</p>
+                <p className="text-gray-700 mt-2  ">{el.paragraph_1}</p>
 
                 <Link
                   href={el.link}

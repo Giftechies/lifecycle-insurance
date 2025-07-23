@@ -29,8 +29,7 @@ export default function Footer() {
         <main className="w-full h-full max-w-[1600px] mx-auto text-[14px] p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-26 font-light">
           <div
             className="content border-b pb-4 lg:pb-[3rem] border-dotted border-white/50 text-white/90
-              flex flex-col 
-              lg:flex-row max-xl:flex-wrap lg:justify-between gap-6  lg:items-start "
+              grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:justify-between gap-6   lg:items-start "
           >
             {/* Insurance */}
             <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
@@ -47,7 +46,7 @@ export default function Footer() {
             </div>
 
             {/* Mortgage */}
-            <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
+            <div className=" lg:pt-0 lg:basis-[18%]">
               <Link  href='/Mortgage'  className="text-[20px] font-medium mb-3 text-white">Mortgage</Link>
               <div className="flex flex-col space-y-4 mt-3">
                 <Link href="/Mortgage/home-loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>

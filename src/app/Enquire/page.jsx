@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
-import Header from "../Components/Banner/Banner";
+import Banner from "../Components/Banner/Banner";
 import { useState, useEffect } from "react";
 
 
@@ -64,9 +64,9 @@ const [enquiries, setEnquiries] = useState([]);
 
   return (
     <>
-      <Header title="Enquire " />
-      <section className=" p-8 md:p-[3rem] bg-[var(--secgr)]/10  space-y-8 ">
-        <div className="Enquire ">
+      <Banner title="Enquire " />
+      <section className=" p-8 md:p-[3rem] bg-[var(--secgr)]/10  text-[var(--secgr)] space-y-8 ">
+        <div className="Enquire  text-center ">
           <h1 className=" text-center text-[36px] font-semibold mb-6 text-[var(--primg)] ">
             Contact us
           </h1>
@@ -117,9 +117,9 @@ const [enquiries, setEnquiries] = useState([]);
 
         <div className="flex  max-lg:flex-col   justify-evenly w-full  gap-8 lg:gap-10   ">
           <div className="flex flex-col  lg:w-[50%] shadow-2xl rounded-xl bg-white  p-4 md:p-8 space-y-5 ">
-            <h1 className="  text-[26px] lg:text-[30px] font-semibold lg:w-[80%] leading-7 lg:leading-9  ">
+            <h4 className="  text-lg font-semibold  leading-7 lg:leading-9  ">
               Feel free to enquire about any questions you got
-            </h1>
+            </h4>
             <div className=" flex-grow rounded-2xl overflow-hidden ">
               {" "}
               <img
@@ -187,13 +187,13 @@ const [enquiries, setEnquiries] = useState([]);
         </div>
 
         <div
-          className="map w-[100%] h-[500px]  p-8   bg-white  rounded overflow-hidden
+          className="map w-[100%]  p-4  flex flex-col  bg-white  rounded overflow-hidden
 "
         >
-          <h1 className="text-[36px]  font-semibold ">Get Direction</h1>
+          <h1 className="text-[36px] flex-grow font-semibold ">Get Direction</h1>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3187.7834505210967!2d174.93835157549714!3d-36.967228372199926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d72b32d2654a2c5%3A0x74d5fe6dac1cda3!2s3%20Otaota%20Way%2C%20Flat%20Bush%2C%20Auckland%202019%2C%20New%20Zealand!5e0!3m2!1sen!2sin!4v1752840495893!5m2!1sen!2sin"
-            className="w-full h-[80%] border-0 rounded-xl md:mt-4 "
+            className="w-ful h-[400px] border-0 rounded-xl md:mt-4 "
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

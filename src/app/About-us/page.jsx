@@ -1,14 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import Header from "../Components/Banner/Banner";
+import Banner from "../Components/Banner/Banner";
 import { getCategoryPages } from "../lib/api";
 
 export default function about() {
   return (
     <>
-      <Header title="About us" />
+      <Banner title="About us" />
       <main className=" ">
-        <section className="section-1 max-w-[1600px] mx-auto w-[100%]  lg:p-[3rem] lg:pb-[5rem] xl:pb-[3rem]  border-amber-300 ">
+        <section className="section-1 max-w-[1600px] mx-auto w-[100%]  lg:p-[3rem] lg:pb-[5rem] xl:pb-[3rem]   ">
           <main className=" h-full w-full lg:flex  ">
             <div className="Left lg:w-[45%]  max-lg:hidden  ">
               <div className="img lg:h-[105%] xl:h-[100%]   w-[100%]  rounded-2xl overflow-hidden ">
@@ -19,8 +19,8 @@ export default function about() {
                 />
               </div>
             </div>
-            <div className="Right w-full    lg:w-[55%]  max-lg:flex flex-col gap-5  max-lg:p-6   ">
-              <div className="uppercontent    lg:pl-5 xl:px-8  ">
+            <div className="Right w-full space-y-6  lg:w-[55%]  flex flex-col lg:pb-10  max-lg:p-6   ">
+              <div className="uppercontent   lg:pl-10  ">
                 <div className="left w-[100%]  ">
                   <p className="text-[var(--primg)]  text-[16px] ">
                     <i className="   ri-record-circle-line mr-1 "></i> About us
@@ -52,7 +52,7 @@ export default function about() {
                 />
               </div>
 
-              <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl  lg:mt-8  lg:w-[90%] lg:p-10 lg:leading-6  xl:mt-20   lg:rounded-r-4xl ">
+              <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl  lg:mt-8  lg:w-[90%] lg:p-10 lg:leading-6   lg:rounded-r-4xl ">
                 <h2 className="  lg:leading-6 font-semibold  text-[20px]  xl:leading-8 w-[90%] ">
                   Comprehensive Financial Solutions, Tailored to Your Needs
                 </h2>
@@ -191,10 +191,10 @@ export default function about() {
                       className="w-full rounded-xl h-full object-cover object-top "
                       alt=""
                     />
-                    <h1 className=" mt-2  md:text-[20px] text-black/80 font-medium ">
+                    <h1 className=" mt-2  text-black/80 font-medium ">
                       {el.Name}
                     </h1>
-                    <h3 className=" text-[14px]  ">{el.title}</h3>
+                    <h4 >{el.title}</h4>
                     <a href={`tel:{el.phone}`} className=" text-[14px]  ">
                       Phone No: {el.Phone}
                     </a>

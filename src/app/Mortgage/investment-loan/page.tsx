@@ -1,6 +1,6 @@
 // components/Sidebar.js
 
-import Header from "@/app/Components/Banner/Banner";
+import Banner from "@/app/Components/Banner/Banner";
 import Slider from "@/app/Components/Slider/Slider";
 
 const Sidebar = () => {
@@ -33,7 +33,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header title="Investment Loan" />
+      <Banner title="Investment Loan" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative   max-w-[1600px] mx-auto leading-7 tracking-wider ">
         {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">
@@ -120,7 +120,7 @@ const Sidebar = () => {
           </section>
         </div>
 
-        {/* Centered Sidebar constrained inside main, below header and above footer */}
+        {/* Centered Sidebar constrained inside main, below Banner and above footer */}
         <Slider />
       </main>
     </>
