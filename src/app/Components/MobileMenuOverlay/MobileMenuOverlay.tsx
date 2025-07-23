@@ -6,11 +6,11 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 type MobileProps = {
   setIsMenuOpen: (open: boolean) => void;
-  setIsEnquireOpen: (open: boolean) => void;
+  
 };
 
 export default function MobileMenuOverlay({
-  setIsMenuOpen,setIsEnquireOpen
+  setIsMenuOpen,
 }: MobileProps) {
   const [isInsuranceOpen, setIsInsuranceOpen] = useState(false);
   const [isMortgageOpen, setIsMortgageOpen] = useState(false);
@@ -186,6 +186,19 @@ export default function MobileMenuOverlay({
               }}
             >
               Calculator
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/Interest-rate"
+              onClick={() => {
+                  
+                setIsMenuOpen(false);
+
+                
+              }}
+            >
+              Interest Rate
             </Link>
           </li>
         </ul>

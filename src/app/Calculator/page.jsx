@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Header from "../Components/Header/Header";
+import Header from "../Components/Banner/Banner";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { Doughnut } from "react-chartjs-2";
@@ -119,7 +119,7 @@ export default function RepaymentCalculator() {
   return (
     <>
       <Header title="Calculator" />
-      <section className=" p-6   lg:px[3rem] xl:px-[9rem] xl:py-[3rem] lg:py-0 ">
+      <section className=" p-6   lg:p-[3rem]  ">
         {/* text */}
         <div className=" text h-[20%] w-full lg:flex gap-10  ">
           {/* left */}
@@ -156,6 +156,7 @@ export default function RepaymentCalculator() {
                 className="border rounded-[5px] min-h-[60px] text-[var(--secgr)] mt-4 w-full p-4"
                 placeholder="$200,000"
                 type="number"
+                min={1}
               />
             </div>
 
@@ -195,6 +196,7 @@ export default function RepaymentCalculator() {
                 className="border rounded-[5px] text-[var(--secgr)] w-full min-h-[60px] p-4 mt-4"
                 placeholder="e.g. 6.5"
                 type="number"
+                min={1}
                 value={interestRate}
                 onChange={(e) => {
                   const val = parseFloat(e.target.value);
@@ -243,6 +245,7 @@ export default function RepaymentCalculator() {
                 className="border rounded-[5px] text-[var(--secgr)] w-[45%] min-h-[60px] p-4 mt-4"
                 placeholder="e.g. 30"
                 type="number"
+                min={1}
               />
             </div>
 

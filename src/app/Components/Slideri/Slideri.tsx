@@ -13,7 +13,7 @@ import {
 import { useRouter } from "next/navigation";
  
  
- export default function Slideri(){
+ export default function Slider(){
     const router = useRouter()
 
     const items = [

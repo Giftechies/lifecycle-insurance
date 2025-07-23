@@ -1,7 +1,7 @@
 // components/Sidebar.js
 
 import Header from "@/app/Components/Header/Header";
-import Slideri from "@/app/Components/Slideri/Slideri";
+import Slider from "@/app/Components/Slider/Slider";
 import {
   ShieldCheck,
   HeartPulse,
@@ -125,7 +125,7 @@ Our group Insurances are designed to support every business in New Zealand in at
         </div>
 
 {/* Centered Sidebar constrained inside main, below header and above footer */}
-       <Slideri/>
+       <Slider/>
       </main>
     </>
   );

@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Header from '../Components/Header/Header';
+import Banner from '../Components/Banner/Banner';
 
 const terms = [
   "Variable floating",
@@ -40,10 +40,10 @@ export default function InterestRatesTable() {
   };
 
   return (
-    // <>
-    // </>
+    <>
+    
+      <Banner title="Interest Rate" />
     <section className=" ">
-      <Header title="Interest Rate" />
       <div className="p-4 max-w-[1600px] mx-auto lg:px-[3.3rem] xl:px-[7rem] font-sans ">
         {loading && (
           <div className="text-center text-gray-500 p-4">Loading rates...</div>
@@ -101,6 +101,7 @@ export default function InterestRatesTable() {
 
       </div>
     </section>
+    </>
   );
 }
 function MobileAccordion({ terms, institutions, getRateForTerm }) {

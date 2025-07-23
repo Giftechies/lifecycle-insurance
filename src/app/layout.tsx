@@ -1,15 +1,13 @@
 "use client"
 
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import { useState } from "react";
 import MobileMenuOverlay from "./Components/MobileMenuOverlay/MobileMenuOverlay";
-import Head from "next/head";
 import { EnquiryProvider } from "./Context/EnquiryContext";
-import Enquire from "./Components/Enquire";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +28,7 @@ export default function RootLayout({
 }>) {
 
    const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const [isEnquireOpen, setIsEnquireOpen] = useState(false);
+   
   return (
     <html lang="en">
       <link
@@ -41,13 +39,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <EnquiryProvider>
-          <Nav setIsMenuOpen={setIsMenuOpen} setIsEnquireOpen={setIsEnquireOpen} />
+          <Nav setIsMenuOpen={setIsMenuOpen}  />
         {children}
         <Footer/>
          {isMenuOpen && (
-          <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen} setIsEnquireOpen={setIsEnquireOpen} />
+          <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen}  />
         )}
-        {isEnquireOpen &&(<Enquire setIsEnquireOpen={setIsEnquireOpen}  />)}
         </EnquiryProvider>
       </body>
     </html>

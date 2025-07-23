@@ -1,7 +1,7 @@
 // components/Sidebar.js
 
-import Header from "@/app/Components/Header/Header";
-import Slideri from "@/app/Components/Slideri/Slideri";
+import Banner from "@/app/Components/Banner/Banner"
+import Slider from "@/app/Components/Slider/Slider";
 import {
   ShieldCheck,
   HeartPulse,
@@ -13,19 +13,19 @@ import {
   Phone,
 } from "lucide-react";
 
-const Sidebar = () => {
-  const items = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} /> },
-    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} /> },
-    {
-      label: "Total Permanent Disability Benefit Cover",
-      icon: <Activity size={20} />,
-    },
-    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} /> },
-    { label: "Income Protection Cover", icon: <Wallet size={20} /> },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} /> },
-    { label: "Group Insurance", icon: <Users size={20} /> },
-  ];
+ const Sidebar = () => {
+//   const items = [
+//     { label: "Life Insurance", icon: <ShieldCheck size={20} /> },
+//     { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} /> },
+//     {
+//       label: "Total Permanent Disability Benefit Cover",
+//       icon: <Activity size={20} />,
+//     },
+//     { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} /> },
+//     { label: "Income Protection Cover", icon: <Wallet size={20} /> },
+//     { label: "Medical Insurance", icon: <Stethoscope size={20} /> },
+//     { label: "Group Insurance", icon: <Users size={20} /> },
+//   ];
 
   const cover = [
     {
@@ -138,7 +138,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <Header title="Trauma recovery cover" />
+      <Banner title="Trauma recovery cover" />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative  max-w-[1600px] mx-auto leading-7 tracking-wider ">
  {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">
@@ -158,49 +158,43 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex gap-8">
-              {/* left content */}
-              <div className="leftcontent w-[100%] lg:w-[55%] 
-               ">
-                {/* content 1 */}
-                <div className="flex mt-2">
-                  <div className=" text-black/60 ">
-                    <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
-                    What do most people use Trauma Recovery Cover for ?
-                    </h1>
-                  
+            <div className="LowerContent w-full mt-4 lg:flex gap-8 items-stretch">
+  {/* Left content */}
+  <div className="leftcontent w-full  lg:w-[55%]">
+    {/* content 1 */}
+    <div className="flex mt-2">
+      <div className="text-black/60">
+        <h1 className="text-[18px] lg:text-[26px] text-black font-semibold">
+          What do most people use Trauma Recovery Cover for?
+        </h1>
 
-                    {cover.map((el) => (
-                      <>
-                        <div className=" flex  items-start mt-2.5 text-black/80">
-                          <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0 "></i>
-                          <p className=" text-[14px] text-justify">
-                            <span className="font-semibold text-[16px]  text-black ">
-                              {el.title}
-                            </span >
-                            {el.content}
-                          </p>
-                        </div>
-                      </>
-                    ))}
-                  </div>
-                </div>
+        {cover.map((el, idx) => (
+          <div key={idx} className="flex items-start mt-2.5 text-black/80">
+            <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0"></i>
+            <p className="text-[14px] text-justify">
+              <span className="font-semibold text-[16px] text-black">
+                {el.title}
+              </span>
+              {el.content}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
 
-                
-              </div>
+  {/* Right content image */}
+  <div className="w-full  lg:w-[40%] flex">
+    <div className="RightContent flex-grow overflow-hidden rounded-lg">
+      <img
+        src="/8.jpg"
+        className="h-full w-full object-cover"
+        alt="Right content"
+      />
+    </div>
+  </div>
+</div>
 
-              {/* Right content image */}
-              <div className="md:w-full lg:w-[40%] h-full  mt-8 " >
-                
-              <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[85vh] mt-4 overflow-hidden rounded-lg ">
-                <img
-                  src="/8.jpg"
-                  className=" h-full w-full object-cover"
-                  alt=""
-                />
-              </div>
-              </div>
-            </div>
           </section>
           
           {/* section 2 */}
@@ -278,7 +272,7 @@ const Sidebar = () => {
         </div>
 
 {/* Centered Sidebar constrained inside main, below header and above footer */}
-      <Slideri/>
+      <Slider/>
       </main>
     </>
   );

@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
-export default function Nav({ setIsMenuOpen, setIsEnquireOpen }) {
+export default function Nav({ setIsMenuOpen, }) {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [InsuranceOpen, setInsuranceOpen] = useState(false);
@@ -45,9 +44,9 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }) {
           </div>
           <div className=" flex items-center lg:gap-3 lg:text-[14px] xl:gap-12 xl:text-[16px]">
             <div className="hidden mb:flex mb:gap-1  lg:flex gap-3  ">
-              <div className="border-b-2 border-white  hover:border-b-2 hover:border-black px-4 py-2">
-                <Link href="/about">About Us</Link>
-              </div>
+              <Link href="/About-us" className="border-b-2 border-white  hover:border-b-2 hover:border-black px-4 py-2">
+                About us
+              </Link>
 
               {/* Insurance dropdown */}
               <div
@@ -130,7 +129,6 @@ export default function Nav({ setIsMenuOpen, setIsEnquireOpen }) {
               ></i>
               <Link
                 href="/Enquire"
-                // onClick={() => setIsEnquireOpen(true)}
                 className="hidden lg:block py-3 px-5  text-[14px] text-center   rounded-full bg-[var(--primg)] text-white  hover:text-black hover:mb-2
            xl transition-all duration-400 ease-in-out"
               >

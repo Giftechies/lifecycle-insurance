@@ -1,7 +1,7 @@
 // components/Sidebar.js
 
 import Header from "@/app/Components/Header/Header";
-import Slideri from "@/app/Components/Slideri/Slideri";
+import Slider from "@/app/Components/Slider/Slider";
 import {
   ShieldCheck,
   HeartPulse,
@@ -194,7 +194,7 @@ const Sidebar = () => {
         </div>
 
 {/* Centered Sidebar constrained inside main, below header and above footer */}
-       <Slideri/>
+       <Slider/>
       </main>
     </>
   );

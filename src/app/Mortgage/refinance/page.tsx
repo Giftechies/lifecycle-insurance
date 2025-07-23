@@ -1,6 +1,6 @@
 // components/Sidebar.js
 
-import Header from "@/app/Components/Header/Header";
+import Header from "@/app/Components/Banner/Banner";
 import Slider from "@/app/Components/Slider/Slider";
 
 const Sidebar = () => {

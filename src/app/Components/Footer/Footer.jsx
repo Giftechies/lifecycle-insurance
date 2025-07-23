@@ -1,7 +1,27 @@
 "use client";
+import { HomeData } from "@/app/lib/api";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [setting, setSetting] = useState()
+  const [loading, setloading] = useState(true)
+   useEffect(() => {
+        async function fetchData() {
+          try {
+            const res = await HomeData("settings");
+            if (res?.success) {
+        setSetting(res.data);
+      }
+           
+          } catch (error) {
+            console.log("error", error);
+          } finally {
+            setloading(false);
+          }
+        }
+        fetchData();
+      }, []);
   return (
     <>
       {/* footer */}
@@ -44,7 +64,7 @@ export default function Footer() {
               <h3 className="text-[20px] font-medium mb-3 text-white">Quick Links</h3>
               <div className="flex flex-col space-y-4">
                 <Link href="/" className="text-white/90 hover:text-white transition-colors">Home</Link>
-                <Link href="/about" className="text-white/90 hover:text-white transition-colors">About Us</Link>
+                <Link href="/About-us" className="text-white/90 hover:text-white transition-colors">About Us</Link>
                 <Link href="/Insurance" className="text-white/90 hover:text-white transition-colors">Insurance</Link>
                 <Link href="/Mortgage" className="text-white/90 hover:text-white transition-colors">Mortgage</Link>
                 <Link href="/Case-study" className="text-white/90 hover:text-white transition-colors">Case Study</Link>
@@ -58,9 +78,9 @@ export default function Footer() {
               <div className="flex flex-col space-y-4">
                 <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
                 <Link href="/Interest-rate" className="text-white/90 hover:text-white transition-colors">Interest Rates</Link>
-                <Link href="#" className="text-white/90 hover:text-white transition-colors lg:w-[70%]">Public Available Disclosure</Link>
-                <Link href="#" className="text-white/90 hover:text-white transition-colors">Make a Complaint</Link>
-                <Link href="#" className="text-white/90 hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/Public-available-disclosure" className="text-white/90 hover:text-white transition-colors lg:w-[70%]">Public Available Disclosure</Link>
+                <Link href="/Make-a-complaint" className="text-white/90 hover:text-white transition-colors">Make a Complaint</Link>
+                <Link href="/Privacy-Policy" className="text-white/90 hover:text-white transition-colors">Privacy Policy</Link>
               </div>
             </div>
 
@@ -70,16 +90,22 @@ export default function Footer() {
               <div className="flex flex-col text-[14px] flex-wrap space-y-4">
                 <div className="flex items-start gap-1">
                   <i className="ri-phone-line text-2lg"></i>
-                  <a href="tel:0800507770" className="text-white/90 hover:text-white transition-colors">0800 50 7770</a>
+                  <a href="tel:0800507770" className="text-white/90 hover:text-white transition-colors">
+                  {/* {setting?.phone_1 || "Loading..." } */}0800 507 770
+                  </a>
                 </div>
                 <div className="flex items-start gap-1">
                   <i className="ri-mail-line text-2lg"></i>
-                  <a href="mailto:harpreet@lifecyclefinancial.co.nz" className="text-white/90 hover:text-white transition-colors">harpreet@lifecyclefinancial.co.nz</a>
+                  <a href="mailto:harpreet@lifecyclefinancial.co.nz" className="text-white/90 hover:text-white transition-colors  break-all">
+                  { setting?.email || "Loading..."}
+                  harpreet@lifecyclefinancial.co.nz
+                  </a>
                 </div>
                 <div className="flex items-start max-xl:flex-wrap">
                   <i className="ri-map-pin-line mr-2 mt-1 text-2lg"></i>
                   <span>
-                    402 Ormiston Road, Flat Bush, Auckland, 2016, North Island, New Zealand
+                  {/* {setting?.address || "Loading..."} */}
+                  3 Otaota way, Flat Bush, Auckland
                   </span>
                 </div>
                 <div className="w-full border-t  pt-4 border-dotted border-white/30 text-lg  flex gap-2 justify-center ">
