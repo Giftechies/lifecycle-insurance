@@ -11,7 +11,7 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
     <main>
       <Banner title={title || "Category"} />
 
-      <section className="w-full px-4 py-6 lg:px-[3rem] lg:py-10 mx-auto leading-7 tracking-wider">
+      <section className="w-full px-4 py-6 lg:px-[3rem] lg:py-10  mx-auto leading-7 tracking-wider">
         <div className="w-full lg:flex gap-10">
           <div className="w-full text-[var(--primg)] text-[16px] lg:w-[55%] font-medium">
             <i className="ri-record-circle-line"></i> {title}
@@ -25,7 +25,7 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
           </div>
         </div>
 
-        <div className="w-full  lg:w-[100%] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] mt-12 gap-15">
+        <div className="w-full  lg:w-[100%] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] xl:grid-cols-4 mt-12 gap-15">
           {cards?.map((el, index) => (
             <div
               key={index}

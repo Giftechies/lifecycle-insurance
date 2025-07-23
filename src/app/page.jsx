@@ -62,17 +62,17 @@ export default function Home() {
     {
       img: "./family.svg",
       number: "6+",
-      content: " million+ in mortgage  arranged   ",
+      content: " insurance providers  partnered with    ",
     },
     {
       img: "./timer.svg",
-      number: "$200",
-      content: " insurance providers  partnered with ",
+      number: "$200M+",
+      content: "   in mortgage  arranged  ",
     },
     {
       img: "./bank.svg",
       number: "20+",
-      content: `mortgage providers to  choose from `,
+      content: `mortgage providers to  choose from  `,
     },
   ];
 
@@ -416,22 +416,22 @@ export default function Home() {
                 <div className=" h-3 w-3 lg:h-5 lg:w-5 rounded-full aspect-auto bg-white  "></div>
                 <div className=" w-full border-t md:w-0.5 md:border-r border-dashed h-[85%] mt-8"></div>
               </div>
-              <div className="cards space-y-8 ">
+              <div className="cards  flex flex-col gap-15 ">
                 {/* text */}
                 <div>
-                  <h1 className=" text-[36px]   font-bold tracking-normal  leading-9 text-white/80 ">
+                  <h1 className=" text-[36px]   font-bold tracking-normal  leading-9 text-white ">
                    Numbers That Speak for Themselves
                   </h1>
                 </div>
                 {/* cards-box */}
-                <div className=" font-normal    grid gap-8 md:grid-cols-2 ">
+                <div className=" font-normal flex-grow   grid gap-8 md:grid-cols-2 ">
                   {sec3_cards.map((e,i) => {
                     return (
-                      <div key={i}  className={`card px-10 py-10 ${i === 0 || i === 1 ? "box-anime" : "box-anime-1"}`}>
-                        <img src={e.img} className=" h-8 w-8 mb-3" alt="" />
-                        <h3 className=" text-[20px]  text-[var(--secgr)] font-bold ">
+                      <div key={i}  className={`card  px-10 py-10 ${i === 0 || i === 1 ? "box-anime" : "box-anime-1"}`}>
+                        <img src={e.img} className=" h-12 w-12 mb-3" alt="" />
+                        <h2 className="   text-[var(--secgr)] font-bold ">
                           {e.number}
-                        </h3>
+                        </h2>
                         <h3 className="   text-black  w-[80%]  ">
                           {" "}
                           {e.content}
@@ -495,7 +495,7 @@ export default function Home() {
                 {/* part 2 */}
                 <div
                   onClick={() => router.push("/Insurance")}
-                  className="part2 sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden "
+                  className="part2 sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
                 >
                   <h3 className="text-white cursor-pointer font-semibold text-[20px] ">
                     Insurance

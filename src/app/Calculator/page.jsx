@@ -317,6 +317,7 @@ export default function RepaymentCalculator() {
             )}
           </div>
         </div>
+
       </section>
     </>
   );

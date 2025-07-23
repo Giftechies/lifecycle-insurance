@@ -96,12 +96,12 @@ export default function Footer() {
                 <div className="flex items-start gap-1">
                   <i className="ri-mail-line text-2lg"></i>
                   <a href="mailto:harpreet@lifecyclefinancial.co.nz" className="text-white/90 hover:text-white transition-colors  break-all">
-                  { setting?.email || "Loading..."}
+                  {/* { setting?.email || "Loading..."} */}
                   harpreet@lifecyclefinancial.co.nz
                   </a>
                 </div>
                 <div className="flex items-start max-xl:flex-wrap">
-                  <i className="ri-map-pin-line mr-2 mt-1 text-2lg"></i>
+                  <i className="ri-map-pin-line mr-2  text-2lg"></i>
                   <span>
                   {/* {setting?.address || "Loading..."} */}
                   3 Otaota way, Flat Bush, Auckland

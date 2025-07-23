@@ -195,8 +195,8 @@ export default function about() {
                       {el.Name}
                     </h1>
                     <h4 >{el.title}</h4>
-                    <a href={`tel:{el.phone}`} className=" text-[14px]  ">
-                      Phone No: {el.Phone}
+                    <a href={`tel:${el.Phone}`} className=" text-[14px]  ">
+                      <i class="ri-phone-fill"></i> {el.Phone}
                     </a>
                   </div>
                 </div>
