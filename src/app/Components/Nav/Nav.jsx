@@ -218,7 +218,7 @@ export default function Nav({ setIsMenuOpen, }) {
             </div>
             <a
               class="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
-              href="/services"
+              href="/"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

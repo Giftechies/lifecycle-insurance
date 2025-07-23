@@ -25,7 +25,7 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
           </div>
         </div>
 
-        <div className="w-full lg:w-[100%] grid md:grid-cols-2 lg:grid-cols-3 mt-12 gap-15">
+        <div className="w-full lg:w-[100%] grid md:grid-cols-2 lg:grid-cols-4 mt-12 gap-10">
           {cards?.map((el, index) => (
             <div
               key={index}
@@ -45,9 +45,9 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
               {/* Title and Read More with link */}
               <div className="relative mt-[20px]">
                 <Link href={el.link}>
-                  <h2 className="text-[20px] font-medium leading-6 text-gray-900 hover:underline">
+                  <h4 className="text-[20px] font-medium leading-6 text-gray-900 hover:underline">
                     {el.title}
-                  </h2>
+                  </h4>
                 </Link>
 
                 <p className="text-gray-700 mt-2">{el.paragraph_1}</p>
