@@ -29,17 +29,17 @@ export default function about() {
                     Operating since 2006 in this Industry.
                   </h2>
                 </div>
-                <div className="right text-black font-medium ">
-                  <p className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
+                <div className="right text-black font-semibold ">
+                  <h6 className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                     Lifecycle Financial is a part of KAN ( Kiwi Advisor Network
                     ) which is one of the biggest financial groups in Mortgage
                     and Insurance distribution. We are a member of Auckland
                     Chamber of Commerce and contribute to Insurance & Saving
                     Ombudsman Scheme.
-                  </p>
-                  <p className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
+                  </h6>
+                  <h6 className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                     Lifecycle Financial is a Leading independent Financial Advisory Company providing a wide range of financial services to the clients including Mortgages both Residential & Commercial & Personal insurance products such as life, Health, Income Protection, Mortgage Protection, Redundancy Cover, and Trauma insurance. For home, contents, car, and business insurance we have additional specialists that we call upon.
-                  </p>
+                  </h6>
                 </div>
               </div>
 
