@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 
 import {
   Home,
@@ -13,6 +14,7 @@ import {
   Wallet,
   Stethoscope,
   Users,
+ 
 } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -89,10 +91,11 @@ export default function Slider() {
             <i className="ri-mail-line text-xl text-[var(--primg)]" />
             <span className="">harpreet@lifecyclefinancial.co.nz</span>
           </a>
-
+ <Link href={'/Enquire'} passHref >
           <button className="bg-[var(--primg)] text-white w-full rounded-md mt-5 py-2 text-sm hover:opacity-90 transition">
-            Call Now
+           Enquire Now
           </button>
+          </Link>
         </div>
       </div>
     </div>
