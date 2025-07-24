@@ -29,7 +29,7 @@ export default function about() {
                     Operating since 2006 in this Industry.
                   </h2>
                 </div>
-                <div className="right text-[var(--secgr)]  ">
+                <div className="right text-black font-medium ">
                   <p className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                     Lifecycle Financial is a part of KAN ( Kiwi Advisor Network
                     ) which is one of the biggest financial groups in Mortgage
