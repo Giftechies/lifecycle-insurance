@@ -1,7 +1,6 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { nanoid } from "nanoid";
 import Banner from "../Components/Banner/Banner";
 import { useState, useEffect } from "react";
 
@@ -12,54 +11,56 @@ const [enquiries, setEnquiries] = useState([]);
   const { register, handleSubmit, reset } = useForm();
 
 
-   useEffect(() => {
-      async function fetchData() {
-        try {
-          const res = await HomeData("settings");
-          if (res?.success) {
-        setSetting(res);//if not working use .data
-      }
-        } catch (error) {
-          console.log("error", error);
-        } finally {
-          setloading(false);
-        }
-      }
-      fetchData();
-    }, []);
+  //  useEffect(() => {
+  //     async function fetchData() {
+  //       try {
+  //         const res = await HomeData("settings");
+  //         if (res?.success) {
+  //       setSetting(res);//if not working use .data
+  //     }
+  //       } catch (error) {
+  //         console.log("error", error);
+  //       } finally {
+  //         setloading(false);
+  //       }
+  //     }
+  //     fetchData();
+  //   }, []);
 
- 
 
-  const data = [
-    {
-      logo: <i className="ri-phone-line text-3xl cursor-pointer  "></i>,
-      title: "Phone",
-      content: setting?.phone_1 || "Loading...",
-    },
-    {
-      logo: <i className=" ri-mail-line text-3xl cursor-pointer "></i>,
-      title: "email ",
-      content: setting?.email || "Loading...",
-    },
-    {
-      logo: <i className="ri-map-pin-line text-3xl cursor-pointer"></i>,
-      title: " Address",
-      content: setting?.address || "Loading...",
-    },
-    {
-      logo: <i className="ri-time-line text-3xl cursor-pointer"></i>,
-      title: "Business Hours ",
-      content: " Mon -Fri 9:00 AM - 6:00 PM ",
-    },
-  ];
+const onSubmit = async (formData) => {
+  try {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    });
 
-    const onSubmit = (data) => {
-    data.id = nanoid();
-    const updated = [...enquiries, data];
-    setEnquiries(updated);
-    reset();
-    console.log("submitted", updated);
-  };
+    const data = await response.json();
+
+    if (data.success) {
+      console.log('✅ Email sent successfully');
+      alert('Your message has been sent!');
+    } else {
+      console.error('❌ Email failed:', data.message);
+      alert('Failed to send message. Please try again later.');
+    }
+  } catch (error) {
+    console.error('❌ Network or server error:', error);
+    alert('An error occurred. Please check your connection and try again.');
+  }
+
+  // Optional: clear the form if using react-hook-form
+  reset();
+};
+
+
 
 
   return (
@@ -178,7 +179,7 @@ const [enquiries, setEnquiries] = useState([]);
 
               <button
                 type="submit"
-                className="py-2 px-6 rounded-[5px] bg-[var(--primg)] outline-0 text-white font-semibold hover:bg-opacity-90 transition"
+                className=  "  py-2 px-6 rounded-[5px] bg-[var(--primg)] outline-0 text-white font-semibold hover:bg-opacity-90 transition"
               >
                 Send
               </button>

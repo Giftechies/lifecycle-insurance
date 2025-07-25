@@ -33,6 +33,7 @@ h3{
 section{
 	max-width: 1600px;
 	margin: 0 auto;
+	
 }
 /* About.module.css */
 .lower div h2{
@@ -54,10 +55,17 @@ section{
 .privacy img{
 	display: none;
 }
+button{
+	cursor: pointer;
+}
 
 .icon-box h1{
   width: 20%;
   
+}
+
+.case strong{
+	font-size: 18px;
 }
 
 /* Privacy */

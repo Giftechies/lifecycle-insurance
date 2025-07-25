@@ -9,6 +9,7 @@ export default function Nav({ setIsMenuOpen, }) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [InsuranceOpen, setInsuranceOpen] = useState(false);
   const [mortgageOpen, setMortgageOpen] = useState(false);
+  const [calculatorOpen, setcalculatorOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -115,8 +116,29 @@ export default function Nav({ setIsMenuOpen, }) {
               <div className="hover:border-b-2 hover:border-black px-4 py-2">
                 <Link href="/Case-study">Case Study</Link>
               </div>
-              <div className="hover:border-b-2 hover:border-black px-4 py-2">
+              <div 
+                onMouseEnter={() => setcalculatorOpen(true)}
+                onMouseLeave={() => setcalculatorOpen(false)}
+              className=" px-4 py-2 relative ">
                 <Link href="/Calculator">Calculator</Link>
+                 {calculatorOpen && (
+                  <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
+                    {[
+                      "Repayment Calculator",
+                      "Extra Loan",
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        href={`/Calculator/${item
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
+                        className="block px-3 py-2 hover:bg-gray-100 text-black"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
               <div className="hover:border-b-2 hover:border-black px-4 py-2">
                 <Link href="/Interest-rate">Interest Rate</Link>

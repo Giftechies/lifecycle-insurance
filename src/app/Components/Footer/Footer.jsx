@@ -6,22 +6,22 @@ import { useEffect, useState } from "react";
 export default function Footer() {
   const [setting, setSetting] = useState()
   const [loading, setloading] = useState(true)
-   useEffect(() => {
-        async function fetchData() {
-          try {
-            const res = await HomeData("settings");
-            if (res?.success) {
-        setSetting(res.data);
-      }
+  //  useEffect(() => {
+  //       async function fetchData() {
+  //         try {
+  //           const res = await HomeData("settings");
+  //           if (res?.success) {
+  //       setSetting(res.data);
+  //     }
            
-          } catch (error) {
-            console.log("error", error);
-          } finally {
-            setloading(false);
-          }
-        }
-        fetchData();
-      }, []);
+  //         } catch (error) {
+  //           console.log("error", error);
+  //         } finally {
+  //           setloading(false);
+  //         }
+  //       }
+  //       fetchData();
+  //     }, []);
   return (
     <>
       {/* footer */}

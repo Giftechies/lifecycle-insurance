@@ -45,7 +45,7 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
               {/* Title and Read More with link */}
               <div className="relative mt-[20px]">
                 <Link href={el.link}>
-                  <h4 className="text-[20px] font-medium leading-6 text-gray-900 hover:underline">
+                  <h4 className="text-[20px] font-medium leading-6 text-gray-900 ">
                     {el.title}
                   </h4>
                 </Link>
