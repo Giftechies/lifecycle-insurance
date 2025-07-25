@@ -8,7 +8,7 @@ import Slideri from "../../Components/Slideri/Slideri"
 const caseStudies = {
   "trauma-cover-impact": {
     slug: "trauma-cover-impact",
-    title: "The Life-Changing Impact of Trauma Cover",
+    title: "Trauma Cover Impact",
     summary:
       "A powerful reminder of how the right advice and timely action can make all the difference when life takes an unexpected turn.",
     content: [
@@ -36,7 +36,7 @@ const caseStudies = {
   },
   "timely-advice-trauma-cover": {
     slug: "timely-advice-trauma-cover",
-    title: "THE VALUE OF TIMELY ADVICE AND COMPREHENSIVE COVER ",
+    title: "Timely Advice Trauma Cover",
     summary:
       "turning dream into reality with just 5% deposit despite having multiple debts, bad credit history and minimal deposit ",
     content: [
