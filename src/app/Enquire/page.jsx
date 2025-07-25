@@ -138,7 +138,7 @@ const onSubmit = async (formData) => {
 
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="pt-4 flex flex-col gap-8 placeholder-[#A9A8A9] text-[#A9A9A9]"
+              className="pt-4 flex flex-col gap-8 placeholder-[#A9A8A9] text-[var(--secgr)]"
             >
               <input
                 {...register("name", { required: true })}
