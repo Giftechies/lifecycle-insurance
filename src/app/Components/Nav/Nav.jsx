@@ -10,6 +10,7 @@ export default function Nav({ setIsMenuOpen, }) {
   const [InsuranceOpen, setInsuranceOpen] = useState(false);
   const [mortgageOpen, setMortgageOpen] = useState(false);
   const [calculatorOpen, setcalculatorOpen] = useState(false);
+  const [caseOpen, setcaseOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function Nav({ setIsMenuOpen, }) {
   }, [lastScrollY]);
 
   return (
-    // ${show ? "translate-y-0" : "-translate-y-full"}
+    
     <>
       <nav className="  w-full max-w-[1600px] min-w--[320px] mx-auto ">
         <div className=" w-full h-15  lg:h-20 px-4   lg:px-[3rem]  py-1  flex items-center justify-between      max-w-[1600px] mx-auto ">
@@ -95,7 +96,7 @@ export default function Nav({ setIsMenuOpen, }) {
                 onMouseEnter={() => setMortgageOpen(true)}
                 onMouseLeave={() => setMortgageOpen(false)}
               >
-                <Link href="/Mortgage"  className=" flex gap-1"  >Mortgage <span className=" group-hover:rotate-180  transition-transform duration-300  " ><i class="ri-arrow-down-s-line"></i></span>
+                <Link href="/Mortgage"  className=" flex gap-1"  >Mortgage <span className=" group-hover:rotate-180  transition-transform duration-300  " ><i className="ri-arrow-down-s-line"></i></span>
                 
                 </Link>
                 {mortgageOpen && (
@@ -122,9 +123,35 @@ export default function Nav({ setIsMenuOpen, }) {
                 )}
               </div>
 
-              <div className="hover:border-b-2 hover:border-black px-4 py-2 group">
-                <Link href="/Case-study" className=" flex gap-1" >Case Study <span className=" group-hover:rotate-180  transition-transform duration-300  " ><i class="ri-arrow-down-s-line"></i></span> </Link>
+              <div className="px-4 py-2 group relative"
+              
+               onMouseEnter={() => setcaseOpen(true)}
+                onMouseLeave={() => setcaseOpen(false)}>
+                <Link href="/Case-study" className=" flex gap-1" >Case Study <span className=" group-hover:rotate-180  transition-transform duration-300  " ><i className="ri-arrow-down-s-line"></i></span> 
+                </Link>
+                 {caseOpen && (
+                  <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
+                    {[
+                      "Trauma Cover Impact",
+                      "Making Home Ownership Possible",
+                      "Timely Advice Trauma Cover",
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        href={`/Case-study/${item
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
+                        className="block px-3 py-2 hover:bg-gray-100 text-black"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
+
+
+
               <div 
                 onMouseEnter={() => setcalculatorOpen(true)}
                 onMouseLeave={() => setcalculatorOpen(false)}

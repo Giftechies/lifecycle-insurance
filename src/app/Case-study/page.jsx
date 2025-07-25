@@ -4,7 +4,7 @@ import Banner from '../Components/Banner/Banner';
 const cards = [
   {
     slug: 'making-home-ownership-possible',
-    title: 'MAKING HOME OWNERSHIP POSSIBLE',
+    title: 'Making Home Ownership Possible',
     summary:
       'Turning dream into reality with just 5% deposit despite having multiple debts, bad credit history...',
     content: {
@@ -17,7 +17,7 @@ const cards = [
   },
   {
   slug: "trauma-cover-impact", // use this for dynamic routing
-  title: "The Life-Changing Impact of Trauma Cover",
+  title: "Trauma Cover Impact",
   summary:
     "A powerful reminder of how the right advice and timely action can make all the difference when life ...",
   content: [
@@ -31,7 +31,7 @@ const cards = [
 },
 {
   slug: "timely-advice-trauma-cover",
-  title: "The Value of Timely Advice and Comprehensive Cover",
+  title: "Timely Advice Trauma Cover",
   summary:
     "They nearly let it go. Six months later, they were thankful they didn't. That's the value of trusted...",
   content: [

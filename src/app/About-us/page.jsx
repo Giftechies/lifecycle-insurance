@@ -13,7 +13,7 @@ export default function about() {
             <div className="Left lg:w-[45%]  max-lg:hidden  ">
               <div className="img lg:h-[105%] xl:h-[100%]   w-[100%]  rounded-2xl overflow-hidden ">
                 <img
-                  src="./about-pic1.jpg"
+                  src="about-pic1.jpg"
                   className=" w-full  h-full  object-cover object-center "
                   alt=""
                 />
@@ -46,7 +46,7 @@ export default function about() {
               {/* image */}
               <div className="img w-full sm:h-[40vw]  rounded-2xl overflow-hidden lg:hidden ">
                 <img
-                  src="./about-pic1.jpg"
+                  src="about-pic1.jpg"
                   className=" w-full h-full object-cover  "
                   alt=""
                 />
@@ -80,13 +80,13 @@ export default function about() {
                   Name: "Harpeet Singh Rattan",
                   title: " Financial Adviser",
                   Phone: "021408971",
-                  img: "/our2.jpg",
+                  img: "our2.jpg",
                 },
                 {
                   Name: "Rajwinder Rattan",
                   title: "Financial Adviser",
                   Phone: "021707246",
-                  img: "/our1.jpg",
+                  img: "our1.jpg",
                 },
               ].map((el) => (
                 <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%]  mt-4  bg-white shadow rounded-xl flex items-center justify-center text-center p-4">

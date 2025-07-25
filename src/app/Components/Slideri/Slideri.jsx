@@ -34,12 +34,12 @@ export default function Slider() {
     ],
     result:" A major bank approved their $880,000 loan at a competitive 6.09% interest rate, with just a 5% deposit. They successfully purchased their dream home for $928,000—proving that with the right strategy and guidance, homeownership is achievable even in tough circumstances.",
     category: "Insurance",
-    coverImage: "/trauma.webp",
+    coverImage: "trauma.webp",
     date: "2025-07-24",
   },
     "making-home-ownership-possible": {
     slug: "making-home-ownership-possible",
-    title: "MAKING HOME OWNERSHIP POSSIBLE",
+    title: "Making Home Ownership Possible",
     summary:
       "A powerful reminder of how the right advice and timely action can make all the difference when life takes an unexpected turn.",
     content: [
@@ -48,7 +48,7 @@ export default function Slider() {
     ],
     result:"The payout provided essential financial support during a highly stressful and emotional time, helping them to focus on recovery without the added burden of financial strain.",
     category: "Insurance",
-    coverImage: "/about-pic1.jpg",
+    coverImage: "about-pic1.jpg",
     date: "2025-07-24",
   },
     "timely-advice-trauma-cover": {
@@ -62,7 +62,7 @@ export default function Slider() {
     ],
     result:"The good news is that she made a full recovery, and the family is now even more appreciative of the importance of maintaining comprehensive insurance cover. This situation reinforces how critical it is to have the right protections in place—especially when they’re needed most.",
     category: "Insurance",
-    coverImage: "/time.webp",
+    coverImage: "time.webp",
     date: "2025-07-24",
   },
   // Add more case studies here
