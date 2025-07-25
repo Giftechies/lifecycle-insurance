@@ -62,29 +62,57 @@ export default function about() {
               </div>
             </div>
           </main>
+        </section> 
+          {/* section 3 team */}
+        <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
+          <main className=" w-full flex  flex-col items-center ">
+            <h2 className=" text-[26px]   text-[var(--secgr)]  font-semibold ">
+              {" "}
+              Our Mortgage Experts
+            </h2>
+
+            {/* cards */}
+            <div className=" w-full  text-black/40  mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
+              {/* card 1 */}
+
+              {[
+                {
+                  Name: "Harpeet Singh Rattan",
+                  title: " Financial Adviser",
+                  Phone: "021408971",
+                  img: "/our2.jpg",
+                },
+                {
+                  Name: "Rajwinder Rattan",
+                  title: "Financial Adviser",
+                  Phone: "021707246",
+                  img: "/our1.jpg",
+                },
+              ].map((el) => (
+                <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%]  mt-4  bg-white shadow rounded-xl flex items-center justify-center text-center p-4">
+                  <div className="img w-[100%]  aspect-square">
+                    <img
+                      src={el.img}
+                      className="w-full rounded-xl h-full object-cover object-top "
+                      alt=""
+                    />
+                    <h1 className=" mt-2  text-black/80 font-medium ">
+                      {el.Name}
+                    </h1>
+                    <h4 >{el.title}</h4>
+                    <a href={`tel:${el.Phone}`} className=" text-[14px]  ">
+                      <i class="ri-phone-fill"></i> {el.Phone}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </main>
         </section>
 
         {/* section 2 */}
         <section className="section_2   w-full overflow-hidden  ">
           <main className="   max-w-[1600px] max-lg:space-y-4  max-lg:p-6   mx-auto  relative  ">
-            {/* Upper div */}
-            <div className="p-[1rem] max-lg:rounded-2xl bg-[var(--tri)] max-lg:flex-col flex gap-3  text-white lg:px-[3rem]   ">
-              {/* left */}
-              <div className="left w-full text-[14px] lg:w-[50%]  ">
-                <i className="ri-record-circle-line"></i> Get to Know Us Better
-                <h2 className=" text-[20px]    leading-8 xl:leading-9 xl:text-[30px]  font-semibold mt-3 xl:mt-4">
-                  Empowering Kiwis With Financial Confidence Since 2006
-                </h2>
-              </div>
-
-              {/* right */}
-              <div className="right  text-[14px] lg:w-[50%] lg:mt-8  xl:pl-4   text-justify xl:mt-12 ">
-                Lifecycle Financial offers trusted mortgage and Insurance
-                advice, working with leading banks and providers to help you
-                make the best financial decisions for your future.
-              </div>
-            </div>
-
             {/* Lower div */}
             <div className=" lower w-full flex max-lg:flex-col  gap-6 lg:gap-3  lg:p-[2.8rem]  xl:p-[5rem] justify-around  ">
               <div className=" w-full rounded-2xl   lg:w-[45%] bg-white p-3 shadow-2xl  lg:p-10  styled-html ">
@@ -158,52 +186,7 @@ export default function about() {
 
         {/*  */}
 
-        {/* section 3 team */}
-        <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
-          <main className=" w-full flex  flex-col items-center ">
-            <h2 className=" text-[26px]   text-[var(--secgr)]  font-semibold ">
-              {" "}
-              Our Mortgage Experts
-            </h2>
-
-            {/* cards */}
-            <div className=" w-full  text-black/40  mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
-              {/* card 1 */}
-
-              {[
-                {
-                  Name: "Harpeet Singh Rattan",
-                  title: " Financial Adviser",
-                  Phone: "021408971",
-                  img: "/our2.jpg",
-                },
-                {
-                  Name: "Rajwinder Rattan",
-                  title: "Financial Adviser",
-                  Phone: "021707246",
-                  img: "/our1.jpg",
-                },
-              ].map((el) => (
-                <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%]  mt-4  bg-white shadow rounded-xl flex items-center justify-center text-center p-4">
-                  <div className="img w-[100%]  aspect-square">
-                    <img
-                      src={el.img}
-                      className="w-full rounded-xl h-full object-cover object-top "
-                      alt=""
-                    />
-                    <h1 className=" mt-2  text-black/80 font-medium ">
-                      {el.Name}
-                    </h1>
-                    <h4 >{el.title}</h4>
-                    <a href={`tel:${el.Phone}`} className=" text-[14px]  ">
-                      <i class="ri-phone-fill"></i> {el.Phone}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </main>
-        </section>
+      
       </main>
     </>
   );

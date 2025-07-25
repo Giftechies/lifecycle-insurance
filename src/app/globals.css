@@ -44,10 +44,12 @@ section{
   padding-left: 1.5rem; /* gives indentation */
   margin-top: .5rem;
   margin-bottom: .5rem;
+    letter-spacing: 1;
+  line-height: 1.8;
 }
 
 .styled-html li {
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0.5rem;
   font-size: 14px;
   text-align: justify;
 }
