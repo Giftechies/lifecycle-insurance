@@ -32,8 +32,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 4,
-    name: 'Tony Symons',
-    quote: `They called me again today from an Australian number. Guy says "Good afternoon sir" at 10am.ve already told them I'm not interested ...`,
+    name: 'Sushwanth Sai Konigeti',
+    quote: `Very Professional and Quick in providing financial advice and Mortgages. Mrs Raji Rathan is being very helpful and supportive throughout the ...`,
     rating: 5,
   },
   {

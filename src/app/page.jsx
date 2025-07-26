@@ -349,7 +349,7 @@ export default function Home() {
                   <div className="call text-[var(--primg)] font-medium md:ml-15 lg:ml-6 xl:ml-16 flex  gap-2 max-md:hidden ">
                     <div className="  p-4 bg-[var(--secgr)] rounded-b-full ">
                       <img
-                        src="phone.svg"
+                        src="/phone.svg"
                         className=" w-[2rem]  cursor-pointer object-cover object-center "
                         alt=""
                       />
@@ -372,7 +372,7 @@ export default function Home() {
                 <div className="lowerpic sec-2-anim w-full flex flex-col items-center max-md:mt-6 md:w-[40%] lg:w-[40%]  lg:mt-8 xl:mt-3   ">
                   <div className="img">
                     <img
-                      src="sec2pic2.png"
+                      src="/sec2pic2.png"
                       className=" h-[19rem] lg:h-[16rem] xl:h-[18rem] "
                       alt=""
                     />
@@ -381,7 +381,7 @@ export default function Home() {
                   <div className="call text-[var(--primg)] font-medium mt-2 flex   gap-2 md:hidden ">
                     <div className="  p-4 bg-[var(--secgr)] rounded-full ">
                       <img
-                        src="phone.svg"
+                        src="./phone.svg"
                         className=" w-[2rem]   object-cover object-center "
                         alt=""
                       />
