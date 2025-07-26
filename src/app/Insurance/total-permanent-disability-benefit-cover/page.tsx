@@ -123,14 +123,48 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4  items-stretch  lg:flex gap-8">
+            <div className="LowerContent w-full   mt-4   md:flex gap-8">
               {/* left content */}
               <div className="leftcontent w-[100%] lg:w-[55%] 
                ">
                 {/* content 1 */}
-                <div className="flex mt-2">
+                 <div className=" text-black/60 mt-4 ">
+                  <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
+                    Food for Thought…
+                  </h1>
+                  {food.map((el) => (
+                    <div className=" flex items-start mt-2.5 text-black/80 ">
+                      <i className="ri-arrow-right-s-line mt-1 mr-1 "></i>
+                      <p className=" text-[14px]">{el.content}</p>
+                    </div>
+                  ))}
+                </div>
+               
+
+              </div>
+
+              {/* Right content image */}
+              <div className="md:w-full lg:w-[45%]  flex-grow " >
+                
+              <div className="RightContent  h-full  overflow-hidden rounded-xl ">
+                <img
+                  src="/8.jpg"
+                  className="max-md:h-80 h-full w-full object-cover"
+                  alt=""
+                />
+              </div>
+              </div>
+            </div>
+          </section>
+          
+          {/* section 2 */}
+          <section className="section_2  w-full  text-justify ">
+            
+                {/* content 2 */}
+               
+ <div className="flex mt-2">
                   <div className=" text-black/60 ">
-                    <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
+                    <h1 className=" text-[17px] lg:text-[26px] text-black font-semibold ">
                 What do most people use TPD Cover for ?
                     </h1>
                   
@@ -150,38 +184,6 @@ const Sidebar = () => {
                     ))}
                   </div>
                 </div>
-
-                {/* content 2 */}
-                <div className=" text-black/60 mt-4 ">
-                  <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
-                    Food for Thought…
-                  </h1>
-                  {food.map((el) => (
-                    <div className=" flex items-start mt-2.5 text-black/80 ">
-                      <i className="ri-arrow-right-s-line mt-1 mr-1 "></i>
-                      <p className=" text-[14px]">{el.content}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right content image */}
-              <div className="md:w-full lg:w-[40%]  " >
-                
-              <div className="RightContent  w-[100%] h-full  overflow-hidden rounded-lg ">
-                <img
-                  src="/8.jpg"
-                  className=" h-full w-full object-cover"
-                  alt=""
-                />
-              </div>
-              </div>
-            </div>
-          </section>
-          
-          {/* section 2 */}
-          <section className="section_2  w-full  text-justify ">
-
             <div>
               <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
               Could you afford the cost of recovery?

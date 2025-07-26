@@ -60,10 +60,10 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4    gap-8">
+            <div className="LowerContent w-full   mt-4 md:flex   gap-8">
               {/* left content */}
               <div
-                className="leftcontent w-[100%]  
+                className="leftcontent md:w-[60%]  
                "
               >
                 {/* content 1 */}
@@ -83,14 +83,12 @@ const Sidebar = () => {
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[100%] h-full  mt-8 ">
-                <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[50vh] overflow-hidden rounded-lg ">
+              <div className="md:w-[40%] mt-8   overflow-hidden rounded-lg  ">
                   <img
                     src="/8.jpg"
-                    className=" h-full w-full object-cover"
+                    className=" max-md:h-60  h-full w-full object-cover"
                     alt=""
                   />
-                </div>
               </div>
             </div>
           </section>

@@ -166,43 +166,7 @@ import {
       <div className="text-black/60">
         <h1 className="text-[18px] lg:text-[26px] text-black font-semibold">
           What do most people use Trauma Recovery Cover for?
-        </h1>
-
-        {cover.map((el, idx) => (
-          <div key={idx} className="flex items-start mt-2.5 text-black/80">
-            <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0"></i>
-            <p className="text-[14px] text-justify">
-              <span className="font-semibold text-[16px] text-black">
-                {el.title}
-              </span>
-              {el.content}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-
-  {/* Right content image */}
-  <div className="w-full  lg:w-[40%] flex">
-    <div className="RightContent flex-grow overflow-hidden rounded-lg">
-      <img
-        src="/8.jpg"
-        className="h-full w-full object-cover"
-        alt="Right content"
-      />
-    </div>
-  </div>
-</div>
-
-          </section>
-          
-          {/* section 2 */}
-          <section className="section_2  w-full  text-justify ">
-
-
-            {/* content 2 */}
-                <div className=" text-black mt-6 ">
+        </h1><div className=" text-black mt-6 ">
                   <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
                     Food for Thought…
                   </h1>
@@ -213,6 +177,42 @@ import {
                     </div>
                   ))}
                 </div>
+
+      
+      </div>
+    </div>
+  </div>
+
+  {/* Right content image */}
+  <div className="w-full  lg:w-[40%] flex">
+    <div className="RightContent flex-grow overflow-hidden rounded-lg">
+      <img
+        src="/8.jpg"
+        className=" max-md:h-60 lg:h-full w-full object-cover"
+        alt="Right content"
+      />
+    </div>
+  </div>
+</div>
+
+          </section>
+          
+          {/* section 2 */}
+          <section className="section_2  w-full  text-justify ">
+  {cover.map((el, idx) => (
+          <div key={idx} className="flex items-start mt-2.5 text-black/80">
+            <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0"></i>
+            <p className="text-[14px] text-justify">
+              <span className="font-semibold text-[16px] text-black">
+                {el.title}
+              </span>
+              {el.content}
+            </p>
+          </div>
+        ))}
+
+            {/* content 2 */}
+                
 
             <div>
               <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">

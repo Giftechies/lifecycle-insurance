@@ -132,12 +132,12 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex gap-8">
+            <div className="LowerContent w-full h-  mt-4   md:flex gap-8">
               {/* left content */}
               <div className="leftcontent w-[100%] lg:w-[55%] 
                ">
                 {/* content 1 */}
-                <div className="flex mt-2">
+                <div className="flex mt-2 ">
                   <div className=" text-black/60 ">
                     <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
                 Did you Know……..
@@ -160,23 +160,16 @@ const Sidebar = () => {
                   </div>
                 </div>
 
-                {/* content 2 */}
-                <div className=" text-black/60 mt-4 ">
-                  <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
-                   What do most people use income protection cover for ?
-                  </h1>
-                  <p className=" text-[14px] text-justify mt-2 ">People can use their income protection cover when they have to take more than two weeks unpaid leave from work because of illness or injury. A combination of sick leave and annual leave will help most employed people cope without working for up to four to six weeks, but what will happen if the disability continues beyond six weeks ? What if the condition renders you unable to work for months or even years?</p>
-                 
-                </div>
+              
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[40%] h-full  mt-8 " >
+              <div className="md:w-full lg:w-[40%]  flex-grow mt-6 " >
                 
-              <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[70vh] mt-8 overflow-hidden rounded-lg ">
+              <div className="RightConte w-[100%]  h-full  overflow-hidden rounded-lg ">
                 <img
                   src="/8.jpg"
-                  className=" h-full w-full object-cover"
+                  className="  max-md:max-h-[20rem] h-full w-full object-cover"
                   alt=""
                 />
               </div>

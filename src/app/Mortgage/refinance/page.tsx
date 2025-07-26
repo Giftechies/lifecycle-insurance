@@ -95,11 +95,11 @@ const Sidebar = () => {
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[60%]  flex    ">
-                <div className="RightContent   overflow-hidden rounded-lg ">
+              <div className="md:w-full lg:w-[60%]  flex-grow    ">
+                <div className="RightContent h-full   overflow-hidden rounded-lg ">
                   <img
                     src="/8.jpg"
-                    className=" h-full w-full object-cover"
+                    className=" max-md:h-50  lg:h-full onject-cover"
                     alt=""
                   />
                 </div>

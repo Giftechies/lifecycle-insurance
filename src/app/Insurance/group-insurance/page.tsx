@@ -43,14 +43,14 @@ const Sidebar = () => {
             </div>
 
             {/* lower content */}
-            <div className="LowerContent w-full   mt-4   lg:flex flex-col ">
+            <div className="LowerContent w-full   mt-4   lg:flex justify-between   ">
               {/* left content */}
               <div
-                className="leftcontent w-[100%] lg:w-[100%] 
+                className="leftcontent w-[100%] lg:w-[55%]  
                "
               >
                 {/* content 1 */}
-                <div className="flex mt-2 tracking-wider text-justify text-[14px]  ">
+                <div className="flex flex-col mt-2 tracking-wider text-justify text-[14px]  ">
                   <div className=" text-black ">
                     <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
                       What Is Group Insurance?
@@ -71,11 +71,27 @@ const Sidebar = () => {
                       reduced premiums.{" "}
                     </p>
                   </div>
+
+                    <div>
+              <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">
+                Benefits of Group Insurance Include:
+              </h1>
+              {benefit.map((el) => (
+                <>
+                  <div className=" flex items-start mt-2.5 ">
+                    <i className="ri-arrow-right-s-line  mr-1"></i>
+                    <p className=" text-[14px] ">{el.content}</p>
+                  </div>
+                </>
+              ))}
+             
+            </div>
+                  
                 </div>
               </div>
 
               {/* Right content image */}
-              <div className="md:w-full lg:w-[100%] h-full  mt-2 ">
+              <div className="md:w-full lg:w-[40%] h-full  mt-2 ">
                 <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[50vh] mt-4 overflow-hidden rounded-lg ">
                   <img
                     src="/8.jpg"
@@ -87,21 +103,7 @@ const Sidebar = () => {
             </div>
           </section>
 
-          {/* section 2 */}
-          <section className="section_2  w-full  text-justify ">
-            <div>
-              <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">
-                Benefits of Group Insurance Include:
-              </h1>
-              {benefit.map((el) => (
-                <>
-                  <div className=" flex items-start mt-2.5 ">
-                    <i className="ri-arrow-right-s-line mt-1 mr-1"></i>
-                    <p className=" text-[14px] ">{el.content}</p>
-                  </div>
-                </>
-              ))}
-              <p className=" text-[14px] mt-4  ">
+         <p className=" text-[14px] mt-4  ">
                 Give your team the peace of mind!
               </p>
               <p className=" text-[14px] mt-2 ">
@@ -110,8 +112,6 @@ const Sidebar = () => {
                 group Insurance solutions from LifeCycle Financial.
               </p>
               <p className=" text-[14px] mt-2">We’re here to help.</p>
-            </div>
-          </section>
         </div>
 
         {/* Centered Sidebar constrained inside main, below Banner and above footer */}

@@ -167,7 +167,23 @@ const Sidebar = () => {
                   </div>
                 </div>
 
-                {/* content 2 */}
+               
+              </div>
+
+              {/* Right content image */}
+              <div className="RightContent w-[100%]  lg:w-[45%] mt-4 overflow-hidden rounded-lg ">
+                <img
+                  src="/8.jpg"
+                  className="  max-lg:h-[20rem] h-full w-full object-cover"
+                  alt=""
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* section 2 */}
+          <section className="section_2  w-full  text-justify ">
+             {/* content 2 */}
                 <div className=" text-black/60 mt-4 ">
                   <h1 className="  text-[18px] lg:text-[26px] lg:leading-8 text-black font-semibold ">
                     Five important reasons to have health Insurance
@@ -179,21 +195,6 @@ const Sidebar = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              {/* Right content image */}
-              <div className="RightContent  md:w-[100%]  md:h-[20em] lg:w-[45%] lg:h-[35em] mt-4 overflow-hidden rounded-lg ">
-                <img
-                  src="/8.jpg"
-                  className=" h-full w-full object-cover"
-                  alt=""
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* section 2 */}
-          <section className="section_2  w-full  text-justify ">
             {/* public */}
             <div>
               <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">
