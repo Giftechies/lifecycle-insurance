@@ -166,17 +166,19 @@ import {
       <div className="text-black/60">
         <h1 className="text-[18px] lg:text-[26px] text-black font-semibold">
           What do most people use Trauma Recovery Cover for?
-        </h1><div className=" text-black mt-6 ">
-                  <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
-                    Food for Thought…
-                  </h1>
-                  {food.map((el) => (
-                    <div className=" flex items-start mt-2.5 text-black/80 ">
-                      <i className="ri-arrow-right-s-line mt-1 mr-1 "></i>
-                      <p className=" text-[14px]">{el.content}</p>
-                    </div>
-                  ))}
-                </div>
+        </h1>
+         {cover.map((el, idx) => (
+          <div key={idx} className="flex items-start mt-2.5 text-black/80">
+            <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0"></i>
+            <p className="text-[14px] text-justify">
+              <span className="font-semibold text-[16px] text-black">
+                {el.title}
+              </span>
+              {el.content}
+            </p>
+          </div>
+        ))}
+       
 
       
       </div>
@@ -187,7 +189,7 @@ import {
   <div className="w-full  lg:w-[40%] flex">
     <div className="RightContent flex-grow overflow-hidden rounded-lg">
       <img
-        src="/8.jpg"
+        src="/trauma.webp"
         className=" max-md:h-60 lg:h-full w-full object-cover"
         alt="Right content"
       />
@@ -199,21 +201,6 @@ import {
           
           {/* section 2 */}
           <section className="section_2  w-full  text-justify ">
-  {cover.map((el, idx) => (
-          <div key={idx} className="flex items-start mt-2.5 text-black/80">
-            <i className="ri-arrow-right-s-line mr-1 mt-1 shrink-0"></i>
-            <p className="text-[14px] text-justify">
-              <span className="font-semibold text-[16px] text-black">
-                {el.title}
-              </span>
-              {el.content}
-            </p>
-          </div>
-        ))}
-
-            {/* content 2 */}
-                
-
             <div>
               <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">
               Could you afford the cost of recovery?
@@ -222,6 +209,24 @@ import {
               Ongoing advances in medical treatment mean New Zealanders have a greater chance of surviving than ever before, and a greater need for financial support. If you suffered a serious illness, would you be able to pay the mortgage or car loan, or simply maintain your lifestyle? How hard would it be on your family?
             </p>
             </div>
+             
+        <div className=" text-black mt-6 ">
+                  <h1 className="  text-[18px] lg:text-[26px] text-black font-semibold ">
+                    Food for Thought…
+                  </h1>
+                  {food.map((el) => (
+                    <div className=" flex items-start mt-2.5 text-black/80 ">
+                      <i className="ri-arrow-right-s-line mt-1 mr-1 "></i>
+                      <p className=" text-[14px]">{el.content}</p>
+                    </div>
+                  ))}
+                </div>
+  
+
+            {/* content 2 */}
+                
+
+            
            {/* How */}
            <div className=" mt-4 ">
              <h1 className="text-[18px] mt-6 lg:text-[26px] text-black font-semibold">

@@ -85,7 +85,7 @@ const Sidebar = () => {
               {/* Right content image */}
               <div className="md:w-[40%] mt-8   overflow-hidden rounded-lg  ">
                   <img
-                    src="/8.jpg"
+                    src= "/construction.webp"
                     className=" max-md:h-60  h-full w-full object-cover"
                     alt=""
                   />

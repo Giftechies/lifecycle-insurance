@@ -118,123 +118,113 @@ export default function RepaymentCalculator() {
 
   return (
     <>
-     <Banner title="Repayment CalCulator"/>
+     <Banner title="Repayment Calculator"/>
       <section className=" p-6   lg:p-[3rem]  ">
        
        
 
         <div className="FormContainer lg:flex justify-between shadow-2xl ">
-          <form
-            // onSubmit={handleSubmit(calculateRepayment)}
-            className="cal   lg:w-[55%] flex flex-wrap max-lg:space-y-5  justify-between shadow-2x p-6  "
-          >
-            {/* Loan Amount */}
+        <form className="cal lg:w-[55%] flex flex-wrap max-lg:space-y-5 justify-between shadow-2x p-6">
 
-            <div className="amount w-[45%]   lg:h-[80px] flex flex-col relative ">
-              <label
-                className=" text-[14px] bg-white absolute  left-3 p-1 lg:text-[17px] "
-                htmlFor=""
-              >
-                Loan Amount
-              </label>
-              <input
-                {...register("amount")}
-                className="border rounded-[5px] min-h-[60px] text-[var(--secgr)] mt-4 w-full p-4"
-                placeholder="$200,000"
-                type="number"
-                min={1}
-              />
-            </div>
+  {/* Loan Amount */}
+  <div className="amount w-[45%] lg:h-20 flex flex-col relative">
+    <label className="text-[12px] bg-white absolute left-3 px-1 -top-2 sm:-top-3 sm:text-[17px]">
+      Loan Amount
+    </label>
+    <input
+      {...register("amount")}
+      className="border rounded-[5px] text-[var(--secgr)] w-full h-[60px] p-4 pt-5 text-[14px] lg:text-[16px]"
+      placeholder="$200,000"
+      type="number"
+      min={1}
+    />
+  </div>
 
-            {/* Payment Frequency */}
-            <div className="frequency w-[45%] lg:h-20 relative flex flex-col">
-              <label
-                className=" text-[12px] md:text-[14px]  absolute  bg-white p-1 left-4 lg:text-[17px]"
-                htmlFor=""
-              >
-                Payment Frequency
-              </label>
-              <Controller
-                control={control}
-                name="frequency"
-                render={({ field }) => (
-                  <select
-                    {...field}
-                    className="border rounded-[5px] text-[var(--secgr)] min-h-[60px] w-full p-4 mt-4"
-                  >
-                    <option value="weekly">Weekly</option>
-                    <option value="fortnightly">Fortnightly</option>
-                    <option value="monthly">Monthly</option>
-                  </select>
-                )}
-              />
-            </div>
+  {/* Payment Frequency */}
+  <div className="frequency w-[45%] lg:h-20 relative flex flex-col">
+    <label className="text-[10px] absolute bg-white px-1 left-4 -top-2 sm:-top-3 z-10 sm:text-[17px]">
+      Payment Frequency
+    </label>
+    <Controller
+      control={control}
+      name="frequency"
+      render={({ field }) => (
+        <select
+          {...field}
+          id="frequency"
+          className="border rounded-[5px] text-[var(--secgr)] h-[60px] w-full p-4 pt-5 text-[14px] lg:text-[16px] appearance-none"
+        >
+          <option value="weekly">Weekly</option>
+          <option value="fortnightly">Fortnightly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+      )}
+    />
+  </div>
 
-            {/* Interest Rate */}
-            <div className="rate  w-[45%] flex lg:h-20  flex-col relative ">
-              <label
-                className=" text-[14px]   absolute  bg-white p-1 left-3 lg:text-[17px] "
-                htmlFor=""
-              >
-                Interest Rate %
-              </label>
-              <input
-                className="border rounded-[5px] text-[var(--secgr)] w-full min-h-[60px] p-4 mt-4"
-                placeholder="e.g. 6.5"
-                type="number"
-                min={1}
-                value={interestRate}
-                onChange={(e) => {
-                  const val = parseFloat(e.target.value);
-                  setInterestRate(val);
-                  setValue("rate", val);
-                }}
-              />
-            </div>
+  {/* Interest Rate */}
+  <div className="rate w-[45%] lg:h-20 flex flex-col relative">
+    <label className="text-[12px] absolute bg-white p-1 left-3 -top-3 sm:-top-4 sm:text-[17px]">
+      Interest Rate %
+    </label>
+    <input
+      className="border rounded-[5px] text-[var(--secgr)] w-full h-[60px] p-4 pt-5 text-[14px] lg:text-[16px]"
+      placeholder="e.g. 6.5"
+      type="number"
+      min={1}
+      value={interestRate}
+      onChange={(e) => {
+        const val = parseFloat(e.target.value);
+        setInterestRate(val);
+        setValue("rate", val);
+      }}
+    />
+  </div>
 
-            {allRates.length > 0 && (
-              <div className="bank-rate-select lg:h-20 w-[45%] flex flex-col relative">
-                <label className=" text-[14px]   absolute  bg-white p-1 left-4 lg:text-[17px] ">
-                  Select Bank Rate
-                </label>
-                <select
-                  className="border rounded-[5px] text-[var(--secgr)] w-full min-h-[60px] p-4 mt-4"
-                  onChange={(e) => {
-                    const newRate = parseFloat(e.target.value);
-                    setInterestRate(newRate);
-                    setSelectedRate(newRate);
-                    setValue("rate", newRate);
-                  }}
-                  value={selectedRate}
-                >
-                  {allRates.map((institution) =>
-                    institution.products.flatMap((product) =>
-                      product.rates.map((rate) => (
-                        <option key={rate.id} value={rate.rate}>
-                          {institution.name} - {product.name} - {rate.term}:{" "}
-                          {rate.rate}%
-                        </option>
-                      ))
-                    )
-                  )}
-                </select>
-              </div>
-            )}
+  {/* Select Bank Rate */}
+  {allRates.length > 0 && (
+    <div className="bank-rate-select w-[45%] lg:h-20 flex flex-col relative">
+      <label className="text-[12px] absolute bg-white p-1 left-4 -top-3 sm:-top-4 sm:text-[17px]">
+        Select Bank Rate
+      </label>
+      <select
+        className="border rounded-[5px] text-[var(--secgr)] w-full h-[60px] p-4 pt-5 text-[14px] lg:text-[16px] appearance-none"
+        onChange={(e) => {
+          const newRate = parseFloat(e.target.value);
+          setInterestRate(newRate);
+          setSelectedRate(newRate);
+          setValue("rate", newRate);
+        }}
+        value={selectedRate}
+      >
+        {allRates.map((institution) =>
+          institution.products.flatMap((product) =>
+            product.rates.map((rate) => (
+              <option key={rate.id} value={rate.rate}>
+                {institution.name} - {product.name} - {rate.term}: {rate.rate}%
+              </option>
+            ))
+          )
+        )}
+      </select>
+    </div>
+  )}
 
-            {/* Loan Period */}
-            <div className="tenure flex flex-col w-full lg:h-20  relative ">
-              <label className=" text-[14px]   absolute  bg-white p-1 left-3 lg:text-[17px] " htmlFor="">
-                Loan Period (Yrs)
-              </label>
-              <input
-                {...register("term")}
-                className="border rounded-[5px] text-[var(--secgr)] w-[45%] min-h-[60px] p-4 mt-4"
-                placeholder="e.g. 30"
-                type="number"
-                min={1}
-              />
-            </div>
-          </form>
+  {/* Loan Period */}
+  <div className="tenure flex flex-col w-full lg:h-20 relative">
+    <label className="text-[12px] absolute bg-white p-1 left-3 -top-3 sm:-top-4 sm:text-[17px]">
+      Loan Period (Yrs)
+    </label>
+    <input
+      {...register("term")}
+      className="border rounded-[5px] text-[var(--secgr)] w-[45%] h-[60px] p-4 pt-5 text-[14px] lg:text-[16px]"
+      placeholder="e.g. 30"
+      type="number"
+      min={1}
+    />
+  </div>
+</form>
+
           <div className="Result  lg:w-[40%]">
             {totalInterest !== null && totalPayable !== null && (
               <div className="  lg:mt-6  p-6 bg-white rounded-lg shadow-2x ">
@@ -275,7 +265,7 @@ export default function RepaymentCalculator() {
                 {/* ✅ EMI, Interest, Payable */}
                 <div className="flex flex-col space-y-3">
                   <div className="flex justify-between">
-                    <span className="font-medium">EMI payable</span>
+                    <span className="font-medium">Repayment</span>
                     <span className="font-semibold max-sm:text-right ">
                       ${payment?.toFixed(2)} NZD
                     </span>

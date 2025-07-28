@@ -94,7 +94,7 @@ const Sidebar = () => {
               <div className="md:w-full lg:w-[40%] h-full  mt-2 ">
                 <div className="RightContent  md:w-[100%]  md:h-[20em]  lg:h-[50vh] mt-4 overflow-hidden rounded-lg ">
                   <img
-                    src="/8.jpg"
+                    src= "/group.webp"
                     className=" h-full w-full object-cover"
                     alt=""
                   />

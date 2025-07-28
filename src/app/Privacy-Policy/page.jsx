@@ -183,9 +183,9 @@ export default function(){
 
   <h3 className="text-[20px] font-semibold text-black">13. How to contact us</h3>
   <ul className="list-disc pl-5 space-y-1">
-    <li>Email: harpreet@lifecyclefinancial.co.nz / samkit@lifecyclefinancial.co.nz</li>
+    <li>Email: harpreet@lifecyclefinancial.co.nz </li>
     <li>Phone: 0800 507 770</li>
-    <li>Mail: Harpreet Rattan, 402 Ormiston Road, Flat Bush, Auckland 2019</li>
+    <li>Mail: Harpreet Rattan, 3 Otaota way, Flat Bush, Auckland</li>
   </ul>
 </div>
                 </div>

@@ -19,27 +19,36 @@ export default function about() {
                 />
               </div>
             </div>
-            <div className="Right w-full space-y-6  lg:w-[55%]  flex flex-col lg:pb-10  max-lg:p-6   ">
+            <div className="Right w-full space-y-6  lg:w-[55%]  flex flex-col   max-lg:p-6   ">
               <div className="uppercontent   lg:pl-10  ">
                 <div className="left w-[100%]  ">
                   <p className="text-[var(--primg)]  text-[16px] ">
                     <i className="   ri-record-circle-line mr-1 "></i> About us
                   </p>
                   <h2 className="text-black text-[20px] lg:text-[24px]   mt-4 leading-7  xl:leading-9 font-semibold">
-                    Operating since 2006 in this Industry.
+                    Welcome to Lifecycle Financial – Your Trusted Financial
+                    Advisory Partner
                   </h2>
                 </div>
                 <div className="right text-black font-semibold ">
                   <h6 className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
-                    Lifecycle Financial is a part of KAN ( Kiwi Advisor Network
-                    ) which is one of the biggest financial groups in Mortgage
-                    and Insurance distribution. We are a member of Auckland
-                    Chamber of Commerce and contribute to Insurance & Saving
-                    Ombudsman Scheme.
+                    Lifecycle Financial is a Trusted financial advisory firm,
+                    committed to delivering a comprehensive range of financial
+                    services tailored to your needs. We specialize in: 
+                   <br/> <strong>Mortgage Solutions</strong> – Residential and Commercial
+                   <br/> <strong>Personal Insurance –</strong> 
+                    Life, Health, Income Protection, Mortgage Protection,
+                    Redundancy Cover, and Trauma Insurance 
+                     <br/> <strong>General Insurance –</strong> 
+                    Home, Contents, Car, and Business (through our network of
+                    specialist partners) With strong relationships across New
+
+                    Zealand’s top banks, private lenders, and insurance
+                    providers, we’re able to offer highly competitive interest
+                    rates and premiums—without compromising on the quality of
+                    advice or products we recommend.
                   </h6>
-                  <h6 className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
-                    Lifecycle Financial is a Leading independent Financial Advisory Company providing a wide range of financial services to the clients including Mortgages both Residential & Commercial & Personal insurance products such as life, Health, Income Protection, Mortgage Protection, Redundancy Cover, and Trauma insurance. For home, contents, car, and business insurance we have additional specialists that we call upon.
-                  </h6>
+                 
                 </div>
               </div>
 
@@ -52,24 +61,25 @@ export default function about() {
                 />
               </div>
 
-              <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl  lg:mt-8  lg:w-[90%] lg:p-10 lg:leading-6   lg:rounded-r-4xl ">
-                <h2 className="  lg:leading-6 font-semibold  text-[20px]  xl:leading-8 w-[90%] ">
+              <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl   lg:w-[90%] lg:p-10 lg:leading-6   lg:rounded-r-4xl ">
+                <h2 className="  max-md:text-[20px] leading-8 font-semibold   w-[90%] mb-4 ">
                   Comprehensive Financial Solutions, Tailored to Your Needs
                 </h2>
-                <p className=" text-[14px]  mt-3 text-justify text-white/80  ">
-              Lifecycle Financial works with most of the leading Banks, Private Lenders, and insurers in NZ, and therefore can offer the most competitive Interest rates and premiums without compromising on the quality of the products it recommends. We are a leading team of Mortgages and Insurance Specialists who can help you with all of your financial requirements. We are one point of contact for all types of personal insurances.
+                <p className=" text-[14px]   text-justify text-white/80  ">
+                 At LifeCycle Financial, we are non-aligned advisers, meaning we are not tied to any specific lender or insurer. This independence allows us to provide objective recommendations tailored solely to your needs—based on a comprehensive needs analysis, not sales targets.
                 </p>
               </div>
             </div>
           </main>
-        </section> 
-          {/* section 3 team */}
+        </section>
+        {/* section 3 team */}
         <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
           <main className=" w-full flex  flex-col items-center ">
-            <h2 className=" text-[26px]   text-[var(--secgr)]  font-semibold ">
+            <h2 className=" text-[26px]   text-[var(--secgr)]  font-semibold mb-4 ">
               {" "}
               Our Mortgage Experts
             </h2>
+            <h6 className=" text-center ">Our expert team of mortgage and insurance specialists provides a seamless, one-stop solution for all your personal and business financial needs. Whether you're protecting your income, financing your first home, or securing your business assets, we’re here to support you every step of the way.</h6>
 
             {/* cards */}
             <div className=" w-full  text-black/40  mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
@@ -99,7 +109,7 @@ export default function about() {
                     <h1 className=" mt-2  text-black/80 font-medium ">
                       {el.Name}
                     </h1>
-                    <h4 >{el.title}</h4>
+                    <h4>{el.title}</h4>
                     <a href={`tel:${el.Phone}`} className=" text-[14px]  ">
                       <i class="ri-phone-fill"></i> {el.Phone}
                     </a>
@@ -119,40 +129,25 @@ export default function about() {
                 <h2>Why Lifecycle Financial?</h2>
                 <ul>
                   <li>
-                    <strong>We are independent Advisors</strong>, not bound to
-                    use any insurers, and make recommendations to clients on the
-                    basis of their need analysis. In this way, we can offer
-                    client type of the product and insurance company based upon
-                    their requirements and benefits.
+                    We act as a single point of contact for all your financial protection and lending requirements. We work with all major banks and insurance providers across New Zealand, giving you access to a full range of mortgage and personal insurance solutions, including life, health, trauma, income protection, and more.
                   </li>
                   <li>
-                    <strong>
-                      We are one point of contact for all your financial
-                      requirements
-                    </strong>{" "}
-                    as we deal with most of the major banks and insurance
-                    companies of New Zealand, a client would like to deal with
-                    and we offer all types of mortgage and insurance solutions a
-                    client would need.
+                   Our team consists of highly experienced advisers who have established a strong track record in the financial services industry. We pride ourselves on building long-term relationships and delivering advice you can trust.
                   </li>
                   <li>
-                    <strong>We have a team of experienced brokers</strong> who
-                    have already proved themselves in the insurance market.
+                   At the heart of our approach is a commitment to client-focused service. We ensure that when the time comes, you receive the protection and support you’ve paid for—so you can maintain financial security and your desired standard of living.
                   </li>
-                  <li>
-                    <strong>
-                      Our focus is on our clients’ needs and serves them
-                      accordingly
-                    </strong>{" "}
-                    so that when the time comes, they get what they have paid
-                    for and can maintain their living standards.
-                  </li>
+                  
                 </ul>
               </div>
 
               <div className="  w-full rounded-2xl text-left lg:w-[45%] bg-white p-4 lg:p-10  shadow-2xl styled-html">
-                <h2>What We Do?</h2>
-                <ul>
+                
+            
+                   
+
+
+                {/* <ul>
                   <li>
                     We review old covers client has got to see whether it is
                     up-to-date as per their needs and status.
@@ -178,15 +173,46 @@ export default function about() {
                     We do frequent follow-ups and auditing of your insurance
                     portfolio.
                   </li>
-                </ul>
+                </ul> */}
+
+                <div  ><h2>What We Do?</h2></div>
+
+                <div className=" h-full w-full grid grid-cols-2 gap-5" >
+
+                  <div className=" ">
+                    <ul>
+                      <h3 className=" mb-2"><a href="/Insurance">Insurance</a></h3>
+                      <li><a href="/Insurance/life-insurance">Life Insurance</a></li>
+                      <li><a href="/Insurance/trauma-recovery-cover">Trauma Recovery Cover</a></li>
+                      <li><a href="/Insurance/total-permanent-disability-benefit-cover">Total Permanent Disability Benefit Cover</a></li>
+                      <li><a href="/Insurance/mortgage-rent-protection-cover">Mortgage & Rent Protection Cover</a></li>
+                      <li><a href="/Insurance/income-protection-cover">Income Protection Cover</a></li>
+                      <li><a href="/Insurance/medical-insurance">Medical Insurance</a></li>
+                      <li><a href="/Insurance/group-insurance">Group Insurance</a></li>
+
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <h3><a href="/Mortgage">Mortgage</a></h3>
+                      <li><a href="/Mortgage/home-loan">Home loan</a></li>
+                      <li><a href="/Mortgage/refinance">Refinance</a></li>
+                      <li><a href="/Mortgage/investment">Investment</a></li>
+
+                    </ul>
+                  </div>
+
+                </div>
+
+               
+
+
               </div>
             </div>
           </main>
         </section>
 
         {/*  */}
-
-      
       </main>
     </>
   );

@@ -110,7 +110,7 @@ const Sidebar = () => {
               <div className="md:w-[40%] flex overflow-hidden rounded-lg mt-8 ">
                
                   <img
-                    src="/8.jpg"
+                    src="/business.webp"
                     className=" max-md:h-60 h-full w-full object-cover"
                     alt=""
                   />

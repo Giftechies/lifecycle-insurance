@@ -93,7 +93,7 @@ const Sidebar = () => {
               <div className="max-md:h-60 md:w-[40%] flex  mt-8 ">
                 <div className="RightContent   overflow-hidden rounded-lg ">
                   <img
-                    src="/8.jpg"
+                    src="/cal2.webp"
                     className=" h-full w-full object-cover"
                     alt=""
                   />

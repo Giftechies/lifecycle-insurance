@@ -168,7 +168,7 @@ const Sidebar = () => {
                 
               <div className="RightConte w-[100%]  h-full  overflow-hidden rounded-lg ">
                 <img
-                  src="/8.jpg"
+                  src="/income.webp"
                   className="  max-md:max-h-[20rem] h-full w-full object-cover"
                   alt=""
                 />

@@ -98,7 +98,7 @@ const Sidebar = () => {
               <div className="md:w-full lg:w-[60%]  flex-grow    ">
                 <div className="RightContent h-full   overflow-hidden rounded-lg ">
                   <img
-                    src="/8.jpg"
+                    src="/main-banner.jpg "
                     className=" max-md:h-50  lg:h-full onject-cover"
                     alt=""
                   />

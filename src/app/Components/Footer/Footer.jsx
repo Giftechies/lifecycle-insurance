@@ -26,13 +26,13 @@ export default function Footer() {
     <>
       {/* footer */}
       <footer className="footer bg-[var(--tri)] overflow-hidden">
-        <main className="w-full h-full max-w-[1600px] mx-auto text-[14px] p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-26 font-light">
+        <main className="w-full h-full max-w-[1500px] mx-auto text-[14px] p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-26 font-light">
           <div
             className="content border-b pb-4 lg:pb-[3rem] border-dotted border-white/50 text-white/90
-              grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:justify-between gap-6   lg:items-start "
+              grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[200px_200px_150px_200px_300px]  justify-between  space-y-5 gap-5 lg:items-start "
           >
             {/* Insurance */}
-            <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
+            <div className="shrink-0 lg:pt-0  ">
               <Link  href='/Insurance' className="text-[20px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
               <div className="flex flex-col space-y-4 mt-3">
                 <Link href="/Insurance/life-insurance" className="text-white/90 hover:text-white transition-colors">Life Insurance</Link>
@@ -46,7 +46,7 @@ export default function Footer() {
             </div>
 
             {/* Mortgage */}
-            <div className=" lg:pt-0 lg:basis-[18%]">
+            <div className=" lg:pt-0  ">
               <Link  href='/Mortgage'  className="text-[20px] font-medium mb-3 text-white">Mortgage</Link>
               <div className="flex flex-col space-y-4 mt-3">
                 <Link href="/Mortgage/home-loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
+            <div className="shrink-0 lg:pt-0   max-w-[120px] ">
               <h3 className="text-[20px] font-medium mb-3 text-white">Quick Links</h3>
               <div className="flex flex-col space-y-4">
                 <Link href="/" className="text-white/90 hover:text-white transition-colors">Home</Link>
@@ -72,7 +72,7 @@ export default function Footer() {
             </div>
 
             {/* Important Links */}
-            <div className="shrink-0 lg:pt-0 lg:basis-[18%]">
+            <div className="shrink-0 lg:pt-0 ">
               <h3 className="text-[20px] font-medium mb-3 text-white">Important Links</h3>
               <div className="flex flex-col space-y-4">
                 <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
@@ -84,7 +84,7 @@ export default function Footer() {
             </div>
 
             {/* Reach Us */}
-            <div className="lg:pt-0 shrink-0 lg:basis-[18%] min-w-[220px] lg:mb-6 ">
+            <div className="lg:pt-0 shrink-0  min-w-[250px] lg:mb-6 ">
               <h3 className="text-[20px] font-medium mb-3 text-white">Reach Us</h3>
               <div className="flex flex-col text-[14px] flex-wrap space-y-4">
                 <div className="flex items-start gap-1">
@@ -107,16 +107,27 @@ export default function Footer() {
                   3 Otaota way, Flat Bush, Auckland
                   </span>
                 </div>
-                <div className="w-full border-t  pt-4 border-dotted border-white/30 text-lg  flex gap-2 justify-center ">
-                  <Link href="#" className="h-10 w-10 rounded-full bg-white/30 flex items-center justify-center">
-                    <i className="ri-facebook-circle-line"></i>
-                  </Link>
-                  <Link href="#" className="h-10 w-10 rounded-full bg-white/30 flex items-center justify-center">
+                <div className="w-full border-t  pt-4 border-dotted border-white/30   text-2xl flex gap-5  ">
+                 <Link
+  href="https://www.facebook.com/Lifecyclefinancial"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="size-10 rounded-full bg-white/30 flex items-center justify-center"
+>
+  <i className="ri-facebook-circle-line"></i>
+</Link>
+
+<Link
+  href="https://www.instagram.com/lifecycle_financial_services?igsh=YXk5Z2NwaXFidm1k"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="size-10 rounded-full bg-white/30 flex items-center justify-center"
+>
+  <i className="ri-instagram-line"></i>
+</Link>
+                  {/* <Link href="#" className="h-10 w-10 rounded-full bg-white/30 flex items-center justify-center">
                     <i className="ri-youtube-line"></i>
-                  </Link>
-                  <Link href="#" className="h-10 w-10 rounded-full bg-white/30 flex items-center justify-center">
-                    <i className="ri-instagram-line"></i>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

@@ -110,7 +110,7 @@ const Sidebar = () => {
               {/* Right content image */}
               <div className="RightContent  w-full lg:w-[40%]  flex overflow-hidden rounded-lg ">
                 <img
-                  src="/8.jpg"
+                  src="/life.webp"
                   className="max-h-80  lg:h-full w-full object-cover"
                   alt=""
                 />

@@ -23,7 +23,7 @@ export default function Home() {
   const [loading, setloading] = useState(true);
   const [data, setdata] = useState();
  const logos = Array.from({ length: 31 }, (_, i) => ({
-  img: `./mq${i + 1}.png`,
+  img: `/mq${i + 1}.png`,
 }));
 
   useEffect(() => {
@@ -55,22 +55,22 @@ export default function Home() {
 
   const sec3_cards = [
     {
-      img: "./target.svg",
-      number: "99%",
+      img: "/target.svg",
+      number: "90%",
       content: " Application approval rate ",
     },
     {
-      img: "./family.svg",
+      img: "/family.svg",
       number: "6+",
       content: " Insurance providers  partnered with    ",
     },
     {
-      img: "./timer.svg",
+      img: "/timer.svg",
       number: "$200M+",
       content: "   In mortgage  arranged  ",
     },
     {
-      img: "./bank.svg",
+      img: "/bank.svg",
       number: "20+",
       content: `Mortgage providers to  choose from  `,
     },
@@ -258,7 +258,7 @@ export default function Home() {
                 {/* Card 1 */}
                 <div className="flex flex-col items-center text-center flex-1   md:border-b-0 md:border-r border-dashed border-white/40 p-4">
                   <img
-                    src="./thumbsup.svg"
+                    src="/thumbsup.svg"
                     alt="Rating"
                     className="w-12  h-12"
                   />
@@ -271,7 +271,7 @@ export default function Home() {
                 {/* Card 2 */}
                 <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dashed border-white/40 p-4">
                   <img
-                    src="./conversation.svg"
+                    src="/conversation.svg"
                     alt="Clients"
                     className="w-12 h-12"
                   />
@@ -283,7 +283,7 @@ export default function Home() {
                 {/* Card 3 */}
                 <div className="flex flex-col items-center text-center flex-1 p-4">
                   <img
-                    src="./ok.svg"
+                    src="/ok.svg"
                     alt="Satisfaction"
                     className="w-12 h-12"
                   />
@@ -304,7 +304,7 @@ export default function Home() {
           <main className="  w-[100%]    lg:flex  relative ">
             <div className="imgLeft w-full  rounded-4xl overflow-hidden border max-md:aspect-[1.5] md:aspect-[1.8]  lg:w-[52%] lg:h-[42rem]  ">
               <img
-                src="about-pic1.jpg"
+                src="/about-pic1.jpg"
                 className=" w-full lg:h-full object-cover object-center"
                 alt=""
               />
@@ -335,7 +335,7 @@ export default function Home() {
                       <p className=" font-semibold">
                         {" "}
                         <img
-                          src="checksquare.svg"
+                          src="/checksquare.svg"
                           className="h-9 w-9 mb-2"
                           alt=""
                         />
@@ -381,7 +381,7 @@ export default function Home() {
                   <div className="call text-[var(--primg)] font-medium mt-2 flex   gap-2 md:hidden ">
                     <div className="  p-4 bg-[var(--secgr)] rounded-full ">
                       <img
-                        src="./phone.svg"
+                        src="/phone.svg"
                         className=" w-[2rem]   object-cover object-center "
                         alt=""
                       />
@@ -445,7 +445,7 @@ export default function Home() {
             <div className="right max-lg:hidden lg:w-[30%]  relative flex ">
               <div className=" w-full  flex-grow  rounded-2xl overflow-hidden    ">
                 <img
-                  src="12.jpg"
+                  src="/12.jpg"
                   className=" h-full w-full object-cover object-top"
                   alt=""
                 />
@@ -482,40 +482,13 @@ export default function Home() {
             </div>
             {/* part 2 */}
             <div className="superpart-2  w-full h-[75em] mt-8 flex flex-col max-md:gap-6 sm:mt-0 md:h-[40em] md:mt-5 lg:gap-3 lg:flex-row lg:mt-8 lg:h-[18em]  xl:h-[16em] ">
-              {/* container 1 */}
-              <div className="container1 w-full h-[49%] flex flex-col gap-6  md:flex-row md:h-[50%]  md:w-[100%] lg:gap-3 lg:h-full lg:w-[50%]  ">
-                {/* part 1 */}
-                <div className="part1 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden ">
-                  <img
-                    src="./pic3.jpg"
-                    className=" h-full w-full  object-cover"
-                    alt=""
-                  />
-                </div>
-                {/* part 2 */}
-                <div
-                  onClick={() => router.push("/Insurance")}
-                  className="part2 sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
-                >
-                  <h3 className="text-white cursor-pointer font-semibold text-[20px] ">
-                    Insurance
-                  </h3>
-
-                  <p className=" text-[14px] text-white/80 text-justify mt-2">
-                    {" "}
-                    As specialist Insurance Brokers with many years of experience, we are able to advise you and provide you with the solutions that best suit your needs,
-                  </p>
-                  <div className="absolute h-[4em] w-[4em] bg-white top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f ] hover:bg-zinc-100">
-                    <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px] "></i>
-                  </div>
-                </div>
-              </div>
+             
               {/* container 2 */}
               <div className="container2  w-full h-[49%]      flex flex-col   gap-6 md:flex-row-reverse md:w-[100%] md:h-[50%] lg:gap-3 lg:flex-row lg:h-full lg:w-[50%]  ">
                 {/* part 3 */}
                 <div className="part3 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden  ">
                   <img
-                    src="./pic4.jpg"
+                    src="/pic4.jpg"
                     className=" h-full w-full  object-cover"
                     alt=""
                   />
@@ -531,10 +504,38 @@ export default function Home() {
 
                   <p className=" text-[14px] text-white/80  text-justify mt-2">
                     {" "}
-                    As specialist Insurance Brokers with many years of experience, we are able to advise you and provide you with the solutions that best suit your needs,
+                   With more than a decade of experience, our company provides expert mortgage solutions, to help you turn your dream home into reality.
                   </p>
                   <div className="absolute h-[4em] w-[4em] bg-white hover:bg-zinc-100 top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f]">
                     <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px]"></i>
+                  </div>
+                </div>
+              </div>
+               {/* container 1 */}
+              <div className="container1 w-full h-[49%] flex flex-col gap-6  md:flex-row md:h-[50%]  md:w-[100%] lg:gap-3 lg:h-full lg:w-[50%]  ">
+                {/* part 1 */}
+                <div className="part1 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden ">
+                  <img
+                    src="/pic3.jpg"
+                    className=" h-full w-full  object-cover"
+                    alt=""
+                  />
+                </div>
+                {/* part 2 */}
+                <div
+                  onClick={() => router.push("/Insurance")}
+                  className="part2 sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
+                >
+                  <h3 className="text-white cursor-pointer font-semibold text-[20px] ">
+                    Insurance
+                  </h3>
+
+                  <p className=" text-[14px] text-white/80 text-justify mt-2">
+                    {" "}
+                  As specialist insurance brokers with 20+ years of experience, our services are tailored to meet the unique needs of every client.
+                  </p>
+                  <div className="absolute h-[4em] w-[4em] bg-white top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f ] hover:bg-zinc-100">
+                    <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px] "></i>
                   </div>
                 </div>
               </div>
@@ -553,7 +554,7 @@ export default function Home() {
               {/* left part 1 */}
               <div className=" w-full h-[20rem] lg:w-[40%] lg:h-[37rem] rounded-xl  overflow-hidden">
                 <img
-                  src="./sec5.jpg  "
+                  src="/sec5.jpg  "
                   className=" h-full w-full object-cover "
                   alt=""
                 />
@@ -588,7 +589,7 @@ export default function Home() {
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
                         <img
-                          src="./checksquare.svg"
+                          src="/checksquare.svg"
                           className=" h-full w-full object-cover cursor-pointer"
                           alt=""
                         />
@@ -604,12 +605,12 @@ export default function Home() {
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
                         <img
-                          src="./checksquare.svg"
+                          src="/checksquare.svg"
                           className=" h-full w-full object-cover cursor-pointer"
                           alt=""
                         />
                       </div>
-                      <h1 className="  cursor-pointe">Investment Loan</h1>
+                      <h1 className="  cursor-pointer">Investment Loan</h1>
                     </div>
                     <div
                       onClick={() => {
@@ -620,7 +621,7 @@ export default function Home() {
                       <div className=" w-[50px]   bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
                         <img
-                          src="./checksquare.svg"
+                          src="/checksquare.svg"
                           className=" h-full w-full object-cover  cursor-pointer"
                           alt=""
                         />
@@ -636,7 +637,7 @@ export default function Home() {
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
                         <img
-                          src="./checksquare.svg"
+                          src="/checksquare.svg"
                           className=" h-full w-full object-cover cursor-pointer"
                           alt=""
                         />
@@ -652,7 +653,7 @@ export default function Home() {
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
                         <img
-                          src="./checksquare.svg"
+                          src="/checksquare.svg"
                           className=" h-full w-full object-cover cursor-pointer"
                           alt=""
                         />
@@ -670,7 +671,7 @@ export default function Home() {
                       <div className=" w-[50px]    bg-white/20 rounded-[10px] p-[.7rem] ">
                         {" "}
                         <img
-                          src="./checksquare.svg"
+                          src="/checksquare.svg"
                           className=" cursor-pointer  h-full w-full object-cover"
                           alt=""
                         />
@@ -776,7 +777,7 @@ export default function Home() {
               <div className="mt-6 h-[32em]  relative lg:h-[36em] ">
                 <div className="h-[70%]  overflow-hidden rounded-[40px]">
                   <img
-                    src="8.jpg"
+                    src="/8.jpg"
                     className="h-full w-full object-cover"
                     alt="Contact Visual"
                   />
@@ -794,7 +795,7 @@ export default function Home() {
                     <div className="  flex flex-col items-center justify-center overflow-hidden p-2">
                      <div className=" h-24   place-items-center flex overflow-hidden">
                        <img
-                        src= "./financial-logo.png "
+                        src= "/financial-logo.png "
                         alt="Membership Logo"
                       />
                      </div>
@@ -804,7 +805,7 @@ export default function Home() {
                     <div className="  flex flex-col items-center justify-center p-2 ">
                    <div className="h-24 flex overflow-hidden  ">
                        <img
-                        src="./KAN-Logo.png"
+                        src="/KAN-Logo.png"
                         alt="Membership Logo"
                       />
                    </div>

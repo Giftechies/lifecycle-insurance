@@ -8,17 +8,18 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 export default function RepaymentCalculator() {
   const calculators = [
     {
-      title: "Extra Loan Payment Calculator",
-      content: "Estimate your loan savings with extra repayments in seconds",
-      link: "/Calculator/loan-calculator ",
-      img: "/cal1.webp",
-    },
-    {
       title: "Repayment Calculator",
       content: "Know your monthly repayments before you borrow.",
       link: "/Calculator/repayment-calculator",
       img: "/cal2.webp",
     },
+    {
+      title: "Loan Calculator",
+      content: "Estimate your loan savings with extra repayments in seconds",
+      link: "/Calculator/loan-calculator ",
+      img: "/cal1.webp",
+    },
+    
   ];
 
   return (
@@ -42,7 +43,7 @@ export default function RepaymentCalculator() {
                   {/* Content */}
                   <div className="relative z-10 text-white p-6 flex flex-col justify-center h-full">
                     <h2 className="text-2xl font-bold mb-2">{el.title}</h2>
-                    <p className={`mb-4 ${i === 1 ? "mt-6" : ""} `}>
+                    <p className={` m-4 `}>
                       {el.content}
                     </p>
                     <a
