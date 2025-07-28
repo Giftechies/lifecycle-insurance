@@ -161,7 +161,7 @@ export default function Nav({ setIsMenuOpen, }) {
                   <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
                     {[
                       "Repayment Calculator",
-                      "Extra Loan",
+                      "Loan calculator",
                     ].map((item, index) => (
                       <Link
                         key={index}

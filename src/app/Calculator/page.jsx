@@ -10,7 +10,7 @@ export default function RepaymentCalculator() {
     {
       title: "Extra Loan Payment Calculator",
       content: "Estimate your loan savings with extra repayments in seconds",
-      link: "/Calculator/extra-loan ",
+      link: "/Calculator/loan-calculator ",
       img: "/cal1.webp",
     },
     {

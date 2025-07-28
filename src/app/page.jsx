@@ -57,22 +57,22 @@ export default function Home() {
     {
       img: "./target.svg",
       number: "99%",
-      content: " application approval rate ",
+      content: " Application approval rate ",
     },
     {
       img: "./family.svg",
       number: "6+",
-      content: " insurance providers  partnered with    ",
+      content: " Insurance providers  partnered with    ",
     },
     {
       img: "./timer.svg",
       number: "$200M+",
-      content: "   in mortgage  arranged  ",
+      content: "   In mortgage  arranged  ",
     },
     {
       img: "./bank.svg",
       number: "20+",
-      content: `mortgage providers to  choose from  `,
+      content: `Mortgage providers to  choose from  `,
     },
   ];
 
@@ -432,10 +432,10 @@ export default function Home() {
                         <h2 className="   text-[var(--secgr)] font-bold ">
                           {e.number}
                         </h2>
-                        <h3 className="   text-black  w-[80%]  ">
+                        <h4 className=" text-[17px]  text-black  w-[80%]  ">
                           {" "}
                           {e.content}
-                        </h3>
+                        </h4>
                       </div>
                     );
                   })}
@@ -790,23 +790,25 @@ export default function Home() {
                       Honored to Be a Member Of
                     </h1>
                   </div>
-                  <div className="grid grid-cols-2 gap-4 p-1 text-[var(--secgr)] w-full items-center">
-                    <div className="  flex flex-col items-center justify-center  p-2">
-                      <img
-                        src= "./financial-logo.png"
-                        className="h-30 w-auto object-contain"
+                  <div className="grid grid-cols-2 gap-4 text-[var(--secgr)] w-full ">
+                    <div className="  flex flex-col items-center justify-center overflow-hidden p-2">
+                     <div className=" h-24   place-items-center flex overflow-hidden">
+                       <img
+                        src= "./financial-logo.png "
                         alt="Membership Logo"
                       />
+                     </div>
                       <h6 className="text-center mt-2"> Financial Ombudsman service </h6>
                     </div>
 
-                    <div className="  flex flex-col items-center justify-center p-2">
-                      <img
+                    <div className="  flex flex-col items-center justify-center p-2 ">
+                   <div className="h-24 flex overflow-hidden  ">
+                       <img
                         src="./KAN-Logo.png"
-                        className="h-24 w-auto  object-contain"
                         alt="Membership Logo"
                       />
-                      <h6 className="text-center mt-2">
+                   </div>
+                      <h6 className="text-center ">
                          Kiwi Adviser Network
                       </h6>
                     </div>
