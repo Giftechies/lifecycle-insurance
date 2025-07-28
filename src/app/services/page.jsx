@@ -5,26 +5,26 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export default function RepaymentCalculator() {
+export default function services() {
   const calculators = [
     {
-      title: "Repayment Calculator",
-      content: "Know your monthly repayments before you borrow.",
-      link: "/Calculator/repayment-calculator",
-      img: "/cal2.webp",
+      title: "Insurance",
+      content: "With more than a decade of experience, our company provides expert mortgage solutions, to help you turn your dream home into reality.",
+      link: "/Insurance",
+      img: "/pic3.jpg",
     },
     {
-      title: "Loan Calculator",
-      content: "Estimate your loan savings with extra repayments in seconds",
-      link: "/Calculator/loan-calculator ",
-      img: "/cal1.webp",
+      title: "Mortgage",
+      content: "With more than a decade of experience, our company provides expert mortgage solutions, to help you turn your dream home into reality.",
+      link: "/Mortgage ",
+      img: "/pic4.jpg",
     },
     
   ];
 
   return (
     <>
-      <Banner title="Calculator" />
+      <Banner title="Services" />
       <section className=" p-4 lg:p-[3rem] ">
           <div className="cards   flex flex-col sm:flex-row gap-10 justify-center items-center   ">
             {calculators.map((el, i) => {
@@ -38,19 +38,19 @@ export default function RepaymentCalculator() {
                   />
 
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/70"></div>
+                  <div className="absolute inset-0 bg-black/55"></div>
 
                   {/* Content */}
                   <div className="relative z-10 text-white p-6 flex flex-col justify-center h-full">
-                    <h2 className="text-2xl font-bold mb-2">{el.title}</h2>
-                    <p className={` m-4 `}>
+                    <h2 className="text-2xl font-bold ">{el.title}</h2>
+                    <p className="my-4">
                       {el.content}
                     </p>
                     <a
                       href={el.link}
-                      className="bg-white  text-black px-4 py-2 rounded hover:bg-gray-200 w-fit"
+                      className="bg-white  text-black px-4 py-2 rounded hover:bg-gray-200 w-fit active:bg-gray-200 "
                     >
-                      Calculate Now
+                      Know more
                     </a>
                   </div>
                 </div>

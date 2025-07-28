@@ -78,9 +78,9 @@ const onSubmit = async (formData) => {
             {/* Phone */}
             <div className="Enquire-box  bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col   items-center">
               <div className=" ibox bg-[var(--primg)] py-3 px-4 rounded-full mb-4 text-white">
-                <i className="ri-phone-line text-3xl cursor-pointer  "></i>
+                <i className="ri-phone-line text-3xl   "></i>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Phone</h3>
+              < h4 className="  font-semibold mb-2">Phone</ h4>
               <a href="tel:0800507770" className="text-gray-600  transition">
                 0800 507 770
               </a>
@@ -89,9 +89,9 @@ const onSubmit = async (formData) => {
             {/* Email */}
             <div className="Enquire-box  bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col   items-center">
               <div className=" ibox bg-[var(--primg)]  px-4 py-3 rounded-full mb-4 text-white">
-                <i className=" ri-mail-line text-3xl cursor-pointer "></i>
+                <i className=" ri-mail-line text-3xl "></i>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Email</h3>
+              < h4 className="  font-semibold mb-2">Email</ h4>
               <a
                 href="mailto:harpreet@lifecyclefinancial.co.nz"
                 className="text-gray-600  transition  break-words text-center  w-full "
@@ -103,17 +103,17 @@ const onSubmit = async (formData) => {
             {/* Address */}
             <div className="Enquire-box   bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col   items-center">
               <div className="ibox bg-[var(--primg)] px-4 py-3 rounded-full mb-4 text-white">
-                <i className="ri-map-pin-line text-3xl cursor-pointer"></i>
+                <i className="ri-map-pin-line text-3xl "></i>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Address</h3>
+              < h4 className="  font-semibold mb-2">Address</ h4>
               <a className="text-gray-600">3 Otaota way, Flat Bush, Auckland</a>
             </div>
             {/* Business  */}
             <div className="Enquire-box   bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col   items-center">
               <div className="ibox bg-[var(--primg)] px-4 py-3 rounded-full mb-4 text-white">
-                <i className="ri-time-line text-3xl cursor-pointer"></i>
+                <i className="ri-time-line text-3xl "></i>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Business Hours</h3>
+              < h4 className="  font-semibold mb-2">Business Hours</ h4>
               <a className="text-gray-600">Mon -Fri 9:00 AM - 6:00 PM</a>
             </div>
           </div>
@@ -121,9 +121,9 @@ const onSubmit = async (formData) => {
 
         <div className="flex  max-lg:flex-col   justify-evenly w-full  gap-8 lg:gap-10   ">
           <div className="flex flex-col  lg:w-[50%] shadow-2xl rounded-xl bg-white  p-4 md:p-8 space-y-5 ">
-            <h4 className="  text-lg font-semibold  leading-7 lg:leading-9  ">
+            < h4 className="    font-semibold   ">
               Feel free to enquire about any questions you got
-            </h4>
+            </ h4>
             <div className=" flex-grow rounded-2xl overflow-hidden ">
               {" "}
               <img
@@ -134,10 +134,10 @@ const onSubmit = async (formData) => {
             </div>
           </div>
 
-          <div className="form  bg-white  lg:w-[50%] p-8 rounded-xl shadow-2xl">
-            <h1 className="text-lg font-semibold mt-2">
+          <div className="form  bg-white  lg:w-[50%]  p-4 md:p-8 rounded-xl shadow-2xl">
+            < h4 className="  font-semibold  ">
               Let’s Connect and Get in Touch With Us.
-            </h1>
+            </ h4>
 
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -191,10 +191,10 @@ const onSubmit = async (formData) => {
         </div>
 
         <div
-          className="map w-[100%]  p-4  flex flex-col  bg-white  rounded overflow-hidden
+          className="map w-[100%]  p-4 md:p-8 flex flex-col  bg-white  rounded overflow-hidden
 "
         >
-          <h1 className="text-[36px] flex-grow font-semibold ">Get Direction</h1>
+          <h4 className="text-[18px] flex-grow font-semibold mb-2 "> <i class="ri-record-circle-line"></i> Get Direction</h4>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3187.7834505210967!2d174.93835157549714!3d-36.967228372199926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d72b32d2654a2c5%3A0x74d5fe6dac1cda3!2s3%20Otaota%20Way%2C%20Flat%20Bush%2C%20Auckland%202019%2C%20New%20Zealand!5e0!3m2!1sen!2sin!4v1752840495893!5m2!1sen!2sin"
             className="w-ful h-[400px] border-0 rounded-xl md:mt-4 "

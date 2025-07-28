@@ -26,14 +26,14 @@ export default function Footer() {
     <>
       {/* footer */}
       <footer className="footer bg-[var(--tri)] overflow-hidden">
-        <main className="w-full h-full max-w-[1500px] mx-auto text-[14px] p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-26 font-light">
+        <main className="w-full h-full max-w-[1600px] mx-auto  p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-26  font-light">
           <div
-            className="content border-b pb-4 lg:pb-[3rem] border-dotted border-white/50 text-white/90
-              grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[200px_200px_150px_200px_300px]  justify-between  space-y-5 gap-5 lg:items-start "
+            className="content border-b pb-4  border-dotted border-white/50 text-white/90
+              grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[150px_150px_150px_180px_300px]  justify-between  space-y-5  lg:items-start "
           >
             {/* Insurance */}
-            <div className="shrink-0 lg:pt-0  ">
-              <Link  href='/Insurance' className="text-[20px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
+            <div className="shrink-0 lg:pt-0   ">
+              <Link  href='/Insurance' className="text-[18px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
               <div className="flex flex-col space-y-4 mt-3">
                 <Link href="/Insurance/life-insurance" className="text-white/90 hover:text-white transition-colors">Life Insurance</Link>
                 <Link href="/Insurance/trauma-recovery-cover" className="text-white/90 hover:text-white transition-colors">Trauma Recovery Cover</Link>
@@ -47,7 +47,7 @@ export default function Footer() {
 
             {/* Mortgage */}
             <div className=" lg:pt-0  ">
-              <Link  href='/Mortgage'  className="text-[20px] font-medium mb-3 text-white">Mortgage</Link>
+              <Link  href='/Mortgage'  className="text-[18px] font-medium mb-3 text-white">Mortgage</Link>
               <div className="flex flex-col space-y-4 mt-3">
                 <Link href="/Mortgage/home-loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>
                 <Link href="/Mortgage/refinance" className="text-white/90 hover:text-white transition-colors">Refinance</Link>
@@ -59,8 +59,8 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div className="shrink-0 lg:pt-0   max-w-[120px] ">
-              <h3 className="text-[20px] font-medium mb-3 text-white">Quick Links</h3>
+            <div className="shrink-0 lg:pt-0    ">
+              <h3 className="text-[18px] font-medium mb-3 text-white">Quick Links</h3>
               <div className="flex flex-col space-y-4">
                 <Link href="/" className="text-white/90 hover:text-white transition-colors">Home</Link>
                 <Link href="/About-us" className="text-white/90 hover:text-white transition-colors">About Us</Link>
@@ -73,7 +73,7 @@ export default function Footer() {
 
             {/* Important Links */}
             <div className="shrink-0 lg:pt-0 ">
-              <h3 className="text-[20px] font-medium mb-3 text-white">Important Links</h3>
+              <h3 className="text-[18px] font-medium mb-3 text-white">Important Links</h3>
               <div className="flex flex-col space-y-4">
                 <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
                 <Link href="/Interest-rate" className="text-white/90 hover:text-white transition-colors">Interest Rates</Link>
@@ -84,8 +84,8 @@ export default function Footer() {
             </div>
 
             {/* Reach Us */}
-            <div className="lg:pt-0 shrink-0  min-w-[250px] lg:mb-6 ">
-              <h3 className="text-[20px] font-medium mb-3 text-white">Reach Us</h3>
+            <div className="lg:pt-0 shrink-0  min-w-[250px] lg:mb-6  ">
+              <h3 className="text-[18px] font-medium mb-3 text-white">Reach Us</h3>
               <div className="flex flex-col text-[14px] flex-wrap space-y-4">
                 <div className="flex items-start gap-1">
                   <i className="ri-phone-line text-2lg"></i>
@@ -95,12 +95,12 @@ export default function Footer() {
                 </div>
                 <div className="flex items-start gap-1">
                   <i className="ri-mail-line text-2lg"></i>
-                  <a href="mailto:harpreet@lifecyclefinancial.co.nz" className="text-white/90 hover:text-white transition-colors  break-all">
+                  <a href="mailto:harpreet@lifecyclefinancial.co.nz" className="text-white/90 hover:text-white transition-colors tracking-wider ">
                   {/* { setting?.email || "Loading..."} */}
                   harpreet@lifecyclefinancial.co.nz
                   </a>
                 </div>
-                <div className="flex items-start max-xl:flex-wrap">
+                <div className="flex items-start ">
                   <i className="ri-map-pin-line mr-2  text-2lg"></i>
                   <span>
                   {/* {setting?.address || "Loading..."} */}

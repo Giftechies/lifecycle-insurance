@@ -13,7 +13,7 @@ const cards = [
     },
     result:
       'A major bank approved their $880,000 loan at a competitive 6.09% interest rate...',
-   coverImage: 'about-pic1.jpg',
+   coverImage: '/about-pic1.jpg',
   },
   {
   slug: "trauma-cover-impact", // use this for dynamic routing
@@ -26,7 +26,7 @@ const cards = [
     "The payout provided essential financial support during a highly stressful and emotional time, helping them to focus on recovery without the added burden of financial strain."
   ],
   category: "Insurance",
-  coverImage: "trauma.webp", // Update with your actual image path
+  coverImage: "/trauma.webp", // Update with your actual image path
   date: "2025-07-24", // optional
 },
 {
@@ -40,7 +40,7 @@ const cards = [
     "The good news is that she made a full recovery, and the family is now even more appreciative of the importance of maintaining comprehensive insurance cover. This situation reinforces how critical it is to have the right protections in place—especially when they’re needed most."
   ],
   category: "Insurance",
-  coverImage: "time.webp", // Replace with actual path
+  coverImage: "/time.webp", // Replace with actual path
   date: "2025-07-24"
 }
 ];

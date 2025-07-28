@@ -141,7 +141,7 @@ const Testimonials: FC = () => {
     useEffect(()=>{
     setIspc(window.innerWidth > 1024)
     setIsMobie(window.innerWidth < 640)
-    },[Ispc])
+    },[])
 
     if(Ispc){
        switch (offset) {
@@ -158,7 +158,7 @@ const Testimonials: FC = () => {
 
        switch (offset) {
       case 0:
-        return 'transform scale-55 opacity-100 z-20 shadow';
+        return 'transform scale-80 opacity-100 z-20 shadow';
       case 1:
         return 'transform scale-[0.4] opacity-90 z-10 translate-x-[80%] shadow';
       case -1:
@@ -186,13 +186,13 @@ const Testimonials: FC = () => {
   return (
     <div className="  w-full max-w-[1600px] p-4 lg:p-[3rem] mx-auto bg-[var(--secgr)]/10 overflow-hidden ">
       <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--secgr)]">
+          <h6 className="text-[18px]  mt-8 font-bold text-[var(--secgr)]">
             Our Client Reviews
             
-          </h1>
+          </h6>
       </div>
 
-      <div className="relative w-full h-[450px] ">
+      <div className="relative w-full h-[400px]  md:h-[300px]  lg:h-[400px] ">
         <button
           onClick={handlePrev}
           className="absolute  top-1/2 -translate-y-1/2 left-0 z-30 bg-white/70 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-gray-700 hover:bg-white transition-all shadow-md"

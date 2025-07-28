@@ -5,12 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Nav({ setIsMenuOpen, }) {
-  const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [InsuranceOpen, setInsuranceOpen] = useState(false);
   const [mortgageOpen, setMortgageOpen] = useState(false);
   const [calculatorOpen, setcalculatorOpen] = useState(false);
-  const [caseOpen, setcaseOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -123,31 +121,10 @@ export default function Nav({ setIsMenuOpen, }) {
                 )}
               </div>
 
-              <div className="px-4 py-2 group relative"
-              
-               onMouseEnter={() => setcaseOpen(true)}
-                onMouseLeave={() => setcaseOpen(false)}>
-                <Link href="/Case-study" className=" flex gap-1" >Case Study <span className=" group-hover:rotate-180  transition-transform duration-300  " ><i className="ri-arrow-down-s-line"></i></span> 
+              <div className="px-4 py-2 group relative">
+                <Link href="/Case-study" className=" flex gap-1" >Case Study 
                 </Link>
-                 {caseOpen && (
-                  <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
-                    {[
-                      "Trauma Cover Impact",
-                      "Making Home Ownership Possible",
-                      "Timely Advice Trauma Cover",
-                    ].map((item, index) => (
-                      <Link
-                        key={index}
-                        href={`/Case-study/${item
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
-                        className="block px-3 py-2 hover:bg-gray-100 text-black"
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                
               </div>
 
 
@@ -205,7 +182,7 @@ export default function Nav({ setIsMenuOpen, }) {
         <div class="relative" bis_skin_checked="1">
           <div class="grid grid-cols-5 h-16" bis_skin_checked="1">
             <a
-              href="tel:+15874355005"
+              href="tel:0800507770"
               class="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
             >
               <svg
@@ -276,7 +253,7 @@ export default function Nav({ setIsMenuOpen, }) {
             </div>
             <a
               class="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
-              href="#"
+              href="/services"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

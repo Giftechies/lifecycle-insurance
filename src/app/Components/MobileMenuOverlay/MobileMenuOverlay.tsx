@@ -14,6 +14,7 @@ export default function MobileMenuOverlay({
 }: MobileProps) {
   const [isInsuranceOpen, setIsInsuranceOpen] = useState(false);
   const [isMortgageOpen, setIsMortgageOpen] = useState(false);
+  const[iscal,setiscal] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
   const handleclose = () => {
     if (drawerRef.current) {
@@ -71,7 +72,7 @@ export default function MobileMenuOverlay({
             </Link>
           </li>
           <li>
-            <Link href="/about" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/About-us" onClick={() => setIsMenuOpen(false)}>
               About Us
             </Link>
           </li>
@@ -97,7 +98,7 @@ export default function MobileMenuOverlay({
               </span>
             </div>
             {isInsuranceOpen && (
-              <ul className="pl-4 mt-2 space-y-6 text-sm">
+              <ul className="pl-4 mt-6 space-y-6 text-sm">
                 {[
                   "Life Insurance",
                   "Trauma Recovery Cover",
@@ -145,7 +146,7 @@ export default function MobileMenuOverlay({
               </span>
             </div>
             {isMortgageOpen && (
-              <ul className="pl-4 mt-3 space-y-6   text-sm">
+              <ul className="pl-4 mt-6 space-y-6   text-sm">
                 {[
                   "Home Loan",
                   "Refinance",
@@ -176,17 +177,46 @@ export default function MobileMenuOverlay({
             </Link>
           </li>
           <li>
-            <Link
+          <div className=" flex justify-between items-center ">
+              <Link
               href="/Calculator"
               onClick={() => {
                   
-                setIsMenuOpen(false);
-
-                
+                setIsMenuOpen(false)
               }}
             >
               Calculator
             </Link>
+             <span>
+                {isMortgageOpen ? (
+                  <i
+                    onClick={() => setiscal(!iscal)}
+                    className="ri-arrow-down-s-line"
+                  ></i>
+                ) : (
+                  <i
+                    onClick={() => setiscal(!iscal)}
+                    className="ri-arrow-right-s-line"
+                  ></i>
+                )}
+              </span>
+          </div>
+
+          {iscal && (
+            <ul className=" pl-4 space-y-6 mt-6 text-sm">
+              {["Repayment Calculator","Loan Calculator"].map((e,id)=>{
+                return(
+                  <li key={id} >
+                    <Link href={`/Calculator/${e.toLocaleLowerCase().replace(/\s+/g,"-")}`}
+                    onClick={()=>{setIsMenuOpen(false)}}>
+                    {e}
+                    </Link>
+                  </li>
+                )
+
+              })}
+            </ul>
+          ) }
           </li>
           <li>
             <Link

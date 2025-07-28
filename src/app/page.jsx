@@ -173,15 +173,27 @@ export default function Home() {
     });
   },  );
 
-  useGSAP(() => {
-    if (!sec5.current) return;
-    gsap.to(".marquee", {
-      xPercent: -100,
-      duration: 40,
-      ease: "none",
-      repeat: -1,
-    });
-  }, );
+useGSAP(() => {
+  const marquee = document.querySelector(".marquee");
+  if (!marquee) return;
+
+  const marqueeWidth = marquee.scrollWidth;
+  const containerWidth = marquee.parentElement.offsetWidth;
+
+  const distance = marqueeWidth;
+  const speed = 70; // pixels per second (adjust as needed)
+
+  gsap.to(".marquee", {
+    x: -distance,
+    duration: distance / speed,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize(x => parseFloat(x) % distance),
+    },
+  });
+}, []);
+
  
  
 
@@ -217,11 +229,11 @@ export default function Home() {
           {/* Text + Icon Content */}
           <div className=" relative  w-full h-full max-w-[1600px] mx-auto z-30">
             <div className="relative pt-25 px-4 md:px-[1.5rem]  lg:px-[3.5rem] xl:px-[3rem] lg:pt-50 pb-10 z-20 text-white ">
-              <h3 className="animate-fadeInUp text-gray-300 text-sm md:text-base font-semibold mb-2">
+              <p className="animate-fadeInUp text-gray-300 text-sm md:text-base font-semibold mb-2">
                 <i className="ri-record-circle-line mr-2 text-lg font-extralight text-white"></i>
                 {/* {data?.data[0]?.title} */}
                 LIFE CYCLE FINANCIAL
-              </h3>
+              </p>
 
               <div className=" text-[26px] md:text-[46px] lg:text-[58px] font-semibold tracking-normal leading-tight">
                 <h1 className=" mt-6  ">
@@ -253,23 +265,21 @@ export default function Home() {
               {/* Icon Box */}
               <div
                 ref={homeIconBox}
-                className="home-icon-box  max-md:mt-12 w-full  border border-dashed border-white/40 md:w-[80%] rounded-3xl flex flex-col  md:flex-row items-center lg:w-[60%] justify-between p-4 gap-6"
+                className="home-icon-box   grid  sm:grid-cols-3 w-[min(800px,80%)] max-sm:mx-auto border border-dashed border-white/40  rounded-3xl   p-4 gap-6"
               >
                 {/* Card 1 */}
-                <div className="flex flex-col items-center text-center flex-1   md:border-b-0 md:border-r border-dashed border-white/40 p-4">
+                <div className="flex  flex-col items-center text-center flex-1 border-b sm:border-b-0 sm:border-r border-dashed border-white/40 p-4">
                   <img
                     src="/thumbsup.svg"
                     alt="Rating"
                     className="w-12  h-12"
                   />
-                  <h1 className="  text-white  font-semibold mt-3 text-sm">
-                    20+ years combined industry experience
-                  </h1>
+                  <h1 className="  text-white  font-semibold mt-3 text-sm">20+ years combined industry experience</h1>
                   <p className="border b"></p>
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex flex-col items-center text-center flex-1 border-b md:border-b-0 md:border-r border-dashed border-white/40 p-4">
+                <div className="flex flex-col items-center text-center flex-1 border-b sm:border-b-0 sm:border-r border-dashed border-white/40 p-4">
                   <img
                     src="/conversation.svg"
                     alt="Clients"
@@ -309,7 +319,7 @@ export default function Home() {
                 alt=""
               />
             </div>
-            <div className="contentRight max-lg:mt-3 lg:w-[55%] lg:flex gap-10 flex-col tracking-wider text-justify  ">
+            <div className="contentRight max-lg:mt-3 lg:w-[55%] lg:flex gap-10 flex-col tracking-wider lg:text-justify  ">
               <div className="uppercontent w-full xl:w-[80%] leading-6 lg:ml-12  ">
                 <h3 className="text-[var(--primg)] font-semibold  ">
                   {" "}
@@ -321,7 +331,7 @@ export default function Home() {
                   We provide wide range of financial services to the clients including Mortgages both Residential & Commercial, & Personal Insurance products such as life, Health, Income Protection, Mortgage Protection, Redundancy cover and Trauma Insurance. For home, contents, car and business Insurance we have additional specialists that we call upon.
                 </p>
                 <button
-                  onClick={() => router.push("/about")}
+                  onClick={() => router.push("/About-us")}
                   className=" flex items-center bg-[var(--primg)] cursor-pointer text-white px-7 py-3 rounded-full  mt-4   text-[16px] hover:text-black hover:scale-[.98] duration-300 "
                 >
                   Know more <i className="ri-arrow-right-s-line    "></i>
@@ -690,7 +700,7 @@ export default function Home() {
               {/* marquee */}
               <div className="   w-[100%] rounded-[20px]  bg-white     overflow-hidden ">
                 <div className="w-full bg-white rounded-[20px] overflow-hidden">
-                  <div className="marquee flex items-center gap-10 py-5 animate-scroll">
+                  <div className="marquee flex items-center gap-10 py-5 ">
                     {logos.map((logo, i) => (
                         <div
                           key={i}
@@ -787,7 +797,7 @@ export default function Home() {
                 <div className=" p-3 w-[85%]  bg-white/95 shadow-2xl rounded-[20px] absolute  bottom-10  left-1/2 transform -translate-x-1/2 ">
                   <div className="w-full h-[55%] flex flex-col gap-2 items-center justify-around">
                     <i className="ri-group-fill bg-[var(--primg)] text-white text-4xl rounded-[10px] py-3 px-4"></i>
-                    <h1 className="text-[var(--primg)]   tracking-normal font-semibold ">
+                    <h1 className="text-[var(--primg)]  font-semibold ">
                       Honored to Be a Member Of
                     </h1>
                   </div>
