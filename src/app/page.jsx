@@ -236,14 +236,12 @@ useGSAP(() => {
               </p>
 
               <div className=" text-[26px] md:text-[46px] lg:text-[58px] font-semibold tracking-normal leading-tight">
-                <h1 className=" mt-6  ">
-                  From Smart{" "}
-                  <span className="text-[var(--primg)]">Financing</span> To
-                </h1>
-                <h1 className="">
-                  Dream <span className="text-[var(--primg)]">Mortgages</span>.
-                </h1>
-                <h1 className="">We Cover It All</h1>
+                <span className=" mt-6  ">
+                  From Smart 
+                  <span className="text-[var(--primg)]"> Financing</span> To<br/>
+               
+                  Dream <span className="text-[var(--primg)]">Mortgages</span>.<br/>
+                We Cover It All</span>
               </div>
 
               <h4 className="mt-4 text-[14px] lg:w-[65%] text-white tracking-wider ">
@@ -274,7 +272,7 @@ useGSAP(() => {
                     alt="Rating"
                     className="w-12  h-12"
                   />
-                  <h1 className="  text-white  font-semibold mt-3 text-sm">20+ years combined industry experience</h1>
+                  <span className="  text-white  font-semibold mt-3 text-sm">20+ years combined industry experience</span>
                   <p className="border b"></p>
                 </div>
 
@@ -285,9 +283,9 @@ useGSAP(() => {
                     alt="Clients"
                     className="w-12 h-12"
                   />
-                  <h1 className="text-white font-semibold mt-3 text-sm">
+                  <span className="text-white font-semibold mt-3 text-sm">
                     700+ Happy Clients served
-                  </h1>
+                  </span>
                 </div>
 
                 {/* Card 3 */}
@@ -297,9 +295,9 @@ useGSAP(() => {
                     alt="Satisfaction"
                     className="w-12 h-12"
                   />
-                  <h1 className="text-white font-semibold mt-3 text-sm">
+                  <span className="text-white font-semibold mt-3 text-sm">
                     98% client satisfaction rate
-                  </h1>
+                  </span>
                 </div>
               </div>
             </div>
@@ -351,9 +349,9 @@ useGSAP(() => {
                         />
                        One Call Does It All
                       </p>
-                      <h1 className="  text-white/100 text-[14px] tracking-widest mt-2   ">
+                      <span className="  text-white/100 text-[14px] tracking-widest mt-2   ">
                         From application to approval, we handle everything under one roof. With access to top banks and lenders across New Zealand
-                      </h1>
+                      </span>
                     </div>
                   </div>
                   <div className="call text-[var(--primg)] font-medium md:ml-15 lg:ml-6 xl:ml-16 flex  gap-2 max-md:hidden ">
@@ -429,9 +427,9 @@ useGSAP(() => {
               <div className="cards  flex flex-col gap-15 ">
                 {/* text */}
                 <div>
-                  <h1 className=" text-[36px]   font-bold tracking-normal  leading-9 text-white ">
+                  <span className=" text-[36px]   font-bold tracking-normal  leading-9 text-white ">
                    Numbers That Speak for Themselves
-                  </h1>
+                  </span>
                 </div>
                 {/* cards-box */}
                 <div className=" font-normal flex-grow   grid gap-8 md:grid-cols-2 ">
@@ -478,9 +476,9 @@ useGSAP(() => {
                   <i className="ri-record-circle-line mr-1 text-2lg"></i>Our
                   Service
                 </p>
-                <h1 className="text-[26px] font-semibold leading-8 sm:text-[38px]   mt-3 tracking-normal  md:leading-10 text-zinc-600/90  md:font-semibold xl:mt-6  sm:w-[70%] ">
+                <h2 className="!text-[26px] font-semibold leading-8 sm:!text-[38px]   mt-3 tracking-normal  md:leading-10 text-zinc-600/90  md:font-semibold xl:mt-6  sm:w-[70%] ">
                   Comprehensive Financial & Mortgage Solutions
-                </h1>
+                </h2>
               </div>
               <div className="  lg:w-[40%] lg:mt-11 mt-3 ">
                 <p className=" text-[14px]  ">
@@ -512,7 +510,7 @@ useGSAP(() => {
                  Mortgage
                   </h3>
 
-                  <p className=" text-[14px] text-white/80  text-justify mt-2">
+                  <p className=" text-[14px] text-white/80   mt-2">
                     {" "}
                    With more than a decade of experience, our company provides expert mortgage solutions, to help you turn your dream home into reality.
                   </p>
@@ -540,7 +538,7 @@ useGSAP(() => {
                     Insurance
                   </h3>
 
-                  <p className=" text-[14px] text-white/80 text-justify mt-2">
+                  <p className=" text-[14px] text-white/80 mt-2">
                     {" "}
                   As specialist insurance brokers with 20+ years of experience, our services are tailored to meet the unique needs of every client.
                   </p>
@@ -604,7 +602,7 @@ useGSAP(() => {
                           alt=""
                         />
                       </div>
-                      <h1 className="  cursor-pointer  ">Home Loan</h1>
+                      <span className="  cursor-pointer  ">Home Loan</span>
                     </div>
                     <div
                       onClick={() => {
@@ -620,7 +618,7 @@ useGSAP(() => {
                           alt=""
                         />
                       </div>
-                      <h1 className="  cursor-pointer">Investment Loan</h1>
+                      <span className="  cursor-pointer">Investment Loan</span>
                     </div>
                     <div
                       onClick={() => {
@@ -636,7 +634,7 @@ useGSAP(() => {
                           alt=""
                         />
                       </div>
-                      <h1 className="   cursor-pointer  ">Refinance</h1>
+                      <span className="   cursor-pointer  ">Refinance</span>
                     </div>
                     <div
                       onClick={() => {
@@ -652,7 +650,7 @@ useGSAP(() => {
                           alt=""
                         />
                       </div>
-                      <h1 className="  cursor-pointer   ">Business Loan</h1>
+                      <span className="  cursor-pointer   ">Business Loan</span>
                     </div>
                     <div
                       onClick={() => {
@@ -668,9 +666,9 @@ useGSAP(() => {
                           alt=""
                         />
                       </div>
-                      <h1 className="  text-[19px]  cursor-pointer   ">
+                      <span className="  text-[19px]  cursor-pointer   ">
                         Construction Loan
-                      </h1>
+                      </span>
                     </div>
                     <div
                       onClick={() => {
@@ -686,7 +684,7 @@ useGSAP(() => {
                           alt=""
                         />
                       </div>
-                      <h1 className=" cursor-pointer   ">Commercial Loan</h1>
+                      <span className=" cursor-pointer   ">Commercial Loan</span>
                     </div>
                   </div>
                 </div>
@@ -694,9 +692,9 @@ useGSAP(() => {
             </div>
             {/* lg marquee box */}
             <div className="marque  w-full flex items-center bg-[var(--primg)] rounded-b-[30px] lg flex-col p-6 pt-0   lg:mt-4 xl:mt-8  lg:rounded-[30px]  lg:p-10  lg:pt-0 ">
-              <h1 className="text-center text-[26px] font-bold  my-3 text-white md:  md:w-[50%]  md:leading-6 lg:tracking-normal lg:leading-9  lg:text-[30px] lg:w-[65%] xl:w-[50%] lg:font-semibold lg:pt-8 ">
+              <span className="text-center text-[26px] font-bold  my-3 text-white md:  md:w-[50%]  md:leading-6 lg:tracking-normal lg:leading-9  lg:text-[30px] lg:w-[65%] xl:w-[50%] lg:font-semibold lg:pt-8 ">
                 Over 20 Handpicked <br /> partners to serve You Better
-              </h1>
+              </span>
               {/* marquee */}
               <div className="   w-[100%] rounded-[20px]  bg-white     overflow-hidden ">
                 <div className="w-full bg-white rounded-[20px] overflow-hidden">
@@ -728,9 +726,9 @@ useGSAP(() => {
               <p className="text-[var(--primg)]">
                 <i className="ri-record-circle-line mr-2"></i> Enquiry Now
               </p>
-              <h1 className="text-lg font-semibold mt-2">
+              <span className="text-lg font-semibold mt-2">
                 Let’s Connect and Get in Touch With Us.
-              </h1>
+              </span>
 
               <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -797,9 +795,9 @@ useGSAP(() => {
                 <div className=" p-3 w-[85%]  bg-white/95 shadow-2xl rounded-[20px] absolute  bottom-10  left-1/2 transform -translate-x-1/2 ">
                   <div className="w-full h-[55%] flex flex-col gap-2 items-center justify-around">
                     <i className="ri-group-fill bg-[var(--primg)] text-white text-4xl rounded-[10px] py-3 px-4"></i>
-                    <h1 className="text-[var(--primg)]  font-semibold ">
+                    <span className="text-[var(--primg)]  font-semibold ">
                       Honored to Be a Member Of
-                    </h1>
+                    </span>
                   </div>
                   <div className="grid grid-cols-2 gap-4 text-[var(--secgr)] w-full ">
                     <div className="  flex flex-col items-center justify-center overflow-hidden p-2">

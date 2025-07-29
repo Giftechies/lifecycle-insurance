@@ -32,7 +32,7 @@ export default function about() {
                   </h2>
                 </div>
                 <div className="right text-black font-semibold ">
-                  <h6 className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
+                  <p className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                     Lifecycle Financial is a Trusted financial advisory firm,
                     committed to delivering a comprehensive range of financial
                     services tailored to your needs. We specialize in:
@@ -48,7 +48,7 @@ export default function about() {
                     providers, we’re able to offer highly competitive interest
                     rates and premiums—without compromising on the quality of
                     advice or products we recommend.
-                  </h6>
+                  </p>
                 </div>
               </div>
 
@@ -76,9 +76,9 @@ export default function about() {
             </div>
           </main>
         </section>
-        {/* section 3 team */}
-        <section className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  max-w-[1600px] mx-auto">
-          <main className=" w-full flex  flex-col items-center ">
+        {/* section 2 team */}
+        <div className=" w-full px-4 py-10 xl:px-[9%]  bg-[var(--tri)]/10  ">
+          <main className=" w-full flex max-w-[1600px] mx-auto  flex-col items-center ">
             <h2 className=" text-[26px]   text-[var(--secgr)]  font-semibold mb-4 ">
               {" "}
               Our Mortgage Experts
@@ -128,7 +128,7 @@ export default function about() {
               ))}
             </div>
           </main>
-        </section>
+        </div>
 
         {/* section 2 */}
         <section className="section_2   w-full overflow-hidden  ">
@@ -162,102 +162,49 @@ export default function about() {
                 </ul>
               </div>
 
-              <div className="  w-full rounded-2xl text-left lg:w-[45%] bg-white p-4 lg:p-10  shadow-2xl styled-html">
-                <div>
-                  <h2>What We Do?</h2>
-                </div>
+              <div className="w-full rounded-2xl text-left lg:w-[45%] bg-white p-4 lg:p-10 shadow-2xl styled-html">
+  <div>
+    <h2 className="text-2xl font-semibold text-gray-800 mb-6">What We Do?</h2>
+  </div>
 
-                <div className="h-full w-full grid grid-cols-[repeat(5,200px)] gap-16 mt-4">
-                  {/* Insurance Column */}
-                  <div className="text-left">
-                    <h3 className=" mb-2">
-                      <Link
-                        href="/Insurance"
-                        className="hover:text-[var(--primg)] transition-colors"
-                      >
-                        Insurance
-                      </Link>
-                    </h3>
-                    <ul className="space-y-2 text-sm text-left">
-                      <li>
-                        <Link href="/Insurance/life-insurance">
-                          Life Insurance
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Insurance/trauma-recovery-cover">
-                          Trauma Recovery Cover
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Insurance/total-permanent-disability-benefit-cover">
-                          Total Permanent Disability Benefit Cover
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Insurance/mortgage-rent-protection-cover">
-                          Mortgage & Rent Protection Cover
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Insurance/income-protection-cover">
-                          Income Protection Cover
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Insurance/medical-insurance">
-                          Medical Insurance
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Insurance/group-insurance">
-                          Group Insurance
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+  <div className="grid grid-cols-1 md:grid-cols-[repeat(2,300px_200px)] gap-10 justify-betweeng">
+    {/* Insurance Column */}
+    <div className="">
+      <h3 className="text-lg  mb-3">
+        <Link href="/Insurance" className="hover:text-[var(--primg)] transition-colors">
+          Insurance
+        </Link>
+      </h3>
+      <ul className="space-y-2 text-sm text-gray-700">
+        <li><Link href="/Insurance/life-insurance">Life Insurance</Link></li>
+        <li><Link href="/Insurance/trauma-recovery-cover">Trauma Recovery Cover</Link></li>
+        <li><Link href="/Insurance/total-permanent-disability-benefit-cover">Total Permanent Disability Benefit Cover</Link></li>
+        <li><Link href="/Insurance/mortgage-rent-protection-cover">Mortgage & Rent Protection Cover</Link></li>
+        <li><Link href="/Insurance/income-protection-cover">Income Protection Cover</Link></li>
+        <li><Link href="/Insurance/medical-insurance">Medical Insurance</Link></li>
+        <li><Link href="/Insurance/group-insurance">Group Insurance</Link></li>
+      </ul>
+    </div>
 
-                  {/* Mortgage Column */}
-                  <div className="text-left  ">
-                    <h3 className=" mb-2">
-                      <Link
-                        href="/Mortgage"
-                        className="hover:text-[var(--primg)] transition-colors"
-                      >
-                        Mortgage
-                      </Link>
-                    </h3>
-                    <ul className="space-y-2 text-sm text-left">
-                      <li>
-                        <Link href="/Mortgage/home-loan">Home Loan</Link>
-                      </li>
-                      <li>
-                        <Link href="/Mortgage/refinance">Refinance</Link>
-                      </li>
-                      <li>
-                        <Link href="/Mortgage/investment-loan">
-                          Investment Loan
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Mortgage/business-loan">
-                          Business Loan
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Mortgage/construction-loan">
-                          Construction Loan
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/Mortgage/commercial-loan">
-                          Commercial Loan
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+    {/* Mortgage Column */}
+    <div>
+      <h3 className="text-lg mb-3">
+        <Link href="/Mortgage" className="hover:text-[var(--primg)] transition-colors">
+          Mortgage
+        </Link>
+      </h3>
+      <ul className="space-y-2 text-sm text-gray-700">
+        <li><Link href="/Mortgage/home-loan">Home Loan</Link></li>
+        <li><Link href="/Mortgage/refinance">Refinance</Link></li>
+        <li><Link href="/Mortgage/investment-loan">Investment Loan</Link></li>
+        <li><Link href="/Mortgage/business-loan">Business Loan</Link></li>
+        <li><Link href="/Mortgage/construction-loan">Construction Loan</Link></li>
+        <li><Link href="/Mortgage/commercial-loan">Commercial Loan</Link></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
             </div>
           </main>
         </section>
