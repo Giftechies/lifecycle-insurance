@@ -1,16 +1,16 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req) {
   try {
     const body = await req.json();
     const { name, email, phone, service, message } = body;
 
+    const resend = new Resend(process.env.RESEND_API_KEY); // ✅ moved here
+
     const data = await resend.emails.send({
-      from: 'Enquiry <onboarding@resend.dev>', // Must be a verified or allowed sender
-      to: 'manveershah007@gmail.com', // Your inbox
+      from: 'Enquiry <onboarding@resend.dev>',
+      to: process.env.EMAIL_TO,
       subject: `New enquiry from ${name}`,
       html: `
         <h3>You've received a new enquiry:</h3>
