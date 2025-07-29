@@ -166,7 +166,7 @@ export default function about() {
     <h2 className="text-2xl font-semibold text-gray-800 mb-6">What We Do?</h2>
   </div>
 
- <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 justify-between  "> {/* Changed gap-10 to gap-x-8 for horizontal space */}
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 justify-between  px-4  "> {/* Changed gap-10 to gap-x-8 for horizontal space */}
   {/* Insurance Column */}
   <div className=" mx-auto "> 
     <h3 className="text-lg mb-3">
@@ -186,7 +186,7 @@ export default function about() {
   </div>
 
   {/* Mortgage Column */}
-  <div className="  mx-auto"> {/* No change needed here for this issue */}
+  <div className="  md:mx-auto"> {/* No change needed here for this issue */}
     <h3 className="text-lg mb-3">
       <Link href="/Mortgage" className="hover:text-[var(--primg)] transition-colors">
         Mortgage
