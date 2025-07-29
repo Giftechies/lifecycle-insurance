@@ -13,7 +13,7 @@ export default function about() {
             <div className="Left lg:w-[45%]  max-lg:hidden  ">
               <div className="img lg:h-[105%] xl:h-[100%]   w-[100%]  rounded-2xl overflow-hidden ">
                 <img
-                  src="about-pic1.jpg"
+                  src="/about-pic1.jpg"
                   className=" w-full  h-full  object-cover object-center "
                   alt=""
                 />
@@ -56,7 +56,7 @@ export default function about() {
                 <img
                   src="/about-pic1.jpg"
                   className=" w-full h-full object-cover  "
-                  alt=""
+                  alt="About pic"
                 />
               </div>
 
