@@ -6,15 +6,12 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap/gsap-core";
 type MobileProps = {
   setIsMenuOpen: (open: boolean) => void;
-  
 };
 
-export default function MobileMenuOverlay({
-  setIsMenuOpen,
-}: MobileProps) {
+export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
   const [isInsuranceOpen, setIsInsuranceOpen] = useState(false);
   const [isMortgageOpen, setIsMortgageOpen] = useState(false);
-  const[iscal,setiscal] = useState(false);
+  const [iscal, setiscal] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
   const handleclose = () => {
     if (drawerRef.current) {
@@ -51,7 +48,10 @@ export default function MobileMenuOverlay({
   return (
     <div className="fixed inset-0 z-[9999]">
       {/* Overlay background */}
-      <div className="absolute inset-0  bg-[var(--secgr)]/50  backdrop-blur-[2px] " onClick={handleclose} />
+      <div
+        className="absolute inset-0  bg-[var(--secgr)]/50  backdrop-blur-[2px] "
+        onClick={handleclose}
+      />
 
       {/* Side Drawer */}
       <div
@@ -177,17 +177,16 @@ export default function MobileMenuOverlay({
             </Link>
           </li>
           <li>
-          <div className=" flex justify-between items-center ">
+            <div className=" flex justify-between items-center ">
               <Link
-              href="/Calculator"
-              onClick={() => {
-                  
-                setIsMenuOpen(false)
-              }}
-            >
-              Calculator
-            </Link>
-             <span>
+                href="/Calculator"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+              >
+                Calculator
+              </Link>
+              <span>
                 {isMortgageOpen ? (
                   <i
                     onClick={() => setiscal(!iscal)}
@@ -200,41 +199,46 @@ export default function MobileMenuOverlay({
                   ></i>
                 )}
               </span>
-          </div>
+            </div>
 
-          {iscal && (
-            <ul className=" pl-4 space-y-6 mt-6 text-sm">
-              {["Repayment Calculator","Loan Calculator"].map((e,id)=>{
-                return(
-                  <li key={id} >
-                    <Link href={`/Calculator/${e.toLocaleLowerCase().replace(/\s+/g,"-")}`}
-                    onClick={()=>{setIsMenuOpen(false)}}>
-                    {e}
-                    </Link>
-                  </li>
-                )
-
-              })}
-            </ul>
-          ) }
+            {iscal && (
+              <ul className=" pl-4 space-y-6 mt-6 text-sm">
+                {["Repayment Calculator", "Loan Calculator"].map((e, id) => {
+                  return (
+                    <li key={id}>
+                      <Link
+                        href={`/Calculator/${e.toLocaleLowerCase().replace(/\s+/g, "-")}`}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        {e}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </li>
           <li>
             <Link
               href="/Interest-rate"
               onClick={() => {
-                  
                 setIsMenuOpen(false);
-
-                
               }}
             >
               Interest Rate
             </Link>
           </li>
           <li>
-            <Link href="/Enquire">
-            
-            Enquire Now</Link>
+            <Link
+              href="/Enquire"
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+            >
+              Enquire Now
+            </Link>
           </li>
         </ul>
       </div>

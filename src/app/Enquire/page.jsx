@@ -67,7 +67,7 @@ export default function EnquiryNow() {
           </h1>
           <div className="mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 ">
             {/* Phone */}
-            <div className="Enquire-box bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col items-center">
+            <div className="Enquire-box bg-white shadow rounded-lg p-2 border-b-2 border-[var(--primg)] flex flex-col items-center  justify-center ">
               <div className="ibox bg-[var(--primg)] py-3 px-4 rounded-full mb-4 text-white">
                 <i className="ri-phone-line text-3xl"></i>
               </div>
@@ -78,7 +78,7 @@ export default function EnquiryNow() {
             </div>
 
             {/* Email */}
-            <div className="Enquire-box bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col items-center">
+            <div className="Enquire-box bg-white shadow rounded-lg p-2 border-b-2 border-[var(--primg)] flex flex-col items-center  justify-center">
               <div className="ibox bg-[var(--primg)] px-4 py-3 rounded-full mb-4 text-white">
                 <i className="ri-mail-line text-3xl"></i>
               </div>
@@ -92,7 +92,7 @@ export default function EnquiryNow() {
             </div>
 
             {/* Address */}
-            <div className="Enquire-box bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col items-center">
+            <div className="Enquire-box bg-white shadow rounded-lg p-2 border-b-2 border-[var(--primg)] flex flex-col items-center  justify-center">
               <div className="ibox bg-[var(--primg)] px-4 py-3 rounded-full mb-4 text-white">
                 <i className="ri-map-pin-line text-3xl"></i>
               </div>
@@ -100,7 +100,7 @@ export default function EnquiryNow() {
               <a className="text-gray-600">3 Otaota way, Flat Bush, Auckland</a>
             </div>
             {/* Business */}
-            <div className="Enquire-box bg-white shadow rounded-lg p-6 border-b-2 border-[var(--primg)] flex flex-col items-center">
+            <div className="Enquire-box bg-white shadow rounded-lg p-2 border-b-2 border-[var(--primg)] flex flex-col items-center  justify-center">
               <div className="ibox bg-[var(--primg)] px-4 py-3 rounded-full mb-4 text-white">
                 <i className="ri-time-line text-3xl"></i>
               </div>
@@ -111,13 +111,13 @@ export default function EnquiryNow() {
         </div>
 
         <div className="flex max-lg:flex-col justify-evenly w-full gap-8 lg:gap-10">
-          <div className="flex flex-col lg:w-[50%] shadow-2xl rounded-xl bg-white p-4 md:p-8 space-y-5">
+          <div className=" max-lg:hidden flex flex-col lg:w-[50%] shadow-2xl rounded-xl bg-white p-4 md:p-8 space-y-5">
             <h4 className="font-semibold">
               Feel free to enquire about any questions you got
             </h4>
             <div className="flex-grow rounded-2xl overflow-hidden">
               <img
-                src="./customercare.jpg"
+                src="/customercare.jpg"
                 className="w-full h-full object-cover object-center"
                 alt="Customer Care"
               />

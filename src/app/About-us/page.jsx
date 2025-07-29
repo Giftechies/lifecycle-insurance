@@ -54,7 +54,7 @@ export default function about() {
               {/* image */}
               <div className="img w-full sm:h-[40vw]  rounded-2xl overflow-hidden lg:hidden ">
                 <img
-                  src="about-pic1.jpg"
+                  src="/about-pic1.jpg"
                   className=" w-full h-full object-cover  "
                   alt=""
                 />
@@ -99,27 +99,29 @@ export default function about() {
                   Name: "Harpeet Singh Rattan",
                   title: " Financial Adviser",
                   Phone: "021408971",
-                  img: "our2.jpg",
+                  img: "/Harpeet-Singh-Rattan.jpg",
+                  alt:"Harpeet Singh Rattan"
                 },
                 {
                   Name: "Rajwinder Rattan",
                   title: "Financial Adviser",
                   Phone: "021707246",
-                  img: "our1.jpg",
+                  img: "/Rajwinder-Rattan.jpg",
+                  alt:"Rajwinder Rattan"
                 },
               ].map((el) => (
-                <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%]  mt-4  bg-white shadow rounded-xl flex items-center justify-center text-center p-4">
+                <div className="card  w-[80%] sm:w-[50%] md:w-[40%] lg:w-[25%] tracking-wider  mt-4  bg-white shadow rounded-xl flex items-center justify-center text-center p-4">
                   <div className="img w-[100%]  aspect-square">
                     <img
                       src={el.img}
                       className="w-full rounded-xl h-full object-cover object-top "
-                      alt=""
+                      alt={el.alt}
                     />
-                    <h1 className=" mt-2  text-black/80 font-medium ">
+                    <span className=" mt-2  text-black/80 font-medium block ">
                       {el.Name}
-                    </h1>
+                    </span>
                     <h4>{el.title}</h4>
-                    <a href={`tel:${el.Phone}`} className=" text-[14px]  ">
+                    <a href={`tel:${el.Phone}`} className="  tracking-widest text-black/80 mt-1 block text-[14px]  ">
                       <i class="ri-phone-fill"></i> {el.Phone}
                     </a>
                   </div>

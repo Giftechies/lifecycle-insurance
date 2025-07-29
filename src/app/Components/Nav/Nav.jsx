@@ -4,16 +4,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function Nav({ setIsMenuOpen, }) {
+export default function Nav({ setIsMenuOpen }) {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [InsuranceOpen, setInsuranceOpen] = useState(false);
   const [mortgageOpen, setMortgageOpen] = useState(false);
   const [calculatorOpen, setcalculatorOpen] = useState(false);
   const router = useRouter();
 
-
   return (
-    
     <>
       <nav className="  w-full max-w-[1600px] min-w--[320px] mx-auto ">
         <div className=" w-full h-15  lg:h-20 px-4   lg:px-[3rem]  py-1  flex items-center justify-between      max-w-[1600px] mx-auto ">
@@ -30,49 +28,52 @@ export default function Nav({ setIsMenuOpen, }) {
           </div>
           <div className=" flex items-center lg:gap-3 lg:text-[14px] xl:gap-12 xl:text-[16px]">
             <div className="hidden mb:flex mb:gap-1  lg:flex gap-3  ">
-              <Link href="/About-us" className="border-b-2 border-white  hover:border-b-2 hover:border-black px-4 py-2">
+             
+              <Link
+                href="/About-us"
+                className="border-b-2 border-white  hover:border-b-2 hover:border-black px-4 py-2"
+              >
                 About us
               </Link>
 
               {/* Insurance dropdown */}
-             <div
-  className="relative px-4 py-2 group"
-  onMouseEnter={() => setInsuranceOpen(true)}
-  onMouseLeave={() => setInsuranceOpen(false)}
->
-  <Link href="/Insurance" className="flex items-center gap-1">
-    Insurance
-    <span className="transition-transform duration-200 group-hover:rotate-180">
-      <i class="ri-arrow-down-s-line"></i>
-    </span>
-  </Link>
+              <div
+                className="relative px-4 py-2 group"
+                onMouseEnter={() => setInsuranceOpen(true)}
+                onMouseLeave={() => setInsuranceOpen(false)}
+              >
+                <Link href="/Insurance" className="flex items-center gap-1">
+                  Insurance
+                  <span className="transition-transform duration-200 group-hover:rotate-180">
+                    <i class="ri-arrow-down-s-line"></i>
+                  </span>
+                </Link>
 
-  {InsuranceOpen && (
-    <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-md z-50 p-3">
-      {[
-        "Life insurance",
-        "Trauma Recovery Cover",
-        "Total Permanent Disability Benefit Cover",
-        "Mortgage & Rent Protection Cover",
-        "Income Protection Cover",
-        "Medical Insurance",
-        "Group Insurance",
-      ].map((item, index) => (
-        <Link
-          key={index}
-          href={`/Insurance/${item
-            .toLowerCase()
-            .replace(/ & /g, "-")
-            .replace(/\s+/g, "-")}`}
-          className="block px-3 py-2 hover:bg-gray-100 text-black text-sm"
-        >
-          {item}
-        </Link>
-      ))}
-    </div>
-  )}
-</div>
-
+                {InsuranceOpen && (
+                  <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-md z-50 p-3">
+                    {[
+                      "Life insurance",
+                      "Trauma Recovery Cover",
+                      "Total Permanent Disability Benefit Cover",
+                      "Mortgage & Rent Protection Cover",
+                      "Income Protection Cover",
+                      "Medical Insurance",
+                      "Group Insurance",
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        href={`/Insurance/${item
+                          .toLowerCase()
+                          .replace(/ & /g, "-")
+                          .replace(/\s+/g, "-")}`}
+                        className="block px-3 py-2 hover:bg-gray-100 text-black text-sm"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* Mortgage dropdown */}
               <div
@@ -80,8 +81,11 @@ export default function Nav({ setIsMenuOpen, }) {
                 onMouseEnter={() => setMortgageOpen(true)}
                 onMouseLeave={() => setMortgageOpen(false)}
               >
-                <Link href="/Mortgage"  className=" flex gap-1"  >Mortgage <span className=" group-hover:rotate-180  transition-transform duration-300  " ><i className="ri-arrow-down-s-line"></i></span>
-                
+                <Link href="/Mortgage" className=" flex gap-1">
+                  Mortgage{" "}
+                  <span className=" group-hover:rotate-180  transition-transform duration-300  ">
+                    <i className="ri-arrow-down-s-line"></i>
+                  </span>
                 </Link>
                 {mortgageOpen && (
                   <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
@@ -108,34 +112,37 @@ export default function Nav({ setIsMenuOpen, }) {
               </div>
 
               <div className="px-4 py-2 group relative">
-                <Link href="/Case-study" className=" flex gap-1" >Case Study 
+                <Link href="/Case-study" className=" flex gap-1">
+                  Case Study
                 </Link>
-                
               </div>
 
-
-
-              <div 
+              <div
                 onMouseEnter={() => setcalculatorOpen(true)}
                 onMouseLeave={() => setcalculatorOpen(false)}
-              className=" px-4 py-2 relative group ">
-                <Link href="/Calculator" className="flex gap-1" >Calculator  <span className=" group-hover:rotate-180  transition-transform duration-300  " ><i class="ri-arrow-down-s-line"></i></span></Link>
-                 {calculatorOpen && (
+                className=" px-4 py-2 relative group "
+              >
+                <Link href="/Calculator" className="flex gap-1">
+                  Calculator{" "}
+                  <span className=" group-hover:rotate-180  transition-transform duration-300  ">
+                    <i class="ri-arrow-down-s-line"></i>
+                  </span>
+                </Link>
+                {calculatorOpen && (
                   <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
-                    {[
-                      "Repayment Calculator",
-                      "Loan calculator",
-                    ].map((item, index) => (
-                      <Link
-                        key={index}
-                        href={`/Calculator/${item
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
-                        className="block px-3 py-2 hover:bg-gray-100 text-black"
-                      >
-                        {item}
-                      </Link>
-                    ))}
+                    {["Repayment Calculator", "Loan calculator"].map(
+                      (item, index) => (
+                        <Link
+                          key={index}
+                          href={`/Calculator/${item
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")}`}
+                          className="block px-3 py-2 hover:bg-gray-100 text-black"
+                        >
+                          {item}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
               </div>
@@ -189,7 +196,7 @@ export default function Nav({ setIsMenuOpen, }) {
               <span class="text-xs font-medium">Call</span>
             </a>
             <a
-               href="mailto:harpreet@lifecyclefinancial.co.nz"
+              href="mailto:harpreet@lifecyclefinancial.co.nz"
               class="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
             >
               <svg
