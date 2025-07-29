@@ -9,7 +9,7 @@ import { useEnquiryContext } from "./Context/EnquiryContext";
 import { nanoid } from "nanoid";
 import { useRouter } from "next/navigation";
 import Testimonials from "./Components/Testimonial/Testimonials";
-import { HomeData } from "./lib/api";
+import { toast } from "react-toastify";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -20,39 +20,10 @@ export default function Home() {
   const sec4 = useRef();
   const sec5 = useRef();
   const router = useRouter();
-  const [loading, setloading] = useState(true);
   const [data, setdata] = useState();
  const logos = Array.from({ length: 31 }, (_, i) => ({
   img: `/mq${i + 1}.png`,
 }));
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const res = await HomeData("home-sections");
-        setdata(res);
-
-        if (data) {
-          console.log("dsfsd>>>>>>", data);
-          console.log("e>>>>", res);
-        }
-      } catch (error) {
-        console.log("error", error);
-      } finally {
-        setloading(false);
-      }
-    }
-    fetchData();
-  }, []);
-
-  // useEffect(() => {
-  //   if (data?.data?.[5]?.files?.length > 0) {
-  //     setlogos(data?.data[5].files);
-  //   }
-  // }, [data]);
-
- 
-
   const sec3_cards = [
     {
       img: "/target.svg",
@@ -150,7 +121,7 @@ export default function Home() {
       x: -250,
       opacity: 0,
       duration: 1.5,
-      stagger: -0.3,
+      stagger: 0.5,
       ease: "power2",
       scrollTrigger: {
         trigger: ".sec-4-card-left",
@@ -197,15 +168,51 @@ useGSAP(() => {
  
  
 
-  const { setEnquiries, enquiries } = useEnquiryContext();
+  
   const { register, handleSubmit, reset } = useForm();
 
-  const onSubmit = (formData) => {
-    formData.id = nanoid();
-    const updated = [...enquiries, formData];
-    setEnquiries(updated);
-    reset();
-    console.log("submitted");
+ const [status, setStatus] = useState(''); // State to display success/error messages
+  const [loading, setLoading] = useState(false); // State for button loading
+
+  const onSubmit = async (formData) => {
+    setLoading(true); // Start loading state
+    setStatus('Sending your message...'); // Initial feedback
+
+    try {
+      const response = await fetch('/api/sendmail', { // Use your existing API route
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,    // These fields match your Enquiry form
+          service: formData.service,  // These fields match your Enquiry form
+          message: formData.message,
+          sourcePage: "Home Page"
+        }),
+      });
+
+      const data = await response.json(); // Parse the response from your API route
+
+      if (response.ok && data.success) { // Check for successful API response
+        console.log('✅ Email sent successfully from homepage (Frontend):', data.message);
+        toast.success('Your message has been sent successfully!')
+        setStatus('Your message has been sent successfully!');
+        reset(); // Clear the form fields
+      } else {
+        console.error('❌ Email failed from homepage (Frontend):', data.message); toast.error(`Failed to send message: ${data.message || 'Unknown error'}. Please try again.`);
+        setStatus(`Failed to send message: ${data.message || 'Unknown error'}. Please try again.`);
+      }
+    } catch (error) {
+      console.error('❌ Network or server error from homepage (Frontend):', error);
+      toast.error('An error occurred. Please check your internet connection and try again.');
+      
+      setStatus('An error occurred. Please check your internet connection and try again.');
+    } finally {
+      setLoading(false); // Always stop loading
+    }
   };
 
   // if (loading) {
@@ -491,20 +498,20 @@ useGSAP(() => {
             {/* part 2 */}
             <div className="superpart-2  w-full h-[75em] mt-8 flex flex-col max-md:gap-6 sm:mt-0 md:h-[40em] md:mt-5 lg:gap-3 lg:flex-row lg:mt-8 lg:h-[18em]  xl:h-[16em] ">
              
-              {/* container 2 */}
+              {/* container 1 */}
               <div className="container2  w-full h-[49%]      flex flex-col   gap-6 md:flex-row-reverse md:w-[100%] md:h-[50%] lg:gap-3 lg:flex-row lg:h-full lg:w-[50%]  ">
-                {/* part 3 */}
-                <div className="part3 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden  ">
+                {/* part 1 */}
+                <div className="part1 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden  ">
                   <img
                     src="/pic4.jpg"
                     className=" h-full w-full  object-cover"
                     alt=""
                   />
                 </div>
-                {/* part 4 */}
+                {/* part 2 */}
                 <div
                   onClick={() => router.push("/Mortgage")}
-                  className="part4  sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--primg)] text-white relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
+                  className="part2  sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--primg)] text-white relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
                 >
                   <h3 className="text-[20px] font-bold cursor-pointer ">
                  Mortgage
@@ -519,20 +526,20 @@ useGSAP(() => {
                   </div>
                 </div>
               </div>
-               {/* container 1 */}
+               {/* container 2 */}
               <div className="container1 w-full h-[49%] flex flex-col gap-6  md:flex-row md:h-[50%]  md:w-[100%] lg:gap-3 lg:h-full lg:w-[50%]  ">
-                {/* part 1 */}
-                <div className="part1 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden ">
+                {/* part 3 */}
+                <div className="part3 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden ">
                   <img
                     src="/pic3.jpg"
                     className=" h-full w-full  object-cover"
                     alt=""
                   />
                 </div>
-                {/* part 2 */}
+                {/* part 4 */}
                 <div
                   onClick={() => router.push("/Insurance")}
-                  className="part2 sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
+                  className="part4 sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
                 >
                   <h3 className="text-white cursor-pointer font-semibold text-[20px] ">
                     Insurance

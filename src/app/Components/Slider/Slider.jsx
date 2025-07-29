@@ -88,8 +88,8 @@ export default function Slider() {
             href="mailto:harpreet@lifecyclefinancial.co.nz"
             className="flex items-start gap-2 mt-2 text-sm break-all"
           >
-            <i className="ri-mail-line text-xl text-[var(--primg)]" />
-            <span className="">harpreet@lifecyclefinancial.co.nz</span>
+            <i className="ri-mail-line text-xl -mt-1 text-[var(--primg)]" />
+            <span className=" text-[13px] font-medium">harpreet@lifecyclefinancial.co.nz</span>
           </a>
  <Link href={'/Enquire'} passHref >
           <button className="bg-[var(--primg)] text-white w-full rounded-md mt-5 py-2 text-sm hover:opacity-90 transition">

@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Banner from "../Components/Banner/Banner";
-import { getCategoryPages } from "../lib/api";
 import Link from "next/link";
 
 export default function about() {
@@ -135,7 +134,7 @@ export default function about() {
           <main className="   max-w-[1600px] max-lg:space-y-4  max-lg:p-6   mx-auto  relative  ">
             {/* Lower div */}
             <div className=" lower w-full flex max-lg:flex-col  gap-6 lg:gap-3  lg:p-[2.8rem]  xl:p-[5rem] justify-around  ">
-              <div className=" w-full rounded-2xl   lg:w-[45%] bg-white p-3 shadow-2xl  lg:p-10  styled-html ">
+              <div className=" w-full rounded-2xl   lg:w-[45%] bg-white p-3 shadow-2xl  lg:p-10  styled-html  ">
                 <h2>Why Lifecycle Financial?</h2>
                 <ul>
                   <li>
@@ -167,42 +166,42 @@ export default function about() {
     <h2 className="text-2xl font-semibold text-gray-800 mb-6">What We Do?</h2>
   </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-[repeat(2,300px_200px)] gap-10 justify-betweeng">
-    {/* Insurance Column */}
-    <div className="">
-      <h3 className="text-lg  mb-3">
-        <Link href="/Insurance" className="hover:text-[var(--primg)] transition-colors">
-          Insurance
-        </Link>
-      </h3>
-      <ul className="space-y-2 text-sm text-gray-700">
-        <li><Link href="/Insurance/life-insurance">Life Insurance</Link></li>
-        <li><Link href="/Insurance/trauma-recovery-cover">Trauma Recovery Cover</Link></li>
-        <li><Link href="/Insurance/total-permanent-disability-benefit-cover">Total Permanent Disability Benefit Cover</Link></li>
-        <li><Link href="/Insurance/mortgage-rent-protection-cover">Mortgage & Rent Protection Cover</Link></li>
-        <li><Link href="/Insurance/income-protection-cover">Income Protection Cover</Link></li>
-        <li><Link href="/Insurance/medical-insurance">Medical Insurance</Link></li>
-        <li><Link href="/Insurance/group-insurance">Group Insurance</Link></li>
-      </ul>
-    </div>
-
-    {/* Mortgage Column */}
-    <div>
-      <h3 className="text-lg mb-3">
-        <Link href="/Mortgage" className="hover:text-[var(--primg)] transition-colors">
-          Mortgage
-        </Link>
-      </h3>
-      <ul className="space-y-2 text-sm text-gray-700">
-        <li><Link href="/Mortgage/home-loan">Home Loan</Link></li>
-        <li><Link href="/Mortgage/refinance">Refinance</Link></li>
-        <li><Link href="/Mortgage/investment-loan">Investment Loan</Link></li>
-        <li><Link href="/Mortgage/business-loan">Business Loan</Link></li>
-        <li><Link href="/Mortgage/construction-loan">Construction Loan</Link></li>
-        <li><Link href="/Mortgage/commercial-loan">Commercial Loan</Link></li>
-      </ul>
-    </div>
+ <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 justify-between  "> {/* Changed gap-10 to gap-x-8 for horizontal space */}
+  {/* Insurance Column */}
+  <div className=" mx-auto "> 
+    <h3 className="text-lg mb-3">
+      <Link href="/Insurance" className="hover:text-[var(--primg)] transition-colors">
+        Insurance
+      </Link>
+    </h3>
+    <ul className="space-y-2 text-sm text-gray-700">
+      <li><Link href="/Insurance/life-insurance">Life Insurance</Link></li>
+      <li><Link href="/Insurance/trauma-recovery-cover">Trauma Recovery Cover</Link></li>
+      <li><Link href="/Insurance/total-permanent-disability-benefit-cover">Total Permanent Disability Benefit Cover</Link></li>
+      <li><Link href="/Insurance/mortgage-rent-protection-cover">Mortgage & Rent Protection Cover</Link></li>
+      <li><Link href="/Insurance/income-protection-cover">Income Protection Cover</Link></li>
+      <li><Link href="/Insurance/medical-insurance">Medical Insurance</Link></li>
+      <li><Link href="/Insurance/group-insurance">Group Insurance</Link></li>
+    </ul>
   </div>
+
+  {/* Mortgage Column */}
+  <div className="  mx-auto"> {/* No change needed here for this issue */}
+    <h3 className="text-lg mb-3">
+      <Link href="/Mortgage" className="hover:text-[var(--primg)] transition-colors">
+        Mortgage
+      </Link>
+    </h3>
+    <ul className="space-y-2 text-sm text-gray-700">
+      <li><Link href="/Mortgage/home-loan">Home Loan</Link></li>
+      <li><Link href="/Mortgage/refinance">Refinance</Link></li>
+      <li><Link href="/Mortgage/investment-loan">Investment Loan</Link></li>
+      <li><Link href="/Mortgage/business-loan">Business Loan</Link></li>
+      <li><Link href="/Mortgage/construction-loan">Construction Loan</Link></li>
+      <li><Link href="/Mortgage/commercial-loan">Commercial Loan</Link></li>
+    </ul>
+  </div>
+</div>
 </div>
 
             </div>

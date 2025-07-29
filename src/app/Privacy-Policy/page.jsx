@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react"
-import {getCategoryPages} from '../lib/api'
 import Banner from '../Components/Banner/Banner'
 import { Section } from "lucide-react"
 
@@ -9,27 +8,6 @@ import { Section } from "lucide-react"
 export default function(){
     const [data, setdata] = useState(null)
 
-    // useEffect(()=>{
-    //     async function fetchData() {
-    //         try {
-    //             const res = await getCategoryPages("privacy-policy")
-    //             if(res){
-    //                 setdata(res)
-    //                 console.log("resp>>>>>",res);
-                    
-    //             }
-                
-    //         } catch (error) {
-    //             console.log('error p>>>>',error)
-                
-    //         }
-    //     }
-    //     fetchData()
-    // },[])
-
-    // if(!data){
-    //   return  <div>loding...</div>
-    // }
     return(
 
         <>

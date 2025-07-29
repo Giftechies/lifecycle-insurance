@@ -186,7 +186,7 @@ const Testimonials: FC = () => {
   return (
     <div className="  w-full max-w-[1600px] p-4 lg:p-[3rem] mx-auto bg-[var(--secgr)]/10 overflow-hidden ">
       <div className="text-center mb-12">
-          <h6 className="text-[18px]  mt-8 font-bold text-[var(--secgr)]">
+          <h6 className="text-[18px] md:text-[36px]  mt-8 font-bold text-[var(--secgr)]">
             Our Client Reviews
             
           </h6>

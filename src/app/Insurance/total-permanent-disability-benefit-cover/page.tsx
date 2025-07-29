@@ -148,7 +148,7 @@ const Sidebar = () => {
                 
               <div className="RightContent  h-full  overflow-hidden rounded-xl ">
                 <img
-                  src="/disability.avif"
+                  src="/Permanent-Disability-Insurance.jpg"
                   className="max-md:h-80 h-full w-full object-cover"
                   alt=""
                 />

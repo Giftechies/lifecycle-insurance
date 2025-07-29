@@ -70,6 +70,15 @@ button{
 .case strong{
 	font-size: 18px;
 }
+/* footer */
+.footer{
+	font-size: 14px;
+}
+
+/* enquire */
+.enquire a{
+	font-size: 14px;
+}
 
 /* Privacy */
 

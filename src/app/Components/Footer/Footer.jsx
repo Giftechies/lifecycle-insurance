@@ -1,5 +1,4 @@
 "use client";
-import { HomeData } from "@/app/lib/api";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -29,7 +28,7 @@ export default function Footer() {
         <main className="w-full h-full max-w-[1600px] mx-auto  p-4  lg:p-[3rem]  tracking-wide  max-lg:pb-26  font-light">
           <div
             className="content border-b pb-4  border-dotted border-white/50 text-white/90
-              grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[150px_150px_150px_180px_300px]  justify-between  space-y-5  lg:items-start "
+              grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[300px_150px_150px_180px_300px]  justify-between  space-y-5  lg:items-start "
           >
             {/* Insurance */}
             <div className="shrink-0 lg:pt-0   ">
@@ -47,7 +46,7 @@ export default function Footer() {
 
             {/* Mortgage */}
             <div className=" lg:pt-0  ">
-              <Link  href='/Mortgage'  className="text-[18px] font-medium mb-3 text-white">Mortgage</Link>
+              <Link  href='/Mortgage'  className="!text-[18px] font-medium mb-3 text-white">Mortgage</Link>
               <div className="flex flex-col space-y-4 mt-3">
                 <Link href="/Mortgage/home-loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>
                 <Link href="/Mortgage/refinance" className="text-white/90 hover:text-white transition-colors">Refinance</Link>

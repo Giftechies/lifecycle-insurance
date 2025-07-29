@@ -34,7 +34,7 @@ export default function Slider() {
     ],
     result:" A major bank approved their $880,000 loan at a competitive 6.09% interest rate, with just a 5% deposit. They successfully purchased their dream home for $928,000—proving that with the right strategy and guidance, homeownership is achievable even in tough circumstances.",
     category: "Insurance",
-    coverImage: "/trauma.webp",
+    coverImage: "/Trauma-Insurance.jpg",
     date: "2025-07-24",
   },
     "making-home-ownership-possible": {

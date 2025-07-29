@@ -120,9 +120,9 @@ const Sidebar = () => {
           <section className=" section_1 w-full   ">
             {/*upper Content */}
             <div className="upperContent w-full ">
-              <h1 className=" text-[var(--primg)]  ">
+              <h6 className=" text-[var(--primg)]  ">
                 <i className="ri-record-circle-line mr-1.5 "></i>Income Protection Cover
-              </h1>
+              </h6>
               <h2 className="  text-[26px] leading-6 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
                What is IP Cover ?
               </h2>
@@ -139,9 +139,9 @@ const Sidebar = () => {
                 {/* content 1 */}
                 <div className="flex mt-2 ">
                   <div className=" text-black/60 ">
-                    <h1 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
+                    <h6 className=" text-[18px] lg:text-[26px] text-black font-semibold ">
                 Did you Know……..
-                    </h1>
+                    </h6>
                   
 
                     {cover.map((el) => (
@@ -168,7 +168,7 @@ const Sidebar = () => {
                 
               <div className="RightConte w-[100%]  h-full  overflow-hidden rounded-lg ">
                 <img
-                  src="/income.webp"
+                  src="/Income-Protection-Insurance.jpg"
                   className="  max-md:max-h-[20rem] h-full w-full object-cover"
                   alt=""
                 />
@@ -181,18 +181,18 @@ const Sidebar = () => {
           <section className="section_2  w-full  text-justify ">
 
             <div>
-              <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
+              <h6 className="text-[18px] mt-4 lg:text-[26px] text-black font-semibold">
               How does Income Protection cover work ?
-            </h1>
-            <p className=" text-[14px] ">A benefit is paid to you if you continue to be disabled after a pre-determined waiting period. You choose how long you want the waiting period to be, most people choose between 30-90 days. The longer the waiting period, the lower your premiums will be.
+            </h6>
+            <p className="mt-2 ">A benefit is paid to you if you continue to be disabled after a pre-determined waiting period. You choose how long you want the waiting period to be, most people choose between 30-90 days. The longer the waiting period, the lower your premiums will be.
             </p>
             </div>
            {/* type */}
            <div className=" mt-4 ">
-             <h1 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
+             <h6 className="text-[18px] mt-2 lg:text-[26px] text-black font-semibold">
             Types of Income Protection
-            </h1>
-            <p className=" text-[14px] ">A benefit is paid to you if you continue to be disabled after a pre-determined waiting period. You choose how long you want the waiting period to be, most people choose between 30-90 days. The longer the waiting period, the lower your premiums will be..</p>
+            </h6>
+            <p className=" mt-4 ">A benefit is paid to you if you continue to be disabled after a pre-determined waiting period. You choose how long you want the waiting period to be, most people choose between 30-90 days. The longer the waiting period, the lower your premiums will be..</p>
             {type.map((el)=>(
               <>
               

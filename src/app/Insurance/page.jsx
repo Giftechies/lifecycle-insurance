@@ -5,21 +5,21 @@ const cardData = [
     title: "Life Insurance",
     paragraph_1:
       "Protect your loved ones with tailored life Insurance. Ensure their financial security with affordable, flexible cover. Peace of mind....",
-    featured_image: "/life.webp",
+    featured_image: "/life-insurance-policy.jpg",
     link: "/Insurance/life-insurance",
   },
   {
     title: "Trauma Recovery Cover",
     paragraph_1:
       "Get support when it matters most. Trauma cover offers financial security after serious illness or injury so you ...",
-    featured_image: "/trauma.webp",
+    featured_image: "/Trauma-Insurance.jpg",
     link: "/Insurance/trauma-recovery-cover",
   },
   {
     title: "Total Permanent Disability Benefit Cover",
     paragraph_1:
       "Financial peace of mind if you're unable to work due to permanent disability...",
-    featured_image: "/disability.avif",
+    featured_image: "/Permanent-Disability-Insurance.jpg",
     link: "/Insurance/total-permanent-disability-benefit-cover",
   },
   {
@@ -33,7 +33,7 @@ const cardData = [
     title: "Income Protection Cover",
     paragraph_1:
       "Replace lost income during illness or injury. Maintain your lifestyle and meet your commitments with our flexible income protection plans, providing...",
-    featured_image: "/income.webp",
+    featured_image: "/Income-Protection-Insurance.jpg",
     link: "/Insurance/income-protection-cover",
   },
   {

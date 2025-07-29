@@ -51,12 +51,12 @@ export default function MobileMenuOverlay({
   return (
     <div className="fixed inset-0 z-[9999]">
       {/* Overlay background */}
-      <div className="absolute inset-0  bg-[var(--primg)]/50  backdrop-blur-[2px] " onClick={handleclose} />
+      <div className="absolute inset-0  bg-[var(--secgr)]/50  backdrop-blur-[2px] " onClick={handleclose} />
 
       {/* Side Drawer */}
       <div
         ref={drawerRef}
-        className="absolute top-0 right-0  h-full text-white w-[70%] sm:w-[50%]  bg-black shadow-lg p-6 overflow-y-auto"
+        className="absolute top-0 right-0  h-full text-white w-[70%] sm:w-[50%]   bg-black/70 shadow-lg p-6 overflow-y-auto"
       >
         <div className="border-b w-full h-8 text-[18px] font-medium flex justify-between items-end ">
           Menu{" "}
@@ -230,6 +230,11 @@ export default function MobileMenuOverlay({
             >
               Interest Rate
             </Link>
+          </li>
+          <li>
+            <Link href="/Enquire">
+            
+            Enquire Now</Link>
           </li>
         </ul>
       </div>

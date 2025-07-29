@@ -72,7 +72,7 @@ const Sidebar = () => {
 
   {/* Right Image */}
   <div className="w-full md:w-[40%] mt-6 lg:mt-0">
-    <div className="RightConte w-full h-[400px] border overflow-hidden rounded-lg">
+    <div className="RightConte w-full h-[400px] overflow-hidden rounded-lg">
       <img
         src="/commercial.webp"
         className="w-full h-full object-cover"

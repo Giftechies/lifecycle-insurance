@@ -11,20 +11,6 @@ export default function Nav({ setIsMenuOpen, }) {
   const [calculatorOpen, setcalculatorOpen] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        setShow(false); // hide on scroll down
-      } else {
-        setShow(true); // show on scroll up
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
   return (
     
@@ -160,7 +146,7 @@ export default function Nav({ setIsMenuOpen, }) {
             <div>
               <i
                 onClick={() => setIsMenuOpen(true)}
-                className="text-[1.5rem] py-2 px-2 lg:hidden bg-black text-white rounded-[5px] tracking-tighter ri-menu-line"
+                className="text-[1.5rem] py-2 px-2 lg:hidden bg-[var(--secgr)] text-white rounded-[5px] tracking-tighter ri-menu-line"
               ></i>
               <Link
                 href="/Enquire"
@@ -295,6 +281,8 @@ export default function Nav({ setIsMenuOpen, }) {
               >
                 <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
               </svg>
+
+              {/* <img src="/call.svg" className=" size-5" alt="" /> */}
               <span class="text-xs font-medium">Contact</span>
             </a>
           </div>

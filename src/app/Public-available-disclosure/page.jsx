@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getCategoryPages } from "../lib/api";
 import Banner from "../Components/Banner/Banner";
 
 export default function () {

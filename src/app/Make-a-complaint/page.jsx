@@ -1,34 +1,11 @@
 "use client"
 import { useEffect, useState } from "react"
-import {getCategoryPages} from '../lib/api'
 import Banner from '../Components/Banner/Banner'
 
 
 
 export default function(){
     const [data, setdata] = useState(null)
-
-    // useEffect(()=>{
-    //     async function fetchData() {
-    //         try {
-    //             const res = await getCategoryPages("make-complaint")
-    //             if(res){
-    //                 setdata(res)
-    //                 console.log("resp>>>>>",res);
-                    
-    //             }
-                
-    //         } catch (error) {
-    //             console.log('error p>>>>',error)
-                
-    //         }
-    //     }
-    //     fetchData()
-    // },[])
-
-    // if(!data){
-    //   return  <div>loding...</div>
-    // }
     return(
 
         <>

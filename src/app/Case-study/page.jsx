@@ -26,7 +26,7 @@ const cards = [
     "The payout provided essential financial support during a highly stressful and emotional time, helping them to focus on recovery without the added burden of financial strain."
   ],
   category: "Insurance",
-  coverImage: "/trauma.webp", // Update with your actual image path
+  coverImage: "/Trauma-Insurance.jpg", // Update with your actual image path
   date: "2025-07-24", // optional
 },
 {

@@ -189,7 +189,7 @@ import {
   <div className="w-full  lg:w-[40%] flex">
     <div className="RightContent flex-grow overflow-hidden rounded-lg">
       <img
-        src="/trauma.webp"
+        src="/Trauma-Insurance.jpg"
         className=" max-md:h-60 lg:h-full w-full object-cover"
         alt="Right content"
       />
