@@ -49,7 +49,7 @@ export default function Slider() {
   const menuItems = isMortgage ? item : isInsurance ? Insurance : [];
 
   return (
-    <div className="hidden lg:flex  lg:w-[30%] xl:w-[25%] flex-col">
+    <div className="hidden lg:flex  lg:w-[40%] xl:w-[30%] flex-col">
       <div className="sticky top-0 w-full space-y-8">
         {/* Dynamic Menu */}
         {menuItems.length > 0 && (
