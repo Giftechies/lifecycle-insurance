@@ -62,15 +62,6 @@ section{
   line-height: 1.8;
 }
 
-.styled-html li {
-  margin-bottom: 0.5rem;
-  font-size: 14px;
-  text-align: justify;
-}
-
-.privacy img{
-	display: none;
-}
 button{
 	cursor: pointer;
 }

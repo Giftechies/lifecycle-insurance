@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Banner from "../Components/Banner/Banner";
 import { getCategoryPages } from "../lib/api";
+import Link from "next/link";
 
 export default function about() {
   return (
@@ -34,21 +35,20 @@ export default function about() {
                   <h6 className="  text-[14px]  font-extralight tracking-wider leading-6  text-justify    mt-3 ">
                     Lifecycle Financial is a Trusted financial advisory firm,
                     committed to delivering a comprehensive range of financial
-                    services tailored to your needs. We specialize in: 
-                   <br/> <strong>Mortgage Solutions</strong> – Residential and Commercial
-                   <br/> <strong>Personal Insurance –</strong> 
+                    services tailored to your needs. We specialize in:
+                    <br /> <strong>Mortgage Solutions</strong> – Residential and
+                    Commercial
+                    <br /> <strong>Personal Insurance –</strong>
                     Life, Health, Income Protection, Mortgage Protection,
-                    Redundancy Cover, and Trauma Insurance 
-                     <br/> <strong>General Insurance –</strong> 
+                    Redundancy Cover, and Trauma Insurance
+                    <br /> <strong>General Insurance –</strong>
                     Home, Contents, Car, and Business (through our network of
                     specialist partners) With strong relationships across New
-
                     Zealand’s top banks, private lenders, and insurance
                     providers, we’re able to offer highly competitive interest
                     rates and premiums—without compromising on the quality of
                     advice or products we recommend.
                   </h6>
-                 
                 </div>
               </div>
 
@@ -66,7 +66,11 @@ export default function about() {
                   Comprehensive Financial Solutions, Tailored to Your Needs
                 </h2>
                 <p className=" text-[14px]   text-justify text-white/80  ">
-                 At LifeCycle Financial, we are non-aligned advisers, meaning we are not tied to any specific lender or insurer. This independence allows us to provide objective recommendations tailored solely to your needs—based on a comprehensive needs analysis, not sales targets.
+                  At LifeCycle Financial, we are non-aligned advisers, meaning
+                  we are not tied to any specific lender or insurer. This
+                  independence allows us to provide objective recommendations
+                  tailored solely to your needs—based on a comprehensive needs
+                  analysis, not sales targets.
                 </p>
               </div>
             </div>
@@ -79,7 +83,13 @@ export default function about() {
               {" "}
               Our Mortgage Experts
             </h2>
-            <h6 className=" text-center ">Our expert team of mortgage and insurance specialists provides a seamless, one-stop solution for all your personal and business financial needs. Whether you're protecting your income, financing your first home, or securing your business assets, we’re here to support you every step of the way.</h6>
+            <h6 className=" text-center ">
+              Our expert team of mortgage and insurance specialists provides a
+              seamless, one-stop solution for all your personal and business
+              financial needs. Whether you're protecting your income, financing
+              your first home, or securing your business assets, we’re here to
+              support you every step of the way.
+            </h6>
 
             {/* cards */}
             <div className=" w-full  text-black/40  mt-6 flex max-md:flex-col items-center justify-around gap-5 lg:justify-center lg:gap-15 ">
@@ -129,84 +139,124 @@ export default function about() {
                 <h2>Why Lifecycle Financial?</h2>
                 <ul>
                   <li>
-                    We act as a single point of contact for all your financial protection and lending requirements. We work with all major banks and insurance providers across New Zealand, giving you access to a full range of mortgage and personal insurance solutions, including life, health, trauma, income protection, and more.
+                    We act as a single point of contact for all your financial
+                    protection and lending requirements. We work with all major
+                    banks and insurance providers across New Zealand, giving you
+                    access to a full range of mortgage and personal insurance
+                    solutions, including life, health, trauma, income
+                    protection, and more.
                   </li>
                   <li>
-                   Our team consists of highly experienced advisers who have established a strong track record in the financial services industry. We pride ourselves on building long-term relationships and delivering advice you can trust.
+                    Our team consists of highly experienced advisers who have
+                    established a strong track record in the financial services
+                    industry. We pride ourselves on building long-term
+                    relationships and delivering advice you can trust.
                   </li>
                   <li>
-                   At the heart of our approach is a commitment to client-focused service. We ensure that when the time comes, you receive the protection and support you’ve paid for—so you can maintain financial security and your desired standard of living.
+                    At the heart of our approach is a commitment to
+                    client-focused service. We ensure that when the time comes,
+                    you receive the protection and support you’ve paid for—so
+                    you can maintain financial security and your desired
+                    standard of living.
                   </li>
-                  
                 </ul>
               </div>
 
               <div className="  w-full rounded-2xl text-left lg:w-[45%] bg-white p-4 lg:p-10  shadow-2xl styled-html">
-                
-            
-                   
-
-
-                {/* <ul>
-                  <li>
-                    We review old covers client has got to see whether it is
-                    up-to-date as per their needs and status.
-                  </li>
-                  <li>
-                    We do need analysis based upon the information provided by
-                    client.
-                  </li>
-                  <li>
-                    Based upon the need analysis, we contact all insurance
-                    companies to get best product and deal as per clients
-                    requirements.
-                  </li>
-                  <li>
-                    We do consultation and provide advice on various insurance
-                    issues.
-                  </li>
-                  <li>
-                    We will handle all claims on your behalf to get satisfactory
-                    conclusion.
-                  </li>
-                  <li>
-                    We do frequent follow-ups and auditing of your insurance
-                    portfolio.
-                  </li>
-                </ul> */}
-
-                <div  ><h2>What We Do?</h2></div>
-
-                <div className=" h-full w-full grid grid-cols-2 gap-5" >
-
-                  <div className=" ">
-                    <ul>
-                      <h3 className=" mb-2"><a href="/Insurance">Insurance</a></h3>
-                      <li><a href="/Insurance/life-insurance">Life Insurance</a></li>
-                      <li><a href="/Insurance/trauma-recovery-cover">Trauma Recovery Cover</a></li>
-                      <li><a href="/Insurance/total-permanent-disability-benefit-cover">Total Permanent Disability Benefit Cover</a></li>
-                      <li><a href="/Insurance/mortgage-rent-protection-cover">Mortgage & Rent Protection Cover</a></li>
-                      <li><a href="/Insurance/income-protection-cover">Income Protection Cover</a></li>
-                      <li><a href="/Insurance/medical-insurance">Medical Insurance</a></li>
-                      <li><a href="/Insurance/group-insurance">Group Insurance</a></li>
-
-                    </ul>
-                  </div>
-                  <div>
-                    <ul>
-                      <h3><a href="/Mortgage">Mortgage</a></h3>
-                      <li><a href="/Mortgage/home-loan">Home loan</a></li>
-                      <li><a href="/Mortgage/refinance">Refinance</a></li>
-                      <li><a href="/Mortgage/investment">Investment</a></li>
-
-                    </ul>
-                  </div>
-
+                <div>
+                  <h2>What We Do?</h2>
                 </div>
 
-               
+                <div className="h-full w-full grid grid-cols-[repeat(5,200px)] gap-16 mt-4">
+                  {/* Insurance Column */}
+                  <div className="text-left">
+                    <h3 className=" mb-2">
+                      <Link
+                        href="/Insurance"
+                        className="hover:text-[var(--primg)] transition-colors"
+                      >
+                        Insurance
+                      </Link>
+                    </h3>
+                    <ul className="space-y-2 text-sm text-left">
+                      <li>
+                        <Link href="/Insurance/life-insurance">
+                          Life Insurance
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Insurance/trauma-recovery-cover">
+                          Trauma Recovery Cover
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Insurance/total-permanent-disability-benefit-cover">
+                          Total Permanent Disability Benefit Cover
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Insurance/mortgage-rent-protection-cover">
+                          Mortgage & Rent Protection Cover
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Insurance/income-protection-cover">
+                          Income Protection Cover
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Insurance/medical-insurance">
+                          Medical Insurance
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Insurance/group-insurance">
+                          Group Insurance
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
 
-
+                  {/* Mortgage Column */}
+                  <div className="text-left  ">
+                    <h3 className=" mb-2">
+                      <Link
+                        href="/Mortgage"
+                        className="hover:text-[var(--primg)] transition-colors"
+                      >
+                        Mortgage
+                      </Link>
+                    </h3>
+                    <ul className="space-y-2 text-sm text-left">
+                      <li>
+                        <Link href="/Mortgage/home-loan">Home Loan</Link>
+                      </li>
+                      <li>
+                        <Link href="/Mortgage/refinance">Refinance</Link>
+                      </li>
+                      <li>
+                        <Link href="/Mortgage/investment-loan">
+                          Investment Loan
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Mortgage/business-loan">
+                          Business Loan
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Mortgage/construction-loan">
+                          Construction Loan
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/Mortgage/commercial-loan">
+                          Commercial Loan
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </main>
