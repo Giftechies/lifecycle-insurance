@@ -72,7 +72,7 @@ const Sidebar = () => {
       content:"You can claim your TPD Cover if you are unable to return to your specific occupation. For example, if you were injured and could no longer work as a plumber, you could claim your TPD Cover even if you were able to do another job, such as working ina plumbing company office. "
     },
     {title:" Any Occupation TPD : ",
-      content:" you can claim your TPD cover if you are unable to work in any job that you are reasonably suited to by training, education or experience. For example, if you are injured and could no longer workas a plumber, you could claim your TPD Cover if you were also unable to do another job, such as working in a plumbing company office."
+      content:" you can claim your TPD cover if you are unable to work in any job that you are reasonably suited to by training, education or experience. For example, if you are injured and could no longer work as a plumber, you could claim your TPD Cover if you were also unable to do another job, such as working in a plumbing company office."
     },
     {title:" Modified TPD : ",
       content:" A good, low cost option if you are not in paid employment, you are in a very high risk occupation or are not eligible for Own or Any Occupation TPD. Instead of using an occupation definition, modified TPD applies if your permanently:"
