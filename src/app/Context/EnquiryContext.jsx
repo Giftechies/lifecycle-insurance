@@ -2,24 +2,10 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-export interface EnquiryData {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  service: string;
-  message: string;
-}
+const EnquiryContext = createContext(null);
 
-interface EnquiryContextType {
-  enquiries: EnquiryData[];
-  setEnquiries: React.Dispatch<React.SetStateAction<EnquiryData[]>>;
-}
-
-const EnquiryContext = createContext<EnquiryContextType | null>(null);
-
-export const EnquiryProvider = ({ children }: { children: React.ReactNode }) => {
-  const [enquiries, setEnquiries] = useState<EnquiryData[]>([]);
+export const EnquiryProvider = ({ children }) => {
+  const [enquiries, setEnquiries] = useState([]);
 
   useEffect(() => {
     const stored = localStorage.getItem("enquiries");
@@ -41,6 +27,8 @@ export const EnquiryProvider = ({ children }: { children: React.ReactNode }) => 
 
 export const useEnquiryContext = () => {
   const ctx = useContext(EnquiryContext);
-  if (!ctx) throw new Error("useEnquiryContext must be inside EnquiryProvider");
+  if (!ctx) {
+    throw new Error("useEnquiryContext must be used inside EnquiryProvider");
+  }
   return ctx;
 };

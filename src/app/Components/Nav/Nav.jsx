@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { ChevronDown, ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function Nav({ setIsMenuOpen }) {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -10,161 +12,136 @@ export default function Nav({ setIsMenuOpen }) {
   const [mortgageOpen, setMortgageOpen] = useState(false);
   const [calculatorOpen, setcalculatorOpen] = useState(false);
   const router = useRouter();
+  const path = usePathname()
+  console.log(path, 'path');
+
+  const navData = [
+    {
+      label: 'About us',
+      path: '/about-us'
+    },
+    {
+      label: 'Insurance',
+      path: "/insurance",
+      child: [
+        { label: "Life insurance", path: '/insurance/life-insurance' },
+        { label: "Trauma Recovery Cover", path: '/insurance/trauma-recovery-cover' },
+        { label: "Total Permanent Disability Benefit Cover", path: '/insurance/total-permanent-disability-benefit-cover' },
+        { label: "Mortgage & Rent Protection Cover", path: '/insurance/mortgage-rent-protection-cover' },
+        { label: "Income Protection Cover ", path: '/insurance/income-protection-cover ' },
+        { label: "Medical Insurance ", path: '/insurance/medical-insurance' },
+        { label: " Group Insurance", path: '/insurance/group-nsurance ' },
+        { label: "Life insurance", path: '/insurance/life-insurance' },
+      ]
+    },
+    {
+      label: "Mortgage",
+      path: '/mortgage',
+      child: [
+        { label: "Home Loan", path: "/mortgage/home-loan" },
+        { label: "Refinance", path: "/mortgage/refinance" },
+        { label: "Investment Loan", path: "/mortgage/investment-loan" },
+        { label: "Business Loan", path: "/mortgage/business-loan" },
+        { label: "Construction Loan", path: "/mortgage/construction-loan" },
+        { label: "Commercial Loan", path: "/mortgage/commercial-loan" },
+      ]
+    },
+    {
+      label: 'Case Study',
+      path: '/Case-study'
+    },
+    {
+      label: "Calculator",
+      path: "/Calculator",
+      child: [
+        {
+          label: "Repayment Calculator",
+          path: "/repayment-calculator"
+        },
+        {
+          label: "Loan calculator",
+          path: "/loan-calculator"
+        },
+      ]
+    },
+    {
+      label: "Interest Rate",
+      path: "/interest-rate"
+    }
+  ]
 
   return (
     <>
-      <nav className="  w-full max-w-[1600px] min-w--[320px] mx-auto ">
-        <div className=" w-full h-15  lg:h-20 px-4   lg:px-[3rem]  py-1  flex items-center justify-between      max-w-[1600px] mx-auto ">
-          {/*logo  */}
-          <div
-            onClick={() => router.push("/")}
-            className=" cursor-pointer w-[70px] md:w-[70px] p-1  lg:w-[90px] xl:w-[120px]  bg-white lg:p-3 mt-6 z-40 "
-          >
-            <img
-              src="/logo.png"
-              alt="Company Logo"
-              className="object-contain z-40 w-full h-full"
-            />
-          </div>
-          <div className=" flex items-center lg:gap-3 lg:text-[14px] xl:gap-12 xl:text-[16px]">
-            <div className="hidden mb:flex mb:gap-1  lg:flex gap-3  ">
-             
-              <Link
-                href="/About-us"
-                className="border-b-2 border-white  hover:border-b-2 hover:border-black px-4 py-2"
-              >
-                About us
-              </Link>
+      <nav className=" flex  w-full max-w-[1600px] min-w-[320px] mx-auto justify-between items-center px-4 lg:px-[3rem] h-20 ">
+        <div
+          onClick={() => router.push("/")}
+          className=" cursor-pointer w-[70px] md:w-[70px] p-1  lg:w-[90px] xl:w-[120px]  bg-white lg:p-3 mt-6 z-40 "
+        >
+          <img
+            src="/logo.png"
+            alt="Company Logo"
+            className="object-contain z-40 w-full h-full"
+          />
+        </div>
 
-              {/* Insurance dropdown */}
-              <div
-                className="relative px-4 py-2 group"
-                onMouseEnter={() => setInsuranceOpen(true)}
-                onMouseLeave={() => setInsuranceOpen(false)}
-              >
-                <Link href="/Insurance" className="flex items-center gap-1">
-                  Insurance
-                  <span className="transition-transform duration-200 group-hover:rotate-180">
-                    <i class="ri-arrow-down-s-line"></i>
-                  </span>
-                </Link>
+        <div className=" flex gap-8  items-center  justify-between " >
+          <div className="hidden lg:flex items-center gap-4 xl:gap-12  " >
+            {
+            navData?.map((item, idx) => {
 
-                {InsuranceOpen && (
-                  <div className="absolute top-full left-0 w-64 bg-white shadow-xl rounded-md z-50 p-3">
-                    {[
-                      "Life insurance",
-                      "Trauma Recovery Cover",
-                      "Total Permanent Disability Benefit Cover",
-                      "Mortgage & Rent Protection Cover",
-                      "Income Protection Cover",
-                      "Medical Insurance",
-                      "Group Insurance",
-                    ].map((item, index) => (
-                      <Link
-                        key={index}
-                        href={`/Insurance/${item
-                          .toLowerCase()
-                          .replace(/ & /g, "-")
-                          .replace(/\s+/g, "-")}`}
-                        className="block px-3 py-2 hover:bg-gray-100 text-black text-sm"
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              const haschild = item?.child && item?.child.length > 0
+              const isChildActive = haschild ? item?.child.some((child) => child.path === path) : false
+              const isActive = path === item.path || isChildActive
 
-              {/* Mortgage dropdown */}
-              <div
-                className="relative   px-4 py-2 group"
-                onMouseEnter={() => setMortgageOpen(true)}
-                onMouseLeave={() => setMortgageOpen(false)}
-              >
-                <Link href="/Mortgage" className=" flex gap-1">
-                  Mortgage{" "}
-                  <span className=" group-hover:rotate-180  transition-transform duration-300  ">
-                    <i className="ri-arrow-down-s-line"></i>
-                  </span>
-                </Link>
-                {mortgageOpen && (
-                  <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
-                    {[
-                      "Home Loan",
-                      "Refinance",
-                      "Investment Loan",
-                      "Business Loan",
-                      "Construction Loan",
-                      "Commercial Loan",
-                    ].map((item, index) => (
-                      <Link
-                        key={index}
-                        href={`/Mortgage/${item
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
-                        className="block px-3 py-2 hover:bg-gray-100 text-black"
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              return (
+                <div key={idx} className="relative group " >
+                  <Link href={`${item.path}`} className={cn("group flex items-center gap-2 relative ",{'font-semibold':isActive})} >
+                  <div className={cn(`w-0 bg-orange-700 h-px border absolute -bottom-1 left-0 `,{'w-full':isActive})} />
+          
+                    {item.label}
+                    {haschild && <span  >
+                      <ChevronDown className=" mt-1 size-4 group-hover:rotate-180 transition-all duration-300 ease-in-out"/>
 
-              <div className="px-4 py-2 group relative">
-                <Link href="/Case-study" className=" flex gap-1">
-                  Case Study
-                </Link>
-              </div>
+                    </span> }
+                  </Link>
 
-              <div
-                onMouseEnter={() => setcalculatorOpen(true)}
-                onMouseLeave={() => setcalculatorOpen(false)}
-                className=" px-4 py-2 relative group "
-              >
-                <Link href="/Calculator" className="flex gap-1">
-                  Calculator{" "}
-                  <span className=" group-hover:rotate-180  transition-transform duration-300  ">
-                    <i class="ri-arrow-down-s-line"></i>
-                  </span>
-                </Link>
-                {calculatorOpen && (
-                  <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3">
-                    {["Repayment Calculator", "Loan calculator"].map(
-                      (item, index) => (
+                  {haschild &&
+                    <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3 hidden group-hover:block ">
+                      {item.child.map((citem, index) => (
                         <Link
                           key={index}
-                          href={`/Calculator/${item
-                            .toLowerCase()
-                            .replace(/\s+/g, "-")}`}
+                          href={citem.path}
                           className="block px-3 py-2 hover:bg-gray-100 text-black"
                         >
-                          {item}
+                          {citem.label}
                         </Link>
-                      )
-                    )}
-                  </div>
-                )}
-              </div>
-              <div className="hover:border-b-2 hover:border-black px-4 py-2">
-                <Link href="/Interest-rate">Interest Rate</Link>
-              </div>
-            </div>
-            <div>
-              <i
-                onClick={() => setIsMenuOpen(true)}
-                className="text-[1.5rem] py-2 px-2 lg:hidden bg-[var(--secgr)] text-white rounded-[5px] tracking-tighter ri-menu-line"
-              ></i>
-              <Link
-                href="/Enquire"
-                className="hidden lg:block py-3 px-5  text-[14px] text-center   rounded-full bg-[var(--primg)] text-white  hover:text-black hover:mb-2
-           xl transition-all duration-400 ease-in-out"
-              >
-                Enquire Now
-              </Link>
-            </div>
+                      ))}
+                    </div>
+                  }
+                </div>
+              )
+            })
+          }
           </div>
+
+
+          <div>
+            <i
+              onClick={() => setIsMenuOpen(true)}
+              className="text-[1.5rem] py-2 px-2 lg:hidden bg-[var(--secgr)] text-white rounded-[5px] tracking-tighter ri-menu-line"
+            ></i>
+            <Link
+              href="/Enquire"
+              className="hidden lg:block py-3 px-5  text-[14px] text-center   rounded-full bg-[var(--primg)] text-white  hover:text-black hover:mb-2
+           xl transition-all duration-400 ease-in-out"
+            >
+              Enquire Now
+            </Link>
+          </div>
+
         </div>
+
+
       </nav>
 
       {/* mobile */}

@@ -6,7 +6,7 @@ import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import { useState } from "react";
 import MobileMenuOverlay from "./Components/MobileMenuOverlay/MobileMenuOverlay";
-import { EnquiryProvider } from "./Context/EnquiryContext"; 
+import { EnquiryProvider } from "./Context/EnquiryContext";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,6 +22,7 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ['100', '200']
 });
 
 
@@ -32,26 +33,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <html lang="en">
       <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+      />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <EnquiryProvider>
-          <Nav setIsMenuOpen={setIsMenuOpen}  />
-        {children}
-        <Footer/>
-         {isMenuOpen && (
-          <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen}  />
-        )}
+          <Nav setIsMenuOpen={setIsMenuOpen} />
+          {children}
+          <Footer />
+          {isMenuOpen && (
+            <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen} />
+          )}
         </EnquiryProvider>
-           <ToastContainer
+        <ToastContainer
           position="top-right" // Where the toasts will appear
           autoClose={5000}    // How long a toast stays (in ms)
           hideProgressBar={false} // Show or hide progress bar

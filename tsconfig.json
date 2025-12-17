@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Components/Nav/Nav.jsx", "src/app/Insurance/page.jsx", "src/app/[category]/page.jsx", "src/app/Enquire/page.jsx", "src/app/About-us/page.jsx", "src/app/Components/Slider/Slider.jsx", "src/app/page.jsx", "src/app/Components/Testimonial/Testimonials.tsx", "src/app/Components/Footer/Footer.jsx", "src/app/index/Insurance/page.jsx", "src/app/Mortgage/page.jsx", "src/app/Insurance/trauma-recovery-cover/page.jsx", "src/app/Components/Slideri/Slideri.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Components/Nav/Nav.jsx", "src/app/insurance/page.jsx", "src/app/[category]/page.jsx", "src/app/enquire/page.jsx", "src/app/about-us/page.jsx", "src/app/Components/Slider/Slider.jsx", "src/app/page.jsx", "src/app/Components/Testimonial/Testimonials.tsx", "src/app/Components/Footer/Footer.jsx", "src/app/index/Insurance/page.jsx", "src/app/mortgage/page.jsx", "src/app/insurance/trauma-recovery-cover/page.jsx", "src/app/Components/Slideri/Slideri.jsx", "src/app/Context/EnquiryContext.jsx"],
   "exclude": ["node_modules"]
 }
