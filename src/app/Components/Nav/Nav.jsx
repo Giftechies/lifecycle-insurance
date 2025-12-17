@@ -31,7 +31,7 @@ export default function Nav({ setIsMenuOpen }) {
         { label: "Income Protection Cover ", path: '/insurance/income-protection-cover ' },
         { label: "Medical Insurance ", path: '/insurance/medical-insurance' },
         { label: " Group Insurance", path: '/insurance/group-nsurance ' },
-        { label: "Life insurance", path: '/insurance/life-insurance' },
+       
       ]
     },
     {
@@ -84,8 +84,8 @@ export default function Nav({ setIsMenuOpen }) {
           />
         </div>
 
-        <div className=" flex gap-8  items-center  justify-between " >
-          <div className="hidden lg:flex items-center gap-4 xl:gap-12  " >
+        <div className=" flex gap-20  items-center  justify-between " >
+          <div className="hidden lg:flex items-center gap-4 xl:gap-10  " >
             {
             navData?.map((item, idx) => {
 
@@ -111,7 +111,7 @@ export default function Nav({ setIsMenuOpen }) {
                         <Link
                           key={index}
                           href={citem.path}
-                          className="block px-3 py-2 hover:bg-gray-100 text-black"
+                          className={`block px-3 py-2 hover:bg-gray-100 text-black ${path===citem.path && "bg-gray-200 rounded-lg "} `}
                         >
                           {citem.label}
                         </Link>

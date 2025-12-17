@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Toaster } from "react-hot-toast";
-import SubMenuNavItem from "@/components/SubMenuItem";
+import SubMenuNavItem from "../../components/Backend/SubMenuItem";
 import {
   FiHome,
   FiBook,
