@@ -5,12 +5,14 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import MobileMenuOverlay from "../MobileMenuOverlay/MobileMenuOverlay";
 
-export default function Nav({ setIsMenuOpen }) {
+export default function Nav() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [InsuranceOpen, setInsuranceOpen] = useState(false);
   const [mortgageOpen, setMortgageOpen] = useState(false);
   const [calculatorOpen, setcalculatorOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const path = usePathname()
   console.log(path, 'path');
@@ -143,6 +145,8 @@ export default function Nav({ setIsMenuOpen }) {
 
 
       </nav>
+
+      { isMenuOpen && <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen} /> }
 
       {/* mobile */}
       <div
