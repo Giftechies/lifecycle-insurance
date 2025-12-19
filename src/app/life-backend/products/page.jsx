@@ -7,7 +7,7 @@ export default async function ProductsPage() {
 
   return (
     <>
-      <DashboardHeader text="Products Section" url="/aws-backend" />
+      <DashboardHeader text="Products Section" url="/life-backend" />
       <ProductForm initialData={data} />
     </>
   );

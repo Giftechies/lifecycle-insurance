@@ -8,7 +8,7 @@ export default async function TeamPage(){
         <>
             <div className="dashboard-header">
                 <h3>Team</h3>
-                <Link href="/aws-backend/team/add">Add Team Member</Link>
+                <Link href="/life-backend/team/add">Add Team Member</Link>
             </div>
             <TeamTable initialData={data} />
         </>

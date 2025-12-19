@@ -8,7 +8,7 @@ export default async function News() {
     <>
       <div className="dashboard-header">
         <h3>News Studies</h3>
-        <Link href="/aws-backend/news-study/add">Add News Study</Link>
+        <Link href="/life-backend/news-study/add">Add News Study</Link>
       </div>
       <NewsTable studies={studies} />
     </>

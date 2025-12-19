@@ -116,7 +116,7 @@ function SortableRow({ banner, isLoading, onToggleStatus, onDelete }) {
       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
         <div className="flex items-center gap-2">
           <Link
-            href={`/aws-backend/hero/edit/${banner._id}`}
+            href={`/life-backend/hero/edit/${banner._id}`}
             className="text-blue-600 hover:text-blue-900 p-1 rounded hover:bg-blue-50 transition-colors"
             title="Edit"
           >
@@ -236,7 +236,7 @@ export default function DraggableHeroTable({ initialData }) {
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold text-gray-800">Hero Banners</h2>
         <Link
-          href="/aws-backend/hero/add"
+          href="/life-backend/hero/add"
           className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium text-[15px] tracking-wide"
         >
           <FiPlus className="w-4 h-4" />
@@ -254,7 +254,7 @@ export default function DraggableHeroTable({ initialData }) {
         <div className="text-center py-12">
           <p className="text-gray-500 text-lg">No hero banners found.</p>
           <Link
-            href="/aws-backend/hero/add"
+            href="/life-backend/hero/add"
             className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
             <FiPlus className="w-4 h-4" />

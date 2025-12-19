@@ -1,8 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "./Components/Nav/Nav";
 import NavProvider from "./Components/NavProvider";
-import Footer from "./Components/Footer/Footer";
+import FooterProvider from "./Components/FooterProvider";
 import { EnquiryProvider } from "./Context/EnquiryContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -33,10 +32,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <EnquiryProvider>
-          {/* <Nav /> */}
           <NavProvider/>
           {children}
-          <Footer />
+          <FooterProvider />
         </EnquiryProvider>
 
         <ToastContainer

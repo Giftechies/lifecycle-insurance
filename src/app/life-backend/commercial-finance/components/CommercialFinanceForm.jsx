@@ -42,7 +42,7 @@ export default function CommercialFinanceForm({ initialData }) {
                 await createCommercialFinance(formData);
                 toast.success("Commercial Finance created successfully!");
             }
-            router.push("/aws-backend/commercial-finance");
+            router.push("/life-backend/commercial-finance");
         } catch (error) {
             console.error(error);
             toast.error("Something went wrong!");

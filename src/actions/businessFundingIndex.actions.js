@@ -34,7 +34,7 @@ export async function updateBusinessFundingIndex(data){
             ...data,
             _id: index?._id?.toString(),
         }
-        revalidatePath("/aws-backend/business-funding-index");
+        revalidatePath("/life-backend/business-funding-index");
         revalidatePath("/business-funding");
         return { success: true, index: serializedIndex };
     } catch (error) {

@@ -6,7 +6,7 @@ export default async function NewsIndex(){
     const {data} = await getNewsIndex();
     return (
         <>
-            <DashboardHeader text="News Index" url="/aws-backend/news" />
+            <DashboardHeader text="News Index" url="/life-backend/news" />
             <NewsIndexForm initialData={data}/>
         </>
     )

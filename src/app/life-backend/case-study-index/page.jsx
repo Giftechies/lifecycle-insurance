@@ -6,7 +6,7 @@ export default async function CaseStudyIndexPage(){
     const {data} = await getCaseStudyIndex();
     return (
         <>
-            <DashboardHeader text={"Case Study Index"} url={`/aws-backend/case-study`} />
+            <DashboardHeader text={"Case Study Index"} url={`/life-backend/case-study`} />
             <CaseStudyIndexForm initialData={data}/>
         </>
     )

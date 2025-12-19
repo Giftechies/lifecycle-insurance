@@ -27,7 +27,7 @@ export async function updateNewsIndex(data){
         }else{
             await NewsIndex.findByIdAndUpdate(news._id, data);
         }
-        revalidatePath("/aws-backend/news-index");
+        revalidatePath("/life-backend/news-index");
         revalidatePath("/news");
         return { success: true };
     } catch (error) {

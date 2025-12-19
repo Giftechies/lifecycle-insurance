@@ -31,7 +31,7 @@ export async function updateMortgageIndex(data) {
             ...data,
             _id: mortgageIndexContent?._id?.toString(),
         };
-        revalidatePath("/aws-backend/mortgage-index");
+        revalidatePath("/life-backend/mortgage-index");
         revalidatePath("/mortgages");
         return { success: true, mortgageIndex: serializedMortgageIndex };
     } catch (error) {

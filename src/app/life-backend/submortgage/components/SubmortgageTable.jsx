@@ -28,10 +28,10 @@ export default function SubmortgageTable({ subMortgages }) {
       ),
     },
     {
-      header: "Category",
+      header: "Short Content",
       accessorKey: "category",
       cell: ({ row }) => (
-        <span className="dashboard-table-value">{row.original.category}</span>
+        <span className="dashboard-table-value">{row.original.shortContent}</span>
       ),
     },
     {
@@ -41,7 +41,7 @@ export default function SubmortgageTable({ subMortgages }) {
         <div className="dashboard-table-actions">
           <Link
             prefetch={true}
-            href={`/aws-backend/submortgage/edit/${row.original._id}`}
+            href={`/life-backend/submortgage/edit/${row.original._id}`}
             className="dashboard-edit-button"
           >
             <BiPencil />

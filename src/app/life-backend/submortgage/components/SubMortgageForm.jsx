@@ -1,6 +1,6 @@
 "use client";
 
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import ImageInput from "@/lib/ImageUpload";
 import MetaTags from "@/lib/MetaInput";
 import RichTextEditor from "@/lib/TextEditor";
@@ -14,19 +14,18 @@ import {
 } from "@/actions/subMortgage.actions";
 import PdfInput from "@/lib/PdfInput";
 
-export default function SubMortgageForm({ initialData, categories }) {
+export default function SubMortgageForm({ initialData,  }) {
   const router = useRouter();
-  console.log('categories',categories)
+  // console.log('categories',categories)
   const [formData, setFormData] = useState({
     heading: initialData?.heading || "",
     content: initialData?.content || "",
     shortContent: initialData?.shortContent || "",
-    category: initialData?.category || "",
     image: initialData?.image || "",
     imageAlt: initialData?.imageAlt || "",
     slug: initialData?.slug || "",
-    pdf: initialData?.pdf || "",
-    pdfAlt: initialData?.pdfAlt || "",
+    // pdf: initialData?.pdf || "",
+    // pdfAlt: initialData?.pdfAlt || "",
     metaTitle: initialData?.metaTitle || "",
     metaDescription: initialData?.metaDescription || "",
     metaKeywords: initialData?.metaKeywords || "",
@@ -57,7 +56,7 @@ export default function SubMortgageForm({ initialData, categories }) {
         toast.error(result.error);
       }
     }
-    router.push("/aws-backend/submortgage");
+    router.push("/life-backend/submortgage");
   };
 
   return (
@@ -81,8 +80,8 @@ export default function SubMortgageForm({ initialData, categories }) {
           value={formData.slug}
           onChange={(value) => handleChange("slug", value)}
         />
-        <label htmlFor="category">Select Mortgage Category</label>
-        <select
+        {/* <label htmlFor="category">Select Mortgage Category</label> */}
+        {/* <select
           id="category"
           name="category"
           value={formData.category}
@@ -94,7 +93,7 @@ export default function SubMortgageForm({ initialData, categories }) {
               {category.heading}
             </option>
           ))}
-        </select>
+        </select> */}
         <div>
           <label htmlFor="shortContent">Short Content</label>
           <textarea
@@ -134,7 +133,7 @@ export default function SubMortgageForm({ initialData, categories }) {
           metaKeywords={formData.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
-        <PdfInput
+        {/* <PdfInput
           uploadAction={(file) => uploadPageFile(file, "pdf")}
           onChange={(value) => handleChange("pdf", value)}
         />
@@ -146,7 +145,7 @@ export default function SubMortgageForm({ initialData, categories }) {
           value={formData.pdfAlt}
           onChange={(e) => handleChange("pdfAlt", e.target.value)}
           placeholder="Enter Pdf Alt"
-        />
+        /> */}
 
         <button type="submit">
           {initialData ? "Update Submortgage" : "Create Submortgage"}

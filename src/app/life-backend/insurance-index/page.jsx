@@ -7,7 +7,7 @@ export default async function InsuranceIndexPage() {
     console.log("main data",data)
     return (
         <>
-            <DashboardHeader text={"Insurance Index"} url={`/aws-backend/insurance`} />
+            <DashboardHeader text={"Insurance Index"} url={`/life-backend/insurance`} />
             <InsuranceIndexForm initialData={data} />
         </>
     )

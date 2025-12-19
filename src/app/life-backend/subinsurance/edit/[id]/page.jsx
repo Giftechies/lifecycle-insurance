@@ -13,7 +13,7 @@ export default async function EditSubInsurancePage({ params }) {
     <>
       <DashboardHeader
         text="Edit Sub Insurance"
-        url="/aws-backend/subinsurance"
+        url="/life-backend/subinsurance"
       />
       <SubInsuranceForm
         initialData={subInsurance.data}

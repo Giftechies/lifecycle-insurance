@@ -12,7 +12,7 @@ export default async function EditBusinessFundingPage({ params }) {
     <>
       <DashboardHeader
         text="Edit Business Funding"
-        url="/aws-backend/business-funding"
+        url="/life-backend/business-funding"
       />
       <BusinessFundingForm initialData={data} categories={categories} />
     </>

@@ -13,7 +13,7 @@ export default async function EditSubMortgage({ params }) {
         <>
             <DashboardHeader
                 text="Edit Submortgage"
-                url="/aws-backend/submortgage"
+                url="/life-backend/submortgage"
             />
             <SubMortgageForm initialData={data} categories={categories.data} />
         </>

@@ -24,7 +24,7 @@ export async function createCommercialFinance(formData) {
     try {
         await dbConnect();
         await CommercialFinance.create(formData);
-        revalidatePath("/aws-backend/commercial-finance");
+        revalidatePath("/life-backend/commercial-finance");
         revalidatePath(`/`,"layout");
         return { success: true };
     } catch (error) {
@@ -36,7 +36,7 @@ export async function updateCommercialFinance(id, formData) {
     try {
         await dbConnect();
         await CommercialFinance.findByIdAndUpdate(id, formData);
-        revalidatePath("/aws-backend/commercial-finance");
+        revalidatePath("/life-backend/commercial-finance");
         revalidatePath(`/`,"layout");
         return { success: true };
     } catch (error) {
@@ -48,7 +48,7 @@ export async function deleteCommercialFinance(id) {
     try {
         await dbConnect();
         await CommercialFinance.findByIdAndDelete(id);
-        revalidatePath("/aws-backend/commercial-finance");
+        revalidatePath("/life-backend/commercial-finance");
         revalidatePath(`/`,"layout");
         return { success: true };
     } catch (error) {

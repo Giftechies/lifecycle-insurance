@@ -8,7 +8,7 @@ export default async function EditCaseStudyPage({ params }) {
 
   return (
     <>
-      <DashboardHeader text="Edit Case Study" url="/aws-backend/case-study" />
+      <DashboardHeader text="Edit Case Study" url="/life-backend/case-study" />
       <CaseStudyForm studies={study} />
     </>
   );

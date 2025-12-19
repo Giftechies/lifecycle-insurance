@@ -55,7 +55,7 @@ export async function createHeroBanner(data) {
   try {
     await dbConnect();
     await Hero.create(data);
-    revalidatePath("/aws-backend/hero");
+    revalidatePath("/life-backend/hero");
     revalidatePath("/");
     return { success: true };
   } catch (error) {
@@ -67,7 +67,7 @@ export async function updateHeroBanner(id, data) {
   try {
     await dbConnect();
     await Hero.findByIdAndUpdate(id, data);
-    revalidatePath("/aws-backend/hero");
+    revalidatePath("/life-backend/hero");
     revalidatePath("/");
     return { success: true };
   } catch (error) {
@@ -79,7 +79,7 @@ export async function deleteHeroBanner(id) {
   try {
     await dbConnect();
     await Hero.findByIdAndDelete(id);
-    revalidatePath("/aws-backend/hero");
+    revalidatePath("/life-backend/hero");
     revalidatePath("/");
     return { success: true };
   } catch (error) {
@@ -96,7 +96,7 @@ export async function toggleHeroBannerStatus(id) {
     }
     banner.isActive = !banner.isActive;
     await banner.save();
-    revalidatePath("/aws-backend/hero");
+    revalidatePath("/life-backend/hero");
     revalidatePath("/");
     return { success: true };
   } catch (error) {
@@ -114,7 +114,7 @@ export async function updateHeroBannersOrder(banners) {
 
     await Promise.all(updatePromises);
 
-    revalidatePath("/aws-backend/hero");
+    revalidatePath("/life-backend/hero");
     revalidatePath("/");
     return { success: true };
   } catch (error) {

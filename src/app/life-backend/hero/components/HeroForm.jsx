@@ -43,7 +43,7 @@ export default function HeroForm({ initialData }) {
         const result = await updateHeroBanner(initialData._id, formData);
         if (result.success) {
           toast.success("Hero banner updated successfully!");
-          router.push("/aws-backend/hero");
+          router.push("/life-backend/hero");
         } else {
           toast.error(result.error || "Failed to update hero banner");
         }
@@ -51,7 +51,7 @@ export default function HeroForm({ initialData }) {
         const result = await createHeroBanner(formData);
         if (result.success) {
           toast.success("Hero banner created successfully!");
-          router.push("/aws-backend/hero");
+          router.push("/life-backend/hero");
         } else {
           toast.error(result.error || "Failed to create hero banner");
         }
@@ -205,7 +205,7 @@ export default function HeroForm({ initialData }) {
           </button>
           <button
             type="button"
-            onClick={() => router.push("/aws-backend/hero")}
+            onClick={() => router.push("/life-backend/hero")}
             className="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Cancel

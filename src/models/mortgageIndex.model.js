@@ -1,6 +1,15 @@
 import mongoose from "mongoose";
 
 const mortgageIndexSchema = new mongoose.Schema({
+  heading:{
+    type:String,
+  },
+  image:{
+    type:String,
+  },
+  slug:{
+    type:String
+  },
   content: {
     type: String,
     required: [true, "Content is required"],

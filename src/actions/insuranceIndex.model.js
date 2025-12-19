@@ -32,7 +32,7 @@ export async function updateInsuranceIndex(data){
             ...data,
             _id: index?._id?.toString(),
         }
-        revalidatePath("/aws-backend/insurance-index");
+        revalidatePath("/life-backend/insurance-index");
         revalidatePath("/insurance");
         return { success: true, index: serializedIndex };
     }catch(error){

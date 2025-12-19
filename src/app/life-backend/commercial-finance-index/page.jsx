@@ -6,7 +6,7 @@ export default async function CommercialFinanceIndexPage() {
     const {data} = await getCommercialIndex();
     return (
         <>
-            <DashboardHeader text={"Commercial Finance"} url={`/aws-backend/commercial-finance`}/>
+            <DashboardHeader text={"Commercial Finance"} url={`/life-backend/commercial-finance`}/>
             <CommercialIndexForm initialData={data}/>
         </>
     )

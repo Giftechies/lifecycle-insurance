@@ -41,7 +41,7 @@ export default function SubInsuranceTable({ initialData }) {
         <div className="dashboard-table-actions">
           <Link
             prefetch={true}
-            href={`/aws-backend/subinsurance/edit/${row.original._id}`}
+            href={`/life-backend/subinsurance/edit/${row.original._id}`}
             className="dashboard-edit-button"
           >
             <BiPencil />

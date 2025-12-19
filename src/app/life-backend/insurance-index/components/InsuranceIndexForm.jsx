@@ -2,50 +2,84 @@
 
 import { updateInsuranceIndex } from "@/actions/insuranceIndex.model";
 import MetaTags from "@/lib/MetaInput";
-import RichTextEditor from "@/lib/TextEditor"
+
 import { useState } from "react"
 import toast from "react-hot-toast";
+import ImageInput from '../../../../lib/ImageUpload'
+import {uploadPageFile} from "../../../../lib/uploadPageFile"
+import SlugInput from "../../../../components/Backend/SlugInput";
 
-export default function InsuranceIndexForm({initialData}){
-    const [formData,setFormData] = useState({
-        content:initialData?.content || "",
-        metaTitle:initialData?.metaTitle || "",
-        metaDescription:initialData?.metaDescription || "",
-        metaKeywords:initialData?.metaKeywords || "",
-    })
+export default function InsuranceIndexForm({ initialData }) {
+  const [formData, setFormData] = useState({
+    image: initialData?.image || "",
+    heading: initialData?.heading || "",
+    slug: initialData?.slig || "",
+    content: initialData?.content || "",
+    metaTitle: initialData?.metaTitle || "",
+    metaDescription: initialData?.metaDescription || "",
+    metaKeywords: initialData?.metaKeywords || "",
+  })
 
-    const handleChange = (field, value) => {
-        setFormData((formData) => ({ ...formData, [field]: value }));
-      };
+  const handleChange = (field, value) => {
+    setFormData((formData) => ({ ...formData, [field]: value }));
+  };
 
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            await updateInsuranceIndex(formData);
-            toast.success("Insurance Data updated successfully!");
-        } catch (error) {
-            toast.error("Something went wrong!");
-        }
-      }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await updateInsuranceIndex(formData);
+      toast.success("Insurance Data updated successfully!");
+    } catch (error) {
+      toast.error("Something went wrong!");
+    }
+  }
+  const handleImageSet = (feild,value)=>{
+    setFormData(prev=>({
+      ...prev,
+      [feild]:value
+    }))
 
-    return (
-            <form className="form-container grid md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
-                <div>
-                <label>Content</label>
-                <RichTextEditor
-          onChange={(value) => handleChange("content", value)}
+  }
+  return (
+    <form className="form-container grid md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="">Heading</label>
+        <input
+          type="text"
+          id="heading"
+          value={formData.heading}
+          onChange={(e) => handleChange("heading", e.target.value)}
+          placeholder="Enter heading"
+        />
+         <SlugInput
+          heading={formData.heading}
+          value={formData.slug}
+          onChange={(value) => handleChange("slug", value)}
+        />
+        <label>Content</label>
+        <textarea 
+           id="content"
           value={formData.content}
-        />   
-                </div>
-                <div>
-                <MetaTags
+          onChange={(e) => handleChange("content", e.target.value)}
+          placeholder="Enter content"
+          maxLength={150}
+          className="min-h-24"
+         />
+      </div>
+      <div>
+      <ImageInput
+      uploadAction={uploadPageFile}
+      onChange={handleImageSet} 
+      initialImage={initialData.image || ''}
+       />
+        <MetaTags
           metaTitle={formData.metaTitle}
           metaDescription={formData.metaDescription}
           metaKeywords={formData.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
         <button type="submit">Update Data</button>
-                </div>
-            </form>
-    )
+      </div>
+    </form>
+  )
 }

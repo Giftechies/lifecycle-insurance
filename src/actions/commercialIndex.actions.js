@@ -32,7 +32,7 @@ export async function updateCommercialIndex(data){
             ...data,
             _id: index?._id?.toString(),
         };
-        revalidatePath("/aws-backend/commercial-index");
+        revalidatePath("/life-backend/commercial-index");
         revalidatePath("/commercial-finance");
         return { success: true, index: serializedIndex };
     } catch (error) {

@@ -7,7 +7,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <DashboardHeader text="About Section" url="/aws-backend" />
+      <DashboardHeader text="About Section" url="/life-backend" />
       <AboutForm initialData={data} />
     </>
   );

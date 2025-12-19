@@ -8,7 +8,7 @@ export default async function InsurancePage() {
     <>
       <div className="dashboard-header">
         <h3>Insurance</h3>
-        <Link href="/aws-backend/insurance/add">Add Insurance</Link>
+        <Link href="/life-backend/insurance/add">Add Insurance</Link>
       </div>
       <InsuranceTable initialData={data} />
     </>

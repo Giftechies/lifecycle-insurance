@@ -34,7 +34,7 @@ export default function BusinessFundingTable({ initialData }){
             accessorKey:"actions",
             cell:({ row }) => (
                 <div className="dashboard-table-actions">
-                    <Link prefetch={true} href={`/aws-backend/business-funding/edit/${row.original._id}`} className="dashboard-edit-button">
+                    <Link prefetch={true} href={`/life-backend/business-funding/edit/${row.original._id}`} className="dashboard-edit-button">
                         <BiPencil/>
                     </Link>
                     <button onClick={() => setBusinessFundingToDelete(row.original)} className="dashboard-delete-button">

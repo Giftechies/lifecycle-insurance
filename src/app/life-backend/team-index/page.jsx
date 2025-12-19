@@ -6,7 +6,7 @@ export default async function TeamIndexPage(){
     const { data } = await getTeamIndex();
     return (
         <>
-        <DashboardHeader text={"Team Index"} url={`/aws-backend/team`} />
+        <DashboardHeader text={"Team Index"} url={`/life-backend/team`} />
         <TeamIndexForm initialData={data}/>
         </>
     )

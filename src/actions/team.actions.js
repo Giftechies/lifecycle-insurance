@@ -48,7 +48,7 @@ export async function createTeamMember(formData) {
     await dbConnect();
     const teamMember = new Team(formData);
     await teamMember.save();
-    revalidatePath("/aws-backend/team");
+    revalidatePath("/life-backend/team");
     revalidatePath("/meet-the-team");
     return { success: true };
   } catch (error) {
@@ -63,7 +63,7 @@ export async function updateTeamMember(id, formData) {
   try {
     await dbConnect();
     await Team.findByIdAndUpdate(id, formData);
-    revalidatePath("/aws-backend/team");
+    revalidatePath("/life-backend/team");
     revalidatePath("/meet-the-team");
     return { success: true };
   } catch (error) {
@@ -78,7 +78,7 @@ export async function deleteTeamMember(id) {
   try {
     await dbConnect();
     await Team.findByIdAndDelete(id);
-    revalidatePath("/aws-backend/team");
+    revalidatePath("/life-backend/team");
     revalidatePath("/meet-the-team");
     return { success: true };
   } catch (error) {

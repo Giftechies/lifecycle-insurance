@@ -54,7 +54,7 @@ export async function updateProductData(data) {
       await Product.create(data);
     }
 
-    revalidatePath("/aws-backend/products");
+    revalidatePath("/life-backend/products");
     revalidatePath("/");
     return { success: true };
   } catch (error) {

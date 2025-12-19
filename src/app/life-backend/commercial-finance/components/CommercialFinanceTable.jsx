@@ -36,7 +36,7 @@ export default function CommercialFinanceTable({ initialData }) {
                 <div className="dashboard-table-actions">
                     <Link
                         prefetch={true}
-                        href={`/aws-backend/commercial-finance/edit/${row.original._id}`}
+                        href={`/life-backend/commercial-finance/edit/${row.original._id}`}
                         className="dashboard-edit-button"
                     >
                         <BiPencil />

@@ -8,7 +8,7 @@ export default async function CaseStudyPage() {
     <>
       <div className="dashboard-header">
         <h3>Case Studies</h3>
-        <Link href="/aws-backend/case-study/add">Add Case Study</Link>
+        <Link href="/life-backend/case-study/add">Add Case Study</Link>
       </div>
       <CaseStudyTable studies={studies} />
     </>

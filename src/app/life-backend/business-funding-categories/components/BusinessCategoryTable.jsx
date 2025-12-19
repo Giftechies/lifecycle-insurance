@@ -34,7 +34,7 @@ export default function InsuranceTable({ initialData }) {
         <div className="dashboard-table-actions">
           <Link
             prefetch={true}
-            href={`/aws-backend/business-funding-categories/edit/${row.original._id}`}
+            href={`/life-backend/business-funding-categories/edit/${row.original._id}`}
             className="dashboard-edit-button"
           >
             <BiPencil />

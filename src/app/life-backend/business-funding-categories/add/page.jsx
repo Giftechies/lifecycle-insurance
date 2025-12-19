@@ -6,7 +6,7 @@ export default function AddInsurancePage() {
     <>
       <DashboardHeader
         text="Add Business Category"
-        url="/aws-backend/business-funding-categories"
+        url="/life-backend/business-funding-categories"
       />
       <BusinessCategoryForm initialData={null} />
     </>

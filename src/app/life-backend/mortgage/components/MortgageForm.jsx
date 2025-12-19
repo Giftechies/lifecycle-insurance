@@ -1,7 +1,7 @@
 "use client";
 
 import { createMortgage, updateMortgage } from "@/actions/mortgage.actions";
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import ImageInput from "@/lib/ImageUpload";
 import MetaTags from "@/lib/MetaInput";
 import RichTextEditor from "@/lib/TextEditor";
@@ -41,7 +41,7 @@ export default function Page({ initialData }) {
       await createMortgage(formData);
       toast.success("Mortgage created successfully!");
     }
-    router.push("/aws-backend/mortgage");
+    router.push("/life-backend/mortgage");
   };
 
   return (

@@ -3,9 +3,12 @@
 import { useRouter } from "next/navigation";
 import Banner from "../Components/Banner/Banner";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CategoryPage({ title, subtitle, cards, description }) {
   const router = useRouter();
+
+  console.log(cards)
 
   return (
     <main>
@@ -38,6 +41,12 @@ export default function CategoryPage({ title, subtitle, cards, description }) {
                     src={el.featured_image}
                     alt={el.title}
                     className="w-full cursor-pointer h-full object-cover "
+                  />
+                  <Image
+                  src={el.featured_image}
+                  width={250}
+                  height={250}
+                  alt={el?.alt || "hello"}
                   />
                 </div>
               </Link>

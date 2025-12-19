@@ -9,7 +9,7 @@ export default async function AddBusinessFundingPage() {
     <>
       <DashboardHeader
         text="Add Business Funding"
-        url="/aws-backend/business-funding"
+        url="/life-backend/business-funding"
       />
       <BusinessFundingForm categories={categories} />
     </>

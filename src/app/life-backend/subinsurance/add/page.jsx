@@ -6,7 +6,7 @@ export default async function AddInsurancePage() {
   const { data } = await getInsuranceNames();
   return (
     <>
-      <DashboardHeader text="Add Insurance" url="/aws-backend/subinsurance" />
+      <DashboardHeader text="Add Insurance" url="/life-backend/subinsurance" />
       <SubInsuranceForm initialData={null} categories={data} />
     </>
   );

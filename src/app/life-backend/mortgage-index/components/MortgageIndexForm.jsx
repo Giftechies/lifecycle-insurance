@@ -5,10 +5,20 @@ import MetaTags from "@/lib/MetaInput";
 import RichTextEditor from "@/lib/TextEditor";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import SlugInput from "../../../../components/Backend/SlugInput";
+import ImageInput from '../../../../lib/ImageUpload'
+import {uploadPageFile} from "../../../../lib/uploadPageFile"
+
+
+
 
 export default function MortgageIndexForm({initialData}){
     const [formData,setFormData] = useState({
+        heading:initialData.heading || "",
+        image:initialData.image || "" ,
+        slug:initialData.slug || "",
         content:initialData?.content || "",
+
         metaTitle:initialData?.metaTitle || "",
         metaDescription:initialData?.metaDescription || "",
         metaKeywords:initialData?.metaKeywords || "",
@@ -32,26 +42,53 @@ export default function MortgageIndexForm({initialData}){
             toast.error(error)
         }
     }
-
+  const handleImageSet = (feild,value)=>{
+    setFormData(prev=>({
+        ...prev,
+        [feild]:value
+    }))
+  }
     return (
-        <form onSubmit={handleSubmit} className="form-container grid md:grid-cols-2 gap-6">
-            <div>
-            <label htmlFor="content">Content</label>
-            <RichTextEditor
-          onChange={(value) => handleChange("content", value)}
-          value={formData.content}
-          
-        />
-        </div>
-        <div>
-        <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
-          onChange={(field, value) => handleChange(field, value)}
-        />
-        <button type="submit">Update Data</button>
-        </div>
-        </form>       
+        <form className="form-container grid md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
+           <div>
+             <label htmlFor="">Heading</label>
+             <input
+               type="text"
+               id="heading"
+               value={formData.heading}
+               onChange={(e) => handleChange("heading", e.target.value)}
+               placeholder="Enter heading"
+             />
+              <SlugInput
+               heading={formData.heading}
+               value={formData.slug}
+               onChange={(value) => handleChange("slug", value)}
+             />
+             <label>Content</label>
+             <textarea 
+                id="content"
+               value={formData.content}
+               onChange={(e) => handleChange("content", e.target.value)}
+               placeholder="Enter content"
+               maxLength={150}
+               className="min-h-24"
+              />
+           </div>
+           <div>
+           <ImageInput
+           uploadAction={uploadPageFile}
+           onChange={handleImageSet} 
+           initialImage={initialData.image || ''}
+            />
+             <MetaTags
+               metaTitle={formData.metaTitle}
+               metaDescription={formData.metaDescription}
+               metaKeywords={formData.metaKeywords}
+               onChange={(field, value) => handleChange(field, value)}
+             />
+             <button type="submit">Update Data</button>
+           </div>
+         </form>
+           
     )
 }

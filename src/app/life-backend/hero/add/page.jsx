@@ -4,7 +4,7 @@ import HeroForm from "../components/HeroForm";
 export default function AddHeroPage() {
   return (
     <>
-      <DashboardHeader text="Add Hero Banner" url="/aws-backend/hero" />
+      <DashboardHeader text="Add Hero Banner" url="/life-backend/hero" />
       <HeroForm initialData={null} />
     </>
   );

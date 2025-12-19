@@ -41,7 +41,7 @@ export default function InsuranceForm({ initialData }) {
         await createInsurance(formData);
         toast.success("Insurance created successfully!");
       }
-      router.push("/aws-backend/insurance");
+      router.push("/life-backend/insurance");
     } catch (error) {
       console.error(error);
       toast.error("Something went wrong!");

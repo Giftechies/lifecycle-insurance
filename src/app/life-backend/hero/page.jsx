@@ -7,7 +7,7 @@ export default async function HeroPage() {
 
   return (
     <>
-      {/* <DashboardHeader text="Hero Banners" url="/aws-backend" /> */}
+      {/* <DashboardHeader text="Hero Banners" url="/life-backend" /> */}
       <DraggableHeroTable initialData={data || []} />
     </>
   );

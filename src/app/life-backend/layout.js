@@ -25,50 +25,50 @@ export default function DashboardLayout({ children }) {
   const menuItems = [
     {
       title: "Dashboard",
-      href: "/aws-backend",
+      href: "/life-backend",
       icon: <FiHome className="h-5 w-5" />,
     },
     {
       title: "Homepage Sections",
       icon: <FiGrid className="h-5 w-5" />,
       submenu: [
-        { title: "Hero Section", href: "/aws-backend/hero" },
-        { title: "About Section", href: "/aws-backend/about" },
-        { title: "Products Section", href: "/aws-backend/products" },
+        { title: "Hero Section", href: "/life-backend/hero" },
+        { title: "About Section", href: "/life-backend/about" },
+        { title: "Products Section", href: "/life-backend/products" },
       ],
     },
     {
       title: "News Section",
       icon: <FiFileText className="h-5 w-5" />,
       submenu: [
-        { title: "News Posts", href: "/aws-backend/news-study" },
-        { title: "Index Page Content", href: "/aws-backend/news-index" },
+        { title: "News Posts", href: "/life-backend/news-study" },
+        { title: "Index Page Content", href: "/life-backend/news-index" },
       ],
     },
     {
       title: "Case Study",
       icon: <FiBook className="h-5 w-5" />,
       submenu: [
-        { title: "Case Studies", href: "/aws-backend/case-study" },
-        { title: "Index Page Content", href: "/aws-backend/case-study-index" },
+        { title: "Case Studies", href: "/life-backend/case-study" },
+        { title: "Index Page Content", href: "/life-backend/case-study-index" },
       ],
     },
     {
       title: "Mortgage",
       icon: <FiDollarSign className="h-5 w-5" />,
       submenu: [
-        { title: "Mortgage", href: "/aws-backend/mortgage" },
-        { title: "Sub Mortgage", href: "/aws-backend/submortgage" },
-        { title: "Index Page Content", href: "/aws-backend/mortgage-index" },
+        // { title: "Mortgage", href: "/life-backend/mortgage" },
+        { title: "Sub Mortgage", href: "/life-backend/submortgage" },
+        { title: "Index Page Content", href: "/life-backend/mortgage-index" },
       ],
     },
     {
       title: "Insurance",
       icon: <FiShield className="h-5 w-5" />,
       submenu: [
-        { title: "Insurance", href: "/aws-backend/insurance" },
-        { title: "Sub Insurance", href: "/aws-backend/subinsurance" },
-        { title: "Insurance Index Page", href: "/aws-backend/insurance-index" },
+        // { title: "Insurance", href: "/life-backend/insurance" },
+        { title: "Sub Insurance", href: "/life-backend/subinsurance" },
+        { title: "Insurance Index Page", href: "/life-backend/insurance-index" },
       ],
     },
     {
@@ -77,12 +77,12 @@ export default function DashboardLayout({ children }) {
       submenu: [
         {
           title: "Business Funding Categories",
-          href: "/aws-backend/business-funding-categories",
+          href: "/life-backend/business-funding-categories",
         },
-        { title: "Business Funding", href: "/aws-backend/business-funding" },
+        { title: "Business Funding", href: "/life-backend/business-funding" },
         {
           title: "Index Page Content",
-          href: "/aws-backend/business-funding-index",
+          href: "/life-backend/business-funding-index",
         },
       ],
     },
@@ -92,11 +92,11 @@ export default function DashboardLayout({ children }) {
       submenu: [
         {
           title: "Commercial Categories",
-          href: "/aws-backend/commercial-finance",
+          href: "/life-backend/commercial-finance",
         },
         {
           title: "Index Page Content",
-          href: "/aws-backend/commercial-finance-index",
+          href: "/life-backend/commercial-finance-index",
         },
       ],
     },
@@ -104,8 +104,8 @@ export default function DashboardLayout({ children }) {
       title: "Team Section",
       icon: <FaPersonBooth className="h-5 w-5" />,
       submenu: [
-        { title: "Team Members", href: "/aws-backend/team" },
-        { title: "Index Page Content", href: "/aws-backend/team-index" },
+        { title: "Team Members", href: "/life-backend/team" },
+        { title: "Index Page Content", href: "/life-backend/team-index" },
       ],
     },
   ];

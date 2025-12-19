@@ -35,7 +35,7 @@ export default function CaseStudyTable({ studies }) {
         <div className="dashboard-table-actions">
           <Link
             prefetch={true}
-            href={`/aws-backend/case-study/edit/${row.original._id}`}
+            href={`/life-backend/case-study/edit/${row.original._id}`}
             className="dashboard-edit-button"
           >
             <BiPencil />

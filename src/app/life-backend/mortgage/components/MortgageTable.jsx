@@ -33,7 +33,7 @@ export default function MortgageTable({ mortgages }) {
         <div className="dashboard-table-actions">
           <Link
             prefetch={true}
-            href={`/aws-backend/mortgage/edit/${row.original._id}`}
+            href={`/life-backend/mortgage/edit/${row.original._id}`}
             className="dashboard-edit-button"
           >
             <BiPencil />

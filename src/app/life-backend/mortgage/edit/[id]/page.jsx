@@ -7,7 +7,7 @@ export default async function EditMortage({ params }) {
   const { data } = await getMortgageById(paramsId.id);
   return (
     <>
-      <DashboardHeader text="Edit Mortgage" url="/aws-backend/mortgage" />
+      <DashboardHeader text="Edit Mortgage" url="/life-backend/mortgage" />
       <MortgageForm initialData={data} />
     </>
   );

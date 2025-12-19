@@ -3,7 +3,7 @@
 import RichTextEditor from "@/lib/TextEditor";
 import { useState } from "react";
 import MetaTags from "@/lib/MetaInput";
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { uploadPageFile } from "@/lib/uploadPageFile";
@@ -42,7 +42,7 @@ export default function NewsStudyForm({ studies }) {
           return;
         }
         toast.success("News study updated successfully!");
-        router.push("/aws-backend/news-study");
+        router.push("/life-backend/news-study");
       } else {
         const result = await createNewsStudy(formData);
         if (!result.success) {
@@ -50,7 +50,7 @@ export default function NewsStudyForm({ studies }) {
           return;
         }
         toast.success("News study created successfully!");
-        router.push("/aws-backend/news-study");
+        router.push("/life-backend/news-study");
       }
     } catch (error) {
       console.error(error);

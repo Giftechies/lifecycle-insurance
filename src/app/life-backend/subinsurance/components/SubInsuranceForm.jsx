@@ -1,6 +1,6 @@
 "use client";
 
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import ImageInput from "@/lib/ImageUpload";
 import MetaTags from "@/lib/MetaInput";
 import RichTextEditor from "@/lib/TextEditor";
@@ -14,21 +14,21 @@ import {
   updateSubInsurance,
 } from "@/actions/subInsurance.actions";
 
-export default function SubInsuranceForm({ initialData, categories }) {
+export default function SubInsuranceForm({ initialData, }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     heading: initialData?.heading || "",
     content: initialData?.content || "",
     shortContent: initialData?.shortContent || "",
-    category: initialData?.category || "",
+    // category: initialData?.category || "",
     image: initialData?.image || "",
     imageAlt: initialData?.imageAlt || "",
     slug: initialData?.slug || "",
     metaTitle: initialData?.metaTitle || "",
     metaDescription: initialData?.metaDescription || "",
     metaKeywords: initialData?.metaKeywords || "",
-    pdf: initialData?.pdf || "",
-    pdfAlt: initialData?.pdfAlt || "",
+    // pdf: initialData?.pdf || "",
+    // pdfAlt: initialData?.pdfAlt || "",
   });
 
   const handleChange = (field, value) => {
@@ -49,7 +49,7 @@ export default function SubInsuranceForm({ initialData, categories }) {
         await createSubInsurance(formData);
         toast.success("Subinsurance created successfully!");
       }
-      router.push("/aws-backend/subinsurance");
+      router.push("/life-backend/subinsurance");
     } catch (error) {
       toast.error("Something went wrong!");
     }
@@ -75,7 +75,7 @@ export default function SubInsuranceForm({ initialData, categories }) {
           onChange={(value) => handleChange("slug", value)}
         />
 
-        <label htmlFor="category">Select Mortgage Category</label>
+        {/* <label htmlFor="category">Select Mortgage Category</label>
         <select
           id="category"
           name="category"
@@ -89,7 +89,7 @@ export default function SubInsuranceForm({ initialData, categories }) {
               {category.heading}
             </option>
           ))}
-        </select>
+        </select> */}
 
         <label htmlFor="shortContent">Short Content</label>
         <textarea type="text" value={formData.shortContent} onChange={(e) => handleChange("shortContent", e.target.value)} placeholder="Enter short content" />
@@ -122,7 +122,7 @@ export default function SubInsuranceForm({ initialData, categories }) {
           metaKeywords={formData.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
-        <PdfInput
+        {/* <PdfInput
           uploadAction={(file) => uploadPageFile(file, "pdf")}
           onChange={(value) => handleChange("pdf", value)}
         />
@@ -136,7 +136,7 @@ export default function SubInsuranceForm({ initialData, categories }) {
           value={formData.pdfAlt}
           onChange={(e) => handleChange("pdfAlt", e.target.value)}
           placeholder="Enter Pdf Alt"
-        />
+        /> */}
 
         <button type="submit">
           {initialData ? "Update Sub Insurance" : "Create Sub Insurance"}

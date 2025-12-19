@@ -52,7 +52,7 @@ export async function updateAboutData(data) {
       await About.create(data);
     }
 
-    revalidatePath("/aws-backend/about");
+    revalidatePath("/life-backend/about");
     revalidatePath("/");
     return { success: true };
   } catch (error) {

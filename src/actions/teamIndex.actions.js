@@ -31,7 +31,7 @@ export async function updateTeamIndex(data) {
       ...data,
       _id: index?._id?.toString(),
     };
-    revalidatePath("/aws-backend/team-index");
+    revalidatePath("/life-backend/team-index");
     revalidatePath("/meet-the-team");
     return { success: true, index: serializedIndex };
   } catch (error) {

@@ -24,7 +24,7 @@ export async function createInsurance(formData) {
   try {
     await dbConnect();
     await Insurance.create(formData);
-    revalidatePath("/aws-backend/insurance");
+    revalidatePath("/life-backend/insurance");
     revalidatePath("/","layout");
     return { success: true };
   } catch (error) {
@@ -36,7 +36,7 @@ export async function updateInsurance(id, data) {
   try {
     await dbConnect();
     await Insurance.findByIdAndUpdate(id, data);
-    revalidatePath("/aws-backend/insurance");
+    revalidatePath("/life-backend/insurance");
     revalidatePath("/","layout");
     return { success: true };
   } catch (error) {
@@ -48,7 +48,7 @@ export async function deleteInsurance(id) {
   try {
     await dbConnect();
     await Insurance.findByIdAndDelete(id);
-    revalidatePath("/aws-backend/insurance");
+    revalidatePath("/life-backend/insurance");
     revalidatePath("/","layout");
     return { success: true };
   } catch (error) {

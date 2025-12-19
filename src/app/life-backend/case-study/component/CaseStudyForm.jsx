@@ -50,7 +50,7 @@ export default function CaseStudyForm({ studies }) {
         ? "Case study updated successfully!"
         : "Case study created successfully!"
     );
-    router.push("/aws-backend/case-study");
+    router.push("/life-backend/case-study");
   };
 
   return (

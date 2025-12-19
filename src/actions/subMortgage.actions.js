@@ -21,15 +21,17 @@ export async function getSubMortgage() {
 }
 
 export async function createSubMortgage(formData) {
-  console.log("data coming",formData)
+  console.log("data coming  for createing submortgage",formData)
   try {
     await dbConnect();
     const datacreated = await SubMortgage.create(formData);
     console.log("data created",datacreated)
-    revalidatePath("/aws-backend","layout");
+    revalidatePath("/life-backend","layout");
     revalidatePath("/","layout");
     return { success: true };
   } catch (error) {
+    console.log('creating ',error);
+    
     return { success: false, error: error.message };
   }
 }
@@ -38,7 +40,7 @@ export async function updateSubMortgage(id, data) {
   try {
     await dbConnect();
     await SubMortgage.findByIdAndUpdate(id, data);
-    revalidatePath("/aws-backend","layout");
+    revalidatePath("/life-backend","layout");
     revalidatePath("/","layout");
     return { success: true };
   } catch (error) {
@@ -50,7 +52,7 @@ export async function deleteSubMortgage(id) {
   try {
     await dbConnect();
     await SubMortgage.findByIdAndDelete(id);
-    revalidatePath("/aws-backend","layout");
+    revalidatePath("/life-backend","layout");
     revalidatePath("/","layout");
     return { success: true };
   } catch (error) {

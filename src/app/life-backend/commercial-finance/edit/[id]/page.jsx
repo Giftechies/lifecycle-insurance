@@ -7,7 +7,7 @@ export default async function CommercialFinanceEdit({ params }) {
     const { finance } = await getCommercialFinanceById(paramsId.id);
     return (
         <>
-            <DashboardHeader text="Edit Commercial Finance" url="/aws-backend/commercial-finance" />
+            <DashboardHeader text="Edit Commercial Finance" url="/life-backend/commercial-finance" />
             <CommercialFinanceForm initialData={finance} />
         </>
     )

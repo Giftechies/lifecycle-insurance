@@ -24,9 +24,9 @@ export async function createMortgage(formData) {
   try {
     await dbConnect();
     await Mortgage.create(formData);
-    revalidatePath("/aws-backend/mortgage");
+    revalidatePath("/life-backend/mortgage");
     revalidatePath("/","layout");
-    revalidatePath("/aws-backend/submortgage")
+    revalidatePath("/life-backend/submortgage")
     return { success: true };
   } catch (error) {
     return { success: false, error: error.message };
@@ -37,9 +37,9 @@ export async function updateMortgage(id, data) {
   try {
     await dbConnect();
     await Mortgage.findByIdAndUpdate(id, data);
-    revalidatePath("/aws-backend/mortgage");
+    revalidatePath("/life-backend/mortgage");
     revalidatePath("/","layout");
-    revalidatePath("/aws-backend/submortgage")
+    revalidatePath("/life-backend/submortgage")
     return { success: true };
   } catch (error) {
     return { success: false, error: error.message };
@@ -50,9 +50,9 @@ export async function deleteMortgage(id) {
   try {
     await dbConnect();
     await Mortgage.findByIdAndDelete(id);
-    revalidatePath("/aws-backend/mortgage");
+    revalidatePath("/life-backend/mortgage");
     revalidatePath("/","layout");
-    revalidatePath("/aws-backend/submortgage")
+    revalidatePath("/life-backend/submortgage")
     return { success: true };
   } catch (error) {
     return { success: false, error: error.message };

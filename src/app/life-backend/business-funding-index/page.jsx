@@ -6,7 +6,7 @@ export default async function BusinessFundingIndexPage() {
     const { data } = await getBusinessFundingIndex();
     return (
         <>
-            <DashboardHeader text={"Business Funding Index"} url={`/aws-backend/business-funding`} />
+            <DashboardHeader text={"Business Funding Index"} url={`/life-backend/business-funding`} />
             <BusinessFundingIndexForm initialData={data} />
         </>
     )

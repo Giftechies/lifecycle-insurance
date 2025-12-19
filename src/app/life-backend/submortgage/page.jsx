@@ -8,7 +8,7 @@ export default async function Page() {
     <>
       <div className="dashboard-header">
         <h3>Submortgages</h3>
-        <Link href="/aws-backend/submortgage/add">Add Submortgage</Link>
+        <Link href="/life-backend/submortgage/add">Add Submortgage</Link>
       </div>
       <SubmortgageTable subMortgages={data} />
     </>

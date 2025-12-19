@@ -4,7 +4,7 @@ import MortgageForm from "../components/MortgageForm";
 export default function Page() {
   return (
     <>
-      <DashboardHeader text="Add Mortgage" url="/aws-backend/mortgage" />
+      <DashboardHeader text="Add Mortgage" url="/life-backend/mortgage" />
       <MortgageForm initialData={null} />
     </>
   );

@@ -1,8 +1,17 @@
 import mongoose from "mongoose";
 
 const insuranceIndexSchema = new mongoose.Schema({
+  heading:{
+    type:String
+  },
   content: {
     type: String,
+  },
+  slug:{
+    type:String,
+  },
+  image:{
+    type:String
   },
   metaTitle: {
     type: String,

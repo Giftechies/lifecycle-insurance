@@ -9,7 +9,7 @@ export default async function EditInsurance({ params }) {
         <>
             <DashboardHeader
                 text="Edit Insurance"
-                url="/aws-backend/insurance"
+                url="/life-backend/insurance"
             />
             <InsuranceForm initialData={data} />
         </>

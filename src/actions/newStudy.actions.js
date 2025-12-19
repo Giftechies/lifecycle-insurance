@@ -8,7 +8,7 @@ export async function createNewsStudy(formData) {
   try {
     await dbConnect();
     await NewsStudy.create(formData);
-    revalidatePath("/aws-backend/news-study");
+    revalidatePath("/life-backend/news-study");
     revalidatePath("/");
     revalidatePath("/news");
     revalidatePath("/news/[slug]");
@@ -54,7 +54,7 @@ export async function deleteNewsStudy(id) {
   try {
     await dbConnect();
     await NewsStudy.findByIdAndDelete(id);
-    revalidatePath("/aws-backend/news-study");
+    revalidatePath("/life-backend/news-study");
     revalidatePath("/");
     revalidatePath("/news");
     revalidatePath("/news/[slug]");
@@ -71,7 +71,7 @@ export async function updateNewsStudy(id, data) {
   try {
     await dbConnect();
     await NewsStudy.findByIdAndUpdate(id, data);
-    revalidatePath("/aws-backend/news-study");
+    revalidatePath("/life-backend/news-study");
     revalidatePath("/");
     revalidatePath("/news");
     revalidatePath("/news/[slug]");

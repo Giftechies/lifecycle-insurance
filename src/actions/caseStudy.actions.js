@@ -9,7 +9,7 @@ export async function createCaseStudy(formData) {
     await dbConnect();
     await CaseStudy.create(formData);
     revalidatePath("/");
-    revalidatePath("/aws-backend/case-study");
+    revalidatePath("/life-backend/case-study");
     revalidatePath("/case-studies");
     revalidatePath("/case-studies/[slug]");
     return { success: true };
@@ -79,7 +79,7 @@ export async function updateCaseStudy(id, data) {
     await dbConnect();
     await CaseStudy.findByIdAndUpdate(id, data);
     revalidatePath("/");
-    revalidatePath("/aws-backend/case-study");
+    revalidatePath("/life-backend/case-study");
     revalidatePath("/case-studies");
     revalidatePath("/case-studies/[slug]");
     return { success: true };
@@ -96,7 +96,7 @@ export async function deleteCaseStudy(id) {
     await dbConnect();
     await CaseStudy.findByIdAndDelete(id);
     revalidatePath("/");
-    revalidatePath("/aws-backend/case-study");
+    revalidatePath("/life-backend/case-study");
     revalidatePath("/case-studies");
     revalidatePath("/case-studies/[slug]");
     return { success: true };

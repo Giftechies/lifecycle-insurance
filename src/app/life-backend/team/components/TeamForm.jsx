@@ -34,7 +34,7 @@ export default function TeamForm({initialData}){
              await createTeamMember(formData);
              toast.success("Team member created successfully!");
          }
-         router.push("/aws-backend/team");
+         router.push("/life-backend/team");
        } catch (error) {
         console.error(error);
         toast.error(error.message || "Something went wrong!");

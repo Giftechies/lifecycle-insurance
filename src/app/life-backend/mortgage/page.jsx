@@ -9,7 +9,7 @@ export default async function Page() {
     <>
       <div className="dashboard-header">
         <h3>Mortgage</h3>
-        <Link href="/aws-backend/mortgage/add">Add Mortgage</Link>
+        <Link href="/life-backend/mortgage/add">Add Mortgage</Link>
       </div>
       <MortgageTable mortgages={data} />
     </>

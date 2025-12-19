@@ -49,7 +49,7 @@ export default function BusinessFundingForm({ initialData, categories }) {
         await createBusinessFunding(formData);
         toast.success("Business Funding created successfully!");
       }
-      router.push("/aws-backend/business-funding");
+      router.push("/life-backend/business-funding");
     } catch (error) {
       toast.error(error.message || "Something went wrong!");
     }

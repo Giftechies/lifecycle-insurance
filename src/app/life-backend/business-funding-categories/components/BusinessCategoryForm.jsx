@@ -44,7 +44,7 @@ export default function BusinessCategoryForm({ initialData }) {
         await createBusinessCategory(formData);
         toast.success("Business Category successfully!");
       }
-      router.push("/aws-backend/business-funding-categories");
+      router.push("/life-backend/business-funding-categories");
     } catch (error) {
       console.error(error);
       toast.error("Something went wrong!");

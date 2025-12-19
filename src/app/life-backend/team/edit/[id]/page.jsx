@@ -8,7 +8,7 @@ export default async function EditTeamPage({ params }){
 
     return (
         <>
-            <DashboardHeader text="Edit Team Member" url="/aws-backend/team" />
+            <DashboardHeader text="Edit Team Member" url="/life-backend/team" />
             <TeamForm initialData={data} />
         </>
     )

@@ -13,7 +13,7 @@ export default async function EditHeroPage({ params }) {
 
   return (
     <>
-      <DashboardHeader text="Edit Hero Banner" url="/aws-backend/hero" />
+      <DashboardHeader text="Edit Hero Banner" url="/life-backend/hero" />
       <HeroForm initialData={data} />
     </>
   );

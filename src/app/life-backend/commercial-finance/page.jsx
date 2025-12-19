@@ -8,7 +8,7 @@ export default async function CommercialFinance() {
         <>
             <div className="dashboard-header">
                 <h3>Commercial Finance</h3>
-                <Link href="/aws-backend/commercial-finance/add">Add Commercial Finance</Link>
+                <Link href="/life-backend/commercial-finance/add">Add Commercial Finance</Link>
             </div>
             <CommercialFinanceTable initialData={data} />
         </>

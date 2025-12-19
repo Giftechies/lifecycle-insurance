@@ -4,7 +4,7 @@ import TeamForm from "../components/TeamForm";
 export default function TeamAddPage(){
     return (
         <>
-            <DashboardHeader text="Add Team Member" url="/aws-backend/team" />
+            <DashboardHeader text="Add Team Member" url="/life-backend/team" />
             <TeamForm initialData={null} />
         </>
     )

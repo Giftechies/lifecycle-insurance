@@ -7,7 +7,7 @@ export default async function EditNewsStudy({ params }) {
   const { study } = await getNewsStudyById(paramsId.id);
   return (
     <>
-      <DashboardHeader text="Edit News Study" url="/aws-backend/news-study" />
+      <DashboardHeader text="Edit News Study" url="/life-backend/news-study" />
       <NewsStudyForm studies={study} />
     </>
   );

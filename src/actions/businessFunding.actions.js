@@ -53,7 +53,7 @@ export async function createBusinessFunding(formData) {
   try {
     await dbConnect();
     const businessFunding = await BusinessFunding.create(formData);
-    revalidatePath("/aws-backend/business-funding");
+    revalidatePath("/life-backend/business-funding");
     revalidatePath("/", "layout");
     return { success: true, data: businessFunding };
   } catch (error) {
@@ -65,7 +65,7 @@ export async function updateBusinessFunding(id, data) {
   try {
     await dbConnect();
     const businessFunding = await BusinessFunding.findByIdAndUpdate(id, data);
-    revalidatePath("/aws-backend/business-funding");
+    revalidatePath("/life-backend/business-funding");
     revalidatePath("/", "layout");
     return { success: true, data: businessFunding };
   } catch (error) {
@@ -77,7 +77,7 @@ export async function deleteBusinessFunding(id) {
   try {
     await dbConnect();
     const businessFunding = await BusinessFunding.findByIdAndDelete(id);
-    revalidatePath("/aws-backend/business-funding");
+    revalidatePath("/life-backend/business-funding");
     revalidatePath("/", "layout");
     return { success: true, data: businessFunding };
   } catch (error) {
