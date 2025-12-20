@@ -76,7 +76,7 @@ export async function getSubInsuranceById(id) {
 export async function getSubInsuranceBySlug(slug) {
   try {
     await dbConnect();
-    const subInsurance = await SubInsurance.find({ category: slug }).lean();
+    const subInsurance = await SubInsurance.find({ slug: slug }).lean();
     if (!subInsurance) {
       return { success: false, error: "SubInsurance not found" };
     }

@@ -27,19 +27,20 @@ export default function InsuranceIndexForm({ initialData }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      console.log(formData,'insurnce');
       await updateInsuranceIndex(formData);
       toast.success("Insurance Data updated successfully!");
     } catch (error) {
       toast.error("Something went wrong!");
     }
   }
-  const handleImageSet = (feild,value)=>{
+  const handleImageSet = (value)=>{
     setFormData(prev=>({
       ...prev,
-      [feild]:value
+      'image':value
     }))
-
   }
+
   return (
     <form className="form-container grid md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
       <div>
@@ -51,11 +52,11 @@ export default function InsuranceIndexForm({ initialData }) {
           onChange={(e) => handleChange("heading", e.target.value)}
           placeholder="Enter heading"
         />
-         <SlugInput
+         {/* <SlugInput
           heading={formData.heading}
           value={formData.slug}
           onChange={(value) => handleChange("slug", value)}
-        />
+        /> */}
         <label>Content</label>
         <textarea 
            id="content"

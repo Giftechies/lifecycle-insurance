@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { createCaseStudy, updateCaseStudy } from "@/actions/caseStudy.actions";
 import { uploadPageFile } from "@/lib/uploadPageFile";
 import ImageInput from "@/lib/ImageUpload";
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import RichTextEditor from "@/lib/TextEditor";
 import MetaTags from "@/lib/MetaInput";
 import toast from "react-hot-toast";
@@ -14,6 +14,7 @@ export default function CaseStudyForm({ studies }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     heading: studies?.heading || "",
+    shortcontent: studies?.shortcontent || "",
     description: studies?.description || "",
     image: studies?.image || "",
     imageAlt: studies?.imageAlt || "",
@@ -75,6 +76,16 @@ export default function CaseStudyForm({ studies }) {
           value={formData.slug}
           onChange={(value) => handleChange("slug", value)}
         />
+         <div>
+          <label htmlFor="heading">Short Content</label>
+          <input
+            type="text"
+            id="shortcontent"
+            value={formData.shortcontent}
+            placeholder="Enter short content"
+            onChange={(e) => handleChange("shortcontent", e.target.value)}
+          />
+        </div>
 
         <div>
           <label>Description</label>

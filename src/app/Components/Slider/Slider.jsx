@@ -18,59 +18,30 @@ import {
 } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
-export default function Slider() {
-  const router = useRouter();
-  const pathname = usePathname(); // <-- Get current path
-
-  const item = [
-    { label: "Home Loan", icon: <Home size={20} />, li: () => router.push("/Mortgage/home-loan") },
-    { label: "Refinance", icon: <Repeat size={20} />, li: () => router.push("/Mortgage/refinance") },
-    { label: "Investment Loan", icon: <LineChart size={20} />, li: () => router.push("/Mortgage/investment-loan") },
-    { label: "Business Loan", icon: <Briefcase size={20} />, li: () => router.push("/Mortgage/business-loan") },
-    { label: "Construction Loan", icon: <Hammer size={20} />, li: () => router.push("/Mortgage/construction-loan") },
-    { label: "Commercial Loan", icon: <Building size={20} />, li: () => router.push("/Mortgage/commercial-loan") },
-  ];
-
-  const Insurance = [
-    { label: "Life Insurance", icon: <ShieldCheck size={20} />, li: () => router.push("/Insurance/life-insurance") },
-    { label: "Trauma Recovery Cover", icon: <HeartPulse size={20} />, li: () => router.push("/Insurance/trauma-recovery-cover") },
-    { label: "Total Permanent Disability Benefit Cover", icon: <Activity size={20} />, li: () => router.push("/Insurance/total-permanent-disability-benefit-cover") },
-    { label: "Mortgage & Rent Protection Cover", icon: <Home size={20} />, li: () => router.push("/Insurance/mortgage-rent-protection-cover") },
-    { label: "Income Protection Cover", icon: <Wallet size={20} />, li: () => router.push("/Insurance/income-protection-cover") },
-    { label: "Medical Insurance", icon: <Stethoscope size={20} />, li: () => router.push("/Insurance/medical-insurance") },
-    { label: "Group Insurance", icon: <Users size={20} />, li: () => router.push("/Insurance/group-insurance") },
-  ];
-
-  // Determine menu based on path
-  const isMortgage = pathname?.toLowerCase().startsWith("/mortgage");
-  const isInsurance = pathname?.toLowerCase().startsWith("/insurance");
-
-  const menuTitle = isMortgage ? "Mortgage" : isInsurance ? "Insurance" : "";
-  const menuItems = isMortgage ? item : isInsurance ? Insurance : [];
+export default function Slider({menuItem,title='mortgage'}) {
 
   return (
     <div className="hidden lg:flex  lg:w-[40%] xl:w-[30%] flex-col">
       <div className="sticky top-0 w-full space-y-8">
         {/* Dynamic Menu */}
-        {menuItems.length > 0 && (
           <aside className="w-full bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
-            <h2 className="text-lg font-semibold mb-6 border-b border-white/30 pb-2">
-              <a href={`/${menuTitle}`}>{menuTitle}</a>
+            <h2 className="text-lg font-semibold mb-6 border-b border-white/30 pb-2 capitalize ">
+              <a href={`/${title}`}>{title}</a>
             </h2>
             <ul className="space-y-4">
-              {menuItems.map((item, idx) => (
+              {menuItem?.map((item, idx) => (
                 <li
                   key={idx}
-                  onClick={item.li}
-                  className="flex items-center gap-3 p-2 hover:bg-white hover:text-[var(--primg)] rounded-lg cursor-pointer transition-all duration-200"
+                
                 >
-                  <span>{item.icon}</span>
-                  <span className="text-sm font-medium">{item.label}</span>
+                <Link href={`/${title}/${item?.slug}`}   className="flex items-center gap-3 p-2 hover:bg-white hover:text-[var(--primg)] rounded-lg cursor-pointer transition-all duration-200" >
+                <Building size={20} />
+                  <span className="text-sm font-medium">{item?.heading}</span></Link>
                 </li>
               ))}
             </ul>
           </aside>
-        )}
+      
 
         {/* Contact Box */}
         <div className="w-full bg-white rounded-xl p-4 text-black/70 shadow-xl shrink">

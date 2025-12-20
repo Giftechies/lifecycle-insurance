@@ -4,6 +4,12 @@ const caseStudyIndexSchema = new mongoose.Schema({
   content: {
     type: String,
   },
+  heading: {
+    type: String,
+  },
+  image: {
+    type: String,
+  },
   metaTitle: {
     type: String,
   },

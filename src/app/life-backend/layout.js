@@ -37,14 +37,14 @@ export default function DashboardLayout({ children }) {
         { title: "Products Section", href: "/life-backend/products" },
       ],
     },
-    {
-      title: "News Section",
-      icon: <FiFileText className="h-5 w-5" />,
-      submenu: [
-        { title: "News Posts", href: "/life-backend/news-study" },
-        { title: "Index Page Content", href: "/life-backend/news-index" },
-      ],
-    },
+    // {
+    //   title: "News Section",
+    //   icon: <FiFileText className="h-5 w-5" />,
+    //   submenu: [
+    //     { title: "News Posts", href: "/life-backend/news-study" },
+    //     { title: "Index Page Content", href: "/life-backend/news-index" },
+    //   ],
+    // },
     {
       title: "Case Study",
       icon: <FiBook className="h-5 w-5" />,
@@ -71,35 +71,35 @@ export default function DashboardLayout({ children }) {
         { title: "Insurance Index Page", href: "/life-backend/insurance-index" },
       ],
     },
-    {
-      title: "Business Funding",
-      icon: <IoBusiness className="h-5 w-5" />,
-      submenu: [
-        {
-          title: "Business Funding Categories",
-          href: "/life-backend/business-funding-categories",
-        },
-        { title: "Business Funding", href: "/life-backend/business-funding" },
-        {
-          title: "Index Page Content",
-          href: "/life-backend/business-funding-index",
-        },
-      ],
-    },
-    {
-      title: "Commercial Finan..",
-      icon: <BiMoney className="h-5 w-5" />,
-      submenu: [
-        {
-          title: "Commercial Categories",
-          href: "/life-backend/commercial-finance",
-        },
-        {
-          title: "Index Page Content",
-          href: "/life-backend/commercial-finance-index",
-        },
-      ],
-    },
+    // {
+    //   title: "Business Funding",
+    //   icon: <IoBusiness className="h-5 w-5" />,
+    //   submenu: [
+    //     {
+    //       title: "Business Funding Categories",
+    //       href: "/life-backend/business-funding-categories",
+    //     },
+    //     { title: "Business Funding", href: "/life-backend/business-funding" },
+    //     {
+    //       title: "Index Page Content",
+    //       href: "/life-backend/business-funding-index",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Commercial Finan..",
+    //   icon: <BiMoney className="h-5 w-5" />,
+    //   submenu: [
+    //     {
+    //       title: "Commercial Categories",
+    //       href: "/life-backend/commercial-finance",
+    //     },
+    //     {
+    //       title: "Index Page Content",
+    //       href: "/life-backend/commercial-finance-index",
+    //     },
+    //   ],
+    // },
     {
       title: "Team Section",
       icon: <FaPersonBooth className="h-5 w-5" />,

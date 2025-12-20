@@ -12,10 +12,10 @@ export default function Nav() {
   const [InsuranceOpen, setInsuranceOpen] = useState(false);
   const [mortgageOpen, setMortgageOpen] = useState(false);
   const [calculatorOpen, setcalculatorOpen] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const path = usePathname()
-  console.log(path, 'path');
+
 
   const navData = [
     {

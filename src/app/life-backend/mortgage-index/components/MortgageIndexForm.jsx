@@ -42,10 +42,10 @@ export default function MortgageIndexForm({initialData}){
             toast.error(error)
         }
     }
-  const handleImageSet = (feild,value)=>{
+  const handleImageSet = (value)=>{
     setFormData(prev=>({
         ...prev,
-        [feild]:value
+        'image':value
     }))
   }
     return (
@@ -59,11 +59,11 @@ export default function MortgageIndexForm({initialData}){
                onChange={(e) => handleChange("heading", e.target.value)}
                placeholder="Enter heading"
              />
-              <SlugInput
+              {/* <SlugInput
                heading={formData.heading}
                value={formData.slug}
                onChange={(value) => handleChange("slug", value)}
-             />
+             /> */}
              <label>Content</label>
              <textarea 
                 id="content"

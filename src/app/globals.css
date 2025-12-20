@@ -424,11 +424,16 @@ input[type=range].custom-slider::-moz-range-thumb {
     @apply bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition-colors;
   }
   .editor-container {
-    @apply text-[14px] tracking-wider !text-center text-gray-800;
+    @apply text-[14px] tracking-wider  text-gray-800;
   }
-  .editor-container p {
-    text-align: center !important;
-  }
+  .editor-container ul {
+  @apply list-disc pl-12 my-4 space-y-2;
+}
+
+.editor-container li {
+  @apply text-base leading-7 text-gray-700;
+}
+
   .index-editor {
     text-align: justify !important;
   }

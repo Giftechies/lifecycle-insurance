@@ -81,7 +81,7 @@ export async function getSubMortgageById(id) {
 export async function getSubMortgageBySlug(slug) {
   try {
     await dbConnect();
-    const subMortgage = await SubMortgage.find({ category:slug }).lean();
+    const subMortgage = await SubMortgage.find({ slug:slug }).lean();
     if (!subMortgage) {
       return { success: false, error: "SubMortgage not found" };
     }

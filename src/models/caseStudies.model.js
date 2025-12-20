@@ -6,6 +6,10 @@ const CaseStudySchema = new mongoose.Schema(
       type: String,
       required: [true, "Heading is required"],
     },
+    shortcontent: {
+      type: String,
+      required: [true, "short content is required"],
+    },
     image: {
       type: String,
       required: [true, "Image is required"],
