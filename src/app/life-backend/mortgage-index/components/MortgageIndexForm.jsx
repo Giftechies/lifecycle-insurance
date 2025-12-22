@@ -14,9 +14,9 @@ import {uploadPageFile} from "../../../../lib/uploadPageFile"
 
 export default function MortgageIndexForm({initialData}){
     const [formData,setFormData] = useState({
-        heading:initialData.heading || "",
-        image:initialData.image || "" ,
-        slug:initialData.slug || "",
+        heading:initialData?.heading || "",
+        image:initialData?.image || "" ,
+        slug:initialData?.slug || "",
         content:initialData?.content || "",
 
         metaTitle:initialData?.metaTitle || "",
@@ -55,7 +55,7 @@ export default function MortgageIndexForm({initialData}){
              <input
                type="text"
                id="heading"
-               value={formData.heading}
+               value={formData?.heading}
                onChange={(e) => handleChange("heading", e.target.value)}
                placeholder="Enter heading"
              />
@@ -67,7 +67,7 @@ export default function MortgageIndexForm({initialData}){
              <label>Content</label>
              <textarea 
                 id="content"
-               value={formData.content}
+               value={formData?.content}
                onChange={(e) => handleChange("content", e.target.value)}
                placeholder="Enter content"
                maxLength={150}
@@ -81,9 +81,9 @@ export default function MortgageIndexForm({initialData}){
            initialImage={initialData.image || ''}
             />
              <MetaTags
-               metaTitle={formData.metaTitle}
-               metaDescription={formData.metaDescription}
-               metaKeywords={formData.metaKeywords}
+               metaTitle={formData?.metaTitle}
+               metaDescription={formData?.metaDescription}
+               metaKeywords={formData?.metaKeywords}
                onChange={(field, value) => handleChange(field, value)}
              />
              <button type="submit">Update Data</button>
