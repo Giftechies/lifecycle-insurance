@@ -1,3 +1,4 @@
+import { Contact } from "lucide-react";
 import mongoose from "mongoose";
 
 const teamSchema = new mongoose.Schema({
@@ -8,6 +9,10 @@ const teamSchema = new mongoose.Schema({
   designation: {
     type: String,
     required: [true, "Designation is required"],
+  },
+  contact: {
+    type: String,
+    required: [true, "Phone number is required"],
   },
   image: {
     type: String,

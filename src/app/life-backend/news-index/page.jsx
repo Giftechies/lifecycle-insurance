@@ -1,5 +1,5 @@
 import DashboardHeader from "@/lib/DashboardHeader";
-import NewsIndexForm from "./components/page";
+import NewsIndexForm from "./components/NewsIndexForm";
 import { getNewsIndex } from "@/actions/newsIndex.actions";
 
 export default async function NewsIndex(){

@@ -101,11 +101,11 @@ export default function DashboardLayout({ children }) {
     //   ],
     // },
     {
-      title: "Team Section",
+      title: "About Page",
       icon: <FaPersonBooth className="h-5 w-5" />,
       submenu: [
         { title: "Team Members", href: "/life-backend/team" },
-        { title: "Index Page Content", href: "/life-backend/team-index" },
+        { title: "Index Page Content", href: "/life-backend/about-index" },
       ],
     },
   ];

@@ -27,7 +27,7 @@ export default async function Subpage({params}){
 
   return (
     <>
-      <Banner title={content?.heading} image={content.image} />
+      <Banner title={content?.heading} image={content?.image} />
       <main className="w-full flex px-4 lg:px-[50px] py-5 gap-10 relative   max-w-[1600px] mx-auto leading-7 tracking-wider ">
         {/* Content Div */}
         <div className="contentdiv   tracking-wider  lg:w-[85%] py-5">

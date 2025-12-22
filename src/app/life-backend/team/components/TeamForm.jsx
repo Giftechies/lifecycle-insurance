@@ -12,6 +12,7 @@ export default function TeamForm({initialData}){
     const [formData, setFormData] = useState({
     name: initialData?.name || "",
     designation: initialData?.designation || "",
+    contact: initialData?.contact || "",
     image: initialData?.image || "",
     imageAlt: initialData?.imageAlt || "",  
     })
@@ -49,6 +50,9 @@ export default function TeamForm({initialData}){
 
                 <label htmlFor="designation">Designation</label>
                 <input type="text" id="designation" value={formData.designation} onChange={(e) => handleChange('designation', e.target.value)} placeholder="Enter Designation" />
+
+                <label htmlFor="contact">Contact Number</label>
+                <input type="text" id="contact" value={formData.contact} onChange={(e) => handleChange('contact', e.target.value)} placeholder="Enter phoen number" />
             </div>
             <div>
                 <ImageInput

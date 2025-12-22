@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
-export default function Slider({menuItem,title='mortgage'}) {
+export default function Slider({menuItem=[],title='mortgage'}) {
 
   return (
     <div className="hidden lg:flex  lg:w-[40%] xl:w-[30%] flex-col">

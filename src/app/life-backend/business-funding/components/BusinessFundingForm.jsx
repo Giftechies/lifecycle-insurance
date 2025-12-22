@@ -4,7 +4,7 @@ import {
   createBusinessFunding,
   updateBusinessFunding,
 } from "@/actions/businessFunding.actions";
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import ImageInput from "@/lib/ImageUpload";
 import MetaTags from "@/lib/MetaInput";
 import PdfInput from "@/lib/PdfInput";

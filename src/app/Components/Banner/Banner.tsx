@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import Image from "next/image";
 
-export default function Banner({ title,image=''}: { title: string,image:string }) {
+export default function Banner({ title,image=''}: { title: string,image?:string }) {
   const scope = useRef(null);
 
   useGSAP(() => {

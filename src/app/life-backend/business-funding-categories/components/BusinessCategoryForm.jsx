@@ -8,7 +8,7 @@ import {
   updateBusinessCategory,
 } from "@/actions/businessCategory.actions";
 import RichTextEditor from "@/lib/TextEditor";
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import ImageInput from "@/lib/ImageUpload";
 import { uploadPageFile } from "@/lib/uploadPageFile";
 import MetaTags from "@/lib/MetaInput";

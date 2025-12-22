@@ -35,14 +35,12 @@ export default async function Page({params}) {
 
  }))
   subpage = await (await getInsuranceIndex()).data
-  console.log(subpage);
-  
 }
   
    
   return (
    <CategoryPage
-  title={params.page}
+  title={params?.page}
   cards={cardData}
   type={subpage}
 />

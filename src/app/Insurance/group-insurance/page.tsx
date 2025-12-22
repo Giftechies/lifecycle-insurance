@@ -115,7 +115,7 @@ const Sidebar = () => {
         </div>
 
         {/* Centered Sidebar constrained inside main, below Banner and above footer */}
-        <Slider />
+        <Slider  />
       </main>
     </>
   );

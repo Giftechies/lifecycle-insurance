@@ -1,7 +1,7 @@
 "use client";
 
 import { createCommercialFinance, updateCommercialFinance } from "@/actions/commercialFinance.actions";
-import SlugInput from "@/components/SlugInput";
+import SlugInput from "../../../../components/Backend/SlugInput";
 import ImageInput from "@/lib/ImageUpload";
 import MetaTags from "@/lib/MetaInput";
 import RichTextEditor from "@/lib/TextEditor";
