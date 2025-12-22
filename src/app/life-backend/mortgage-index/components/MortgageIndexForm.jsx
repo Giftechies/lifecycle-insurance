@@ -78,7 +78,7 @@ export default function MortgageIndexForm({initialData}){
            <ImageInput
            uploadAction={uploadPageFile}
            onChange={handleImageSet} 
-           initialImage={initialData.image || ''}
+           initialImage={initialData?.image || ''}
             />
              <MetaTags
                metaTitle={formData?.metaTitle}
