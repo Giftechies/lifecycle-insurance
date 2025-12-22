@@ -23,11 +23,11 @@ export default function Connect( ){
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,    // These fields match your Enquiry form
-          service: formData.service,  // These fields match your Enquiry form
-          message: formData.message,
+          name: formData?.name,
+          email: formData?.email,
+          phone: formData?.phone,    // These fields match your Enquiry form
+          service: formData?.service,  // These fields match your Enquiry form
+          message: formData?.message,
           sourcePage: "Home Page"
         }),
       });

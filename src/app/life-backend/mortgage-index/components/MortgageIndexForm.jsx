@@ -60,8 +60,8 @@ export default function MortgageIndexForm({initialData}){
                placeholder="Enter heading"
              />
               {/* <SlugInput
-               heading={formData.heading}
-               value={formData.slug}
+               heading={formData?.heading}
+               value={formData?.slug}
                onChange={(value) => handleChange("slug", value)}
              /> */}
              <label>Content</label>

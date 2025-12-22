@@ -49,19 +49,19 @@ export default function InsuranceIndexForm({ initialData }) {
         <input
           type="text"
           id="heading"
-          value={formData.heading}
+          value={formData?.heading}
           onChange={(e) => handleChange("heading", e.target.value)}
           placeholder="Enter heading"
         />
          {/* <SlugInput
-          heading={formData.heading}
-          value={formData.slug}
+          heading={formData?.heading}
+          value={formData?.slug}
           onChange={(value) => handleChange("slug", value)}
         /> */}
         <label>Content</label>
         <textarea 
            id="content"
-          value={formData.content}
+          value={formData?.content}
           onChange={(e) => handleChange("content", e.target.value)}
           placeholder="Enter content"
           maxLength={150}

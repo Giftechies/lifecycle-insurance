@@ -55,40 +55,40 @@ export default function Page({ initialData }) {
           type="text"
           id="heading"
           name="heading"
-          value={formData.heading}
+          value={formData?.heading}
           onChange={(e) => handleChange("heading", e.target.value)}
           placeholder="Enter Heading"
         />
         <SlugInput
-          heading={formData.heading}
-          value={formData.slug}
+          heading={formData?.heading}
+          value={formData?.slug}
           onChange={(value) => handleChange("slug", value)}
         />
         <RichTextEditor
           onChange={(value) => handleChange("content", value)}
-          value={formData.content}
+          value={formData?.content}
         />
       </div>
       <div>
         <ImageInput
           uploadAction={(file) => uploadPageFile(file, "image")}
           onChange={handleImageChange}
-          initialImage={formData.image || ""}
+          initialImage={formData?.image || ""}
         />
         <label htmlFor="imageAlt">Image Alt</label>
         <input
           type="text"
           id="imageAlt"
           name="imageAlt"
-          value={formData.imageAlt}
+          value={formData?.imageAlt}
           onChange={(e) => handleChange("imageAlt", e.target.value)}
           placeholder="Enter Image Alt"
         />
 
         <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
+          metaTitle={formData?.metaTitle}
+          metaDescription={formData?.metaDescription}
+          metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
 

@@ -9,12 +9,12 @@ cloudinary.config({
 export const uploadToCloudinary = async (file) => {
   try {
     const formData = new FormData();
-    formData.append("file", file);
-    formData.append(
+    formData?.append("file", file);
+    formData?.append(
       "upload_preset",
       process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET || ""
     );
-    formData.append(
+    formData?.append(
       "cloud_name",
       process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || ""
     );

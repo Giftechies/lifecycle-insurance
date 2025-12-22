@@ -3,7 +3,7 @@ import { uploadToBlob } from "@/lib/uploadToBlob";
 
 export async function POST(req) {
   const formData = await req.formData();
-  const file = formData.get("file") ;
+  const file = formData?.get("file") ;
 
   if (!file) {
     return NextResponse.json(

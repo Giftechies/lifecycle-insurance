@@ -25,11 +25,11 @@ export default function EnquiryNow() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          service: formData.service,
-          message: formData.message,
+          name: formData?.name,
+          email: formData?.email,
+          phone: formData?.phone,
+          service: formData?.service,
+          message: formData?.message,
           sourcePage: "Enquire Page"
         }),
       });

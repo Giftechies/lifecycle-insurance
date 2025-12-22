@@ -63,9 +63,9 @@ export default function CaseStudyIndexForm({ initialData }) {
                     className="min-h-20"
                 />
                 <MetaTags
-                    metaTitle={formData.metaTitle}
-                    metaDescription={formData.metaDescription}
-                    metaKeywords={formData.metaKeywords}
+                    metaTitle={formData?.metaTitle}
+                    metaDescription={formData?.metaDescription}
+                    metaKeywords={formData?.metaKeywords}
                     onChange={(field, value) => handleChange(field, value)}
                 />
             </div>

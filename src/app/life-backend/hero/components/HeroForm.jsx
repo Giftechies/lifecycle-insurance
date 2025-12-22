@@ -74,7 +74,7 @@ export default function HeroForm({ initialData }) {
             </label>
             <input
               type="text"
-              value={formData.title}
+              value={formData?.title}
               onChange={(e) => handleChange("title", e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -87,7 +87,7 @@ export default function HeroForm({ initialData }) {
             </label>
             <input
               type="text"
-              value={formData.subTitle}
+              value={formData?.subTitle}
               onChange={(e) => handleChange("subTitle", e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -100,7 +100,7 @@ export default function HeroForm({ initialData }) {
             Content *
           </label>
           <textarea
-            value={formData.content}
+            value={formData?.content}
             onChange={(e) => handleChange("content", e.target.value)}
             rows={4}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -115,7 +115,7 @@ export default function HeroForm({ initialData }) {
             </label>
             <input
               type="text"
-              value={formData.knowMoreText}
+              value={formData?.knowMoreText}
               onChange={(e) => handleChange("knowMoreText", e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -128,7 +128,7 @@ export default function HeroForm({ initialData }) {
             </label>
             <input
               type="text"
-              value={formData.knowMoreLink}
+              value={formData?.knowMoreLink}
               onChange={(e) => handleChange("knowMoreLink", e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="/example-page"
@@ -144,7 +144,7 @@ export default function HeroForm({ initialData }) {
             </label>
             <input
               type="text"
-              value={formData.imageAlt}
+              value={formData?.imageAlt}
               onChange={(e) => handleChange("imageAlt", e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -157,7 +157,7 @@ export default function HeroForm({ initialData }) {
             </label>
             <input
               type="number"
-              value={formData.order}
+              value={formData?.order}
               onChange={(e) =>
                 handleChange("order", parseInt(e.target.value) || 0)
               }
@@ -171,7 +171,7 @@ export default function HeroForm({ initialData }) {
               Status
             </label>
             <select
-              value={formData.isActive}
+              value={formData?.isActive}
               onChange={(e) =>
                 handleChange("isActive", e.target.value === "true")
               }
@@ -187,7 +187,7 @@ export default function HeroForm({ initialData }) {
           <ImageInput
             uploadAction={(file) => uploadPageFile(file, "image")}
             onChange={handleImageChange}
-            initialImage={formData.image || ""}
+            initialImage={formData?.image || ""}
           />
         </div>
 

@@ -16,8 +16,8 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       const result = await login({
-        username: formData.username,
-        password: formData.password,
+        username: formData?.username,
+        password: formData?.password,
       });
 
       if (result.success) {
@@ -65,7 +65,7 @@ export default function LoginPage() {
                 </label>
                 <input
                   id="username"
-                  value={formData.username}
+                  value={formData?.username}
                   onChange={(e) =>
                     setFormData({ ...formData, username: e.target.value })
                   }
@@ -85,7 +85,7 @@ export default function LoginPage() {
                 </label>
                 <input
                   id="password"
-                  value={formData.password}
+                  value={formData?.password}
                   onChange={(e) =>
                     setFormData({ ...formData, password: e.target.value })
                   }

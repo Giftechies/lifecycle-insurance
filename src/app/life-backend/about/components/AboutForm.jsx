@@ -141,7 +141,7 @@ export default function AboutForm({ initialData }) {
   };
 
   const handlePointChange = (index, value) => {
-    const newPoints = [...formData.points];
+    const newPoints = [...formData?.points];
     newPoints[index] = { ...newPoints[index], text: value };
     setFormData((prev) => ({ ...prev, points: newPoints }));
   };
@@ -150,14 +150,14 @@ export default function AboutForm({ initialData }) {
     const newPoint = {
       id: `point-${Date.now()}`,
       text: "",
-      order: formData.points.length,
+      order: formData?.points.length,
     };
     setFormData((prev) => ({ ...prev, points: [...prev.points, newPoint] }));
   };
 
   const removePoint = (index) => {
-    if (formData.points.length > 1) {
-      const newPoints = formData.points.filter((_, i) => i !== index);
+    if (formData?.points.length > 1) {
+      const newPoints = formData?.points.filter((_, i) => i !== index);
       // Update order for remaining points
       const reorderedPoints = newPoints.map((point, idx) => ({
         ...point,
@@ -171,14 +171,14 @@ export default function AboutForm({ initialData }) {
     const { active, over } = event;
 
     if (active.id !== over?.id) {
-      const oldIndex = formData.points.findIndex(
+      const oldIndex = formData?.points.findIndex(
         (point) => point.id === active.id
       );
-      const newIndex = formData.points.findIndex(
+      const newIndex = formData?.points.findIndex(
         (point) => point.id === over.id
       );
 
-      const newPoints = arrayMove(formData.points, oldIndex, newIndex);
+      const newPoints = arrayMove(formData?.points, oldIndex, newIndex);
 
       // Update order for all points
       const reorderedPoints = newPoints.map((point, index) => ({
@@ -196,7 +196,7 @@ export default function AboutForm({ initialData }) {
 
     try {
       // Filter out empty points and prepare data
-      const filteredPoints = formData.points
+      const filteredPoints = formData?.points
         .filter((point) => point.text.trim() !== "")
         .map((point, index) => ({
           text: point.text,
@@ -237,7 +237,7 @@ export default function AboutForm({ initialData }) {
         <ImageInput
           uploadAction={uploadPageFile}
           onChange={handleImageChange}
-          initialImage={formData.image}
+          initialImage={formData?.image}
         />
 
         {/* Image Alt Text */}
@@ -247,7 +247,7 @@ export default function AboutForm({ initialData }) {
           </label>
           <input
             type="text"
-            value={formData.imageAlt}
+            value={formData?.imageAlt}
             onChange={(e) => handleChange("imageAlt", e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter image alt text"
@@ -262,7 +262,7 @@ export default function AboutForm({ initialData }) {
           </label>
           <input
             type="text"
-            value={formData.title}
+            value={formData?.title}
             onChange={(e) => handleChange("title", e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter title"
@@ -276,7 +276,7 @@ export default function AboutForm({ initialData }) {
             Content
           </label>
           <textarea
-            value={formData.content}
+            value={formData?.content}
             onChange={(e) => handleChange("content", e.target.value)}
             rows={6}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -315,17 +315,17 @@ export default function AboutForm({ initialData }) {
             >
               <div className="space-y-3">
                 <SortableContext
-                  items={formData.points.map((point) => point.id)}
+                  items={formData?.points.map((point) => point.id)}
                   strategy={verticalListSortingStrategy}
                 >
-                  {formData.points.map((point, index) => (
+                  {formData?.points.map((point, index) => (
                     <SortablePointItem
                       key={point.id}
                       point={point}
                       index={index}
                       onPointChange={handlePointChange}
                       onRemove={removePoint}
-                      canRemove={formData.points.length > 1}
+                      canRemove={formData?.points.length > 1}
                     />
                   ))}
                 </SortableContext>

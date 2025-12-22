@@ -54,26 +54,26 @@ export default function TeamIndexForm({initialData}){
                 <label htmlFor="heading">Heading </label>
                 <input 
                 id="heading"
-                value={formData.heading}
+                value={formData?.heading}
                 onChange={(e)=>handleChange('heading',e.target.value)}
                 />
                 <label htmlFor="boxheading">Box Heading </label>
                 <input 
                 id="boxheading"
-                value={formData.boxheading}
+                value={formData?.boxheading}
                 onChange={(e)=>handleChange('boxheading',e.target.value)}
                 />
                 <label htmlFor="boxContent">Box Content </label>
                 <textarea 
                 id="shortContent"
-                value={formData.boxcontent}
+                value={formData?.boxcontent}
                 onChange={(e)=>handleChange('boxcontent',e.target.value)}
                 className="min-h-26"
                 />
             <label htmlFor="content">Content</label>
             <RichTextEditor
           onChange={(value) => handleChange("content", value)}
-          value={formData.content}
+          value={formData?.content}
           
         />
         </div>
@@ -84,9 +84,9 @@ export default function TeamIndexForm({initialData}){
             onChange={(value)=>handleImage(value)}
             />
         <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
+          metaTitle={formData?.metaTitle}
+          metaDescription={formData?.metaDescription}
+          metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
         <button type="submit">Update Data</button>

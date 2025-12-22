@@ -66,25 +66,25 @@ export default function NewsStudyForm({ studies }) {
             <label>Heading</label>
             <input
               type="text"
-              value={formData.heading}
+              value={formData?.heading}
               onChange={(e) => handleChange("heading", e.target.value)}
               placeholder="Enter heading"
             />
           </div>
 
           <SlugInput
-            heading={formData.heading}
-            value={formData.slug}
+            heading={formData?.heading}
+            value={formData?.slug}
             onChange={(value) => handleChange("slug", value)}
           />
 
           <label htmlFor="shortTitle">Short Title</label>
-          <textarea type="text" value={formData.shortTitle} onChange={(e) => handleChange("shortTitle", e.target.value)} placeholder="Enter short title" />
+          <textarea type="text" value={formData?.shortTitle} onChange={(e) => handleChange("shortTitle", e.target.value)} placeholder="Enter short title" />
 
           <div>
             <label>Description</label>
             <RichTextEditor
-              value={formData.description}
+              value={formData?.description}
               onChange={(value) => handleChange("description", value)}
             />
           </div>
@@ -101,16 +101,16 @@ export default function NewsStudyForm({ studies }) {
             <input
               type="text"
               id="imageAlt"
-              value={formData.imageAlt}
+              value={formData?.imageAlt}
               onChange={(e) => handleChange("imageAlt", e.target.value)}
               placeholder="Enter image alt"
             />
           </div>
 
           <MetaTags
-            metaTitle={formData.metaTitle}
-            metaDescription={formData.metaDescription}
-            metaKeywords={formData.metaKeywords}
+            metaTitle={formData?.metaTitle}
+            metaDescription={formData?.metaDescription}
+            metaKeywords={formData?.metaKeywords}
             onChange={(field, value) => handleChange(field, value)}
           />
         </div>

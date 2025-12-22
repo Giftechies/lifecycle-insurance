@@ -65,13 +65,13 @@ export default function BusinessFundingForm({ initialData, categories }) {
         <input
           type="text"
           id="heading"
-          value={formData.heading}
+          value={formData?.heading}
           onChange={(e) => handleChange("heading", e.target.value)}
           placeholder="Enter Heading"
         />
         <SlugInput
-          heading={formData.heading}
-          value={formData.slug}
+          heading={formData?.heading}
+          value={formData?.slug}
           onChange={(value) => handleChange("slug", value)}
         />
 
@@ -79,7 +79,7 @@ export default function BusinessFundingForm({ initialData, categories }) {
         <textarea
           type="text"
           id="shortContent"
-          value={formData.shortContent}
+          value={formData?.shortContent}
           onChange={(e) => handleChange("shortContent", e.target.value)}
           placeholder="Enter Short Content"
         />
@@ -87,13 +87,13 @@ export default function BusinessFundingForm({ initialData, categories }) {
         <label htmlFor="Content">Content</label>
         <RichTextEditor
           onChange={(value) => handleChange("content", value)}
-          value={formData.content}
+          value={formData?.content}
         />
 
         <label htmlFor="category">Category</label>
         <select
           id="category"
-          value={formData.category}
+          value={formData?.category}
           onChange={(e) => handleChange("category", e.target.value)}
           className="w-full p-2 border rounded"
         >
@@ -109,22 +109,22 @@ export default function BusinessFundingForm({ initialData, categories }) {
         <ImageInput
           uploadAction={(file) => uploadPageFile(file, "image")}
           onChange={handleImageChange}
-          initialImage={formData.image || ""}
+          initialImage={formData?.image || ""}
         />
         <label htmlFor="imageAlt">Image Alt</label>
         <input
           type="text"
           id="imageAlt"
           name="imageAlt"
-          value={formData.imageAlt}
+          value={formData?.imageAlt}
           onChange={(e) => handleChange("imageAlt", e.target.value)}
           placeholder="Enter Image Alt"
         />
 
         <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
+          metaTitle={formData?.metaTitle}
+          metaDescription={formData?.metaDescription}
+          metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
 
@@ -139,7 +139,7 @@ export default function BusinessFundingForm({ initialData, categories }) {
           type="text"
           id="pdfAlt"
           name="pdfAlt"
-          value={formData.pdfAlt}
+          value={formData?.pdfAlt}
           onChange={(e) => handleChange("pdfAlt", e.target.value)}
           placeholder="Enter Pdf Alt"
         />

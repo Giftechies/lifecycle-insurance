@@ -65,13 +65,13 @@ export default function SubInsuranceForm({ initialData, }) {
         <input
           type="text"
           id="heading"
-          value={formData.heading}
+          value={formData?.heading}
           onChange={(e) => handleChange("heading", e.target.value)}
           placeholder="Enter heading"
         />
         <SlugInput
-          heading={formData.heading}
-          value={formData.slug}
+          heading={formData?.heading}
+          value={formData?.slug}
           onChange={(value) => handleChange("slug", value)}
         />
 
@@ -79,7 +79,7 @@ export default function SubInsuranceForm({ initialData, }) {
         <select
           id="category"
           name="category"
-          value={formData.category}
+          value={formData?.category}
           onChange={(e) => handleChange("category", e.target.value)}
           className="w-full text-sm mb-6 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
         >
@@ -92,34 +92,34 @@ export default function SubInsuranceForm({ initialData, }) {
         </select> */}
 
         <label htmlFor="shortContent">Short Content</label>
-        <textarea type="text" value={formData.shortContent} onChange={(e) => handleChange("shortContent", e.target.value)} placeholder="Enter short content" />
+        <textarea type="text" value={formData?.shortContent} onChange={(e) => handleChange("shortContent", e.target.value)} placeholder="Enter short content" />
 
         <label>Content</label>
         <RichTextEditor
           onChange={(value) => handleChange("content", value)}
-          value={formData.content}
+          value={formData?.content}
         />
       </div>
       <div>
         <ImageInput
           uploadAction={(file) => uploadPageFile(file, "image")}
           onChange={handleImageChange}
-          initialImage={formData.image || ""}
+          initialImage={formData?.image || ""}
         />
         <label htmlFor="imageAlt">Image Alt</label>
         <input
           type="text"
           id="imageAlt"
           name="imageAlt"
-          value={formData.imageAlt}
+          value={formData?.imageAlt}
           onChange={(e) => handleChange("imageAlt", e.target.value)}
           placeholder="Enter Image Alt"
         />
 
         <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
+          metaTitle={formData?.metaTitle}
+          metaDescription={formData?.metaDescription}
+          metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
         {/* <PdfInput
@@ -133,7 +133,7 @@ export default function SubInsuranceForm({ initialData, }) {
           type="text"
           id="pdfAlt"
           name="pdfAlt"
-          value={formData.pdfAlt}
+          value={formData?.pdfAlt}
           onChange={(e) => handleChange("pdfAlt", e.target.value)}
           placeholder="Enter Pdf Alt"
         /> */}

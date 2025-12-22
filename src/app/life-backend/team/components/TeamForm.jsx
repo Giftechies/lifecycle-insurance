@@ -46,22 +46,22 @@ export default function TeamForm({initialData}){
         <form className="form-container grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" value={formData.name} onChange={(e) => handleChange('name', e.target.value)} placeholder="Enter Name" />
+                <input type="text" id="name" value={formData?.name} onChange={(e) => handleChange('name', e.target.value)} placeholder="Enter Name" />
 
                 <label htmlFor="designation">Designation</label>
-                <input type="text" id="designation" value={formData.designation} onChange={(e) => handleChange('designation', e.target.value)} placeholder="Enter Designation" />
+                <input type="text" id="designation" value={formData?.designation} onChange={(e) => handleChange('designation', e.target.value)} placeholder="Enter Designation" />
 
                 <label htmlFor="contact">Contact Number</label>
-                <input type="text" id="contact" value={formData.contact} onChange={(e) => handleChange('contact', e.target.value)} placeholder="Enter phoen number" />
+                <input type="text" id="contact" value={formData?.contact} onChange={(e) => handleChange('contact', e.target.value)} placeholder="Enter phoen number" />
             </div>
             <div>
                 <ImageInput
           uploadAction={(file) => uploadPageFile(file, "image")}
           onChange={handleImageChange}
-          initialImage={formData.image || ""}
+          initialImage={formData?.image || ""}
         />
                 <label htmlFor="imageAlt">Image Alt</label>
-                <input type="text" id="imageAlt" value={formData.imageAlt} onChange={(e) => handleChange('imageAlt', e.target.value)} placeholder="Enter Image Alt" />
+                <input type="text" id="imageAlt" value={formData?.imageAlt} onChange={(e) => handleChange('imageAlt', e.target.value)} placeholder="Enter Image Alt" />
             <button type="submit">Submit</button>
             </div>
         </form>

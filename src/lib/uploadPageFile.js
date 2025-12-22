@@ -1,7 +1,7 @@
 export async function uploadPageFile(file, type) {
   try {
     const formData = new FormData();
-    formData.append("file", file);
+    formData?.append("file", file);
 
     const res = await fetch("/api/upload/page-file", {
       method: "POST",

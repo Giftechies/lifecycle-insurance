@@ -65,15 +65,15 @@ export default function CaseStudyForm({ studies }) {
           <input
             type="text"
             id="heading"
-            value={formData.heading}
+            value={formData?.heading}
             placeholder="Enter heading"
             onChange={(e) => handleChange("heading", e.target.value)}
           />
         </div>
 
         <SlugInput
-          heading={formData.heading}
-          value={formData.slug}
+          heading={formData?.heading}
+          value={formData?.slug}
           onChange={(value) => handleChange("slug", value)}
         />
          <div>
@@ -81,7 +81,7 @@ export default function CaseStudyForm({ studies }) {
           <input
             type="text"
             id="shortcontent"
-            value={formData.shortcontent}
+            value={formData?.shortcontent}
             placeholder="Enter short content"
             onChange={(e) => handleChange("shortcontent", e.target.value)}
           />
@@ -90,7 +90,7 @@ export default function CaseStudyForm({ studies }) {
         <div>
           <label>Description</label>
           <RichTextEditor
-            value={formData.description}
+            value={formData?.description}
             onChange={(value) => handleChange("description",value)}
           />
         </div>
@@ -107,7 +107,7 @@ export default function CaseStudyForm({ studies }) {
           <input
             type="text"
             id="imageAlt"
-            value={formData.imageAlt}
+            value={formData?.imageAlt}
             onChange={(e) => handleChange("imageAlt",e.target.value)}
             placeholder="Enter image alt"
           />
@@ -118,15 +118,15 @@ export default function CaseStudyForm({ studies }) {
           <input
             type="date"
             id="date"
-            value={formData.date}
+            value={formData?.date}
             onChange={(e) => handleChange('date', e.target.value)}
           />
         </div>
 
         <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
+          metaTitle={formData?.metaTitle}
+          metaDescription={formData?.metaDescription}
+          metaKeywords={formData?.metaKeywords}
           onChange={(field, value) =>
             setFormData((formData) => ({ ...formData, [field]: value }))
           }

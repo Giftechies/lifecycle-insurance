@@ -34,14 +34,14 @@ export default function CommercialIndexForm({initialData}){
                 <label>Content</label>
                 <RichTextEditor
           onChange={(value) => handleChange("content", value)}
-          value={formData.content}
+          value={formData?.content}
         />   
                 </div>
                 <div>
                 <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
+          metaTitle={formData?.metaTitle}
+          metaDescription={formData?.metaDescription}
+          metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
         <button type="submit">Update Data</button>

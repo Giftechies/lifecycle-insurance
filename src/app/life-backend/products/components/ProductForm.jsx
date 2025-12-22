@@ -213,7 +213,7 @@ export default function ProductForm({ initialData }) {
   };
 
   const handleServiceChange = (index, updatedService) => {
-    const newServices = [...formData.services];
+    const newServices = [...formData?.services];
     newServices[index] = updatedService;
     setFormData((prev) => ({ ...prev, services: newServices }));
   };
@@ -226,7 +226,7 @@ export default function ProductForm({ initialData }) {
       title: "",
       description: "",
       link: "",
-      order: formData.services.length,
+      order: formData?.services.length,
     };
     setFormData((prev) => ({
       ...prev,
@@ -235,8 +235,8 @@ export default function ProductForm({ initialData }) {
   };
 
   const removeService = (index) => {
-    if (formData.services.length > 1) {
-      const newServices = formData.services.filter((_, i) => i !== index);
+    if (formData?.services.length > 1) {
+      const newServices = formData?.services.filter((_, i) => i !== index);
       // Update order for remaining services
       const reorderedServices = newServices.map((service, idx) => ({
         ...service,
@@ -250,14 +250,14 @@ export default function ProductForm({ initialData }) {
     const { active, over } = event;
 
     if (active.id !== over?.id) {
-      const oldIndex = formData.services.findIndex(
+      const oldIndex = formData?.services.findIndex(
         (service) => service.id === active.id
       );
-      const newIndex = formData.services.findIndex(
+      const newIndex = formData?.services.findIndex(
         (service) => service.id === over.id
       );
 
-      const newServices = arrayMove(formData.services, oldIndex, newIndex);
+      const newServices = arrayMove(formData?.services, oldIndex, newIndex);
 
       // Update order for all services
       const reorderedServices = newServices.map((service, index) => ({
@@ -275,7 +275,7 @@ export default function ProductForm({ initialData }) {
 
     try {
       // Validate and prepare services data
-      const validServices = formData.services.filter(
+      const validServices = formData?.services.filter(
         (service) =>
           service.title.trim() !== "" &&
           service.description.trim() !== "" &&
@@ -291,8 +291,8 @@ export default function ProductForm({ initialData }) {
       }
 
       const dataToSubmit = {
-        title: formData.title,
-        description: formData.description,
+        title: formData?.title,
+        description: formData?.description,
         services: validServices.map((service, index) => ({
           image: service.image,
           imageAlt: service.imageAlt,
@@ -329,7 +329,7 @@ export default function ProductForm({ initialData }) {
           </label>
           <input
             type="text"
-            value={formData.title}
+            value={formData?.title}
             onChange={(e) => handleChange("title", e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Enter section title"
@@ -343,7 +343,7 @@ export default function ProductForm({ initialData }) {
             Section Description
           </label>
           <textarea
-            value={formData.description}
+            value={formData?.description}
             onChange={(e) => handleChange("description", e.target.value)}
             rows={4}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -382,17 +382,17 @@ export default function ProductForm({ initialData }) {
             >
               <div className="space-y-4">
                 <SortableContext
-                  items={formData.services.map((service) => service.id)}
+                  items={formData?.services.map((service) => service.id)}
                   strategy={verticalListSortingStrategy}
                 >
-                  {formData.services.map((service, index) => (
+                  {formData?.services.map((service, index) => (
                     <SortableServiceItem
                       key={service.id}
                       service={service}
                       index={index}
                       onServiceChange={handleServiceChange}
                       onRemove={removeService}
-                      canRemove={formData.services.length > 1}
+                      canRemove={formData?.services.length > 1}
                     />
                   ))}
                 </SortableContext>
