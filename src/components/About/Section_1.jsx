@@ -1,6 +1,8 @@
 import Image from "next/image";
+import DOMPurify from "isomorphic-dompurify";
 
 export default function({data}){
+  const safeHTML = DOMPurify.sanitize(data?.content)
     return(
          <section className="section-1 max-w-[1600px] mx-auto w-[100%]  lg:p-[3rem] lg:pb-[5rem] xl:pb-[3rem]   ">
           <main className=" h-full w-full lg:flex  ">
@@ -20,7 +22,7 @@ export default function({data}){
                   <p className="text-[var(--primg)]  text-[16px] ">
                     <i className="   ri-record-circle-line mr-1 "></i> {data?.heading}
                   </p>
-              <div dangerouslySetInnerHTML={{__html:data?.content}} />
+              <div dangerouslySetInnerHTML={{__html:safeHTML}} />
               </div>
 
               {/* image */}
