@@ -20,7 +20,7 @@ export default function InsuranceIndexForm({ initialData }) {
     metaKeywords: initialData?.metaKeywords || "",
   })
 
-  
+
   const handleChange = (field, value) => {
     setFormData((formData) => ({ ...formData, [field]: value }));
   };
@@ -76,7 +76,7 @@ export default function InsuranceIndexForm({ initialData }) {
        />
         <MetaTags
           metaTitle={formData?.metaTitle}
-          metaDescription={formData??.metaDescription}
+          metaDescription={formData?.metaDescription}
           metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
