@@ -41,7 +41,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen grid grid-cols-1 lg:grid-cols-2">
-      <div className="flex items-center justify-center p-8 bg-blue-800 text-white">
+      <div className="flex items-center justify-center p-8 bg-[#659aa5] text-white">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
             <Image
@@ -49,12 +49,10 @@ export default function LoginPage() {
               alt="alt"
               width={200}
               height={200}
-              className="bg-blue-800 p-4 mx-auto"
+              className="bg-white p-4 mx-auto"
             />
             <h2 className="mt-6 text-3xl font-semibold">Secure Portal</h2>
-            <p className="mt-2 text-sm">
-              Enter your credentials to access AWS CMS
-            </p>
+           
           </div>
           <form onSubmit={handleLogin} className="mt-8 space-y-6">
             <div className="space-y-4">
@@ -73,7 +71,7 @@ export default function LoginPage() {
                   }
                   type="text"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 "
                   placeholder="Enter your username"
                 />
               </div>
@@ -93,7 +91,7 @@ export default function LoginPage() {
                   }
                   type="password"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 text-black"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300"
                   placeholder="••••••••"
                 />
               </div>
@@ -103,7 +101,7 @@ export default function LoginPage() {
               type="submit"
               className="w-full bg-white text-gray-800 py-3 px-4 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#154583] focus:ring-offset-2"
             >
-              Authenticate
+              Login
             </button>
           </form>
         </div>

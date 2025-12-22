@@ -11,24 +11,23 @@ export async function login(formData) {
 
     const { username, password } = formData;
 
-    if (!username || !password) {
-      return { error: "Username and password are required" };
-    }
+   const user = await User.findOne({ username }).select("+password");
 
-    const user = await User.findOne({ username });
-    if (!user) {
-      return { error: "Invalid credentials" };
-    }
+if (!user) {
+  return { error: "Invalid credentials" };
+}
 
-    const isMatch = await user.comparePassword(password);
-    if (!isMatch) {
-      return { error: "Invalid credentials" };
-    }
+const isMatch = await user.comparePassword(password);
+if (!isMatch) {
+  return { error: "Invalid credentials" };
+}
 
-    const secret = new TextEncoder().encode(process.env.JWT_SECRET);
-    if (!secret) {
-      throw new Error("JWT_SECRET environment variable is not set");
-    }
+
+   if (!process.env.JWT_SECRET) {
+  throw new Error("JWT_SECRET environment variable is not set");
+}
+
+const secret = new TextEncoder().encode(process.env.JWT_SECRET);
 
     const token = await new SignJWT({ userId: user._id })
       .setProtectedHeader({ alg: "HS256" })
@@ -74,8 +73,8 @@ export async function warmUpDatabase() {
 
 export async function register() {
   console.log("register");
-  const username = "awsadmin";
-  const password = "awsaccess02";
+  const username = "lifeAdmin";
+  const password = "life-acces01";
 
   try {
     await dbConnect();
@@ -93,3 +92,4 @@ export async function register() {
     return { success: false, error: error.message };
   }
 }
+

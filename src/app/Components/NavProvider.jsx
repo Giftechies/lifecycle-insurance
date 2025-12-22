@@ -6,7 +6,7 @@ import Nav from './Nav/Nav'
 export default function NavProvider(){
 
     const pathname = usePathname()
-    if(pathname.startsWith("/life-backend")){
+    if(pathname.startsWith("/life-backend") || pathname==='/login'){
     return null
 }
     return <Nav/>

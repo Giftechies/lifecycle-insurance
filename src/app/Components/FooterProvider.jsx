@@ -6,7 +6,7 @@ export default function footeProvider(){
 const pathname = usePathname()
 
 
-if(pathname.startsWith("/life-backend")){
+if(pathname.startsWith("/life-backend") || pathname==="/login"){
     return null
 }
 

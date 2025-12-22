@@ -13,7 +13,7 @@ export default async function about() {
   
   return (
     <>
-      <Banner title="About us" />
+       <Banner title="About Us" image={pageData.image} />
        <Section1 data={res.data} />
        <Section2 team={team.data} />
        <Section3/>

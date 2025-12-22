@@ -56,12 +56,11 @@ const caseStudies = {
 export default async function CaseStudyDetail({ params }) {
   // const study = caseStudies[params.slug];
   const studies = await (await getCaseStudies ()).studies
-  const  data = studies?.filter((item)=>item.slug===params.slug)
+  const  data = studies?.filter((item)=>item?.slug===params?.slug)
   const study = data[0]
-  const safeHTML = DOMPurify.sanitize(study.description)
-  console.log(data,'study');
+  const safeHTML = DOMPurify.sanitize(study?.description)
+ 
 
-  
 
   if (!studies) return notFound();
 

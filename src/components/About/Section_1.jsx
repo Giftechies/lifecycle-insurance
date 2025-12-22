@@ -9,7 +9,7 @@ export default function({data}){
                 <Image
                   width={250}
                   height={250}
-                  src={data.image}
+                  src={data?.image}
                   className=" w-full  h-full  object-cover object-center "
                   alt=""
                 />
@@ -18,9 +18,9 @@ export default function({data}){
             <div className="Right w-full space-y-6  lg:w-[55%]  flex flex-col   max-lg:p-6   ">
               <div className="uppercontent   lg:pl-10  ">
                   <p className="text-[var(--primg)]  text-[16px] ">
-                    <i className="   ri-record-circle-line mr-1 "></i> {data.heading}
+                    <i className="   ri-record-circle-line mr-1 "></i> {data?.heading}
                   </p>
-              <div dangerouslySetInnerHTML={{__html:data.content}} />
+              <div dangerouslySetInnerHTML={{__html:data?.content}} />
               </div>
 
               {/* image */}
@@ -28,7 +28,7 @@ export default function({data}){
                 <Image
                 width={250}
                 height={250}
-                  src={data.image}
+                  src={data?.image}
                   className=" w-full h-full object-cover  "
                   alt="About pic"
                 />
@@ -36,10 +36,10 @@ export default function({data}){
 
               <div className="lowercontent p-4 text-white  bg-[var(--primg)] w-full max-lg:rounded-2xl   lg:w-[90%] lg:p-10 lg:leading-6   lg:rounded-r-4xl ">
                 <h2 className="  max-md:text-[20px] leading-8 font-semibold   w-[90%] mb-4 ">
-                  {data.boxheading}
+                  {data?.boxheading}
                 </h2>
                 <p className=" text-[14px]   text-justify text-white/80  ">
-            {data.boxcontent}
+            {data?.boxcontent}
                 </p>
               </div>
             </div>
