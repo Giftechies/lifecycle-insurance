@@ -12,11 +12,11 @@ export default function TeamIndexForm({initialData}){
     console.log(initialData,"ddk>>");
     
     const [formData,setFormData] = useState({
-        heading:initialData.heading || '',
-        boxheading:initialData.boxheading || '',
-        boxcontent:initialData.boxcontent || '',
+        heading:initialData?.heading || '',
+        boxheading:initialData?.boxheading || '',
+        boxcontent:initialData?.boxcontent || '',
         content:initialData?.content || "",
-        image:initialData.image || "",
+        image:initialData?.image || "",
         metaTitle:initialData?.metaTitle || "",
         metaDescription:initialData?.metaDescription || "",
         metaKeywords:initialData?.metaKeywords || "",
