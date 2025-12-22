@@ -19,10 +19,13 @@ export default function DataTable({
   searchableColumns = [],
 }) {
   const [globalFilter, setGlobalFilter] = useState("");
+  const safeData = Array.isArray(data) ? data : [];
+const safeColumns = Array.isArray(columns) ? columns : [];
+
 
   const table = useReactTable({
-    data,
-    columns,
+    data:safeData,
+    columns:safeColumns,
     state: {
       globalFilter,
     },
