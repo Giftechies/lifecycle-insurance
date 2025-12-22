@@ -20,6 +20,7 @@ export default function InsuranceIndexForm({ initialData }) {
     metaKeywords: initialData?.metaKeywords || "",
   })
 
+  
   const handleChange = (field, value) => {
     setFormData((formData) => ({ ...formData, [field]: value }));
   };
@@ -71,12 +72,12 @@ export default function InsuranceIndexForm({ initialData }) {
       <ImageInput
       uploadAction={uploadPageFile}
       onChange={handleImageSet} 
-      initialImage={initialData.image || ''}
+      initialImage={initialData?.image || ''}
        />
         <MetaTags
-          metaTitle={formData.metaTitle}
-          metaDescription={formData.metaDescription}
-          metaKeywords={formData.metaKeywords}
+          metaTitle={formData?.metaTitle}
+          metaDescription={formData??.metaDescription}
+          metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
         <button type="submit">Update Data</button>
