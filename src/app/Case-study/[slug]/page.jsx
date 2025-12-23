@@ -3,7 +3,7 @@
 import Banner from "../../Components/Banner/Banner";
 import { notFound } from "next/navigation";
 import Slideri from "../../Components/Slideri/Slideri"
-import {getCaseStudies} from "../../../actions/caseStudy.actions"
+import { getCaseStudies } from "../../../actions/caseStudy.actions"
 import DOMPurify from "isomorphic-dompurify";
 
 // Simulated data (in real app, fetch from API or DB)
@@ -54,13 +54,11 @@ const caseStudies = {
 };
 
 export default async function CaseStudyDetail({ params }) {
-  // const study = caseStudies[params.slug];
-  const studies = await (await getCaseStudies ()).studies
-  const  data = studies?.filter((item)=>item?.slug===params?.slug)
+  const { slug } = await params;
+  const studies = await (await getCaseStudies()).studies
+  const data = studies?.filter((item) => item?.slug === slug)
   const study = data[0]
   const safeHTML = DOMPurify.sanitize(study?.description)
- 
-
 
   if (!studies) return notFound();
 
@@ -69,10 +67,7 @@ export default async function CaseStudyDetail({ params }) {
       <Banner title={study.heading} />
       <section className=" case py-10 px-4  lg:p-[3rem]  space-y-6">
         <main className=" flex gap-5  justify-between">
-          <div className=" w-[70%] editor-container " dangerouslySetInnerHTML={{__html:safeHTML}} />
-         
-        
-
+          <div className=" w-[70%] editor-container " dangerouslySetInnerHTML={{ __html: safeHTML }} />
           <Slideri studies={studies} />
         </main>
 
