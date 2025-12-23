@@ -7,14 +7,20 @@ import { getInsuranceIndex } from "@/actions/insuranceIndex.model"
 
 
 export default async function Page({params}) {
+  const {page} = await params;
    
    
       let subpage
       let cardData
    
-  if(params?.page==='mortgage'){
-   const res = await getSubMortgage();
-    subpage = (await getMortgageIndex()).mortgageIndex
+  if(page==='mortgage'){
+
+    const [res,ressubpage] = await Promise.all([
+      getSubMortgage(),
+      getMortgageIndex()
+    ])
+
+    subpage = ressubpage.mortgageIndex
   cardData = res?.data?.map((type)=>({
      title:type?.slug,
     slug:type?.slug,
@@ -23,8 +29,13 @@ export default async function Page({params}) {
     alt:type?.imageAlt,
     link:`/mortgage/${type.slug}`
   }))
-}else{
- const res= await getSubInsurance();
+}
+if(page ==='insurance'){
+  const [res,ressubpage] = await Promise.all([
+      getSubInsurance(),
+      getInsuranceIndex()
+    ])
+
  cardData = res?.data?.map((type)=>({
    title:type?.slug,
     slug:type?.slug,
@@ -34,13 +45,13 @@ export default async function Page({params}) {
     link:`/insurance/${type.slug}`
 
  }))
-  subpage = await (await getInsuranceIndex()).data
+  subpage = ressubpage.data
 }
   
    
   return (
    <CategoryPage
-  title={params?.page}
+  title={page}
   cards={cardData}
   type={subpage}
 />
