@@ -150,14 +150,14 @@ export default function Nav() {
 
       {/* mobile */}
       <div
-        class="fixed left-0 bottom-0 right-0 lg:hidden bg-white border-t border-gray-200 shadow-lg z-[9999]"
+        className="fixed left-0 bottom-0 right-0 lg:hidden bg-white border-t border-gray-200 shadow-lg z-[9999]"
         bis_skin_checked="1"
       >
-        <div class="relative" bis_skin_checked="1">
-          <div class="grid grid-cols-5 h-16" bis_skin_checked="1">
+        <div className="relative" bis_skin_checked="1">
+          <div className="grid grid-cols-5 h-16" bis_skin_checked="1">
             <a
               href="tel:0800507770"
-              class="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
+              className="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -167,18 +167,18 @@ export default function Nav() {
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-phone"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-phone"
                 aria-hidden="true"
               >
                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
               </svg>
-              <span class="text-xs font-medium">Call</span>
+              <span className="text-xs font-medium">Call</span>
             </a>
             <a
               href="mailto:harpreet@lifecyclefinancial.co.nz"
-              class="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
+              className="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -188,22 +188,22 @@ export default function Nav() {
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-mail"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-mail"
                 aria-hidden="true"
               >
                 <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
               </svg>
-              <span class="text-xs font-medium">Email</span>
+              <span className="text-xs font-medium">Email</span>
             </a>
             <div
-              class="flex items-center justify-center relative"
+              className="flex items-center justify-center relative"
               bis_skin_checked="1"
             >
               <a
-                class="absolute -top-6 w-14 h-14 bg-[var(--primg)] rounded-full flex flex-col items-center justify-center text-white shadow-lg border-4 border-white"
+                className="absolute -top-6 w-14 h-14 bg-[var(--primg)] rounded-full flex flex-col items-center justify-center text-white shadow-lg border-4 border-white"
                 href="/"
               >
                 <svg
@@ -214,19 +214,19 @@ export default function Nav() {
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-house"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-house"
                   aria-hidden="true"
                 >
                   <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
                   <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 </svg>
               </a>
-              <span class="text-xs font-medium text-gray-700 mt-6">Home</span>
+              <span className="text-xs font-medium text-gray-700 mt-6">Home</span>
             </div>
             <a
-              class="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
+              className="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
               href="/services"
             >
               <svg
@@ -237,9 +237,9 @@ export default function Nav() {
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-grid3x3 lucide-grid-3x3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-grid3x3 lucide-grid-3x3"
                 aria-hidden="true"
               >
                 <rect width="18" height="18" x="3" y="3" rx="2"></rect>
@@ -248,10 +248,10 @@ export default function Nav() {
                 <path d="M9 3v18"></path>
                 <path d="M15 3v18"></path>
               </svg>
-              <span class="text-xs font-medium">Services</span>
+              <span className="text-xs font-medium">Services</span>
             </a>
             <a
-              class="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
+              className="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
               href="/Enquire"
             >
               <svg
@@ -262,16 +262,16 @@ export default function Nav() {
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-message-circle"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-message-circle"
                 aria-hidden="true"
               >
                 <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
               </svg>
 
               {/* <img src="/call.svg" className=" size-5" alt="" /> */}
-              <span class="text-xs font-medium">Contact</span>
+              <span className="text-xs font-medium">Contact</span>
             </a>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default async function Page({params}) {
       let subpage
       let cardData
    
-  if(params.page==='mortgage'){
+  if(params?.page==='mortgage'){
    const res = await getSubMortgage();
     subpage = (await getMortgageIndex()).mortgageIndex
   cardData = res?.data?.map((type)=>({
