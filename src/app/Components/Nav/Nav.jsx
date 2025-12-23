@@ -50,11 +50,11 @@ export default function Nav() {
     },
     {
       label: 'Case Study',
-      path: '/Case-study'
+      path: '/case-study'
     },
     {
       label: "Calculator",
-      path: "/Calculator",
+      path: "/calculator",
       child: [
         {
           label: "Repayment Calculator",
