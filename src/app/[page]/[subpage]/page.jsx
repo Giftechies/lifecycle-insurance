@@ -4,14 +4,14 @@ import Banner from "@/app/Components/Banner/Banner";
 import Slider from "@/app/Components/Slider/Slider";
 import {  getSubMortgageBySlug,getSubMortgage  } from "../../../actions/subMortgage.actions"
 import {  getSubInsuranceBySlug,getSubInsurance  } from "../../../actions/subInsurance.actions"
-import DOMPurify from "isomorphic-dompurify";
+import sanitizeHtml from 'sanitize-html';
 
 
 export default async function Subpage({params}){
   const {subpage,page} = await params
   let Allpage
   let content
-  if(params.page.startsWith('mortgage')){
+  if(params?.page?.startsWith('mortgage')){
   const data = (await getSubMortgageBySlug(subpage)).data
  Allpage = await (await getSubMortgage()).data
    content = data[0]
@@ -22,8 +22,13 @@ export default async function Subpage({params}){
    content = data[0]
   console.log(content,'f');
   }
-  const safeHTML = DOMPurify.sanitize(content?.content);
-  
+  const safeHTML = sanitizeHtml(content?.content || "", {
+  allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'iframe']),
+  allowedAttributes: {
+    ...sanitizeHtml.defaults.allowedAttributes,
+    '*': ['class', 'style', 'id'],
+  },
+});
 
   return (
     <>

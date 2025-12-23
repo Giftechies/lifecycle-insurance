@@ -1,8 +1,15 @@
 import Image from "next/image";
-import DOMPurify from "isomorphic-dompurify";
+import sanitizeHtml from 'sanitize-html';
 
 export default function({data}){
-  const safeHTML = DOMPurify.sanitize(data?.content)
+
+  const safeHTML = sanitizeHtml(data?.content || "", {
+  allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'iframe']),
+  allowedAttributes: {
+    ...sanitizeHtml.defaults.allowedAttributes,
+    '*': ['class', 'style', 'id'],
+  },
+});
     return(
          <section className="section-1 max-w-[1600px] mx-auto w-[100%]  lg:p-[3rem] lg:pb-[5rem] xl:pb-[3rem]   ">
           <main className=" h-full w-full lg:flex  ">
