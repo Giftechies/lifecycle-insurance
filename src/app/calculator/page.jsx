@@ -10,13 +10,13 @@ export default function RepaymentCalculator() {
     {
       title: "Repayment Calculator",
       content: "Know your monthly repayments before you borrow.",
-      link: "/Calculator/repayment-calculator",
+      link: "/calculator/repayment-calculator",
       img: "/cal2.webp",
     },
     {
       title: "Loan Calculator",
       content: "Estimate your loan savings with extra repayments in seconds",
-      link: "/Calculator/loan-calculator ",
+      link: "/calculator/loan-calculator ",
       img: "/cal1.webp",
     },
     
