@@ -13,7 +13,6 @@ export default async function about() {
   
   return (
     <>
-
        <Banner title="About Us" image={res?.image} />
        <Section1 data={res?.data} />
        <Section2 team={team?.data} />
