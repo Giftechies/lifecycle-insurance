@@ -43,11 +43,11 @@ export async function createOrUpdateHomeBanner(data) {
         } else {
             const newBanner = new HomeBanner(data);
             const savedBanner = await newBanner.save();
-            result = savedBanner.toObject(); // Convert to plain object if not using .lean()
+            result = savedBanner.toObject(); 
         }
 
         return {
-            data: stringifyData(result), // ✅ Convert ObjectId and Dates to strings
+            data: stringifyData(result),
             success: true,
             message: existingBanner ? "Home Banner updated successfully" : "Home Banner created successfully"
         };
