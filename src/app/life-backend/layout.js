@@ -32,7 +32,7 @@ export default function DashboardLayout({ children }) {
       title: "Homepage Sections",
       icon: <FiGrid className="h-5 w-5" />,
       submenu: [
-        { title: "Hero Section", href: "/life-backend/hero" },
+        { title: "Home Banner", href: "/life-backend/Banner" },
         { title: "About Section", href: "/life-backend/about" },
         { title: "Products Section", href: "/life-backend/products" },
       ],

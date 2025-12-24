@@ -50,7 +50,7 @@ export default function ImageInput({
             <input
               type="file"
               className="hidden"
-              accept="image/*"
+           accept=".png, .jpg, .jpeg, .svg, .webp, image/png, image/jpeg, image/svg+xml, image/webp"
               onChange={handleFileChange}
             />
           </label>
@@ -68,12 +68,12 @@ export default function ImageInput({
 
       {imageUrl && !uploadStatus?.loading && (
         <div className="relative border rounded-lg overflow-hidden">
-          <div className="aspect-video relative">
+          <div className="aspect-video min-w-40 min-h-40  relative">
             <Image
               src={imageUrl}
               alt="Uploaded image"
               fill
-              className="object-cover"
+              className="object-container w-full h-full "
             />
           </div>
           <button
