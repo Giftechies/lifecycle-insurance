@@ -5,11 +5,15 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
+
 
 
 gsap.registerPlugin(ScrollTrigger,useGSAP)
 
-export default function HomeBanner(){
+export default function HomeBanner({data=[]}){
+ console.log("home banner data:", data);
+  
     const homeIconBox = useRef()
       useGSAP(() => {
         if (!homeIconBox.current) return;
@@ -42,8 +46,7 @@ export default function HomeBanner(){
             <div className="relative pt-25 px-4 md:px-[1.5rem]  lg:px-[3.5rem] xl:px-[3rem] lg:pt-50 pb-10 z-20 text-white ">
               <p className="animate-fadeInUp text-gray-300 text-sm md:text-base font-semibold mb-2">
                 <i className="ri-record-circle-line mr-2 text-lg font-extralight text-white   "></i>
-                {/* {data?.data[0]?.title} */}
-                LIFE CYCLE FINANCIAL
+             {data?.title}
               </p>
 
               <div className=" text-[26px] md:text-[46px] lg:text-[58px] font-semibold tracking-normal leading-tight">
@@ -78,36 +81,42 @@ export default function HomeBanner(){
               >
                 {/* Card 1 */}
                 <div className="flex  flex-col items-center text-center flex-1 border-b sm:border-b-0 sm:border-r border-dashed border-white/40 p-4">
-                  <img
-                    src="/thumbsup.svg"
+                  <Image
+                  width={250}
+                  height={250}
+                    src={data?.boximage1}
                     alt="Rating"
                     className="w-12  h-12"
                   />
-                  <span className="  text-white  font-semibold mt-3 text-sm">20+ years combined industry experience</span>
-                  <p className="border b"></p>
+                  <span className="  text-white  font-semibold mt-3 text-sm">{data?.boxtitle1}</span>
+                
                 </div>
 
                 {/* Card 2 */}
                 <div className="flex flex-col items-center text-center flex-1 border-b sm:border-b-0 sm:border-r border-dashed border-white/40 p-4">
-                  <img
-                    src="/conversation.svg"
+                  <Image
+                  width={250}
+                  height={250}
+                   src={data?.boximage2}
                     alt="Clients"
                     className="w-12 h-12"
                   />
                   <span className="text-white font-semibold mt-3 text-sm">
-                    700+ Happy Clients served
+                   {data?.boxtitle2}
                   </span>
                 </div>
 
                 {/* Card 3 */}
                 <div className="flex flex-col items-center text-center flex-1 p-4">
-                  <img
-                    src="/ok.svg"
+                  <Image
+                  width={250}
+                  height={250}
+                     src={data?.boximage3}
                     alt="Satisfaction"
                     className="w-12 h-12"
                   />
                   <span className="text-white font-semibold mt-3 text-sm">
-                    98% client satisfaction rate
+                   {data?.boxtitle3}
                   </span>
                 </div>
               </div>

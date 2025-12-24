@@ -24,7 +24,7 @@ export default function RichTextEditor({
   return (
     <div className={className}>
       <Editor
-        apiKey={EDITOR_API_KEY}
+        apiKey={process.env.EDITOR_API_KEY}
         value={value}
         init={{
           ...defaultEditorConfig,
