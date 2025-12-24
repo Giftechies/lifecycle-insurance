@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { defaultEditorConfig, EDITOR_API_KEY } from "@/utils/editorConfig";
+import { defaultEditorConfig} from "@/utils/editorConfig";
 
 const Editor = dynamic(
   () => import("@tinymce/tinymce-react").then((mod) => mod.Editor),

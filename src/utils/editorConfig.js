@@ -32,5 +32,4 @@ export const defaultEditorConfig = {
   content_style: "body { font-family: Arial, sans-serif; font-size: 14px; }",
 };
 
-export const EDITOR_API_KEY =
-  "9j2nb7fv7ojl9vo12lkit57z2kv2ysza4375z4z4mq6ggntj";
+export const EDITOR_API_KEY = "33mxaj0mrgjmsvjhsa2x8h9qf47lgq6f732r5hswd8a71ziq"
