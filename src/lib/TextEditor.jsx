@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { defaultEditorConfig} from "@/utils/editorConfig";
+import { defaultEditorConfig, EDITOR_API_KEY } from "@/utils/editorConfig";
 
 const Editor = dynamic(
   () => import("@tinymce/tinymce-react").then((mod) => mod.Editor),
@@ -24,7 +24,7 @@ export default function RichTextEditor({
   return (
     <div className={className}>
       <Editor
-        apiKey={process.env.EDITOR_API_KEY}
+        apiKey={EDITOR_API_KEY}
         value={value}
         init={{
           ...defaultEditorConfig,
