@@ -58,11 +58,11 @@ export default function Nav() {
       child: [
         {
           label: "Repayment Calculator",
-          path: "/repayment-calculator"
+          path: "/calculator/repayment-calculator"
         },
         {
           label: "Loan calculator",
-          path: "/loan-calculator"
+          path: "/calculator/loan-calculator"
         },
       ]
     },
