@@ -430,6 +430,30 @@ input[type=range].custom-slider::-moz-range-thumb {
   @apply list-disc pl-12 my-4 space-y-2;
 }
 
+.editor-container h1{
+  @apply text-[26px] lg:text-[36px] font-bold my-4;
+}
+
+  .editor-container h2{
+  @apply text-[22px] lg:text-[32px] font-bold my-4;
+}
+.editor-container h3{
+  @apply text-[18px] lg:text-[26px] font-semibold my-4;
+}
+.editor-container h4{
+  @apply text-[16px] lg:text-[22px] font-semibold my-4;
+}
+.editor-container h5{
+  @apply text-[14px] lg:text-[20px] font-semibold my-4;
+}
+.editor-container h6{
+  @apply text-[14px] lg:text-[18px] font-semibold my-4;
+}
+
+.editor-container p {
+  @apply text-base leading-7 text-gray-700 my-4;
+}
+
 .editor-container li {
   @apply text-base leading-7 text-gray-700;
 }

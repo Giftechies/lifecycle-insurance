@@ -6,16 +6,25 @@ import { usePathname, useRouter } from "next/navigation";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import MobileMenuOverlay from "../MobileMenuOverlay/MobileMenuOverlay";
+import { getNavData } from "@/actions/nav.action";
 
 export default function Nav() {
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [InsuranceOpen, setInsuranceOpen] = useState(false);
-  const [mortgageOpen, setMortgageOpen] = useState(false);
-  const [calculatorOpen, setcalculatorOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [getnavData, setGetnavdata] = useState(null);
   const router = useRouter();
   const path = usePathname()
+  useEffect(() => {
+    const fetchNavData = async () => {
+      try {
+        const data = await getNavData();
+        setGetnavdata(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
+    fetchNavData();
+  }, []);
 
   const navData = [
     {
@@ -25,32 +34,17 @@ export default function Nav() {
     {
       label: 'Insurance',
       path: "/insurance",
-      child: [
-        { label: "Life insurance", path: '/insurance/life-insurance' },
-        { label: "Trauma Recovery Cover", path: '/insurance/trauma-recovery-cover' },
-        { label: "Total Permanent Disability Benefit Cover", path: '/insurance/total-permanent-disability-benefit-cover' },
-        { label: "Mortgage & Rent Protection Cover", path: '/insurance/mortgage-rent-protection-cover' },
-        { label: "Income Protection Cover ", path: '/insurance/income-protection-cover ' },
-        { label: "Medical Insurance ", path: '/insurance/medical-insurance' },
-        { label: " Group Insurance", path: '/insurance/group-nsurance ' },
-       
-      ]
+      child: []
     },
     {
       label: "Mortgage",
       path: '/mortgage',
-      child: [
-        { label: "Home Loan", path: "/mortgage/home-loan" },
-        { label: "Refinance", path: "/mortgage/refinance" },
-        { label: "Investment Loan", path: "/mortgage/investment-loan" },
-        { label: "Business Loan", path: "/mortgage/business-loan" },
-        { label: "Construction Loan", path: "/mortgage/construction-loan" },
-        { label: "Commercial Loan", path: "/mortgage/commercial-loan" },
-      ]
+      child: []
     },
     {
       label: 'Case Study',
-      path: '/case-study'
+      path: '/case-study',
+      child: []
     },
     {
       label: "Calculator",
@@ -72,6 +66,31 @@ export default function Nav() {
     }
   ]
 
+  getnavData?.subInsurance.map((item) => {
+    return (
+      navData[1].child.push({
+        label: item.heading,
+        path: `/insurance/${item.slug}`
+      })
+    )
+  })
+  getnavData?.subMortgage?.map((item) => {
+    return (
+      navData[2].child.push({
+        label: item.heading,
+        path: `/mortgage/${item.slug}`
+      })
+    )
+  })
+  getnavData?.caseStudies?.map((item) => {
+    return (
+      navData[3].child.push({
+        label: item.heading,
+        path: `/case-study/${item.slug}`
+      })
+    )
+  })
+
   return (
     <>
       <nav className=" flex  w-full max-w-[1600px] min-w-[320px] mx-auto justify-between items-center px-4 lg:px-[3rem] h-20 ">
@@ -89,41 +108,41 @@ export default function Nav() {
         <div className=" flex gap-20  items-center  justify-between " >
           <div className="hidden lg:flex items-center gap-4 xl:gap-10  " >
             {
-            navData?.map((item, idx) => {
+              navData?.map((item, idx) => {
 
-              const haschild = item?.child && item?.child.length > 0
-              const isChildActive = haschild ? item?.child.some((child) => child.path === path) : false
-              const isActive = path === item.path || isChildActive
+                const haschild = item?.child && item?.child.length > 0
+                const isChildActive = haschild ? item?.child.some((child) => child.path === path) : false
+                const isActive = path === item.path || isChildActive
 
-              return (
-                <div key={idx} className="relative group " >
-                  <Link href={`${item.path}`} className={cn("group flex items-center gap-2 relative ",{'font-semibold':isActive})} >
-                  <div className={cn(`w-0 bg-orange-700 h-px border absolute -bottom-1 left-0 `,{'w-full':isActive})} />
-          
-                    {item.label}
-                    {haschild && <span  >
-                      <ChevronDown className=" mt-1 size-4 group-hover:rotate-180 transition-all duration-300 ease-in-out"/>
+                return (
+                  <div key={idx} className="relative group " >
+                    <Link href={`${item.path}`} className={cn("group flex items-center gap-2 relative ", { 'font-semibold': isActive })} >
+                      <div className={cn(`w-0   border absolute -bottom-1 left-0 `, { 'w-full h-1px bg-black ': isActive })} />
 
-                    </span> }
-                  </Link>
+                      {item.label}
+                      {haschild && <span  >
+                        <ChevronDown className=" mt-1 size-4 group-hover:rotate-180 transition-all duration-300 ease-in-out" />
 
-                  {haschild &&
-                    <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3 hidden group-hover:block ">
-                      {item.child.map((citem, index) => (
-                        <Link
-                          key={index}
-                          href={citem.path}
-                          className={`block px-3 py-2 hover:bg-gray-100 text-black ${path===citem.path && "bg-gray-200 rounded-lg "} `}
-                        >
-                          {citem.label}
-                        </Link>
-                      ))}
-                    </div>
-                  }
-                </div>
-              )
-            })
-          }
+                      </span>}
+                    </Link>
+
+                    {haschild &&
+                      <div className="absolute top-full left-0 w-60 bg-white shadow-xl rounded-md z-50 p-3 hidden group-hover:block ">
+                        {item.child.map((citem, index) => (
+                          <Link
+                            key={index}
+                            href={citem.path}
+                            className={`block px-3 py-2 hover:bg-gray-100 hover:rounded-lg mb-2 text-black ${path === citem.path && "bg-gray-200 rounded-lg "} `}
+                          >
+                            {citem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    }
+                  </div>
+                )
+              })
+            }
           </div>
 
 
@@ -146,7 +165,7 @@ export default function Nav() {
 
       </nav>
 
-      { isMenuOpen && <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen} /> }
+      {isMenuOpen && <MobileMenuOverlay setIsMenuOpen={setIsMenuOpen} />}
 
       {/* mobile */}
       <div

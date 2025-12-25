@@ -37,7 +37,7 @@ if(page ==='insurance'){
     ])
 
  cardData = res?.data?.map((type)=>({
-   title:type?.slug,
+   title:type?.heading,
     slug:type?.slug,
     paragraph_1:type?.shortContent,
     featured_image:type?.image,

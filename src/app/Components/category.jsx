@@ -36,16 +36,13 @@ export default function CategoryPage({ title, cards ,type }) {
               {/* Image with link */}
               <Link href={el.link}>
                 <div className="w-full h-[15em] rounded-[12px] overflow-hidden">
-                  <img
-                    src={el.featured_image}
-                    alt={el.title}
-                    className="w-full cursor-pointer h-full object-cover "
-                  />
+            
                   <Image
                   src={el.featured_image}
                   width={250}
                   height={250}
                   alt={el?.alt || "hello"}
+                  className="w-full cursor-pointer h-full object-cover "
                   />
                 </div>
               </Link>
@@ -53,7 +50,7 @@ export default function CategoryPage({ title, cards ,type }) {
               {/* Title and Read More with link */}
               <div className="relative mt-[20px]">
                 <Link href={el.link}>
-                  <h4 className="text-[20px] font-medium leading-6 text-gray-900 ">
+                  <h4 className="text-[20px] font-medium leading-6 text-gray-900 capitalize  hover:text-[var(--primg)]  ">
                     {el.title}
                   </h4>
                 </Link>

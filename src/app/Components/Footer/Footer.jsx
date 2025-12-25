@@ -1,26 +1,27 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { getNavData } from "@/actions/nav.action";
+
 
 export default function Footer() {
   const [setting, setSetting] = useState()
   const [loading, setloading] = useState(true)
-  //  useEffect(() => {
-  //       async function fetchData() {
-  //         try {
-  //           const res = await HomeData("settings");
-  //           if (res?.success) {
-  //       setSetting(res.data);
-  //     }
-           
-  //         } catch (error) {
-  //           console.log("error", error);
-  //         } finally {
-  //           setloading(false);
-  //         }
-  //       }
-  //       fetchData();
-  //     }, []);
+    const [getnavData, setGetnavdata] = useState(null);
+    useEffect(() => {
+  const fetchNavData = async () => {
+    try {
+      const data = await getNavData();
+     setGetnavdata(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  fetchNavData();
+}, []);
+
+
   return (
     <>
       {/* footer */}
@@ -32,28 +33,30 @@ export default function Footer() {
           >
             {/* Insurance */}
             <div className="shrink-0 lg:pt-0   ">
-              <Link  href='/Insurance' className="text-[18px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
+              <Link  href='/insurance' className="text-[18px] font-medium mb-3 lg:mb-0 text-white">Insurance</Link>
               <div className="flex flex-col space-y-4 mt-3">
-                <Link href="/Insurance/life-insurance" className="text-white/90 hover:text-white transition-colors">Life Insurance</Link>
-                <Link href="/Insurance/trauma-recovery-cover" className="text-white/90 hover:text-white transition-colors">Trauma Recovery Cover</Link>
-                <Link href="/Insurance/total-permanent-disability-benefit-cover" className="text-white/90 hover:text-white transition-colors">Total Permanent Disability Benefit Cover</Link>
-                <Link href="/Insurance/mortgage-rent-protection-cover" className="text-white/90 hover:text-white transition-colors">Mortgage & Rent Protection Cover</Link>
-                <Link href="/Insurance/income-protection-cover" className="text-white/90 hover:text-white transition-colors">Income Protection Cover</Link>
-                <Link href="/Insurance/medical-insurance" className="text-white/90 hover:text-white transition-colors">Medical Insurance</Link>
-                <Link href="/Insurance/group-insurance" className="text-white/90 hover:text-white transition-colors">Group Insurance</Link>
+             { getnavData?.subInsurance?.map((item)=>{
+              return(
+                <Link key={item._id} href={`/insurance/${item.slug}`} className="text-white/90 hover:text-white transition-colors"> {item.heading}</Link>
+              )
+             }
+            )}
+               
               </div>
             </div>
 
             {/* Mortgage */}
             <div className=" lg:pt-0  ">
-              <Link  href='/Mortgage'  className="!text-[18px] font-medium mb-3 text-white">Mortgage</Link>
+              <Link  href='/mortgage'  className="!text-[18px] font-medium mb-3 text-white">Mortgage</Link>
               <div className="flex flex-col space-y-4 mt-3">
-                <Link href="/Mortgage/home-loan" className="text-white/90 hover:text-white transition-colors">Home Loan</Link>
-                <Link href="/Mortgage/refinance" className="text-white/90 hover:text-white transition-colors">Refinance</Link>
-                <Link href="/Mortgage/investment-loan" className="text-white/90 hover:text-white transition-colors">Investment Loan</Link>
-                <Link href="/Mortgage/business-loan" className="text-white/90 hover:text-white transition-colors">Business Loan</Link>
-                <Link href="/Mortgage/construction-loan" className="text-white/90 hover:text-white transition-colors">Construction Loan</Link>
-                <Link href="/Mortgage/commercial-loan" className="text-white/90 hover:text-white transition-colors">Commercial Loan</Link>
+              {
+                getnavData?.subMortgage?.map((item)=>{
+                    return(
+                    <Link key={item._id} href={`/mortgage/${item.slug}`} className="text-white/90 hover:text-white transition-colors"> {item.heading}</Link>  
+              )
+                }
+                
+              )}
               </div>
             </div>
 
@@ -62,11 +65,11 @@ export default function Footer() {
               <h3 className="text-[18px] font-medium mb-3 text-white">Quick Links</h3>
               <div className="flex flex-col space-y-4">
                 <Link href="/" className="text-white/90 hover:text-white transition-colors">Home</Link>
-                <Link href="/About-us" className="text-white/90 hover:text-white transition-colors">About Us</Link>
-                <Link href="/Insurance" className="text-white/90 hover:text-white transition-colors">Insurance</Link>
-                <Link href="/Mortgage" className="text-white/90 hover:text-white transition-colors">Mortgage</Link>
-                <Link href="/Case-study" className="text-white/90 hover:text-white transition-colors">Case Study</Link>
-                <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
+                <Link href="/about-us" className="text-white/90 hover:text-white transition-colors">About Us</Link>
+                <Link href="/insurance" className="text-white/90 hover:text-white transition-colors">Insurance</Link>
+                <Link href="/mortgage" className="text-white/90 hover:text-white transition-colors">Mortgage</Link>
+                <Link href="/case-study" className="text-white/90 hover:text-white transition-colors">Case Study</Link>
+                <Link href="/calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
               </div>
             </div>
 

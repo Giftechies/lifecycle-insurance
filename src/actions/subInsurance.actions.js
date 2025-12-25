@@ -7,7 +7,7 @@ import SubInsurance from "@/models/subInsurance.model";
 export async function getSubInsurance() {
   try {
     await dbConnect();
-    const data = await SubInsurance.find().lean();
+    const data = await SubInsurance.find().sort({ heading:1 }).lean();
     const serializedData = data.map((item) => {
       return {
         ...item,

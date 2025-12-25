@@ -123,7 +123,7 @@ const Sidebar = () => {
               <h6 className=" text-[var(--primg)]  ">
                 <i className="ri-record-circle-line mr-1.5 "></i>Income Protection Cover
               </h6>
-              <h2 className="  text-[26px] leading-6 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
+              <h2 className="   leading-6 text-[18px] lg:text-[26px]  lg:mt-8 font-semibold mt-3 ">
                What is IP Cover ?
               </h2>
               <p className=" mt-1 lg:mt-4 tracking-wider text-justify text-[14px] ">Income protection cover pays you a regular monthly payment if you are unable to work temporarily or permanently because you are sick or injured. Income protection cover is designed to provide you with money to live on while you are not receiving your salary or wages. This cover will pay you until you can return to work, or reach the payment period on your policy. This can be up to the age of 70.
