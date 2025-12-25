@@ -1,5 +1,4 @@
 "use client";
-
 import SlugInput from "../../../../components/Backend/SlugInput";
 import ImageInput from "@/lib/ImageUpload";
 import MetaTags from "@/lib/MetaInput";
@@ -8,7 +7,6 @@ import { uploadPageFile } from "@/lib/uploadPageFile";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import PdfInput from "@/lib/PdfInput";
 import {
   createSubInsurance,
   updateSubInsurance,
@@ -19,6 +17,7 @@ export default function SubInsuranceForm({ initialData, }) {
   const [formData, setFormData] = useState({
     heading: initialData?.heading || "",
     content: initialData?.content || "",
+    content1: initialData?.content1 || "",
     shortContent: initialData?.shortContent || "",
     // category: initialData?.category || "",
     image: initialData?.image || "",
@@ -75,29 +74,17 @@ export default function SubInsuranceForm({ initialData, }) {
           onChange={(value) => handleChange("slug", value)}
         />
 
-        {/* <label htmlFor="category">Select Mortgage Category</label>
-        <select
-          id="category"
-          name="category"
-          value={formData?.category}
-          onChange={(e) => handleChange("category", e.target.value)}
-          className="w-full text-sm mb-6 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-        >
-          <option value="">Select category</option>
-          {categories?.map((category) => (
-            <option key={category._id} value={category.slug}>
-              {category.heading}
-            </option>
-          ))}
-        </select> */}
-
         <label htmlFor="shortContent">Short Content</label>
         <textarea type="text" value={formData?.shortContent} onChange={(e) => handleChange("shortContent", e.target.value)} placeholder="Enter short content" />
-
         <label>Content</label>
         <RichTextEditor
           onChange={(value) => handleChange("content", value)}
           value={formData?.content}
+        />
+        <label className="mt-6">Content 2</label>
+        <RichTextEditor
+          onChange={(value) => handleChange("content1", value)}
+          value={formData?.content1}
         />
       </div>
       <div>
@@ -122,22 +109,6 @@ export default function SubInsuranceForm({ initialData, }) {
           metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
-        {/* <PdfInput
-          uploadAction={(file) => uploadPageFile(file, "pdf")}
-          onChange={(value) => handleChange("pdf", value)}
-        />
-        <label htmlFor="pdfAlt" className="mt-4">
-          Pdf Alt
-        </label>
-        <input
-          type="text"
-          id="pdfAlt"
-          name="pdfAlt"
-          value={formData?.pdfAlt}
-          onChange={(e) => handleChange("pdfAlt", e.target.value)}
-          placeholder="Enter Pdf Alt"
-        /> */}
-
         <button type="submit">
           {initialData ? "Update Sub Insurance" : "Create Sub Insurance"}
         </button>

@@ -67,6 +67,7 @@ export default function InsuranceForm({ initialData }) {
           value={formData?.slug}
           onChange={(value) => handleChange("slug", value)}
         />
+       
         <RichTextEditor
           onChange={(value) => handleChange("content", value)}
           value={formData?.content}

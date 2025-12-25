@@ -5,6 +5,7 @@ import Slider from "@/app/Components/Slider/Slider";
 import { getSubMortgageBySlug, getSubMortgage } from "../../../actions/subMortgage.actions"
 import { getSubInsuranceBySlug, getSubInsurance } from "../../../actions/subInsurance.actions"
 import sanitizeHtml from 'sanitize-html';
+import Image from "next/image";
 
 
 export default async function Subpage({ params }) {
@@ -40,6 +41,13 @@ export default async function Subpage({ params }) {
       '*': ['class', 'style', 'id'],
     },
   });
+  const safeHTML1 = sanitizeHtml(content?.content1 || "", {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'iframe']),
+    allowedAttributes: {
+      ...sanitizeHtml.defaults.allowedAttributes,
+      '*': ['class', 'style', 'id'],
+    },
+  });
 
   return (
     <>
@@ -52,7 +60,13 @@ export default async function Subpage({ params }) {
             <i className="ri-record-circle-line mr-1.5 "></i>{content?.heading}
           </h1>
 
-          <div dangerouslySetInnerHTML={{ __html: safeHTML }} className="editor-container" />
+          <div className="  md:flex gap-6 items-stretch " >
+            <div dangerouslySetInnerHTML={{ __html: safeHTML }} className="editor-container" />
+         <div className="  w-full md:w-[40%]  md:shrink-0 flex " >
+           <Image src={content?.image} alt={content?.imageAlt} width={600} height={400} className="w-full h-full  object-cover rounded-lg  " />
+         </div>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: safeHTML1 }} className="editor-container" />
         </div>
 
         {/* Centered Sidebar constrained inside main, below Banner and above footer */}
