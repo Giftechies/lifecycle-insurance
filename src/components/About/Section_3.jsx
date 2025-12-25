@@ -42,35 +42,35 @@ export default function (){
   {/* Insurance Column */}
   <div className=" mx-auto "> 
     <h3 className="text-lg mb-3">
-      <Link href="/Insurance" className="hover:text-[var(--primg)] transition-colors">
+      <Link href="/insurance" className="hover:text-[var(--primg)] transition-colors">
         Insurance
       </Link>
     </h3>
     <ul className="space-y-2 text-sm text-gray-700">
-      <li><Link href="/Insurance/life-insurance">Life Insurance</Link></li>
-      <li><Link href="/Insurance/trauma-recovery-cover">Trauma Recovery Cover</Link></li>
-      <li><Link href="/Insurance/total-permanent-disability-benefit-cover">Total Permanent Disability Benefit Cover</Link></li>
-      <li><Link href="/Insurance/mortgage-rent-protection-cover">Mortgage & Rent Protection Cover</Link></li>
-      <li><Link href="/Insurance/income-protection-cover">Income Protection Cover</Link></li>
-      <li><Link href="/Insurance/medical-insurance">Medical Insurance</Link></li>
-      <li><Link href="/Insurance/group-insurance">Group Insurance</Link></li>
+      <li><Link href="/insurance/life-insurance">Life Insurance</Link></li>
+      <li><Link href="/insurance/trauma-recovery-cover">Trauma Recovery Cover</Link></li>
+      <li><Link href="/insurance/total-permanent-disability-benefit-cover">Total Permanent Disability Benefit Cover</Link></li>
+      <li><Link href="/insurance/mortgage-rent-protection-cover">Mortgage & Rent Protection Cover</Link></li>
+      <li><Link href="/insurance/income-protection-cover">Income Protection Cover</Link></li>
+      <li><Link href="/insurance/medical-insurance">Medical Insurance</Link></li>
+      <li><Link href="/insurance/group-insurance">Group Insurance</Link></li>
     </ul>
   </div>
 
   {/* Mortgage Column */}
   <div className="  md:mx-auto"> {/* No change needed here for this issue */}
     <h3 className="text-lg mb-3">
-      <Link href="/Mortgage" className="hover:text-[var(--primg)] transition-colors">
+      <Link href="/mortgage" className="hover:text-[var(--primg)] transition-colors">
         Mortgage
       </Link>
     </h3>
     <ul className="space-y-2 text-sm text-gray-700">
-      <li><Link href="/Mortgage/home-loan">Home Loan</Link></li>
-      <li><Link href="/Mortgage/refinance">Refinance</Link></li>
-      <li><Link href="/Mortgage/investment-loan">Investment Loan</Link></li>
-      <li><Link href="/Mortgage/business-loan">Business Loan</Link></li>
-      <li><Link href="/Mortgage/construction-loan">Construction Loan</Link></li>
-      <li><Link href="/Mortgage/commercial-loan">Commercial Loan</Link></li>
+      <li><Link href="/mortgage/home-loan">Home Loan</Link></li>
+      <li><Link href="/mortgage/refinance">Refinance</Link></li>
+      <li><Link href="/mortgage/investment-loan">Investment Loan</Link></li>
+      <li><Link href="/mortgage/business-loan">Business Loan</Link></li>
+      <li><Link href="/mortgage/construction-loan">Construction Loan</Link></li>
+      <li><Link href="/mortgage/commercial-loan">Commercial Loan</Link></li>
     </ul>
   </div>
 </div>

@@ -50,7 +50,7 @@ export default function KnowMore(){
                   We provide wide range of financial services to the clients including Mortgages both Residential & Commercial, & Personal Insurance products such as life, Health, Income Protection, Mortgage Protection, Redundancy cover and Trauma Insurance. For home, contents, car and business Insurance we have additional specialists that we call upon.
                 </p>
                 <button
-                  onClick={() => router.push("/About-us")}
+                  onClick={() => router.push("/about-us")}
                   className=" flex items-center bg-[var(--primg)] cursor-pointer text-white px-7 py-3 rounded-full  mt-4   text-[16px] hover:text-black hover:scale-[.98] duration-300 "
                 >
                   Know more <i className="ri-arrow-right-s-line    "></i>

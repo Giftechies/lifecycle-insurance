@@ -80,7 +80,7 @@ export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
           {/* Insurance dropdown */}
           <li>
             <div className="flex justify-between items-center w-full">
-              <Link href={"/Insurance"} onClick={() => setIsMenuOpen(false)}>
+              <Link href={"/insurance"} onClick={() => setIsMenuOpen(false)}>
                 <span>Insurance</span>
               </Link>
               <span>
@@ -110,7 +110,7 @@ export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
                 ].map((item, index) => (
                   <li key={index}>
                     <Link
-                      href={`/Insurance/${item
+                      href={`/insurance/${item
                         .toLowerCase()
                         .replace(/ & /g, "-")
                         .replace(/\s+/g, "-")}`}
@@ -128,7 +128,7 @@ export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
           {/* Mortgage dropdown */}
           <li>
             <div className="flex justify-between items-center w-full">
-              <Link href={"/Mortgage"} onClick={() => setIsMenuOpen(false)}>
+              <Link href={"/mortgage"} onClick={() => setIsMenuOpen(false)}>
                 <span>Mortgage</span>
               </Link>
               <span>
@@ -157,7 +157,7 @@ export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
                 ].map((item, index) => (
                   <li key={index}>
                     <Link
-                      href={`/Mortgage/${item
+                      href={`/mortgage/${item
                         .toLowerCase()
                         .replace(/\s+/g, "-")}`}
                       onClick={() => setIsMenuOpen(false)}

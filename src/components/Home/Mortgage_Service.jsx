@@ -71,7 +71,7 @@ export default function MortgageService(){
                   <div className="icon-box   w-full  bg-[var(--primg)] flex max-md:flex-col flex-wrap items-start max-md:gap-10  md:justify-between md:gap-y-11 text-white text-[18px]  font-normal  max-lg:rounded-t-4xl tracking-wide p-12   lg:rounded-r-4xl    ">
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/home-loan");
+                        router.push("/mortgage/home-loan");
                       }}
                       className="icon  w-full     md:w-[30%] md:border-r border-white/50 border-dashed flex md:flex-col  gap-4  items-start   "
                     >
@@ -87,7 +87,7 @@ export default function MortgageService(){
                     </div>
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/investment-loan");
+                        router.push("/mortgage/investment-loan");
                       }}
                       className=" icon w-full     md:w-[30%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4       "
                     >
@@ -103,7 +103,7 @@ export default function MortgageService(){
                     </div>
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/refinance");
+                        router.push("/mortgage/refinance");
                       }}
                       className="icon w-full     md:w-[30%]      flex md:flex-col  gap-4      "
                     >
@@ -119,7 +119,7 @@ export default function MortgageService(){
                     </div>
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/business-loan");
+                        router.push("/mortgage/business-loan");
                       }}
                       className="icon  w-full     md:w-[30%]     md:border-r  border-white/50 border-dashed flex md:flex-col  gap-4      "
                     >
@@ -135,7 +135,7 @@ export default function MortgageService(){
                     </div>
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/construction-loan");
+                        router.push("/mortgage/construction-loan");
                       }}
                       className="icon w-full     md:w-[30%]     md:border-r border-white/50 border-dashed flex md:flex-col  gap-4       "
                     >
@@ -153,7 +153,7 @@ export default function MortgageService(){
                     </div>
                     <div
                       onClick={() => {
-                        router.push("/Mortgage/commercial-loan");
+                        router.push("/mortgage/commercial-loan");
                       }}
                       className="icon w-full     md:w-[30%]      flex md:flex-col  gap-4      "
                     >

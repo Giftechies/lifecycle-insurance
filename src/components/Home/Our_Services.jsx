@@ -78,7 +78,7 @@ export default function OurService(){
                 </div>
                 {/* part 2 */}
                 <div
-                  onClick={() => router.push("/Mortgage")}
+                  onClick={() => router.push("/mortgage")}
                   className="part2  sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--primg)] text-white relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
                 >
                   <h3 className="text-[20px] font-bold cursor-pointer ">
@@ -106,7 +106,7 @@ export default function OurService(){
                 </div>
                 {/* part 4 */}
                 <div
-                  onClick={() => router.push("/Insurance")}
+                  onClick={() => router.push("/insurance")}
                   className="part4 sec-4-card-left w-full h-[50%] px-10 flex  flex-col  justify-center bg-[var(--tri)] relative md:h-[90%] lg:h-full md:w-[50%] lg:px-6 lg:py-12  rounded-2xl overflow-hidden  "
                 >
                   <h3 className="text-white cursor-pointer font-semibold text-[20px] ">

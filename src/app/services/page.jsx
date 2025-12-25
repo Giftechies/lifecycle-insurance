@@ -10,13 +10,13 @@ export default function services() {
     {
       title: "Insurance",
       content: "With more than a decade of experience, our company provides expert mortgage solutions, to help you turn your dream home into reality.",
-      link: "/Insurance",
+      link: "/insurance",
       img: "/pic3.jpg",
     },
     {
       title: "Mortgage",
       content: "With more than a decade of experience, our company provides expert mortgage solutions, to help you turn your dream home into reality.",
-      link: "/Mortgage ",
+      link: "/mortgage ",
       img: "/pic4.jpg",
     },
     

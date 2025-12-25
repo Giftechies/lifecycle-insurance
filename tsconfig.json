@@ -43,7 +43,7 @@
     "src/app/page.jsx",
     "src/app/Components/Testimonial/Testimonials.tsx",
     "src/app/Components/Footer/Footer.jsx",
-    "src/app/index/Insurance/page.jsx",
+    "src/app/index/insurance/page.jsx",
     "src/app/[page]/page.jsx",
     "Insurance/trauma-recovery-cover/page.jsx",
     "src/app/Components/Slideri/Slideri.jsx",
