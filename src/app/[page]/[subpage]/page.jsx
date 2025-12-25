@@ -7,6 +7,7 @@ import { getSubInsuranceBySlug, getSubInsurance } from "../../../actions/subInsu
 import sanitizeHtml from 'sanitize-html';
 import Image from "next/image";
 
+export const revalidate = 3600; // 1 hour
 
 export default async function Subpage({ params }) {
   const { subpage, page } = await params

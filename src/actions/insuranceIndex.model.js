@@ -1,4 +1,4 @@
-"use server"
+// "use server"
 
 import { revalidatePath } from "next/cache";
 import dbConnect from "@/lib/db";
@@ -10,7 +10,6 @@ export async function getInsuranceIndex() {
 
     const indexData = await InsuranceIndex
       .findOne()
-      .sort({ heading: -1 }) // alphabetical; NOT "latest"
       .lean();
 
     // ✅ FIX: handle empty collection safely

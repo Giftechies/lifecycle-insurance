@@ -4,6 +4,8 @@ import { getMortgageIndex } from "@/actions/mortgageIndex.actions"
 import { getSubInsurance } from "@/actions/subInsurance.actions"
 import { getInsuranceIndex } from "@/actions/insuranceIndex.model"
 
+export const revalidate = 3600; // 1 hour
+
 
 
 export default async function Page({params}) {
