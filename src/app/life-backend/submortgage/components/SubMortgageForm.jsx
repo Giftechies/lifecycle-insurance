@@ -20,6 +20,7 @@ export default function SubMortgageForm({ initialData,  }) {
   const [formData, setFormData] = useState({
     heading: initialData?.heading || "",
     content: initialData?.content || "",
+    content1: initialData?.content1 || "",
     shortContent: initialData?.shortContent || "",
     image: initialData?.image || "",
     imageAlt: initialData?.imageAlt || "",
@@ -80,20 +81,7 @@ export default function SubMortgageForm({ initialData,  }) {
           value={formData?.slug}
           onChange={(value) => handleChange("slug", value)}
         />
-        {/* <label htmlFor="category">Select Mortgage Category</label> */}
-        {/* <select
-          id="category"
-          name="category"
-          value={formData?.category}
-          onChange={(e) => handleChange("category", e.target.value)}
-        >
-          <option value="">Select category</option>
-          {categories.map((category) => (
-            <option key={category._id} value={category.slug}>
-              {category.heading}
-            </option>
-          ))}
-        </select> */}
+      
         <div>
           <label htmlFor="shortContent">Short Content</label>
           <textarea
@@ -108,6 +96,13 @@ export default function SubMortgageForm({ initialData,  }) {
         <RichTextEditor
           onChange={(value) => handleChange("content", value)}
           value={formData?.content}
+        />
+        </div>
+        <div>
+          <label>Content 2</label>
+        <RichTextEditor
+          onChange={(value) => handleChange("content1", value)}
+          value={formData?.content1}
         />
         </div>
       </div>

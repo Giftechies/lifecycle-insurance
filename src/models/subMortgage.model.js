@@ -17,6 +17,9 @@ const subMortgageSchema = new mongoose.Schema(
     content: {
       type: String,
     },
+    content1: {
+      type: String,
+    },
     shortContent: {
       type: String,
       required: [true, "Short content is required"],
