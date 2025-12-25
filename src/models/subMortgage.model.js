@@ -40,16 +40,7 @@ const subMortgageSchema = new mongoose.Schema(
     metaKeywords: {
       type: String,
     },
-    // pdfInput: {
-    //   type: String,
-    // },
-    // pdfAlt: {
-    //   type: String,
-    // },
-    // category: {
-    //   type: String,
-    //   required: [true, "Category is required"],
-    // },
+    
   },
   { timestamps: true }
 );

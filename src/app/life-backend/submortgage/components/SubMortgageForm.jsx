@@ -98,7 +98,7 @@ export default function SubMortgageForm({ initialData,  }) {
           value={formData?.content}
         />
         </div>
-        <div>
+        <div className="mt-6" >
           <label>Content 2</label>
         <RichTextEditor
           onChange={(value) => handleChange("content1", value)}
@@ -128,20 +128,7 @@ export default function SubMortgageForm({ initialData,  }) {
           metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
-        {/* <PdfInput
-          uploadAction={(file) => uploadPageFile(file, "pdf")}
-          onChange={(value) => handleChange("pdf", value)}
-        />
-        <label htmlFor="pdfAlt">Pdf Alt</label>
-        <input
-          type="text"
-          id="pdfAlt"
-          name="pdfAlt"
-          value={formData?.pdfAlt}
-          onChange={(e) => handleChange("pdfAlt", e.target.value)}
-          placeholder="Enter Pdf Alt"
-        /> */}
-
+      
         <button type="submit">
           {initialData ? "Update Submortgage" : "Create Submortgage"}
         </button>
