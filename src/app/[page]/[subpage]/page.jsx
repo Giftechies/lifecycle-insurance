@@ -2,9 +2,9 @@
 
 import Banner from "@/app/Components/Banner/Banner";
 import Slider from "@/app/Components/Slider/Slider";
-import { getSubMortgageBySlug, getSubMortgage } from "../../../actions/subMortgage.actions"
-import { getSubInsuranceBySlug, getSubInsurance } from "../../../actions/subInsurance.actions"
-import sanitizeHtml from 'sanitize-html';
+// import { getSubMortgageBySlug, getSubMortgage } from "../../../actions/subMortgage.actions"
+// import { getSubInsuranceBySlug, getSubInsurance } from "../../../actions/subInsurance.actions"
+import { getInsuranceIndex,getMortgageIndex,getSubInsurance,getSubMortgage } from "../../../actions/subInsurance_Mortgage"
 import Image from "next/image";
 
 export const revalidate = 3600; // 1 hour

@@ -1,8 +1,9 @@
 import CategoryPage from "../Components/category"
-import {getSubMortgage} from "@/actions/subMortgage.actions"  
-import { getMortgageIndex } from "@/actions/mortgageIndex.actions"    
-import { getSubInsurance } from "@/actions/subInsurance.actions"
-import { getInsuranceIndex } from "@/actions/insuranceIndex.model"
+// import {getSubMortgage} from "@/actions/subMortgage.actions"  
+// import { getMortgageIndex } from "@/actions/mortgageIndex.actions"    
+// import { getSubInsurance } from "@/actions/subInsurance.actions"
+// import { getInsuranceIndex } from "@/actions/insuranceIndex.model"
+import { getInsuranceIndex,getMortgageIndex,getSubInsurance,getSubMortgage } from "../../actions/subInsurance_Mortgage"
 
 export const revalidate = 3600; // 1 hour
 
