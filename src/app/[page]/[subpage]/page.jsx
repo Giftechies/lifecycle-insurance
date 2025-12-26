@@ -6,6 +6,7 @@ import Slider from "@/app/Components/Slider/Slider";
 // import { getSubInsuranceBySlug, getSubInsurance } from "../../../actions/subInsurance.actions"
 import { getSubInsuranceBySlug,getSubMortgageBySlug,getSubInsurance,getSubMortgage } from "../../../actions/subInsurance_Mortgage"
 import Image from "next/image";
+import sanitizeHtml from "sanitize-html";
 
 export const revalidate = 3600; // 1 hour
 
