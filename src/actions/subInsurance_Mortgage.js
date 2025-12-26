@@ -81,3 +81,42 @@ export async function getInsuranceIndex() {
     };
   }
 }
+
+
+export async function getSubMortgageBySlug(slug) {
+  try {
+    await dbConnect();
+    const subMortgage = await SubMortgage.find({ slug:slug }).lean();
+    if (!subMortgage) {
+      return { success: false, error: "SubMortgage not found" };
+    }
+   const serializedSubMortgage = subMortgage.map((subMortgage) => {
+     return {
+       ...subMortgage,
+       _id: subMortgage?._id?.toString(),
+     };
+   })
+    return { success: true, data: serializedSubMortgage };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+}
+
+export async function getSubInsuranceBySlug(slug) {
+  try {
+    await dbConnect();
+    const subInsurance = await SubInsurance.find({ slug: slug }).lean();
+    if (!subInsurance) {
+      return { success: false, error: "SubInsurance not found" };
+    }
+    const serializedSubInsurance = subInsurance.map((item) => {
+      return {
+        ...item,
+        _id: item?._id?.toString(),
+      };
+    });
+    return { success: true, data: serializedSubInsurance };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+}
