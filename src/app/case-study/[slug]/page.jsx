@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Slideri from "../../Components/Slideri/Slideri"
 import { getCaseStudies } from "../../../actions/caseStudy.actions"
 import sanitizeHtml from "sanitize-html";
+export const revalidate = 86400; // 1 hour
 
 
 export default async function CaseStudyDetail({ params }) {
@@ -12,7 +13,7 @@ export default async function CaseStudyDetail({ params }) {
   const studies = await (await getCaseStudies()).studies
   const data = studies?.filter((item) => item?.slug === slug)
   const study = data[0]
-  // const safeHTML = DOMPurify.sanitize(study?.description)
+
 const safeHTML = sanitizeHtml(study?.description || "", {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'iframe']),
     allowedAttributes: {
