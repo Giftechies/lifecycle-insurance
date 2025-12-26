@@ -2,30 +2,34 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 import { useRef } from "react";
 
-export default function Number(){
+export default function Number({ numberData }) {
+
+  console.log('number Data',numberData);
+  
     const sec3 = useRef()
       const sec3_cards = [
         {
-          img: "/target.svg",
-          number: "90%",
-          content: " Application approval rate ",
+          img:numberData?.box1image || "/chart.svg",
+          number: numberData?.box1number || "95%",
+          content: numberData?.box1content || " ",
         },
         {
-          img: "/family.svg",
-          number: "6+",
-          content: " Insurance providers  partnered with    ",
+          img: numberData?.box2image || "/group.svg",
+          number: numberData?.box2number || "",
+          content: numberData?.box2content || " ",
         },
         {
-          img: "/timer.svg",
-          number: "$200M+",
-          content: "   In mortgage  arranged  ",
+          img: numberData?.box3image || "/money.svg",
+          number: numberData?.box3number || "",
+          content: numberData?.box3content || "",
         },
         {
-          img: "/bank.svg",
-          number: "20+",
-          content: `Mortgage providers to  choose from  `,
+          img: numberData?.box4image || "/building.svg",
+          number: numberData?.box4number || "",
+          content: numberData?.box4content || "",
         },
       ];
     
@@ -85,7 +89,7 @@ export default function Number(){
                 {/* text */}
                 <div>
                   <span className=" text-[36px]   font-bold tracking-normal  leading-9 text-white ">
-                   Numbers That Speak for Themselves
+                   {numberData?.heading || "Our Achievements in Numbers"}
                   </span>
                 </div>
                 {/* cards-box */}
@@ -109,8 +113,10 @@ export default function Number(){
             </div>
             <div className="right max-lg:hidden lg:w-[30%]  relative flex ">
               <div className=" w-full  flex-grow  rounded-2xl overflow-hidden    ">
-                <img
-                  src="/12.jpg"
+                <Image
+                height={250}
+                width={250}
+                  src={numberData?.image || "#"}
                   className=" h-full w-full object-cover object-top"
                   alt=""
                 />

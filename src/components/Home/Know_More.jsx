@@ -2,10 +2,12 @@
 
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useRef } from "react"
 
-export default function KnowMore(){
+export default function KnowMore({oneMoreData}) {
     const sec2 = useRef()
     const router = useRouter()
     
@@ -25,6 +27,9 @@ export default function KnowMore(){
     });
   },  );
 
+  console.log("one more",oneMoreData);
+  
+
     return(
         <section
           ref={sec2}
@@ -32,10 +37,12 @@ export default function KnowMore(){
         >
           <main className="  w-[100%]    lg:flex  relative ">
             <div className="imgLeft w-full  rounded-4xl overflow-hidden border max-md:aspect-[1.5] md:aspect-[1.8]  lg:w-[52%] lg:h-[42rem]  ">
-              <img
-                src="/about-pic1.jpg"
+              <Image
+              width={600}
+              height={600}
+                src={oneMoreData?.image1 || "/about-pic1.jpg"}
                 className=" w-full lg:h-full object-cover object-center"
-                alt=""
+                alt={oneMoreData?.image1Alt || "About us image"}
               />
             </div>
             <div className="contentRight max-lg:mt-3 lg:w-[55%] lg:flex gap-10 flex-col tracking-wider lg:text-justify  ">
@@ -43,18 +50,18 @@ export default function KnowMore(){
                 <h3 className="text-[var(--primg)] font-semibold  ">
                   {" "}
                   <i className="  ri-record-circle-line font-medium mr-2  "></i>
-                Get to Know Life Cycle Financial
+                {oneMoreData?.heading || "Know More About Our Services"}
 
                 </h3>
                 <p className=" text-[16px]  text-[var(--secgr)] font-normal  mt-2">
-                  We provide wide range of financial services to the clients including Mortgages both Residential & Commercial, & Personal Insurance products such as life, Health, Income Protection, Mortgage Protection, Redundancy cover and Trauma Insurance. For home, contents, car and business Insurance we have additional specialists that we call upon.
+              {oneMoreData?.content || "something went wrong"}
                 </p>
-                <button
-                  onClick={() => router.push("/about-us")}
-                  className=" flex items-center bg-[var(--primg)] cursor-pointer text-white px-7 py-3 rounded-full  mt-4   text-[16px] hover:text-black hover:scale-[.98] duration-300 "
+                <Link
+                  href={oneMoreData?.buttonLink}
+                  className=" flex items-center bg-[var(--primg)]  text-white px-7 py-3 rounded-full  mt-4   text-[16px] hover:text-black hover:scale-[.98] duration-300 w-fit "
                 >
-                  Know more <i className="ri-arrow-right-s-line    "></i>
-                </button>
+                  {oneMoreData?.buttonText || "Know more"}<i className="ri-arrow-right-s-line    "></i>
+                </Link>
               </div>
 
               <div className="middle  md:flex max-md:gap-10  lg:gap-2 w-full  ">
@@ -68,10 +75,10 @@ export default function KnowMore(){
                           className="h-9 w-9 mb-2"
                           alt=""
                         />
-                       One Call Does It All
+                     {oneMoreData?.boxheading || "All-In-One Mortgage Solution"}
                       </p>
                       <span className="  text-white/100 text-[14px] tracking-widest mt-2   ">
-                        From application to approval, we handle everything under one roof. With access to top banks and lenders across New Zealand
+                      {oneMoreData?.boxcontent || 'something went wrong '}
                       </span>
                     </div>
                   </div>
@@ -85,14 +92,14 @@ export default function KnowMore(){
                     </div>
 
                     <div className="call">
-                      <a href="tel:0800507770" className=" block font-semibold">
+                      <a href={`tel:${oneMoreData?.contact || "0800507770"}`} className=" block font-semibold">
                         Call Now
                       </a>
                       <a
-                        href="tel:0800507770"
+                        href={`tel:${oneMoreData?.contact || "0800507770"}`}
                         className=" cursor-pointer text-[var(--secgr)] font-semibold text-[18px]"
                       >
-                        0800 50 7770
+                       {oneMoreData?.contact || "0800 50 7770"}
                       </a>
                     </div>
                   </div>
@@ -100,16 +107,20 @@ export default function KnowMore(){
 
                 <div className="lowerpic sec-2-anim w-full flex flex-col items-center max-md:mt-6 md:w-[40%] lg:w-[40%]  lg:mt-8 xl:mt-3   ">
                   <div className="img">
-                    <img
-                      src="/sec2pic2.png"
+                    <Image
+                    width={300}
+                    height={300}
+                    src={oneMoreData?.image2 || "/sec2-pic2.jpg"}
                       className=" h-[19rem] lg:h-[16rem] xl:h-[18rem] "
-                      alt=""
+                      alt={oneMoreData?.image2Alt || "Know more image"}
                     />
                   </div>
 
                   <div className="call text-[var(--primg)] font-medium mt-2 flex   gap-2 md:hidden ">
                     <div className="  p-4 bg-[var(--secgr)] rounded-full ">
-                      <img
+                      <Image
+                      width={80}
+                      height={80}
                         src="/phone.svg"
                         className=" w-[2rem]   object-cover object-center "
                         alt=""
@@ -117,14 +128,14 @@ export default function KnowMore(){
                     </div>
 
                     <div className="call">
-                      <a href="tel:0800507770" className=" block font-semibold">
+                      <a href={`tel:${oneMoreData?.contact || "0800507770"}`} className=" block font-semibold">
                         Call Now
                       </a>
                       <a
-                        href="tel:0800507770"
+                        href={`tel:${oneMoreData?.contact || "0800507770"}`}
                         className="  text-[var(--secgr)]"
                       >
-                        0800 50 7770
+                        {oneMoreData?.contact || "0800 50 7770"}
                       </a>
                     </div>
                   </div>

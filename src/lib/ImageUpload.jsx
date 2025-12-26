@@ -11,6 +11,7 @@ export default function ImageInput({
   onChange,
   className = "",
   initialImage = "",
+  text='Image'
 }) {
   const [imageUrl, setImageUrl] = useState(initialImage);
   const { status: uploadStatus, upload, remove } = useFileUpload(uploadAction);
@@ -40,7 +41,7 @@ export default function ImageInput({
 
   return (
     <div className={`space-y-2 mb-4 ${className}`}>
-      <label className="block text-sm font-medium text-gray-700">Image</label>
+      <label className="block text-sm font-medium text-gray-700">{text}</label>
 
       {!imageUrl && !uploadStatus?.loading && (
         <div className="border-2 border-dashed w-fit rounded-lg p-10">

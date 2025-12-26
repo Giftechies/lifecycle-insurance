@@ -33,8 +33,9 @@ export default function DashboardLayout({ children }) {
       icon: <FiGrid className="h-5 w-5" />,
       submenu: [
         { title: "Home Banner", href: "/life-backend/Banner" },
-        { title: "About Section", href: "/life-backend/about" },
-        { title: "Products Section", href: "/life-backend/products" },
+        { title: "One More Section", href: "/life-backend/one-more" },
+        { title: "Number Section", href: "/life-backend/number" },
+        {title:"Testimonial Section",href:"/life-backend/testimonial",}
       ],
     },
     // {
