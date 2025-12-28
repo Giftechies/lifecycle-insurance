@@ -75,8 +75,8 @@ export default function Footer() {
             <div className="shrink-0 lg:pt-0 ">
               <h3 className="text-[18px] font-medium mb-3 text-white">Important Links</h3>
               <div className="flex flex-col space-y-4">
-                <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
-                <Link href="/Interest-rate" className="text-white/90 hover:text-white transition-colors">Interest Rates</Link>
+                <Link href="/calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
+                <Link href="/interest-rate" className="text-white/90 hover:text-white transition-colors">Interest Rates</Link>
                 <Link href="/public-available-disclosure" className="text-white/90 hover:text-white transition-colors lg:w-[70%]">Public Available Disclosure</Link>
                 <Link href="/make-a-complaint" className="text-white/90 hover:text-white transition-colors">Make a Complaint</Link>
                 <Link href="/privacy-policy" className="text-white/90 hover:text-white transition-colors">Privacy Policy</Link>
