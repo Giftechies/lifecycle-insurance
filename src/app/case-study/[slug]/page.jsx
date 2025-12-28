@@ -7,6 +7,13 @@ import {
 } from "../../../actions/caseStudy.actions";
 import sanitizeHtml from "sanitize-html";
 export const revalidate = 86400; 
+export async function generateStaticParams() {
+const {studies} = await getCaseStudies();
+return studies?.map((item)=>({
+  slug:item?.slug
+}))
+  
+}
 
 export default async function CaseStudyDetail({ params }) {
   const { slug } = await params;

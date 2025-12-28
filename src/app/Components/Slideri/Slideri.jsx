@@ -11,7 +11,7 @@ export default function Slider({studies=[]}) {
         {(
           <aside className="w-full bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
             <h2 className="text-lg font-semibold mb-6 border-b border-white/30 pb-2">
-              <a href={`/Case-study`}>{menuTitle}</a>
+              <Link href={`/case-study`}>{menuTitle}</Link>
             </h2>
             <ul className="space-y-4">
               {studies.map((item, idx) => (

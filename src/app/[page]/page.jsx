@@ -6,7 +6,12 @@ import CategoryPage from "../Components/category"
 import { getInsuranceIndex,getMortgageIndex,getSubInsurance,getSubMortgage } from "../../actions/subInsurance_Mortgage"
 
 export const revalidate = 3600; // 1 hour
-
+export async function generateStaticParams() {
+  return [
+    { page: 'mortgage' },
+    { page: 'insurance' }
+  ];
+}
 
 
 export default async function Page({params}) {

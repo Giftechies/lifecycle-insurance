@@ -7,6 +7,28 @@ import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
 
 export const revalidate = 3600; // 1 hour
+export async function generateStaticParams() {
+  // 1. Fetch all sub-items for both categories
+  const [mortgages, insurances] = await Promise.all([
+    getSubMortgage(),
+    getSubInsurance()
+  ]);
+
+  // 2. Map Mortgages: creates paths like /mortgage/first-time-buyer
+  const mortgageParams = (mortgages?.data || []).map((item) => ({
+    page: 'mortgage',
+    subpage: item.slug,
+  }));
+
+  // 3. Map Insurances: creates paths like /insurance/life-insurance
+  const insuranceParams = (insurances?.data || []).map((item) => ({
+    page: 'insurance',
+    subpage: item.slug,
+  }));
+
+  // 4. Combine them into one array
+  return [...mortgageParams, ...insuranceParams];
+}
 
 export default async function Subpage({ params }) {
   const { subpage, page } = await params
