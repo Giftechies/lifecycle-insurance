@@ -7,7 +7,7 @@ export  async function getOneMore() {
     try {
         await dbConnect();
         const oneMoreData = await OneMore.findOne({}).lean();
-        return { data: oneMoreData };
+        return { data:JSON.parse(JSON.stringify(oneMoreData)) };
         
     } catch (error) {
         return { error: error.meggage || 'Error fetching One More section data' };

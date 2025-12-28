@@ -1,10 +1,37 @@
 import CategoryPage from "../Components/category"
-// import {getSubMortgage} from "@/actions/subMortgage.actions"  
-// import { getMortgageIndex } from "@/actions/mortgageIndex.actions"    
-// import { getSubInsurance } from "@/actions/subInsurance.actions"
-// import { getInsuranceIndex } from "@/actions/insuranceIndex.model"
 import { getInsuranceIndex,getMortgageIndex,getSubInsurance,getSubMortgage } from "../../actions/subInsurance_Mortgage"
+import { Metadata } from 'next'; 
 
+// ... other imports and generateStaticParams ...
+
+export async function generateMetadata({ params }) {
+  const { page } = await params;
+
+  // 1. Fetch the specific SEO data for the category
+  let seoData;
+  if (page === 'mortgage') {
+    const res = await getMortgageIndex();
+    seoData = res?.mortgageIndex; 
+  } else if (page === 'insurance') {
+    const res = await getInsuranceIndex();
+    seoData = res?.data;
+  }
+
+  // 2. Fallback to a default if data isn't found
+  const title = seoData?.metaTitle || `${page.charAt(0).toUpperCase() + page.slice(1)} - LifeCycle Insurance`;
+  const description = seoData?.metaDescription || `Explore our ${page} solutions.`;
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+    }
+  };
+}
+
+// ... your existing Page component ...
 export const revalidate = 3600; // 1 hour
 export async function generateStaticParams() {
   return [

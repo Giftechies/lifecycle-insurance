@@ -5,6 +5,7 @@ import FooterProvider from "./Components/FooterProvider";
 import { EnquiryProvider } from "./Context/EnquiryContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LayoutWrapper from "./LayoutWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,9 +18,12 @@ const geistMono = Geist_Mono({
   weight: ["100", "200"],
 });
 
+export const metadata = {
+  title: "LifeCycle Insurance",
+  description: "Providing expert insurance and mortgage solutions tailored to your needs.",
+};
+
 export default function RootLayout({ children }) {
-
-
   return (
     <html lang="en">
       <head>
@@ -32,8 +36,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <EnquiryProvider>
-          <NavProvider/>
-          {children}
+          <NavProvider />
+          <LayoutWrapper>{children}</LayoutWrapper>
           <FooterProvider />
         </EnquiryProvider>
 
