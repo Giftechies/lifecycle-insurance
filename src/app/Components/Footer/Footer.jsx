@@ -77,9 +77,9 @@ export default function Footer() {
               <div className="flex flex-col space-y-4">
                 <Link href="/Calculator" className="text-white/90 hover:text-white transition-colors">Calculator</Link>
                 <Link href="/Interest-rate" className="text-white/90 hover:text-white transition-colors">Interest Rates</Link>
-                <Link href="/Public-available-disclosure" className="text-white/90 hover:text-white transition-colors lg:w-[70%]">Public Available Disclosure</Link>
-                <Link href="/Make-a-complaint" className="text-white/90 hover:text-white transition-colors">Make a Complaint</Link>
-                <Link href="/Privacy-Policy" className="text-white/90 hover:text-white transition-colors">Privacy Policy</Link>
+                <Link href="/public-available-disclosure" className="text-white/90 hover:text-white transition-colors lg:w-[70%]">Public Available Disclosure</Link>
+                <Link href="/make-a-complaint" className="text-white/90 hover:text-white transition-colors">Make a Complaint</Link>
+                <Link href="/privacy-policy" className="text-white/90 hover:text-white transition-colors">Privacy Policy</Link>
               </div>
             </div>
 

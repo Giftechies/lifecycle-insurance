@@ -152,7 +152,7 @@ export default function Nav() {
               className="text-[1.5rem] py-2 px-2 lg:hidden bg-[var(--secgr)] text-white rounded-[5px] tracking-tighter ri-menu-line"
             ></i>
             <Link
-              href="/Enquire"
+              href="/enquire"
               className="hidden lg:block py-3 px-5  text-[14px] text-center   rounded-full bg-[var(--primg)] text-white  hover:text-black hover:mb-2
            xl transition-all duration-400 ease-in-out"
             >
