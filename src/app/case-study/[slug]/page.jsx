@@ -1,37 +1,37 @@
-
-
 import Banner from "../../Components/Banner/Banner";
 import { notFound } from "next/navigation";
-import Slideri from "../../Components/Slideri/Slideri"
-import { getCaseStudies } from "../../../actions/caseStudy.actions"
+import Slideri from "../../Components/Slideri/Slideri";
+import {
+  getCaseStudies,
+  getCaseStudyBySlug,
+} from "../../../actions/caseStudy.actions";
 import sanitizeHtml from "sanitize-html";
-export const revalidate = 86400; // 1 hour
-
+export const revalidate = 86400; 
 
 export default async function CaseStudyDetail({ params }) {
   const { slug } = await params;
-  const studies = await (await getCaseStudies()).studies
-  const data = studies?.filter((item) => item?.slug === slug)
-  const study = data[0]
-
-const safeHTML = sanitizeHtml(study?.description || "", {
-    allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'iframe']),
+  const study = await (await getCaseStudyBySlug(slug)).study;
+  const allStudies = await (await getCaseStudies()).studies;
+  const safeHTML = sanitizeHtml(study?.description || "", {
+    allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img", "iframe"]),
     allowedAttributes: {
       ...sanitizeHtml.defaults.allowedAttributes,
-      "*":['class','style','id'],
+      "*": ["class", "style", "id"],
     },
   });
-  if (!studies) return notFound();
+  if (!study) return notFound();
 
   return (
     <>
-      <Banner title={study.heading} />
+      <Banner title={study?.heading} />
       <section className=" case py-10 px-4  lg:p-[3rem]  space-y-6">
         <main className=" flex gap-5  justify-between">
-          <div className=" w-[70%] editor-container " dangerouslySetInnerHTML={{ __html: safeHTML }} />
-          <Slideri studies={studies} />
+          <div
+            className=" w-[70%] editor-container "
+            dangerouslySetInnerHTML={{ __html: safeHTML }}
+          />
+          <Slideri studies={allStudies} />
         </main>
-
       </section>
     </>
   );

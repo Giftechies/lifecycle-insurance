@@ -38,14 +38,7 @@ export default function DashboardLayout({ children }) {
         {title:"Testimonial Section",href:"/life-backend/testimonial",}
       ],
     },
-    // {
-    //   title: "News Section",
-    //   icon: <FiFileText className="h-5 w-5" />,
-    //   submenu: [
-    //     { title: "News Posts", href: "/life-backend/news-study" },
-    //     { title: "Index Page Content", href: "/life-backend/news-index" },
-    //   ],
-    // },
+  
     {
       title: "Case Study",
       icon: <FiBook className="h-5 w-5" />,
@@ -58,7 +51,6 @@ export default function DashboardLayout({ children }) {
       title: "Mortgage",
       icon: <FiDollarSign className="h-5 w-5" />,
       submenu: [
-        // { title: "Mortgage", href: "/life-backend/mortgage" },
         { title: "Sub Mortgage", href: "/life-backend/submortgage" },
         { title: "Index Page Content", href: "/life-backend/mortgage-index" },
       ],
@@ -67,40 +59,11 @@ export default function DashboardLayout({ children }) {
       title: "Insurance",
       icon: <FiShield className="h-5 w-5" />,
       submenu: [
-        // { title: "Insurance", href: "/life-backend/insurance" },
-        { title: "Sub Insurance", href: "/life-backend/subinsurance" },
+     { title: "Sub Insurance", href: "/life-backend/subinsurance" },
         { title: "Insurance Index Page", href: "/life-backend/insurance-index" },
       ],
     },
-    // {
-    //   title: "Business Funding",
-    //   icon: <IoBusiness className="h-5 w-5" />,
-    //   submenu: [
-    //     {
-    //       title: "Business Funding Categories",
-    //       href: "/life-backend/business-funding-categories",
-    //     },
-    //     { title: "Business Funding", href: "/life-backend/business-funding" },
-    //     {
-    //       title: "Index Page Content",
-    //       href: "/life-backend/business-funding-index",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Commercial Finan..",
-    //   icon: <BiMoney className="h-5 w-5" />,
-    //   submenu: [
-    //     {
-    //       title: "Commercial Categories",
-    //       href: "/life-backend/commercial-finance",
-    //     },
-    //     {
-    //       title: "Index Page Content",
-    //       href: "/life-backend/commercial-finance-index",
-    //     },
-    //   ],
-    // },
+   
     {
       title: "About Page",
       icon: <FaPersonBooth className="h-5 w-5" />,

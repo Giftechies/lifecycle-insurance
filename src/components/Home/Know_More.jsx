@@ -27,7 +27,7 @@ export default function KnowMore({oneMoreData}) {
     });
   },  );
 
-  console.log("one more",oneMoreData);
+  // console.log("one more",oneMoreData);
   
 
     return(

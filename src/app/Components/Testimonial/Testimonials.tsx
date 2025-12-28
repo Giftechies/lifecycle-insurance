@@ -2,52 +2,24 @@
 
 import React, { useState, useCallback, FC, SVGProps, useEffect } from 'react';
 
-// --- Consolidated Types and Constants ---
+// --- Types ---
 
 export interface Testimonial {
-  id: number;
+  _id?: string;   // For MongoDB data
+  id?: number;    // For Static data
   name: string;
-  quote: string;
-  rating: number;
+  quote?: string;  // Static data field
+  review?: string; // Database field
+  rating?: number; // Static data field
+  rate?: number;   // Database field
 }
 
-export const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: 'laddi dhillon',
-    quote: `I highly recommend Lifecycle financial for their efficiency and support. They maintained excellent communication and were always ...`,
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: 'Pritpaal Sokhi',
-    quote: `Excellent service and great financial advice to help save money and invest wisely. Harpreet Rattan is very professional, quick...`,
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: 'Monu Singh',
-    quote: `Really good service from Harpreet Rattan . he is really good consultant and always give good advice to help you save money and do...`,
-    rating: 4,
-  },
-  {
-    id: 4,
-    name: 'Sushwanth Sai Konigeti',
-    quote: `Very Professional and Quick in providing financial advice and Mortgages. Mrs Raji Rathan is being very helpful and supportive throughout the ...`,
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: 'Japjeet Kaur',
-    quote: `Very satisfied with the service . Samkit understands our requirement and advise the best policy product for us within our budget.`,
-    rating: 4,
-  },
-];
+interface TestimonialsProps {
+  testimonials: Testimonial[];
+}
 
+// --- SVG Icons ---
 
-// --- End of Consolidated Section ---
-
-// SVG Icons
 const ChevronLeftIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
@@ -66,70 +38,71 @@ const StarIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
     </svg>
 );
 
-// Star Rating Component
-interface StarRatingProps {
-  rating: number;
-}
+// --- Sub-Components ---
 
-const StarRating: FC<StarRatingProps> = ({ rating }) => {
+const StarRating: FC<{ rating: number }> = ({ rating }) => {
     return (
-        <div className="flex justify-center items-center mb-4" aria-label={`Rating: ${rating} out of 5 stars`}>
+        <div className="flex justify-center items-center mb-4">
             {[...Array(5)].map((_, i) => (
                 <StarIcon
                     key={i}
                     className={`w-5 h-5 ${ i < rating ? 'text-yellow-400' : 'text-slate-300'}`}
-                    aria-hidden="true"
                 />
             ))}
         </div>
     );
 };
 
-// Testimonial Card Component
-interface TestimonialCardProps {
-  testimonial: Testimonial;
-}
-
-const TestimonialCard: FC<TestimonialCardProps> = ({ testimonial }) => {
+const TestimonialCard: FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
   const initial = testimonial.name.charAt(0).toUpperCase();
   const bgColors = ['bg-red-500', 'bg-green-500', 'bg-blue-500', 'bg-purple-500', 'bg-yellow-500'];
-  const bgColor = bgColors[testimonial.id % bgColors.length];
+  // Fallback to index 0 if id/_id isn't numeric
+  const bgColor = bgColors[0]; 
 
   return (
     <div className="bg-white rounded-xl p-8 max-w-md w-full text-center shadow-xl overflow-hidden ">
       <div className="flex flex-col items-center mb-6">
-        <div
-          className={`w-25 h-25 rounded-full ${bgColor} text-white flex items-center justify-center text-4xl font-medium mb-4`}
-        >
+        <div className={`w-20 h-20 rounded-full ${bgColor} text-white flex items-center justify-center text-4xl font-medium mb-4`}>
           {initial}
         </div>
-
         <div className='w-full flex flex-col items-center'>
           <p className="font-semibold text-lg text-slate-900 ">{testimonial.name}</p>
         </div>
       </div>
-      <StarRating rating={testimonial.rating} />
+      {/* Handles both 'rating' (static) and 'rate' (DB) */}
+      <StarRating rating={testimonial.rate || testimonial.rating || 0} />
       <blockquote className="text-slate-600 leading-relaxed">
-        <h3 className=' text-[14px]  ' >“{testimonial.quote}”</h3>
+        {/* Handles both 'quote' (static) and 'review' (DB) */}
+        <h3 className='text-[14px]'>“{testimonial.review || testimonial.quote}”</h3>
       </blockquote>
     </div>
   );
 };
 
+// --- Main Component ---
 
-// Main Testimonials Component
-const Testimonials: FC = () => {
-  const [activeIndex, setActiveIndex] = useState(2);
-  const [Ispc, setIspc] = useState(false)
-  const [IsMoblie, setIsMobie] = useState(false)
+const Testimonials: FC<TestimonialsProps> = ({ testimonials = [] }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [Ispc, setIspc] = useState(false);
+  const [IsMoblie, setIsMobie] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+        setIspc(window.innerWidth > 1024);
+        setIsMobie(window.innerWidth < 640);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handlePrev = useCallback(() => {
-    setActiveIndex((prevIndex) => (prevIndex ===  testimonials.length - 1? 0  : prevIndex + 1));
-  }, []);
+    setActiveIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+  }, [testimonials.length]);
 
   const handleNext = useCallback(() => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
-  }, []);
+    setActiveIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+  }, [testimonials.length]);
   
   const getCardClasses = (index: number) => {
     let offset = index - activeIndex;
@@ -138,65 +111,47 @@ const Testimonials: FC = () => {
       offset = offset > 0 ? offset - total : offset + total;
     }
 
-    useEffect(()=>{
-    setIspc(window.innerWidth > 1024)
-    setIsMobie(window.innerWidth < 640)
-    },[])
-
     if(Ispc){
        switch (offset) {
-      case 0:
-        return 'transform scale-95 opacity-100 z-20 shadow';
-      case 1:
-        return 'transform scale-[0.8] opacity-90 z-10 translate-x-[100%] shadow';
-      case -1:
-        return 'transform scale-[0.8] opacity-90 z-10 translate-x-[-100%] shadow';
-      default:
-        return `transform ${offset > 0 ? 'translate-x-[110%]' : 'translate-x-[-110%]'} scale-[0.7] opacity-0 z-0`;
-    }
-    }if(IsMoblie){
-
+          case 0: return 'transform scale-95 opacity-100 z-20 shadow';
+          case 1: return 'transform scale-[0.8] opacity-90 z-10 translate-x-[100%] shadow';
+          case -1: return 'transform scale-[0.8] opacity-90 z-10 translate-x-[-100%] shadow';
+          default: return `transform ${offset > 0 ? 'translate-x-[110%]' : 'translate-x-[-110%]'} scale-[0.7] opacity-0 z-0`;
+       }
+    } 
+    
+    if(IsMoblie){
        switch (offset) {
-      case 0:
-        return 'transform scale-80 opacity-100 z-20 shadow';
-      case 1:
-        return 'transform scale-[0.4] opacity-90 z-10 translate-x-[80%] shadow';
-      case -1:
-        return 'transform scale-[0.4] opacity-90 z-10 translate-x-[-80%] shadow';
-      default:
-        return `transform ${offset > 0 ? 'translate-x-[110%]' : 'translate-x-[-110%]'} scale-[0.7] opacity-0 z-0`;
-    }
+          case 0: return 'transform scale-80 opacity-100 z-20 shadow';
+          case 1: return 'transform scale-[0.4] opacity-90 z-10 translate-x-[80%] shadow';
+          case -1: return 'transform scale-[0.4] opacity-90 z-10 translate-x-[-80%] shadow';
+          default: return `transform ${offset > 0 ? 'translate-x-[110%]' : 'translate-x-[-110%]'} scale-[0.7] opacity-0 z-0`;
+       }
+    } 
 
-    } else{
-       switch (offset) {
-      case 0:
-        return 'transform scale-55 opacity-100 z-20 shadow';
-      case 1:
-        return 'transform scale-[0.4] opacity-90 z-10 translate-x-[50%] shadow';
-      case -1:
-        return 'transform scale-[0.4] opacity-90 z-10 translate-x-[-50%] shadow';
-      default:
-        return `transform ${offset > 0 ? 'translate-x-[110%]' : 'translate-x-[-110%]'} scale-[0.7] opacity-0 z-0`;
+    // Tablet/Default
+    switch (offset) {
+      case 0: return 'transform scale-55 opacity-100 z-20 shadow';
+      case 1: return 'transform scale-[0.4] opacity-90 z-10 translate-x-[50%] shadow';
+      case -1: return 'transform scale-[0.4] opacity-90 z-10 translate-x-[-50%] shadow';
+      default: return `transform ${offset > 0 ? 'translate-x-[110%]' : 'translate-x-[-110%]'} scale-[0.7] opacity-0 z-0`;
     }
-    }
-
-   
   };
 
+  if (!testimonials || testimonials.length === 0) return null;
+
   return (
-    <div className="  w-full max-w-[1600px] p-4 lg:p-[3rem] mx-auto bg-[var(--secgr)]/10 overflow-hidden ">
+    <div className="w-full max-w-[1600px] p-4 lg:p-[3rem] mx-auto bg-[var(--secgr)]/10 overflow-hidden ">
       <div className="text-center mb-12">
-          <h6 className="text-[18px] md:text-[36px]  mt-8 font-bold text-[var(--secgr)]">
+          <h6 className="text-[18px] md:text-[36px] mt-8 font-bold text-[var(--secgr)]">
             Our Client Reviews
-            
           </h6>
       </div>
 
-      <div className="relative w-full h-[400px]  md:h-[300px]  lg:h-[400px] ">
+      <div className="relative w-full h-[400px] md:h-[300px] lg:h-[400px] ">
         <button
           onClick={handlePrev}
-          className="absolute  top-1/2 -translate-y-1/2 left-0 z-30 bg-white/70 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-gray-700 hover:bg-white transition-all shadow-md"
-          aria-label="Previous testimonial"
+          className="absolute top-1/2 -translate-y-1/2 left-0 z-30 bg-white/70 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-gray-700 hover:bg-white transition-all shadow-md"
         >
           <ChevronLeftIcon className="w-6 h-6" />
         </button>
@@ -204,9 +159,8 @@ const Testimonials: FC = () => {
         <div className="relative w-full mx-auto h-full flex items-center justify-center ">
           {testimonials.map((testimonial, index) => (
             <div
-              key={testimonial.id}
+              key={testimonial._id || testimonial.id || index}
               className={`absolute transition-all duration-800 ease-in-out ${getCardClasses(index)}`}
-              aria-hidden={index !== activeIndex}
             >
               <TestimonialCard testimonial={testimonial} />
             </div>
@@ -216,13 +170,12 @@ const Testimonials: FC = () => {
         <button
           onClick={handleNext}
           className="absolute top-1/2 -translate-y-1/2 right-0 z-30 bg-white/70 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-gray-700 hover:bg-white transition-all shadow-md"
-          aria-label="Next testimonial"
         >
           <ChevronRightIcon className="w-6 h-6" />
         </button>
       </div>
 
-      <div className="flex  justify-center space-x-3 mt-12 " role="tablist" aria-label="Testimonials Navigation">
+      <div className="flex justify-center space-x-3 mt-12">
         {testimonials.map((_, index) => (
           <button
             key={index}
@@ -230,9 +183,6 @@ const Testimonials: FC = () => {
             className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
               activeIndex === index ? 'bg-slate-800 scale-125' : 'bg-slate-300 hover:bg-slate-400'
             }`}
-            aria-label={`Go to testimonial ${index + 1}`}
-            aria-selected={activeIndex === index}
-            role="tab"
           />
         ))}
       </div>

@@ -1,12 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getNavData } from "@/actions/nav.action";
+import { getNavData } from "../../../actions/nav.action";
 
 
 export default function Footer() {
-  const [setting, setSetting] = useState()
-  const [loading, setloading] = useState(true)
     const [getnavData, setGetnavdata] = useState(null);
     useEffect(() => {
   const fetchNavData = async () => {

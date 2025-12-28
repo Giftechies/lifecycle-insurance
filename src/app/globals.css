@@ -412,12 +412,22 @@ input[type=range].custom-slider::-moz-range-thumb {
   .form-container label {
     @apply block text-sm tracking-wide font-medium text-gray-700 mb-2;
   }
+  .label {
+    @apply block text-sm tracking-wide font-medium text-gray-700 mb-2;
+  }
   .form-container input {
     @apply w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-600 focus:border-[1.6px] mb-6 placeholder:text-sm text-sm tracking-wide placeholder:tracking-wide;
+  }
+  .input{
+    @apply  w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-600 focus:border-[1.6px] mb-6 placeholder:text-sm text-sm tracking-wide placeholder:tracking-wide
   }
 
   .form-container textarea {
     @apply w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-600 focus:border-[1.6px] mb-6 placeholder:text-sm text-sm tracking-wide placeholder:tracking-wide;
+  }
+  .textarea{
+      @apply w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-600 focus:border-[1.6px] mb-6 placeholder:text-sm text-sm tracking-wide placeholder:tracking-wide;
+
   }
 
   .form-container button[type="submit"] {

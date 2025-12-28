@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 export default function Number({ numberData }) {
 
-  console.log('number Data',numberData);
+  // console.log('number Data',numberData);
   
     const sec3 = useRef()
       const sec3_cards = [

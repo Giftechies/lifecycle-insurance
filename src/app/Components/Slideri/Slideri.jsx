@@ -16,7 +16,7 @@ export default function Slider({studies=[]}) {
             <ul className="space-y-4">
               {studies.map((item, idx) => (
              <Link
-             href={`/Case-study/${item?.slug}`}
+             href={`/case-study/${item?.slug}`}
              >
                 <li
                   key={idx}

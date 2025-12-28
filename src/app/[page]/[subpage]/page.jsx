@@ -2,8 +2,6 @@
 
 import Banner from "@/app/Components/Banner/Banner";
 import Slider from "@/app/Components/Slider/Slider";
-// import { getSubMortgageBySlug, getSubMortgage } from "../../../actions/subMortgage.actions"
-// import { getSubInsuranceBySlug, getSubInsurance } from "../../../actions/subInsurance.actions"
 import { getSubInsuranceBySlug,getSubMortgageBySlug,getSubInsurance,getSubMortgage } from "../../../actions/subInsurance_Mortgage"
 import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
@@ -22,19 +20,19 @@ export default async function Subpage({ params }) {
       getSubMortgage()
 
     ])
-    const data = resdata?.data
+    content = resdata?.data
     Allpage = resAllpage?.data
-    content = data[0]
+    
   }
   if (page?.startsWith('insurance')) {
 
     const [resdata, resAllpage] = await Promise.all([
       getSubInsuranceBySlug(subpage),
       getSubInsurance()
-    ])
-    const data = resdata?.data
+    ]) 
+     content = resdata?.data
     Allpage = resAllpage?.data
-    content = data[0]
+    
   }
   const safeHTML = sanitizeHtml(content?.content || "", {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'iframe']),

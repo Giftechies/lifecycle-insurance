@@ -12,7 +12,7 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger,useGSAP)
 
 export default function HomeBanner({data=[]}){
- console.log("home banner data:", data);
+//  console.log("home banner data:", data);
   
     const homeIconBox = useRef()
       useGSAP(() => {

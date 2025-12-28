@@ -5,10 +5,10 @@ import TestimonialTable from './component/testimonialTable';
 
 export default async function TestimonialPage() {
     
-    const testimonialies = await getTestimonial();
+    const testimonialies = await getTestimonial();  
 
     return(
-       <TestimonialTable  />
+       <TestimonialTable initialData={testimonialies?.data}  />
 
     )
 }

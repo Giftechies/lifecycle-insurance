@@ -12,7 +12,7 @@ const testimonailSchema = mongoose.Schema({
         required:[true,"Review is required"]
     },
     rate:{
-        type:String,
+        type:Number,
     }
 },{timestamps:true})
 

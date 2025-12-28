@@ -2,7 +2,7 @@ import 'server-only'
 import InsuranceIndex from "@/models/insuranceIndex.model";
 import SubMortgage from "@/models/subMortgage.model";
 import dbConnect from "@/lib/db";
-import SubInsurance from "@/models/subInsurance.model";
+import SubInsurance from "../models/subInsurance.model";
 import MortgageIndex from "@/models/mortgageIndex.model";
 
 export async function getSubInsurance() {
@@ -86,17 +86,12 @@ export async function getInsuranceIndex() {
 export async function getSubMortgageBySlug(slug) {
   try {
     await dbConnect();
-    const subMortgage = await SubMortgage.find({ slug:slug }).lean();
+    const subMortgage = await SubMortgage.findOne({ slug:slug }).lean();
     if (!subMortgage) {
       return { success: false, error: "SubMortgage not found" };
     }
-   const serializedSubMortgage = subMortgage.map((subMortgage) => {
-     return {
-       ...subMortgage,
-       _id: subMortgage?._id?.toString(),
-     };
-   })
-    return { success: true, data: serializedSubMortgage };
+ 
+    return { success: true, data: subMortgage };
   } catch (error) {
     return { success: false, error: error.message };
   }
@@ -105,17 +100,11 @@ export async function getSubMortgageBySlug(slug) {
 export async function getSubInsuranceBySlug(slug) {
   try {
     await dbConnect();
-    const subInsurance = await SubInsurance.find({ slug: slug }).lean();
+    const subInsurance = await SubInsurance.findOne({ slug: slug }).lean();
     if (!subInsurance) {
       return { success: false, error: "SubInsurance not found" };
     }
-    const serializedSubInsurance = subInsurance.map((item) => {
-      return {
-        ...item,
-        _id: item?._id?.toString(),
-      };
-    });
-    return { success: true, data: serializedSubInsurance };
+    return { success: true, data: subInsurance };
   } catch (error) {
     return { success: false, error: error.message };
   }

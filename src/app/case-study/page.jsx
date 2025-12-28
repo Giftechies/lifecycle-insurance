@@ -2,59 +2,14 @@ import Link from 'next/link';
 import Banner from '../Components/Banner/Banner';
 import {getCaseStudyIndex} from "../../actions/caseStudyIndex.actions"
 import {getCaseStudies} from '../../actions/caseStudy.actions'
+import Image from 'next/image';
 
-const cards = [
-  {
-    slug: 'making-home-ownership-possible',
-    title: 'Making Home Ownership Possible',
-    summary:
-      'Turning dream into reality with just 5% deposit despite having multiple debts, bad credit history...',
-    content: {
-      p1: 'A husband and wife approached us with the goal of purchasing their first home...',
-      p2: 'We created a tailored 3–4 month action plan to help them restructure...',
-    },
-    result:
-      'A major bank approved their $880,000 loan at a competitive 6.09% interest rate...',
-   coverImage: '/about-pic1.jpg',
-  },
-  {
-  slug: "trauma-cover-impact", // use this for dynamic routing
-  title: "Trauma Cover Impact",
-  summary:
-    "A powerful reminder of how the right advice and timely action can make all the difference when life ...",
-  content: [
-    "We carried out a thorough review of a client’s existing insurance policy, which had originally been set up by another adviser. After identifying key gaps in their trauma cover, we recommended them additional protection and a $100,000 Trauma policy to better safeguard their financial future.",
-    "In a truly unfortunate turn of events, the client was diagnosed with cancer less than a month after the new cover was put in place. Thankfully, the Trauma policy had already been approved and in force, providing immediate financial support during a very challenging time.",
-    "The payout provided essential financial support during a highly stressful and emotional time, helping them to focus on recovery without the added burden of financial strain."
-  ],
-  category: "Insurance",
-  coverImage: "/Trauma-Insurance.jpg", // Update with your actual image path
-  date: "2025-07-24", // optional
-},
-{
-  slug: "timely-advice-trauma-cover",
-  title: "Timely Advice Trauma Cover",
-  summary:
-    "They nearly let it go. Six months later, they were thankful they didn't. That's the value of trusted...",
-  content: [
-    "During an annual insurance review with a husband and wife in their early 40s, the husband expressed interest in removing his wife's trauma cover to save on premiums. Given their age group and the increasing health risks that can arise in the 40s, I strongly advised against cancelling the cover. After discussing the long-term implications and the importance of financial protection, the couple decided to retain the policy.",
-    "Just six months later, the wife was unexpectedly diagnosed with a tumor. Fortunately, her trauma cover was still in place, and a claim was successfully lodged—resulting in a $110,000 payout. This financial support allowed the family to focus entirely on her treatment and recovery without the added stress of financial strain.",
-    "The good news is that she made a full recovery, and the family is now even more appreciative of the importance of maintaining comprehensive insurance cover. This situation reinforces how critical it is to have the right protections in place—especially when they’re needed most."
-  ],
-  category: "Insurance",
-  coverImage: "/time.webp", // Replace with actual path
-  date: "2025-07-24"
-}
-];
+
 
 export default async function CaseStudy() {
 
   const caseData = await (await getCaseStudyIndex()).data
   const Studies = await (await getCaseStudies()).studies
-  console.log(Studies);
-  
-
-  
 
   return (
   <>
@@ -81,9 +36,11 @@ export default async function CaseStudy() {
             key={index}
             className="w-full p-[20px]  bg-white rounded-[16px] shadow-xl overflow-hidden relative transition-transform hover:scale-[0.95] duration-300 ease-in-out"
           >
-            <Link href={`/Case-study/${el.slug}`}>
+            <Link href={`/case-study/${el.slug}`}>
               <div className="w-full h-[15em] rounded-[12px] overflow-hidden">
-                <img
+                <Image
+                width={250}
+                height={250}
                   src={el.image}
                   alt={el.heading}
                   className="w-full cursor-pointer h-full object-cover"

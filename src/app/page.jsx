@@ -8,12 +8,14 @@ import HomeBanner from "@/components/Home/Home_banner"
 import { getHomeBanner } from "../actions/homeBanner.action"
 import {getOneMore} from "../actions/oneMore.action"
 import {getNumber} from "../actions/number.action"
+import { getTestimonial } from "../actions/testimonial.action";
 
 export default async function Home() {
 
   const {data} = await getHomeBanner();
   const {data: oneMoreData} = await getOneMore();
   const {data: numberData} = await getNumber();
+  const {data:testimonial} = await getTestimonial();
 
   return (
     <>
@@ -24,7 +26,7 @@ export default async function Home() {
         <OurService />
         <MortageService />
         <Contact />
-        <Testimonials />
+        <Testimonials testimonials={testimonial} />
       </main>
     </>
   );
