@@ -2,21 +2,8 @@
 import Link from 'next/link';
 
 import {
-  Home,
-  Repeat,
-  LineChart,
-  Briefcase,
-  Hammer,
   Building,
-  ShieldCheck,
-  HeartPulse,
-  Activity,
-  Wallet,
-  Stethoscope,
-  Users,
- 
 } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
 
 export default function Slider({menuItem=[],title='mortgage'}) {
 
@@ -26,7 +13,7 @@ export default function Slider({menuItem=[],title='mortgage'}) {
         {/* Dynamic Menu */}
           <aside className="w-full bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
             <h2 className="text-lg font-semibold mb-6 border-b border-white/30 pb-2 capitalize ">
-              <a href={`/${title}`}>{title}</a>
+              <Link href={`/${title}`}>{title}</Link>
             </h2>
             <ul className="space-y-4">
               {menuItem?.map((item, idx) => (
