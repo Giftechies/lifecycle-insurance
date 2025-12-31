@@ -10,9 +10,9 @@ import { getNavData } from "@/actions/nav.action";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [getnavData, setGetnavdata] = useState(null);
   const router = useRouter();
   const path = usePathname()
+  const [getnavData, setGetnavdata] = useState(null);
   useEffect(() => {
     const fetchNavData = async () => {
       try {
@@ -174,7 +174,7 @@ export default function Nav() {
       >
         <div className="relative" bis_skin_checked="1">
           <div className="grid grid-cols-5 h-16" bis_skin_checked="1">
-            <a
+            <Link
               href="tel:0800507770"
               className="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
             >
@@ -194,8 +194,8 @@ export default function Nav() {
                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
               </svg>
               <span className="text-xs font-medium">Call</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="mailto:harpreet@lifecyclefinancial.co.nz"
               className="flex flex-col items-center justify-center gap-1 text-gray-600 hover:text-[var(--primary)] transition-colors duration-200 py-2"
             >
@@ -216,12 +216,12 @@ export default function Nav() {
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
               </svg>
               <span className="text-xs font-medium">Email</span>
-            </a>
+            </Link>
             <div
               className="flex items-center justify-center relative"
               bis_skin_checked="1"
             >
-              <a
+              <Link
                 className="absolute -top-6 w-14 h-14 bg-[var(--primg)] rounded-full flex flex-col items-center justify-center text-white shadow-lg border-4 border-white"
                 href="/"
               >
@@ -241,10 +241,10 @@ export default function Nav() {
                   <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
                   <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 </svg>
-              </a>
+              </Link>
               <span className="text-xs font-medium text-gray-700 mt-6">Home</span>
             </div>
-            <a
+            <Link
               className="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
               href="/services"
             >
@@ -268,10 +268,10 @@ export default function Nav() {
                 <path d="M15 3v18"></path>
               </svg>
               <span className="text-xs font-medium">Services</span>
-            </a>
-            <a
+            </Link>
+            <Link
               className="flex flex-col items-center justify-center gap-1 transition-all duration-200 py-2 text-gray-600 hover:text-[var(--primary)]"
-              href="/Enquire"
+              href="/enquire"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -291,7 +291,7 @@ export default function Nav() {
 
               {/* <img src="/call.svg" className=" size-5" alt="" /> */}
               <span className="text-xs font-medium">Contact</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
