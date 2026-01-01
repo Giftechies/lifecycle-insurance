@@ -204,7 +204,7 @@ export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
           {/* ---------------- Calculator ---------------- */}
           <li>
             <div className="flex justify-between items-center">
-              <Link href="/Calculator" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/calculator" onClick={() => setIsMenuOpen(false)}>
                 Calculator
               </Link>
               {iscal ? (
@@ -225,7 +225,7 @@ export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
                 {["Repayment Calculator", "Loan Calculator"].map((e) => (
                   <li key={e}>
                     <Link
-                      href={`/Calculator/${e.toLowerCase().replace(/\s+/g, "-")}`}
+                      href={`/calculator/${e.toLowerCase().replace(/\s+/g, "-")}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {e}
