@@ -32,13 +32,13 @@ export default function Nav() {
       path: '/about-us'
     },
     {
-      label: 'Insurance',
-      path: "/insurance",
+      label: "Mortgage",
+      path: '/mortgage',
       child: []
     },
     {
-      label: "Mortgage",
-      path: '/mortgage',
+      label: 'Insurance',
+      path: "/insurance",
       child: []
     },
     {
