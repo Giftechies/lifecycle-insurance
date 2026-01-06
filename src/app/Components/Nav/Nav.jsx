@@ -68,7 +68,7 @@ export default function Nav() {
 
   getnavData?.subInsurance.map((item) => {
     return (
-      navData[1].child.push({
+      navData[2].child.push({
         label: item.heading,
         path: `/insurance/${item.slug}`
       })
@@ -76,7 +76,7 @@ export default function Nav() {
   })
   getnavData?.subMortgage?.map((item) => {
     return (
-      navData[2].child.push({
+      navData[1].child.push({
         label: item.heading,
         path: `/mortgage/${item.slug}`
       })

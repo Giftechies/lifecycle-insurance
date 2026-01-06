@@ -14,7 +14,7 @@ import {
 } from "@/actions/subMortgage.actions";
 import PdfInput from "@/lib/PdfInput";
 
-export default function SubMortgageForm({ initialData,  }) {
+export default function SubMortgageForm({ initialData, OrderLenght }) {
   const router = useRouter();
   // console.log('categories',categories)
   const [formData, setFormData] = useState({
@@ -25,6 +25,7 @@ export default function SubMortgageForm({ initialData,  }) {
     image: initialData?.image || "",
     imageAlt: initialData?.imageAlt || "",
     slug: initialData?.slug || "",
+    order: initialData?.order || "",
     // pdf: initialData?.pdf || "",
     // pdfAlt: initialData?.pdfAlt || "",
     metaTitle: initialData?.metaTitle || "",
@@ -128,6 +129,23 @@ export default function SubMortgageForm({ initialData,  }) {
           metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
+        <div>
+        <label className="my-4" >Order</label>
+        <select onChange={(e) => handleChange("order", parseInt(e.target.value))}
+        value={formData?.order} 
+         className="border rounded-lg p-2 "
+         >
+          {
+            Array.from({length:OrderLenght}).map((_,index)=>{
+
+              return(
+                <option key={index} value={index+1} selected={formData?.order==index+1} >{index+1}</option>
+              )
+            })
+          }
+          
+        </select>
+        </div>
       
         <button type="submit">
           {initialData ? "Update Submortgage" : "Create Submortgage"}

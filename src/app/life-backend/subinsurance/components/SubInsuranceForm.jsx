@@ -12,7 +12,7 @@ import {
   updateSubInsurance,
 } from "@/actions/subInsurance.actions";
 
-export default function SubInsuranceForm({ initialData, }) {
+export default function SubInsuranceForm({ initialData,orderLength }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     heading: initialData?.heading || "",
@@ -23,6 +23,7 @@ export default function SubInsuranceForm({ initialData, }) {
     image: initialData?.image || "",
     imageAlt: initialData?.imageAlt || "",
     slug: initialData?.slug || "",
+    order: initialData?.order || "",
     metaTitle: initialData?.metaTitle || "",
     metaDescription: initialData?.metaDescription || "",
     metaKeywords: initialData?.metaKeywords || "",
@@ -109,6 +110,19 @@ export default function SubInsuranceForm({ initialData, }) {
           metaKeywords={formData?.metaKeywords}
           onChange={(field, value) => handleChange(field, value)}
         />
+       <div className="my-4" >
+        <label>Order</label>
+         <select
+          value={formData?.order}
+          onChange={(e) => handleChange("order", e.target.value)}
+          className="border rounded-lg p-2 "
+        >
+          {
+            Array.from({length:orderLength}).map((_,index)=>(<option key={index} value={index+1} selected={formData?.order==index}>{index+1}</option>))
+          }
+
+        </select>
+       </div>
         <button type="submit">
           {initialData ? "Update Sub Insurance" : "Create Sub Insurance"}
         </button>

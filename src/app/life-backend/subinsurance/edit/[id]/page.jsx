@@ -2,12 +2,14 @@ import DashboardHeader from "@/lib/DashboardHeader";
 import SubInsuranceForm from "../../components/SubInsuranceForm";
 import { getSubInsuranceById } from "@/actions/subInsurance.actions";
 import { getInsuranceNames } from "@/actions/insurance.actions";
+import { getSubInsurance } from "../../../../../actions/subInsurance.actions";
 
 export default async function EditSubInsurancePage({ params }) {
   const paramsId = await params;
-  const [subInsurance, { data: categories }] = await Promise.all([
+  const [subInsurance, { data: categories },subInsuranceNumber] = await Promise.all([
     getSubInsuranceById(paramsId.id),
     getInsuranceNames(),
+    getSubInsurance(),
   ]);
   return (
     <>
@@ -18,6 +20,7 @@ export default async function EditSubInsurancePage({ params }) {
       <SubInsuranceForm
         initialData={subInsurance.data}
         categories={categories}
+        orderLength={subInsuranceNumber?.data?.length}
       />
     </>
   );

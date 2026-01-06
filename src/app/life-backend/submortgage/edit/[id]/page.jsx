@@ -5,17 +5,19 @@ import { getSubMortgageById } from "@/actions/subMortgage.actions";
 
 export default async function EditSubMortgage({ params }) {
     const paramsId = await params;
-    const [{ data }, categories] = await Promise.all([
+    const [{ data,total }, categories] = await Promise.all([
         getSubMortgageById(paramsId.id),
         getMortgageNames(),
     ]);
+    console.log(total,'ddfd');
+    
     return (
         <>
             <DashboardHeader
                 text="Edit Submortgage"
                 url="/life-backend/submortgage"
             />
-            <SubMortgageForm initialData={data} categories={categories.data} />
+            <SubMortgageForm initialData={data} categories={categories.data} OrderLenght={total} />
         </>
     );
 }

@@ -7,7 +7,8 @@ import SubMortgage from "@/models/subMortgage.model";
 export async function getSubMortgage() {
   try {
     await dbConnect();
-    const subMortgages = await SubMortgage.find({}).lean();
+
+    const subMortgages = await SubMortgage.find().sort({ order:1 }).lean();
     const serializedSubMortgages = subMortgages.map((subMortgage) => {
       return {
         ...subMortgage,
@@ -21,10 +22,13 @@ export async function getSubMortgage() {
 }
 
 export async function createSubMortgage(formData) {
-  console.log("data coming  for createing submortgage",formData)
+ 
   try {
     await dbConnect();
-    const datacreated = await SubMortgage.create(formData);
+    const maxOrder = await SubMortgage.findOne().sort({order:-1}).select("order").lean();
+    const nextOrder = maxOrder ? maxOrder.order + 1 : 0;
+
+    const datacreated = await SubMortgage.create({...formData,order:nextOrder});
     console.log("data created",datacreated)
     revalidatePath("/life-backend","layout");
     revalidatePath("/","layout");
@@ -39,6 +43,7 @@ export async function createSubMortgage(formData) {
 export async function updateSubMortgage(id, data) {
   try {
     await dbConnect();
+  
     await SubMortgage.findByIdAndUpdate(id, data);
     revalidatePath("/life-backend","layout");
     revalidatePath("/","layout");
@@ -63,15 +68,19 @@ export async function deleteSubMortgage(id) {
 export async function getSubMortgageById(id) {
   try {
     await dbConnect();
-    const subMortgage = await SubMortgage.findById(id).lean();
+    const [total,subMortgage] = await Promise.all([
+      SubMortgage.find().countDocuments(),
+       SubMortgage.findById(id).lean()
+    ])
     if (!subMortgage) {
       return { success: false, error: "SubMortgage not found" };
     }
+    // order
     const serializedSubMortgage = {
       ...subMortgage,
       _id: subMortgage?._id?.toString(),
     };
-    return { success: true, data: serializedSubMortgage };
+    return { success: true, data: serializedSubMortgage,total };
   } catch (error) {
     return { success: false, error: error.message };
   }

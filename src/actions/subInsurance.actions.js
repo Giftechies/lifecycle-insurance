@@ -7,7 +7,7 @@ import SubInsurance from "@/models/subInsurance.model";
 export async function getSubInsurance() {
   try {
     await dbConnect();
-    const data = await SubInsurance.find().sort({ heading:1 }).lean();
+    const data = await SubInsurance.find().sort({ order:1 }).lean();
     const serializedData = data.map((item) => {
       return {
         ...item,
@@ -23,7 +23,14 @@ export async function getSubInsurance() {
 export async function createSubInsurance(formData) {
   try {
     await dbConnect();
-    await SubInsurance.create(formData);
+    const maxOrder = await SubInsurance
+  .findOne()
+  .sort({ order: -1 })
+  .select("order")
+  .lean();
+
+const nextOrder = maxOrder ? maxOrder.order + 1 : 0;
+    await SubInsurance.create({...formData,order:nextOrder});
     revalidatePath("/life-backend/subinsurance");
     revalidatePath("/","layout");
     return { success: true };

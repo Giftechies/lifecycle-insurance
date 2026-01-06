@@ -8,8 +8,8 @@ export async function getNavData(){
     try {
         await dbConnect();
         const [subInsuranceData,subMortgageData,caseStudyData] = await Promise.all([
-            SubInsurance.find().sort({ heading: 1 }).lean(),
-            subMortgage.find().sort({ heading: 1 }).lean(),
+            SubInsurance.find().sort({ order: 1 }).lean(),
+            subMortgage.find().sort({ order: 1 }).lean(),
             CaseStudy.find().sort({ heading: 1 }).lean()
         ]);
         const serializeData = (data) => {
