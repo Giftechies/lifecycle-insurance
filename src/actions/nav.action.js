@@ -20,8 +20,8 @@ export async function getNavData(){
         };
         return {
             success: true,
-            subInsurance: serializeData(subInsuranceData),
             subMortgage: serializeData(subMortgageData),
+            subInsurance: serializeData(subInsuranceData),
             caseStudies: serializeData(caseStudyData)
         };
       
