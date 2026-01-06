@@ -39,15 +39,11 @@ const subInsuranceSchema = new mongoose.Schema({
   metaKeywords: {
     type: String,
   },
-  // pdf: {
-  //   type: String,
-  // },
-  // pdfAlt: {
-  //   type: String,
-  // },
-  // category: {
-  //   type: String,
-  // },
+  order: {
+    type: Number,
+    default: 0,
+  },
+ 
 });
 
 const SubInsurance =

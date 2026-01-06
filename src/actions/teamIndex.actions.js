@@ -32,7 +32,7 @@ export async function updateTeamIndex(data) {
       _id: index?._id?.toString(),
     };
     revalidatePath("/life-backend/team-index");
-    revalidatePath("/meet-the-team");
+    revalidatePath("/about-us");
     return { success: true, index: serializedIndex };
   } catch (error) {
     return { error: error.message || "An unexpected error occurred" };

@@ -41,6 +41,7 @@ export default function TeamIndexForm({initialData}){
                 toast.success("Team index updated successfully!");
             }else{
                 toast.error("Error updating team index")
+                
             }           
         } catch (error) {
             console.log("error occured",error)

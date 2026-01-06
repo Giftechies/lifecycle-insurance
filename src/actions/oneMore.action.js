@@ -1,4 +1,5 @@
 'use server'
+import { revalidatePath } from "next/cache";
 import  dbConnect  from "../lib/db"
 import OneMore from "../models/oneMore.model"
 
@@ -25,6 +26,8 @@ export async function getUpdateandCreateOneMore(formData) {
         } else {
             await OneMore.create(formData);
         }
+        revalidatePath('/')
+        revalidatePath('/life-backend/one-more')
         return { success: true };
     } catch (error) {
         return { error: error.meggage || 'Error updating One More section data' };

@@ -34,10 +34,12 @@ export async function updateandCreateNumber(formData){
         if(numberData){
             await numberData.updateOne(formData);
             revalidatePath('/life-backend/number');
-         
+            revalidatePath('/');
+            
         }else{
             await NumberModel.create(formData);
             revalidatePath('/life-backend/number');
+            revalidatePath('/');
         }
 
         return{success:true,message:'Operation completed successfully'}

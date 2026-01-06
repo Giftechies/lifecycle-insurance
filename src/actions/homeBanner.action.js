@@ -1,4 +1,5 @@
 'use server'
+import { revalidatePath } from "next/cache";
 import dbConnect from "../lib/db"
 import { HomeBanner } from "../models/home-banner.model"
 
@@ -45,6 +46,9 @@ export async function createOrUpdateHomeBanner(data) {
             const savedBanner = await newBanner.save();
             result = savedBanner.toObject(); 
         }
+
+        revalidatePath("/life-backend/Banner")
+        revalidatePath("/")
 
         return {
             data: stringifyData(result),
