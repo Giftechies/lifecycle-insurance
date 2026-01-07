@@ -38,3 +38,4 @@ export async function updateTeamIndex(data) {
     return { error: error.message || "An unexpected error occurred" };
   }
 }
+
