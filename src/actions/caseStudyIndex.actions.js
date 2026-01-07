@@ -28,7 +28,9 @@ export async function updateCaseStudyIndex(data){
         }else{
             await CaseStudyIndex.findByIdAndUpdate(index._id, data);
         }
-        revalidatePath("/case-studies");
+        revalidatePath("/");
+        revalidatePath("/case-study");
+        revalidatePath("/life-backend/case-study-index");
         return { success: true };
     } catch (error) {
         return { success: false, error: error.message };

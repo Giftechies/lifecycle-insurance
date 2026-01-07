@@ -8,7 +8,6 @@ import InsuranceIndex from "../models/insuranceIndex.model";
 export async function getSubInsurance() {
   try {
     await dbConnect();
-    const bannerImage = await InsuranceIndex.findOne().select('bannerImage').lean();
     const data = await SubInsurance.find().sort({ order:1 }).lean();
     const serializedData = data.map((item) => {
       return {
@@ -16,7 +15,7 @@ export async function getSubInsurance() {
         _id: item?._id?.toString(),
       };
     });
-    console.log('subinc',[...serializedData]);
+  
     
     return { success: true, data: serializedData };
   } catch (error) {
@@ -87,6 +86,7 @@ export async function getSubInsuranceById(id) {
 export async function getSubInsuranceBySlug(slug) {
   try {
     await dbConnect();
+    const bannerImage = await InsuranceIndex.findOne().select('bannerImage').lean();
     const subInsurance = await SubInsurance.find({ slug: slug }).lean();
     if (!subInsurance) {
       return { success: false, error: "SubInsurance not found" };
@@ -97,6 +97,8 @@ export async function getSubInsuranceBySlug(slug) {
         _id: item?._id?.toString(),
       };
     });
+    console.log('subInn',[...serializedSubInsurance]);
+    
     return { success: true, data: serializedSubInsurance };
   } catch (error) {
     return { success: false, error: error.message };
