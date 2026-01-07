@@ -62,7 +62,7 @@ export default function MortgageService(){
                     className="text-[14px] mt-1 
                     "
                   >
-                   From application to approval, we handle everything under one roof. With access to top banks and lenders across New Zealand, we provide custom loan options, expert advice, and stress-free support
+             From the first conversation through to approval and beyond, we’re with you at every step. By working closely with New Zealand’s major banks and lenders, we deliver customised loan options, expert guidance, and a smooth, stress-free experience.
                   </p>
                 </div>
                 {/* part 3 */}

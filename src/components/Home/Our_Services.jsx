@@ -52,14 +52,13 @@ export default function OurService(){
                   Service
                 </p>
                 <h2 className="!text-[26px] font-semibold leading-8 sm:!text-[38px]   mt-3 tracking-normal  md:leading-10 text-zinc-600/90  md:font-semibold xl:mt-6  sm:w-[70%] ">
-                  Comprehensive Financial & Mortgage Solutions
+                Comprehensive Mortgage & Financial Solutions
                 </h2>
               </div>
               <div className="  lg:w-[40%] lg:mt-11 mt-3 ">
                 <p className=" text-[14px]  ">
                   {" "}
-                  We have a team of experienced advisors who have already proved
-                  themselves in the financial market.
+                  Our experienced advisers bring proven expertise across the New Zealand financial market. We focus on practical advice, transparent communication, and solutions that genuinely work for you—now and in the long term.
                 </p>
               </div>
             </div>
@@ -87,7 +86,7 @@ export default function OurService(){
 
                   <p className=" text-[14px] text-white/80   mt-2">
                     {" "}
-                   With more than a decade of experience, our company provides expert mortgage solutions, to help you turn your dream home into reality.
+                  With over a decade of experience, we provide tailored mortgage solutions to help you buy your first home, upgrade, invest, or refinance with confidence.
                   </p>
                   <div className="absolute h-[4em] w-[4em] bg-white hover:bg-zinc-100 top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f]">
                     <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px]"></i>
@@ -115,7 +114,7 @@ export default function OurService(){
 
                   <p className=" text-[14px] text-white/80 mt-2">
                     {" "}
-                  As specialist insurance brokers with 20+ years of experience, our services are tailored to meet the unique needs of every client.
+                  As specialist insurance advisers with more than 20 years’ experience, we design protection strategies that reflect your lifestyle, responsibilities, and future goals.
                   </p>
                   <div className="absolute h-[4em] w-[4em] bg-white top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f ] hover:bg-zinc-100">
                     <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px] "></i>

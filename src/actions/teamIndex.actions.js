@@ -31,7 +31,7 @@ export async function updateTeamIndex(data) {
       ...data,
       _id: index?._id?.toString(),
     };
-    revalidatePath("/life-backend/team-index");
+    revalidatePath("/life-backend/about-index");
     revalidatePath("/about-us");
     return { success: true, index: serializedIndex };
   } catch (error) {

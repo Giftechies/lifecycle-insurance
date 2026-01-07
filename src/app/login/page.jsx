@@ -1,10 +1,11 @@
 "use client";
 
 import { login, register, warmUpDatabase } from "@/actions/auth.actions";
+import { Eye } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function LoginPage() {
     username: "",
     password: "",
   });
+  const [passwordVisible, setPasswordVisible] = useState(false);
   async function handleLogin(e) {
     e.preventDefault();
     try {
@@ -19,7 +21,13 @@ export default function LoginPage() {
         username: formData?.username,
         password: formData?.password,
       });
-
+      if(result.error){
+        console.log(result,'sdfsd');
+        toast.error(result.error);
+        return;
+      }
+      
+      toast.success(result.message)
       if (result.success) {
         console.log("sucess", result);
         router.push("/life-backend");
@@ -83,17 +91,20 @@ export default function LoginPage() {
                 >
                   Password
                 </label>
-                <input
+               <div className="relative " >
+                 <input
                   id="password"
                   value={formData?.password}
                   onChange={(e) =>
                     setFormData({ ...formData, password: e.target.value })
                   }
-                  type="password"
+                  type={passwordVisible ? "text" : "password"}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-gray-300"
                   placeholder="••••••••"
                 />
+                <Eye className="absolute right-1 top-1/2  -translate-1/2 " onClick={()=>setPasswordVisible(!passwordVisible)} />
+               </div>
               </div>
             </div>
 

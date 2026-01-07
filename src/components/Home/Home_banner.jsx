@@ -54,14 +54,12 @@ export default function HomeBanner({data=[]}){
                   From Smart 
                   <span className="text-[var(--primg)]"> Financing</span> To<br/>
                
-                  Dream <span className="text-[var(--primg)]">Mortgages</span>.<br/>
+                  Dream <span className="text-[var(--primg)]">Mortgages</span>,<br/>
                 We Cover It All</span>
               </div>
 
               <h4 className="mt-4 text-[14px] lg:w-[65%] text-white tracking-wider ">
-                Lifecycle Financial is a Leading independent Financial Advisory
-                Company providing a wide range of financial services to the
-                clients including Mortgages both Residential & Commercial,
+                LifeCycle Financial is a leading independent financial advisory firm, providing residential and commercial mortgage solutions, as well as personal insurance, across New Zealand.
               </h4>
 
               <button
