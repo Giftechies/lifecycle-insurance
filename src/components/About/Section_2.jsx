@@ -11,11 +11,7 @@ export default function({team}){
               Our Mortgage Experts
             </h2>
             <h6 className=" text-center ">
-              Our expert team of mortgage and insurance specialists provides a
-              seamless, one-stop solution for all your personal and business
-              financial needs. Whether you're protecting your income, financing
-              your first home, or securing your business assets, we’re here to
-              support you every step of the way.
+             Our experienced team of mortgage and insurance specialists provides a seamless, one-stop solution for all your personal and business financial needs. Whether you’re protecting your income, buying your first home, or securing your business assets, we’re here to support you every step of the way.
             </h6>
 
             {/* cards */}

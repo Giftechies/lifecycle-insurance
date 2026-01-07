@@ -6,17 +6,19 @@ import Section2 from "@/components/About/Section_2"
 import Section3 from "@/components/About/Section_3"
 import {getTeamIndex} from '@/actions/teamIndex.actions'
 import {getTeamMembers} from "@/actions/team.actions"
+import {getNavData} from "../../actions/nav.action";
 
 export default async function about() {
   const res = await getTeamIndex();
   const team = await getTeamMembers();
+  const navData = await getNavData();
   
   return (
     <>
        <Banner title="About Us" image={res?.image} />
        <Section1 data={res?.data} />
        <Section2 team={team?.data} />
-       <Section3/>
+       <Section3 navData={navData} />
     </>
   );
 }
