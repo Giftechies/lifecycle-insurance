@@ -86,12 +86,13 @@ export async function getInsuranceIndex() {
 export async function getSubMortgageBySlug(slug) {
   try {
     await dbConnect();
+    const bannerImage = await MortgageIndex.findOne().select('bannerImage').lean();
     const subMortgage = await SubMortgage.findOne({ slug:slug }).lean();
     if (!subMortgage) {
       return { success: false, error: "SubMortgage not found" };
     }
  
-    return { success: true, data: subMortgage };
+    return { success: true, data: {...subMortgage,bannerImage:bannerImage.bannerImage} };
   } catch (error) {
     return { success: false, error: error.message };
   }
@@ -100,11 +101,13 @@ export async function getSubMortgageBySlug(slug) {
 export async function getSubInsuranceBySlug(slug) {
   try {
     await dbConnect();
+    const bannerImage = await InsuranceIndex.findOne().select('bannerImage').lean();
     const subInsurance = await SubInsurance.findOne({ slug: slug }).lean();
     if (!subInsurance) {
       return { success: false, error: "SubInsurance not found" };
     }
-    return { success: true, data: subInsurance };
+    console.log('subInn',{...subInsurance,bannerImage:bannerImage.bannerImage});
+    return { success: true, data: {...subInsurance,bannerImage:bannerImage.bannerImage} };
   } catch (error) {
     return { success: false, error: error.message };
   }

@@ -1,3 +1,4 @@
+// case-study/[slug]/page.jsx
 import Banner from "../../Components/Banner/Banner";
 import { notFound } from "next/navigation";
 import Slideri from "../../Components/Slideri/Slideri";

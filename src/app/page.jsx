@@ -10,6 +10,8 @@ import { getHomeBanner } from "../actions/homeBanner.action"
 import {getOneMore} from "../actions/oneMore.action"
 import {getNumber} from "../actions/number.action"
 import { getTestimonial } from "../actions/testimonial.action";
+import {getInsuranceIndex} from "../actions/insuranceIndex.model"
+import { getMortgageIndex } from "../actions/mortgageIndex.actions";
 
 export default async function Home() {
 
@@ -17,6 +19,8 @@ export default async function Home() {
   const {data: oneMoreData} = await getOneMore();
   const {data: numberData} = await getNumber();
   const {data:testimonial} = await getTestimonial();
+  const  {data:insuranceData} = await getInsuranceIndex();
+  const  {mortgageIndex:mortgageData} = await getMortgageIndex();
 
   return (
     <>
@@ -24,7 +28,7 @@ export default async function Home() {
         <HomeBanner data={data} />
         <KnowMore oneMoreData={oneMoreData} />
         <Number numberData={numberData} />
-        <OurService />
+        <OurService mortgageData={mortgageData} insuranceData={insuranceData} />
         <MortageService />
         <Contact />
         <Testimonials testimonials={testimonial} />

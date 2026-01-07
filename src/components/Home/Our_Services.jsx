@@ -4,9 +4,10 @@ import { useRouter } from "next/navigation"
 import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
+import Image from "next/image"
 
 gsap.registerPlugin(useGSAP)
-export default function OurService(){
+export default function OurService({mortgageData,insuranceData}) {
     const sec4 = useRef()
     const router = useRouter()
       useGSAP(() => {
@@ -37,6 +38,9 @@ export default function OurService(){
           },
         });
       },  );
+
+      console.log(mortgageData,insuranceData);
+      
     return(
           <section
           ref={sec4}
@@ -69,8 +73,10 @@ export default function OurService(){
               <div className="container2  w-full h-[49%]      flex flex-col   gap-6 md:flex-row-reverse md:w-[100%] md:h-[50%] lg:gap-3 lg:flex-row lg:h-full lg:w-[50%]  ">
                 {/* part 1 */}
                 <div className="part1 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden  ">
-                  <img
-                    src="/pic4.jpg"
+                  <Image
+                  width={500}
+                  height={500}
+                    src={mortgageData?.image || "/pic4.jpg"}
                     className=" h-full w-full  object-cover"
                     alt=""
                   />
@@ -86,7 +92,7 @@ export default function OurService(){
 
                   <p className=" text-[14px] text-white/80   mt-2">
                     {" "}
-                  With over a decade of experience, we provide tailored mortgage solutions to help you buy your first home, upgrade, invest, or refinance with confidence.
+                {mortgageData?.content}
                   </p>
                   <div className="absolute h-[4em] w-[4em] bg-white hover:bg-zinc-100 top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f]">
                     <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px]"></i>
@@ -97,8 +103,10 @@ export default function OurService(){
               <div className="container1 w-full h-[49%] flex flex-col gap-6  md:flex-row md:h-[50%]  md:w-[100%] lg:gap-3 lg:h-full lg:w-[50%]  ">
                 {/* part 3 */}
                 <div className="part3 sec-4-card-left w-full h-[50%] md:h-[90%]   lg:h-full md:w-[50%] rounded-2xl overflow-hidden ">
-                  <img
-                    src="/pic3.jpg"
+                  <Image
+                  width={500}
+                  height={500}
+                    src={insuranceData?.image || "/pic5.jpg"}
                     className=" h-full w-full  object-cover"
                     alt=""
                   />
@@ -114,7 +122,7 @@ export default function OurService(){
 
                   <p className=" text-[14px] text-white/80 mt-2">
                     {" "}
-                  As specialist insurance advisers with more than 20 years’ experience, we design protection strategies that reflect your lifestyle, responsibilities, and future goals.
+                {insuranceData?.content}
                   </p>
                   <div className="absolute h-[4em] w-[4em] bg-white top-0 right-0 rounded-bl-[20px] flex items-center justify-center shadow-[-10px_10px_80px_0px_#46485f ] hover:bg-zinc-100">
                     <i className="text-4lg cursor-pointer ri-arrow-right-up-line text-black text-[25px] "></i>
