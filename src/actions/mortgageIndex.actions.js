@@ -33,6 +33,7 @@ export async function updateMortgageIndex(data) {
         };
         revalidatePath("/life-backend/mortgage-index");
         revalidatePath("/mortgages");
+        revalidatePath("/");
         return { success: true, mortgageIndex: serializedMortgageIndex };
     } catch (error) {
             return { error: error.message };

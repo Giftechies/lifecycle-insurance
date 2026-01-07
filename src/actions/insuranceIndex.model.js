@@ -49,6 +49,7 @@ export async function updateInsuranceIndex(data){
         }
         revalidatePath("/life-backend/insurance-index");
         revalidatePath("/insurance");
+        revalidatePath("/");
         return { success: true, index: serializedIndex };
     }catch(error){
         return { error: error.message || "An unexpected error occurred" };
