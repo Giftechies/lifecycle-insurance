@@ -7,6 +7,9 @@ const mortgageIndexSchema = new mongoose.Schema({
   image:{
     type:String,
   },
+  bannerImage:{
+    type:String,
+  },
   slug:{
     type:String
   },

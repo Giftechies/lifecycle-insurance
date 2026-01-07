@@ -16,6 +16,7 @@ export default function MortgageIndexForm({initialData}){
     const [formData,setFormData] = useState({
         heading:initialData?.heading || "",
         image:initialData?.image || "" ,
+        bannerImage:initialData?.bannerImage || "" ,
         slug:initialData?.slug || "",
         content:initialData?.content || "",
 
@@ -42,10 +43,10 @@ export default function MortgageIndexForm({initialData}){
             toast.error(error)
         }
     }
-  const handleImageSet = (value)=>{
+  const handleImageSet = (field,value)=>{
     setFormData(prev=>({
-        ...prev,
-        'image':value
+      ...prev,
+      [field]:value
     }))
   }
     return (
@@ -73,19 +74,27 @@ export default function MortgageIndexForm({initialData}){
                maxLength={150}
                className="min-h-24"
               />
-           </div>
-           <div>
-           <ImageInput
-           uploadAction={uploadPageFile}
-           onChange={handleImageSet} 
-           initialImage={initialData?.image || ''}
-            />
-             <MetaTags
+              <MetaTags
                metaTitle={formData?.metaTitle}
                metaDescription={formData?.metaDescription}
                metaKeywords={formData?.metaKeywords}
                onChange={(field, value) => handleChange(field, value)}
              />
+           </div>
+           <div>
+           <ImageInput
+           uploadAction={uploadPageFile}
+         onChange={(value)=>handleImageSet('image',value)}  
+           initialImage={initialData?.image || ''}
+           text='Thumbnail Image'
+            />
+           <ImageInput
+           uploadAction={uploadPageFile}
+           onChange={(value)=>handleImageSet('bannerImage',value)} 
+           initialImage={initialData?.bannerImage || ''}
+           text="Banner Image"
+            />
+             
              <button type="submit">Update Data</button>
            </div>
          </form>

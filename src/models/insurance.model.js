@@ -9,6 +9,10 @@ const InsuranceSchema = new mongoose.Schema({
     type: String,
     required: [true, "Image is required"],
   },
+  bannerImage: {
+    type: String,
+    required: [true, "Banner Image is required"],
+  },
   imageAlt: {
     type: String,
     required: [true, "Image alt is required"],

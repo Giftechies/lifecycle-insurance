@@ -17,6 +17,10 @@ const insuranceIndexSchema = new mongoose.Schema({
     type:String,
     required: [true, "Image is required"],
   },
+  bannerImage:{
+    type:String,
+    required: [true, "Image is required"],
+  },
   metaTitle: {
     type: String,
     required: [true, "Meta Title is required"],

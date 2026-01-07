@@ -3,10 +3,12 @@
 import { revalidatePath } from "next/cache";
 import dbConnect from "@/lib/db";
 import SubInsurance from "@/models/subInsurance.model";
+import InsuranceIndex from "../models/insuranceIndex.model";
 
 export async function getSubInsurance() {
   try {
     await dbConnect();
+    const bannerImage = await InsuranceIndex.findOne().select('bannerImage').lean();
     const data = await SubInsurance.find().sort({ order:1 }).lean();
     const serializedData = data.map((item) => {
       return {
@@ -14,6 +16,8 @@ export async function getSubInsurance() {
         _id: item?._id?.toString(),
       };
     });
+    console.log('subinc',[...serializedData]);
+    
     return { success: true, data: serializedData };
   } catch (error) {
     return { success: false, error: error.message };

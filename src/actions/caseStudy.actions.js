@@ -8,10 +8,11 @@ export async function createCaseStudy(formData) {
   try {
     await dbConnect();
     await CaseStudy.create(formData);
-    revalidatePath("/");
+   revalidatePath("/");
     revalidatePath("/life-backend/case-study");
-    revalidatePath("/case-studies");
-    revalidatePath("/case-studies/[slug]");
+    revalidatePath("/life-backend/case-study/edit/[id]");
+    revalidatePath("/case-study");
+    revalidatePath("/case-study/[slug]");
     return { success: true };
   } catch (error) {
     if (error) {
@@ -80,8 +81,9 @@ export async function updateCaseStudy(id, data) {
     await CaseStudy.findByIdAndUpdate(id, data);
     revalidatePath("/");
     revalidatePath("/life-backend/case-study");
-    revalidatePath("/case-studies");
-    revalidatePath("/case-studies/[slug]");
+    revalidatePath("/life-backend/case-study/edit/[id]");
+    revalidatePath("/case-study");
+    revalidatePath("/case-study/[slug]");
     return { success: true };
   } catch (error) {
     if (error instanceof Error) {
@@ -95,10 +97,11 @@ export async function deleteCaseStudy(id) {
   try {
     await dbConnect();
     await CaseStudy.findByIdAndDelete(id);
-    revalidatePath("/");
+  revalidatePath("/");
     revalidatePath("/life-backend/case-study");
-    revalidatePath("/case-studies");
-    revalidatePath("/case-studies/[slug]");
+    revalidatePath("/life-backend/case-study/edit/[id]");
+    revalidatePath("/case-study");
+    revalidatePath("/case-study/[slug]");
     return { success: true };
   } catch (error) {
     if (error instanceof Error) {
