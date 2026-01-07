@@ -7,8 +7,6 @@ import Image from "next/image";
 
 export default function CategoryPage({ title, cards ,type }) {
   const router = useRouter();
-   console.log(type,'mortage');
-
   return (
     <main>
       <Banner title={title || "Category"} image={type?.image} />

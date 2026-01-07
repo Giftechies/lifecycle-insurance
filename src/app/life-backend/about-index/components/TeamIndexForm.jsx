@@ -44,7 +44,7 @@ export default function TeamIndexForm({initialData}){
                 
             }           
         } catch (error) {
-            console.log("error occured",error)
+            ("error occured",error)
             toast.error(error)
         }
     }

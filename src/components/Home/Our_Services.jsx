@@ -39,7 +39,7 @@ export default function OurService({mortgageData,insuranceData}) {
         });
       },  );
 
-      console.log(mortgageData,insuranceData);
+  
       
     return(
           <section

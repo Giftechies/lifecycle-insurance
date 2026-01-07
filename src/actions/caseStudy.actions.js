@@ -11,13 +11,9 @@ export async function createCaseStudy(formData) {
    revalidatePath("/");
     revalidatePath("/life-backend/case-study")
     revalidatePath("/case-study");
-    revalidatePath(`/case-study/${slug}`);
     return { success: true };
   } catch (error) {
-    if (error) {
       return { success: false, error: error.message };
-    }
-    return { success: false, error: "An unexpected error occurred" };
   }
 }
 
@@ -82,7 +78,7 @@ export async function updateCaseStudy(id, data) {
     revalidatePath("/life-backend/case-study");
     revalidatePath("/life-backend/case-study/edit/${id}");
     revalidatePath("/case-study");
-    revalidatePath(`/case-study/${slug}`);
+    revalidatePath(`/case-study/${CaseStudy?.slug}`);
     return { success: true };
   } catch (error) {
     if (error instanceof Error) {
@@ -100,7 +96,7 @@ export async function deleteCaseStudy(id) {
     revalidatePath("/life-backend/case-study");
     revalidatePath("/life-backend/case-study/edit/${id}");
     revalidatePath("/case-study");
-    revalidatePath(`/case-study/${slug}`);
+    revalidatePath(`/case-study/${CaseStudy?.slug}`);
     return { success: true };
   } catch (error) {
     if (error instanceof Error) {

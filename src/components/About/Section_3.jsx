@@ -1,8 +1,7 @@
 import Link from "next/link";
 
 export default function ({ navData = {} }) {
-  console.log('about nav', navData);
-  console.log('about nav', navData?.subMortgage);
+
   const lifeContent = [
     {
       title: "One Trusted Point of Contact",

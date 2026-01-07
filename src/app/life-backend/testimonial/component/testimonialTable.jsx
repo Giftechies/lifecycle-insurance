@@ -23,7 +23,6 @@ export default function TestimonialTable({ initialData = [] }) {
     }
   };
 
-  console.log(initialData);
 
   return (
     <div>
