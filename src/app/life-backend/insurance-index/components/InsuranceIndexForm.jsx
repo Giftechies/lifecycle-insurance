@@ -64,7 +64,7 @@ export default function InsuranceIndexForm({ initialData }) {
           value={formData?.content}
           onChange={(e) => handleChange("content", e.target.value)}
           placeholder="Enter content"
-          maxLength={150}
+          maxLength={250}
           className="min-h-24"
          />
            <MetaTags

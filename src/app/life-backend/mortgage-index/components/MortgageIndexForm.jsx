@@ -60,18 +60,14 @@ export default function MortgageIndexForm({initialData}){
                onChange={(e) => handleChange("heading", e.target.value)}
                placeholder="Enter heading"
              />
-              {/* <SlugInput
-               heading={formData?.heading}
-               value={formData?.slug}
-               onChange={(value) => handleChange("slug", value)}
-             /> */}
+            
              <label>Content</label>
              <textarea 
                 id="content"
                value={formData?.content}
                onChange={(e) => handleChange("content", e.target.value)}
                placeholder="Enter content"
-               maxLength={150}
+               maxLength={250}
                className="min-h-24"
               />
               <MetaTags
