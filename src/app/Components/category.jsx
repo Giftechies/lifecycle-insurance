@@ -5,23 +5,27 @@ import Banner from "../Components/Banner/Banner";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function CategoryPage({ title, cards ,type }) {
+export default function CategoryPage({ title, cards ,pageType }) {
   const router = useRouter();
+  console.log(pageType,'df');
+  
   return (
     <main>
-      <Banner title={title || "Category"} image={type?.image} />
+      <Banner title={title || "Category"} image={pageType?.bannerImage} />
 
       <section className="w-full px-4 py-6 lg:px-[3rem] lg:py-10  mx-auto leading-7 tracking-wider">
         <div className="w-full lg:flex gap-10">
           <div className="w-full text-[var(--primg)] text-[16px] lg:w-[55%] font-medium">
-            <i className="ri-record-circle-line"></i> {title}
+          <span className=" capitalize " >
+              <i className="ri-record-circle-line"></i> {title}
+          </span>
             <h1 className="leading-9 text-black text-[26px] lg:text-[36px] font-semibold mt-3 lg:leading-11">
-              {type?.heading}
+              {pageType?.heading}
             </h1>
           </div>
 
           <div className="w-full mt-2 lg:w-[40%] lg:mt-10 lg:text-[14px] text-justify">
-            <h4>{type?.content}</h4>
+            <h4>{pageType?.content}</h4>
           </div>
         </div>
 

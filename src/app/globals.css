@@ -358,6 +358,9 @@ input[type=range].custom-slider::-moz-range-thumb {
 }
 
 @layer base {
+  .container{
+    @apply w-full  p-4 lg:px-[3rem] lg:py-[80px] max-w-[1600px] mx-auto
+  }
   * {
     @apply border-border outline-ring/50;
   }

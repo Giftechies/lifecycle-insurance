@@ -1,6 +1,6 @@
 import Banner from "@/app/Components/Banner/Banner";
 import Slider from "@/app/Components/Slider/Slider";
-import { getSubInsuranceBySlug,getSubMortgageBySlug,getSubInsurance,getSubMortgage } from "../../../actions/subInsurance_Mortgage"
+import { getSubInsuranceBySlug, getSubMortgageBySlug, getSubInsurance, getSubMortgage } from "../../../actions/subInsurance_Mortgage"
 import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
 
@@ -42,17 +42,17 @@ export default async function Subpage({ params }) {
     ])
     content = resdata?.data
     Allpage = resAllpage?.data
-    
+
   }
   if (page?.startsWith('insurance')) {
 
     const [resdata, resAllpage] = await Promise.all([
       getSubInsuranceBySlug(subpage),
       getSubInsurance()
-    ]) 
-     content = resdata?.data
+    ])
+    content = resdata?.data
     Allpage = resAllpage?.data
-    
+
   }
   const safeHTML = sanitizeHtml(content?.content || "", {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img', 'iframe']),
@@ -68,8 +68,8 @@ export default async function Subpage({ params }) {
       '*': ['class', 'style', 'id'],
     },
   });
-  console.log("dk",content);
-  
+  console.log("dk", content);
+
 
   return (
     <>
@@ -84,9 +84,9 @@ export default async function Subpage({ params }) {
 
           <div className="  md:flex gap-6 items-stretch " >
             <div dangerouslySetInnerHTML={{ __html: safeHTML }} className="editor-container" />
-         <div className="  w-full md:w-[40%]  md:shrink-0 flex " >
-           <Image src={content?.image} alt={content?.imageAlt} width={600} height={400} className="w-full h-full  object-cover rounded-lg  " />
-         </div>
+            <div className="  w-full md:w-[40%]  md:shrink-0 flex " >
+              <Image src={content?.image} alt={content?.imageAlt} width={600} height={400} className="w-full h-full  object-cover rounded-lg  " />
+            </div>
           </div>
           <div dangerouslySetInnerHTML={{ __html: safeHTML1 }} className="editor-container" />
         </div>

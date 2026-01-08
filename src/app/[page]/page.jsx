@@ -1,7 +1,5 @@
 import CategoryPage from "../Components/category"
-import { getInsuranceIndex,getMortgageIndex,getSubInsurance,getSubMortgage } from "../../actions/subInsurance_Mortgage"
-import { Metadata } from 'next'; 
-
+import { getInsuranceIndex, getMortgageIndex, getSubInsurance, getSubMortgage } from "../../actions/subInsurance_Mortgage"
 // ... other imports and generateStaticParams ...
 
 export async function generateMetadata({ params }) {
@@ -11,7 +9,7 @@ export async function generateMetadata({ params }) {
   let seoData;
   if (page === 'mortgage') {
     const res = await getMortgageIndex();
-    seoData = res?.mortgageIndex; 
+    seoData = res?.mortgageIndex;
   } else if (page === 'insurance') {
     const res = await getInsuranceIndex();
     seoData = res?.data;
@@ -41,54 +39,55 @@ export async function generateStaticParams() {
 }
 
 
-export default async function Page({params}) {
-  const {page} = await params;
-   
-   
-      let subpage
-      let cardData
-   
-  if(page==='mortgage'){
+export default async function Page({ params }) {
+  const { page } = await params;
 
-    const [res,ressubpage] = await Promise.all([
+  let subpage
+  let cardData
+
+  if (page === 'mortgage') {
+    const [res, ressubpage] = await Promise.all([
       getSubMortgage(),
       getMortgageIndex()
     ])
 
     subpage = ressubpage.mortgageIndex
-  cardData = res?.data?.map((type)=>({
-     title:type?.slug,
-    slug:type?.slug,
-    paragraph_1:type?.shortContent,
-    featured_image:type?.image,
-    alt:type?.imageAlt,
-    link:`/mortgage/${type.slug}`
-  }))
-}
-if(page ==='insurance'){
-  const [res,ressubpage] = await Promise.all([
+    cardData = res?.data?.map((type) => ({
+      title: type?.slug,
+      slug: type?.slug,
+      paragraph_1: type?.shortContent,
+      featured_image: type?.image,
+      alt: type?.imageAlt,
+      link: `/mortgage/${type.slug}`
+    }))
+  }
+  if (page === 'insurance') {
+    const [res, ressubpage] = await Promise.all([
       getSubInsurance(),
       getInsuranceIndex()
     ])
 
- cardData = res?.data?.map((type)=>({
-   title:type?.heading,
-    slug:type?.slug,
-    paragraph_1:type?.shortContent,
-    featured_image:type?.image,
-    alt:type?.imageAlt,
-    link:`/insurance/${type.slug}`
+    cardData = res?.data?.map((type) => ({
+      title: type?.heading,
+      slug: type?.slug,
+      paragraph_1: type?.shortContent,
+      featured_image: type?.image,
+      alt: type?.imageAlt,
+      link: `/insurance/${type.slug}`
 
- }))
-  subpage = ressubpage.data
-}
+    }))
+    subpage = ressubpage.data
+  }
+
+  console.log("page",subpage);
   
-   
+
+
   return (
-   <CategoryPage
-  title={page}
-  cards={cardData}
-  type={subpage}
-/>
+    <CategoryPage
+      title={page}
+      cards={cardData}
+      pageType={subpage}
+    />
   );
 }
