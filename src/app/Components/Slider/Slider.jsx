@@ -8,8 +8,8 @@ import Home from '@/components/Icons/HomeIcons'
 export default function Slider({ menuItem = [], title = 'mortgage' }) {
 
   return (
-    <div className="hidden lg:flex  lg:w-[40%] xl:w-[30%] flex-col">
-      <div className="sticky top-0 w-full space-y-8">
+    <div className="hidden  lg:flex  lg:w-[40%] xl:w-[30%] flex-col">
+      <div data-lenis-prevent  className="sticky  custom-scrollbar overflow-auto  top-0 w-full space-y-8">
         {/* Dynamic Menu */}
         <aside className="w-full bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
           <h2 className="text-lg font-semibold mb-6 border-b border-white/30 pb-2 capitalize ">

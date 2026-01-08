@@ -9,7 +9,7 @@ export default function Slider({studies=[]}) {
       <div className="sticky top-0 w-full space-y-8">
         {/* Dynamic Menu */}
         {(
-          <aside className="w-full bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
+          <aside data-lenis-prevent className="custom-scrollbar w-full h-104 overflow-auto  bg-[var(--primg)] text-white p-6 rounded-2xl shadow-lg">
             <h2 className="text-lg font-semibold mb-6 border-b border-white/30 pb-2">
               <Link href={`/case-study`}>{menuTitle}</Link>
             </h2>
@@ -30,6 +30,7 @@ export default function Slider({studies=[]}) {
                 </li>
              </Link>
               ))}
+            
             </ul>
           </aside>
         )}
