@@ -8,7 +8,7 @@ import MortgageIndex from "@/models/mortgageIndex.model";
 export async function getSubInsurance() {
   try {
     await dbConnect();
-    const data = await SubInsurance.find().sort({ heading:1 }).lean();
+    const data = await SubInsurance.find().sort({ order:1 }).lean();
     const serializedData = data.map((item) => {
       return {
         ...item,
