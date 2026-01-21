@@ -64,7 +64,7 @@ export default function KnowMore({ oneMoreData }) {
             </Link>
           </div>
 
-          <div className="middle  md:flex max-md:gap-10  lg:gap-2 w-full  ">
+          <div className="lowercontent  md:flex max-md:gap-10  lg:gap-2 w-full  ">
             <div className="sec-2-OneBox sec-2-anim md:w-[55%]  lg:w-[80%]  ">
               <div className="text bg-[var(--primg)] text-white mt-6 max-lg:rounded-4xl  p-6 md:w-[100%] md:p-12 md:flex md:flex-col lg:py-10 lg:px-6 xl:px-10 xl:py-16    lg:w-[100%] justify-center items-center  lg:rounded-r-4xl    ">
                 <div className="">
@@ -106,14 +106,16 @@ export default function KnowMore({ oneMoreData }) {
             </div>
 
             <div className="lowerpic sec-2-anim w-full flex flex-col items-center max-md:mt-6 md:w-[40%] lg:w-[40%]  lg:mt-8 xl:mt-3   ">
-              <div className="img">
+              <div className=" img">
                 <Image
                 width={300}
                 height={300}
                 src={oneMoreData?.image2 || "/sec2-pic2.jpg"}
-                  className=" h-[19rem] lg:h-[16rem] xl:h-[18rem] "
+                  className=" h-full w-full object-cover object-center  "
                   alt={oneMoreData?.image2Alt || "Know more image"}
+              
                 />
+
               </div>
 
               <div className="call text-[var(--primg)] font-medium mt-2 flex   gap-2 md:hidden ">
