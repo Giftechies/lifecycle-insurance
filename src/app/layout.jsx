@@ -27,7 +27,7 @@ export const metadata = {
   description:"Providing expert insurance and mortgage solutions tailored to your needs.",
 
   openGraph: {
-    title: "Financial Advisors Specialise in Mortgage & Insurance in NZ | LifeCycle Financial",
+    title: "Trusted Mortgage & Insurance Advisors in New Zealand | LifeCycle Financial",
     description:"With over 20 years of experience, we’ve been helping Kiwis with clear, trusted mortgage and insurance advice.",
     url: "https://www.lifecyclefinancial.co.nz/",
     siteName: "LifeCycle Financial",

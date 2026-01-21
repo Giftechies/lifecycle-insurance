@@ -1,5 +1,6 @@
 import CategoryPage from "../Components/category"
 import { getInsuranceIndex, getMortgageIndex, getSubInsurance, getSubMortgage } from "../../actions/subInsurance_Mortgage"
+import { notFound } from "next/navigation";
 // ... other imports and generateStaticParams ...
 
 export async function generateMetadata({ params }) {
@@ -52,6 +53,10 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
   const { page } = await params;
 
+  if (page !== 'mortgage' && page !== 'insurance') {
+    notFound();
+  }
+
   let subpage
   let cardData
 
@@ -88,11 +93,6 @@ export default async function Page({ params }) {
     }))
     subpage = ressubpage.data
   }
-
-  console.log("page",subpage);
-  
-
-
   return (
     <CategoryPage
       title={page}

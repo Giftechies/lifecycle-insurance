@@ -3,6 +3,7 @@ import Slider from "@/app/Components/Slider/Slider";
 import { getSubInsuranceBySlug, getSubMortgageBySlug, getSubInsurance, getSubMortgage } from "../../../actions/subInsurance_Mortgage"
 import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }){
   const { page, subpage } = await  params;
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }){
   }
 
   if (!content) {
-    return null
+   notFound()
   }
 
   const title = `${content.heading} | LifeCycle Financial`;

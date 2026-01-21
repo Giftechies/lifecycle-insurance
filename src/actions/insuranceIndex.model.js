@@ -33,25 +33,62 @@ export async function getInsuranceIndex() {
 }
 
 
-export async function updateInsuranceIndex(data){
-    try{
+// export async function updateInsuranceIndex(data){
+//     try{
+//         await dbConnect();
+//         const index = await InsuranceIndex.findOne({}).lean();
+//         if(!index){
+//             await InsuranceIndex.create(data);
+//         }else{
+//             await InsuranceIndex.findByIdAndUpdate(index._id, data);
+//         }
+//         const serializedIndex = {
+//             ...data,
+//             _id: index?._id?.toString(),
+//         }
+//         revalidatePath("/life-backend/insurance-index");
+//         revalidatePath("/insurance");
+//         revalidatePath("/insurance/child pages");
+//         revalidatePath("/");
+//         return { success: true, index: serializedIndex };
+//     }catch(error){
+//         return { error: error.message || "An unexpected error occurred" };
+//     }
+// }
+
+
+
+export async function updateInsuranceIndex(data) {
+    try {
         await dbConnect();
         const index = await InsuranceIndex.findOne({}).lean();
-        if(!index){
+        
+        if (!index) {
             await InsuranceIndex.create(data);
-        }else{
+        } else {
             await InsuranceIndex.findByIdAndUpdate(index._id, data);
         }
+
         const serializedIndex = {
             ...data,
             _id: index?._id?.toString(),
-        }
+        };
+
+        // 1. Revalidate the index management page
         revalidatePath("/life-backend/insurance-index");
+
+        // 2. Revalidate the main category listing page (/insurance)
         revalidatePath("/insurance");
-        revalidatePath("/insurance/child pages");
+
+        // 3. Revalidate ALL subpages under insurance (e.g., /insurance/life-insurance)
+        // By using the 'page' type on a dynamic segment, it clears the cache for those routes
+        revalidatePath("/insurance/[subpage]", "page");
+
+        // 4. Revalidate the Home page
         revalidatePath("/");
+
         return { success: true, index: serializedIndex };
-    }catch(error){
+    } catch (error) {
         return { error: error.message || "An unexpected error occurred" };
     }
 }
