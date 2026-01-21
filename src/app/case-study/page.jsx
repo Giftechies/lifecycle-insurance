@@ -49,7 +49,7 @@ export default async function CaseStudy() {
             </Link>
 
             <div className="relative mt-[20px]">
-              <Link href={`/Case-study/${el.slug}`}>
+              <Link href={`/case-study/${el.slug}`}>
                 <h4 className="text-[20px] font-medium leading-6 text-gray-900">
                   {el.heading}
                 </h4>
@@ -58,7 +58,7 @@ export default async function CaseStudy() {
               <p className="text-gray-700 mt-2">{el.shortcontent}</p>
 
               <Link
-                href={`/Case-study/${el.slug}`}
+                href={`/case-study/${el.slug}`}
                 className="text-[var(--primg)] font-semibold text-sm hover:underline flex items-center gap-1 mt-4"
               >
                 Read More →
