@@ -18,6 +18,7 @@ export default function InsuranceIndexForm({ initialData }) {
     metaTitle: initialData?.metaTitle || "",
     metaDescription: initialData?.metaDescription || "",
     metaKeywords: initialData?.metaKeywords || "",
+    bannerImage:initialData?.bannerImage || "",
   })
 
 
@@ -28,7 +29,6 @@ export default function InsuranceIndexForm({ initialData }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log(formData,'insurnce');
       await updateInsuranceIndex(formData);
       toast.success("Insurance Data updated successfully!");
     } catch (error) {
@@ -78,14 +78,14 @@ export default function InsuranceIndexForm({ initialData }) {
       <ImageInput
       uploadAction={uploadPageFile}
     onChange={(value)=>handleImageSet('image',value)} 
-      initialImage={initialData?.image || ''}
+      initialImage={formData?.image || ''}
       text='Thumbnail Image'
        />
 
          <ImageInput
                   uploadAction={uploadPageFile}
                   onChange={(value)=>handleImageSet('bannerImage',value)} 
-                  initialImage={initialData?.bannerImage || ''}
+                  initialImage={formData?.bannerImage || ''}
                   text="Banner Image"
                    />
       

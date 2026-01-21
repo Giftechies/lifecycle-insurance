@@ -18,9 +18,34 @@ const geistMono = Geist_Mono({
   weight: ["100", "200"],
 });
 
+
+
 export const metadata = {
-  title: "LifeCycle Insurance",
-  description: "Providing expert insurance and mortgage solutions tailored to your needs.",
+  metadataBase: new URL("https://www.lifecyclefinancial.co.nz/"),
+
+  title: "LifeCycle Financial",
+  description:"Providing expert insurance and mortgage solutions tailored to your needs.",
+
+  openGraph: {
+    title: "LifeCycle Financial",
+    description:"Expert insurance and mortgage solutions tailored to your financial journey.",
+    url: "https://www.lifecyclefinancial.co.nz/",
+    siteName: "LifeCycle Financial",
+    images: [
+      {
+        url: "/life_cycle_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "LifeCycle Financial",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -30,6 +55,23 @@ export default function RootLayout({ children }) {
         <link
           href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "LifeCycle Financial",
+              url: "https://www.lifecyclefinancial.co.nz",
+              logo:
+                "https://www.lifecyclefinancial.co.nz/life_cycle_logo.png",
+              sameAs: [
+                "https://www.facebook.com/Lifecyclefinancial",
+                "https://www.instagram.com/lifecycle_financial_services",
+              ],
+            }),
+          }}
         />
       </head>
       <body
@@ -54,6 +96,7 @@ export default function RootLayout({ children }) {
           theme="light"
         />
       </body>
+      
     </html>
   );
 }

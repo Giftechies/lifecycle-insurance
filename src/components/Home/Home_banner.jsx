@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -62,15 +63,13 @@ export default function HomeBanner({data=[]}){
                 LifeCycle Financial is a leading independent financial advisory firm, providing residential and commercial mortgage solutions, as well as personal insurance, across New Zealand.
               </h4>
 
-              <button
-                onClick={() => {
-                  router.push("/Enquire");
-                }}
-                className="mt-6 tracking-widest py-3 px-6 cursor-pointer text-sm mb-10 border border-white rounded-full hover:text-[var(--primg)] hover:bg-white/10 hover:scale-[.98] transition-all duration-300 "
+              <Link
+                href={'/enquire'}
+                className="mt-6 tracking-widest py-3 px-6 cursor-pointer text-sm mb-10 border border-white rounded-full hover:text-[var(--primg)] hover:bg-white/10 hover:scale-[.98] transition-all duration-300  block w-fit "
               >
                 Request An Appraisal{" "}
                 <i className="ml-1 ri-arrow-right-wide-fill"></i>
-              </button>
+              </Link>
 
               {/* Icon Box */}
               <div

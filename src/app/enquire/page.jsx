@@ -59,7 +59,7 @@ export default function EnquiryNow() {
 
   return (
     <>
-      <Banner title="Enquire " />
+      <Banner title="Enquire Now " />
       <section className="enquire p-8 md:p-[3rem] bg-[var(--secgr)]/10 text-[var(--secgr)] space-y-8 ">
         <div className="Enquire text-center ">
           <h1 className="text-center text-[36px] font-semibold mb-6 text-[var(--primg)] ">

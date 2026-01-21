@@ -4,6 +4,48 @@ import { getSubInsuranceBySlug, getSubMortgageBySlug, getSubInsurance, getSubMor
 import Image from "next/image";
 import sanitizeHtml from "sanitize-html";
 
+export async function generateMetadata({ params }){
+  const { page, subpage } = await  params;
+
+  let content;
+
+  if (page === "mortgage") {
+    content = (await getSubMortgageBySlug(subpage))?.data;
+  }
+
+  if (page === "insurance") {
+    content = (await getSubInsuranceBySlug(subpage))?.data;
+  }
+
+  if (!content) {
+    return null
+  }
+
+  const title = `${content.heading} | LifeCycle Financial`;
+  const description =
+    content.metaDescription ||
+    "Expert insurance and mortgage solutions tailored to your needs.";
+
+  const image = content.bannerImage || "/life_cycle_logo.png";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: content.heading,
+        },
+      ],
+    },
+  };
+}
+
 export const revalidate = 3600; // 1 hour
 export async function generateStaticParams() {
   // 1. Fetch all sub-items for both categories

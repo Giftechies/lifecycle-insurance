@@ -18,6 +18,8 @@ export async function generateMetadata({ params }) {
   // 2. Fallback to a default if data isn't found
   const title = seoData?.metaTitle || `${page.charAt(0).toUpperCase() + page.slice(1)} - LifeCycle Insurance`;
   const description = seoData?.metaDescription || `Explore our ${page} solutions.`;
+  const image = seoData?.image;
+  const alt = seoData?.alt;
 
   return {
     title: title,
@@ -25,6 +27,14 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: title,
       description: description,
+      images: [
+      {
+        url: `image`,
+        width: 1200,
+        height: 630,
+        alt:`alt`,
+      },
+    ]
     }
   };
 }

@@ -34,7 +34,6 @@ export async function getInsuranceIndex() {
 
 
 export async function updateInsuranceIndex(data){
-    console.log("data",data)
     try{
         await dbConnect();
         const index = await InsuranceIndex.findOne({}).lean();
@@ -49,6 +48,7 @@ export async function updateInsuranceIndex(data){
         }
         revalidatePath("/life-backend/insurance-index");
         revalidatePath("/insurance");
+        revalidatePath("/insurance/child pages");
         revalidatePath("/");
         return { success: true, index: serializedIndex };
     }catch(error){
