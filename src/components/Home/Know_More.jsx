@@ -36,7 +36,7 @@ export default function KnowMore({ oneMoreData }) {
       className="section-2 w-full  p-4 lg:px-[3rem] xl:px-[3rem] lg:py-[80px] max-w-[1600px] mx-auto  "
     >
       <main className="  w-[100%]    lg:flex  relative ">
-        <div className="imgLeft w-full  rounded-4xl overflow-hidden border max-md:aspect-[1.5] md:aspect-[1.8]  lg:w-[52%] lg:h-[42rem]  ">
+        <div className="imgLeft   rounded-4xl overflow-hidden lg:w-[48%] shrink-0  ">
           <Image
           width={600}
           height={600}
@@ -45,7 +45,7 @@ export default function KnowMore({ oneMoreData }) {
             alt={oneMoreData?.image1Alt || "About us image"}
           />
         </div>
-        <div className="contentRight max-lg:mt-3 lg:w-[55%] lg:flex gap-10 flex-col tracking-wider lg:text-justify  ">
+        <div className="contentRight max-lg:mt-3  lg:flex gap-4 flex-col text-justify  ">
           <div className="uppercontent w-full xl:w-[80%] leading-6 lg:ml-12  ">
             <h3 className="text-[var(--primg)] font-semibold  ">
               {" "}
