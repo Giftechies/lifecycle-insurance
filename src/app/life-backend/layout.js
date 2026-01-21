@@ -35,7 +35,8 @@ export default function DashboardLayout({ children }) {
         { title: "Home Banner", href: "/life-backend/Banner" },
         { title: "One More Section", href: "/life-backend/one-more" },
         { title: "Number Section", href: "/life-backend/number" },
-        {title:"Testimonial Section",href:"/life-backend/testimonial",}
+        {title:"logo Section",href:"/life-backend/logo"},
+        {title:"Testimonial Section",href:"/life-backend/testimonial"}
       ],
     },
   

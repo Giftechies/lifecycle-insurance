@@ -12,6 +12,7 @@ import {getNumber} from "../actions/number.action"
 import { getTestimonial } from "../actions/testimonial.action";
 import {getInsuranceIndex} from "../actions/insuranceIndex.model"
 import { getMortgageIndex } from "../actions/mortgageIndex.actions";
+import { getLogos } from "../actions/logo.actions";
 
 export default async function Home() {
 
@@ -21,6 +22,7 @@ export default async function Home() {
   const {data:testimonial} = await getTestimonial();
   const  {data:insuranceData} = await getInsuranceIndex();
   const  {mortgageIndex:mortgageData} = await getMortgageIndex();
+  const {data:logo} = await  getLogos()
 
   return (
     <>
@@ -29,7 +31,7 @@ export default async function Home() {
         <KnowMore oneMoreData={oneMoreData} />
         <Number numberData={numberData} />
         <OurService mortgageData={mortgageData} insuranceData={insuranceData} />
-        <MortageService />
+        <MortageService logos={logo} />
         <Contact />
         <Testimonials testimonials={testimonial} />
       </main>

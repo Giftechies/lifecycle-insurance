@@ -6,13 +6,9 @@ import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(useGSAP)
 
-export default function MortgageService(){
+export default function MortgageService( {logos} ){
     const router = useRouter()
     const sec5 = useRef()
-     const logos = Array.from({ length: 31 }, (_, i) => ({
-  img: `/mq${i + 1}.png`,
-}));
-
   useGSAP(() => {
     const marquee = document.querySelector(".marquee");
     if (!marquee) return;
@@ -173,7 +169,7 @@ export default function MortgageService(){
             </div>
             {/* lg marquee box */}
             <div className="marque  w-full flex items-center bg-[var(--primg)] rounded-b-[30px] lg flex-col p-6 pt-0   lg:mt-4 xl:mt-8  lg:rounded-[30px]  lg:p-10  lg:pt-0 ">
-              <span className="text-center text-[26px] font-bold  my-3 text-white md:  md:w-[50%]  md:leading-6 lg:tracking-normal lg:leading-9  lg:text-[30px] lg:w-[65%] xl:w-[50%] lg:font-semibold lg:pt-8 ">
+              <span className="text-center capitalize text-[26px] font-bold  my-3 text-white md:  md:w-[50%]  md:leading-6 lg:tracking-normal lg:leading-9  lg:text-[30px] lg:w-[65%] xl:w-[50%] lg:font-semibold lg:pt-8 ">
                 Over 20 Handpicked <br /> partners to serve You Better
               </span>
               {/* marquee */}
@@ -186,8 +182,8 @@ export default function MortgageService(){
                           className="h-[4em] flex items-center flex-shrink-0 px-4"
                         >
                           <img
-                            src={logo.img}
-                            alt='logos'
+                            src={logo.imageUrl}
+                            alt={logo.title}
                             className="h-full w-auto object-contain"
                           />
                         </div>
