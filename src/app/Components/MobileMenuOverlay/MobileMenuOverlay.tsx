@@ -237,13 +237,13 @@ export default function MobileMenuOverlay({ setIsMenuOpen }: MobileProps) {
           </li>
 
           <li>
-            <Link href="/Interest-rate" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/interest-rate" onClick={() => setIsMenuOpen(false)}>
               Interest Rate
             </Link>
           </li>
 
           <li>
-            <Link href="/Enquire" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/enquire" onClick={() => setIsMenuOpen(false)}>
               Enquire Now
             </Link>
           </li>

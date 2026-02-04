@@ -35,7 +35,7 @@ export default async function CaseStudyDetail({ params }) {
       <section className=" case py-10 px-4  lg:p-[3rem]  space-y-6">
         <main className=" flex gap-5  justify-between">
           <div
-            className=" w-[70%] editor-container "
+            className=" lg:w-[70%] editor-container "
             dangerouslySetInnerHTML={{ __html: safeHTML }}
           />
           <Slideri studies={allStudies} />
