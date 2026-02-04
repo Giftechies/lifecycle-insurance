@@ -1,6 +1,7 @@
 import CategoryPage from "../Components/category"
 import { getInsuranceIndex, getMortgageIndex, getSubInsurance, getSubMortgage } from "../../actions/subInsurance_Mortgage"
 import { notFound } from "next/navigation";
+import { type } from "os";
 // ... other imports and generateStaticParams ...
 
 export async function generateMetadata({ params }) {
@@ -29,13 +30,13 @@ export async function generateMetadata({ params }) {
       title: title,
       description: description,
       images: [
-      {
-        url: `image`,
-        width: 1200,
-        height: 630,
-        alt:`alt`,
-      },
-    ]
+        {
+          url: `image`,
+          width: 1200,
+          height: 630,
+          alt: `alt`,
+        },
+      ]
     }
   };
 }
@@ -82,15 +83,18 @@ export default async function Page({ params }) {
       getInsuranceIndex()
     ])
 
-    cardData = res?.data?.map((type) => ({
-      title: type?.heading,
-      slug: type?.slug,
-      paragraph_1: type?.shortContent,
-      featured_image: type?.image,
-      alt: type?.imageAlt,
-      link: `/insurance/${type.slug}`
+    cardData = res?.data?.map((type) => {
+      if (type.slug === 'group-insurance') return;
+      return {
+        title: type?.heading,
+        slug: type?.slug,
+        paragraph_1: type?.shortContent,
+        featured_image: type?.image,
+        alt: type?.imageAlt,
+        link: `/insurance/${type.slug}`
 
-    }))
+      }
+    })
     subpage = ressubpage.data
   }
   return (

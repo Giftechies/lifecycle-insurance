@@ -67,6 +67,9 @@ export default function Nav() {
   ]
 
   getnavData?.subInsurance.map((item) => {
+
+    if (item.slug === 'group-insurance') return;
+
     return (
       navData[2].child.push({
         label: item.heading,

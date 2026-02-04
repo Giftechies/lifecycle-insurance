@@ -5,6 +5,8 @@ export async function middleware(request) {
   const token = request.cookies.get("accessToken423798")?.value;
   const { pathname } = request.nextUrl;
 
+  if (pathname === "/insurance/group-insurance") return NextResponse.redirect(new URL("/", request.url));
+
   if (pathname === "/login") {
     if (token) {
       try {
